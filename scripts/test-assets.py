@@ -85,7 +85,7 @@ def main() -> int:
             capture_output=True,
             text=True,
         ).stdout
-        if opaque != "True":
+        if opaque.strip().lower() != "true":
             fail(f"fond non opaque: {name}")
 
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
