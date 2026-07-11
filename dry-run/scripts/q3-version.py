@@ -16,12 +16,13 @@ loi avec les actes CC du dossier (anlib.load_all_dossiers()[uid].raw) et on
 ré-apparie les scrutins d'ensemble de lecture postérieure non liés (voteRefs nuls).
 """
 from __future__ import annotations
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import sys, json, os
-sys.path.insert(0, '/home/cos/Bureau/dev/boussole-politique/dry-run/scripts')
+sys.path.insert(0, str(SCRIPTS_DIR))
 import anlib
 from collections import Counter, defaultdict
 
-OUT = "/home/cos/Bureau/dev/boussole-politique/dry-run/out"
+OUT = str(OUT_DIR)
 CORPUS = os.path.join(OUT, "corpus.json")
 
 # --- statutConclusion.fam_code -> interprétation "le texte promulgué diffère du texte voté ?" ---

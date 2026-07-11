@@ -4,11 +4,12 @@ Vérification ADVERSE INDÉPENDANTE de q4-mandats.
 Méthode: parsing BRUT des fichiers scrutin JSON (PAS anlib.positions_nominales,
 PAS le script q4-mandats.py). On reconstruit tout à la main pour recouper.
 """
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import json, os, glob, statistics
 from collections import defaultdict
 
-DATA = "/home/cos/Bureau/dev/boussole-politique/dry-run/data"
-CORPUS = "/home/cos/Bureau/dev/boussole-politique/dry-run/out/corpus.json"
+DATA = str(DATA_DIR)
+CORPUS = str(OUT_DIR / "corpus.json")
 SIEGES_AN = 577
 
 def as_list(x):
@@ -290,7 +291,7 @@ for leg in (16, 17):
     result[f"acteurs_total_avec_groupe_leg{leg}"] = len(ap)
 
 # write
-OUT = "/home/cos/Bureau/dev/boussole-politique/dry-run/out/v4-mandats-verify.json"
+OUT = str(OUT_DIR / "v4-mandats-verify.json")
 with open(OUT, "w") as fh:
     json.dump(result, fh, ensure_ascii=False, indent=2, default=lambda o: list(o) if isinstance(o, set) else o)
 

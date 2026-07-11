@@ -1,7 +1,7 @@
 # Vérification adverse — Q2 « Participation & polarisation des votes de référence »
 
 **Vérificateur :** recalcul indépendant (parse maison de `corpus.json` + ré-agrégation depuis les fichiers scrutins BRUTS via `decompteNominatif`), SANS réutiliser `q2-polarisation.py`.
-**Date :** 2026-06-13. **Scripts :** `/home/cos/Bureau/dev/boussole-politique/dry-run/scripts/v-q2-check.py` ; chiffres machine `/home/cos/Bureau/dev/boussole-politique/dry-run/out/v-q2-check.json`.
+**Date :** 2026-06-13. **Scripts :** `dry-run/scripts/v-q2-check.py` ; chiffres machine `dry-run/out/v-q2-check.json`.
 
 ## Verdict : CONCORDE (confiance haute)
 

@@ -186,6 +186,6 @@ Le corpus jugeable **n'est pas un échantillon neutre de l'activité législativ
 ---
 
 ### Fichiers
-- Script : `/home/cos/Bureau/dev/boussole-politique/dry-run/scripts/q1-funnel.py`
-- Chiffres machine : `/home/cos/Bureau/dev/boussole-politique/dry-run/out/q1-funnel.json`
-- Source figée consommée : `/home/cos/Bureau/dev/boussole-politique/dry-run/out/corpus.json`
+- Script : `dry-run/scripts/q1-funnel.py`
+- Chiffres machine : `dry-run/out/q1-funnel.json`
+- Source figée consommée : `dry-run/out/corpus.json`

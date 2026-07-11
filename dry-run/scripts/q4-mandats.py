@@ -15,9 +15,10 @@ Mandat :
 Consomme le corpus FIGÉ (out/corpus.json) ; n'utilise anlib que pour charger scrutins/organes.
 """
 from __future__ import annotations
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import sys, os, json, glob, collections, statistics
 
-ROOT = "/home/cos/Bureau/dev/boussole-politique/dry-run"
+ROOT = str(DRY_RUN_DIR)
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import anlib  # noqa: E402
 

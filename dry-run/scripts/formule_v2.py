@@ -12,11 +12,12 @@ But :
 Réutilise anlib (chargement open data AN) + out/corpus.json (159 lois figées).
 """
 from __future__ import annotations
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import sys, json, os, glob, unicodedata
 from collections import defaultdict, Counter
 
-DRY = '/home/cos/Bureau/dev/boussole-politique/dry-run'
-OUT_VECTORS = '/home/cos/Bureau/dev/boussole-politique/vecteurs-test.json'
+DRY = str(DRY_RUN_DIR)
+OUT_VECTORS = str(REPO_ROOT / "vecteurs-test.json")
 sys.path.insert(0, os.path.join(DRY, 'scripts'))
 import anlib
 

@@ -4,11 +4,12 @@ INDEPENDENT adversarial verification of q5-miseaupoint.
 Reads RAW scrutin JSON directly. Does NOT import anlib, does NOT reuse q5 script.
 Parses miseAuPoint buckets + ventilationVotes nominal positions by hand.
 """
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import json, glob, os
 from collections import Counter, defaultdict
 
-DATA = "/home/cos/Bureau/dev/boussole-politique/dry-run/data"
-CORPUS = "/home/cos/Bureau/dev/boussole-politique/dry-run/out/corpus.json"
+DATA = str(DATA_DIR)
+CORPUS = str(OUT_DIR / "corpus.json")
 
 def as_list(x):
     if isinstance(x, list):
@@ -230,7 +231,7 @@ def main():
             pl[row["leg"]]["basc"] += 1
     result["per_leg_corrections"] = pl
 
-    out_json = "/home/cos/Bureau/dev/boussole-politique/dry-run/out/v5-verify.json"
+    out_json = str(OUT_DIR / "v5-verify.json")
     json.dump(result, open(out_json,"w"), ensure_ascii=False, indent=2)
     print(json.dumps(result, ensure_ascii=False, indent=2))
 

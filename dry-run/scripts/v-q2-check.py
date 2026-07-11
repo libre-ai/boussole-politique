@@ -12,12 +12,13 @@ Méthode INDÉPENDANTE (ne réutilise PAS q2-polarisation.py) :
      On reproduit la règle "groupe majeur = présent (avec pour/contre) sur >=50% des votes"
      et la moyenne inter-groupes, mais on l'écrit indépendamment + on teste des variantes.
 """
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import sys, json, glob, os, re, statistics, unicodedata
 from collections import Counter, defaultdict
 
-CORPUS = '/home/cos/Bureau/dev/boussole-politique/dry-run/out/corpus.json'
-DATA = '/home/cos/Bureau/dev/boussole-politique/dry-run/data'
-OUT_JSON = '/home/cos/Bureau/dev/boussole-politique/dry-run/out/v-q2-check.json'
+CORPUS = str(OUT_DIR / "corpus.json")
+DATA = str(DATA_DIR)
+OUT_JSON = str(OUT_DIR / "v-q2-check.json")
 SIEGES = 577
 QU = 0.10   # quasi-unanime  : part minorité < 10%
 DISC = 0.20  # discriminant  : part minorité >= 20%

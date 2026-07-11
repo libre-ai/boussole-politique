@@ -3,11 +3,12 @@
 Does NOT import the analysis script. Reads raw JSON files directly + corpus.json.
 Reuses anlib ONLY as an independent cross-check oracle at the end.
 """
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import json, glob, os, re, sys
 from collections import defaultdict, Counter
 
-DATA = "/home/cos/Bureau/dev/boussole-politique/dry-run/data"
-OUT = "/home/cos/Bureau/dev/boussole-politique/dry-run/out"
+DATA = str(DATA_DIR)
+OUT = str(OUT_DIR)
 
 def as_list(x):
     return x if isinstance(x, list) else ([] if x is None else [x])

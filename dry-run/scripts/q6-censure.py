@@ -11,13 +11,14 @@ et conclut sur le nombre de lois "structurantes" hors-corpus et la cardinalité 
 Sorties : out/q6-censure.md (rapport), out/q6-censure.json (chiffres machine).
 """
 from __future__ import annotations
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import sys, json, re, os
-sys.path.insert(0, '/home/cos/Bureau/dev/boussole-politique/dry-run/scripts')
+sys.path.insert(0, str(SCRIPTS_DIR))
 import anlib
 from collections import Counter, defaultdict
 
-OUT = "/home/cos/Bureau/dev/boussole-politique/dry-run/out"
-CORPUS = "/home/cos/Bureau/dev/boussole-politique/dry-run/out/corpus.json"
+OUT = str(OUT_DIR)
+CORPUS = str(OUT_DIR / "corpus.json")
 VR = re.compile(r"VTANR5L(\d+)V(\d+)")
 DLR_LEG = re.compile(r"DLR5L(\d+)N")
 
