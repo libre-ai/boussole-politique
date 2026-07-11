@@ -46,7 +46,7 @@ done
 
 render_square() {
   local size=$1 output=$2
-  rsvg-convert --format=png --width="$size" --height="$size" \
+  rsvg-convert --format=png --background-color="#111827" --width="$size" --height="$size" \
     "$BRAND/icon.svg" > "$output"
 }
 
@@ -75,7 +75,7 @@ cat > "$TMP/social-card.svg" <<SVG
   <path d="M0 620h1200" stroke="#22C55E" stroke-width="20"/>
 </svg>
 SVG
-rsvg-convert --format=png --width=1200 --height=630 "$TMP/social-card.svg" > "$WEB/social-card.png"
+rsvg-convert --format=png --background-color="#000000" --width=1200 --height=630 "$TMP/social-card.svg" > "$WEB/social-card.png"
 
 cat > "$TMP/icon-size-sheet.svg" <<SVG
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480">
@@ -94,7 +94,7 @@ cat > "$TMP/icon-size-sheet.svg" <<SVG
   <text x="1068" y="462" text-anchor="middle" fill="#6B7280" font-family="Inter, sans-serif" font-size="16">contenu signifiant dans le cercle</text>
 </svg>
 SVG
-rsvg-convert --format=png --width=1200 --height=480 "$TMP/icon-size-sheet.svg" > "$PROOFS/icon-size-sheet.png"
+rsvg-convert --format=png --background-color="#FFFFFF" --width=1200 --height=480 "$TMP/icon-size-sheet.svg" > "$PROOFS/icon-size-sheet.png"
 
 python3 - "$ROOT" <<'PY'
 from __future__ import annotations

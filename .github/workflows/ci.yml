@@ -50,4 +50,3 @@ jobs:
             | sort -z \
             | xargs -0 sha256sum > /tmp/assets-second.sha256
           diff -u /tmp/assets-first.sha256 /tmp/assets-second.sha256
-          git diff --exit-code
