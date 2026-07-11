@@ -30,11 +30,12 @@ FORMULE (relue dans le rapport, ré-implémentée à neuf) :
   - chiffre = MÉDIANE des spreads sur les députés.
 """
 from __future__ import annotations
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import json, glob, os, statistics, re
 from collections import defaultdict, Counter
 
-OUT = '/home/cos/Bureau/dev/boussole-politique/dry-run/out'
-DATA = '/home/cos/Bureau/dev/boussole-politique/dry-run/data'
+OUT = str(OUT_DIR)
+DATA = str(DATA_DIR)
 
 def as_list(x):
     if x is None:

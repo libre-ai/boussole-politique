@@ -1,6 +1,6 @@
 # Notes de schéma — open data AN (établies par inspection directe, 2026-06-13)
 
-Workspace : `/home/cos/Bureau/dev/boussole-politique/dry-run/` — données dans `data/`, scripts dans `scripts/`, sorties dans `out/`.
+Workspace : `dry-run/` à la racine du dépôt — données dans `data/`, scripts dans `scripts/`, sorties dans `out/`.
 Outils : python3, jq, unzip, curl (réseau OK). Volumes : tout tient en RAM en python.
 
 ## Fichiers disponibles
@@ -81,6 +81,6 @@ publiée pour la 17. **Quantifier ce trou fait partie des analyses.**
 
 Le périmètre spec v0.1 §2 : loi **définitivement adoptée/promulguée** + **scrutin public sur l'ensemble à l'AN** ;
 vote de référence = **dernier** scrutin public AN sur l'ensemble. Exclusions : 49.3 (branche séparée), ratifications,
-main levée. Les règles contestées par la revue (`/home/cos/Bureau/dev/boussole-politique/revue-specs-2026-06-12.md`) :
+main levée. Les règles contestées par la revue (`../revue-specs-2026-06-12.md`) :
 dernier-scrutin vs scrutin-solennel-préféré, version votée ≠ promulguée, ratifications avec scrutin public (type CETA),
 exclusion des absents du ratio, « participation » vs « présence », censure 49.2 vs 49.3.

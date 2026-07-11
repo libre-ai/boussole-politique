@@ -2,10 +2,11 @@
 """Verify leg17 'changements de groupe REELS=8' independently.
 Map each multi-PO-ref actor's PO set to libelleAbrev (where resolvable);
 count actors with >=2 distinct abbrevs = real moves."""
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import json, glob, os
 from collections import defaultdict
 
-DATA = "/home/cos/Bureau/dev/boussole-politique/dry-run/data"
+DATA = str(DATA_DIR)
 
 def as_list(x):
     if x is None: return []
@@ -80,5 +81,5 @@ out = dict(
     unresolvable=len(unresolvable),
     unres_with_multi_abbrev=len(unres_multi_abbrev),
 )
-with open("/home/cos/Bureau/dev/boussole-politique/dry-run/out/v4-groupchanges.json", "w") as fh:
+with open(str(OUT_DIR / "v4-groupchanges.json"), "w") as fh:
     json.dump(out, fh, ensure_ascii=False, indent=2)

@@ -10,10 +10,11 @@ Axes :
   (drift) une décision AN postérieure au vote de référence existe dans le dossier
   union = (a) OR (drift)
 """
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import json, os, glob, re, unicodedata
 from collections import Counter, defaultdict
 
-ROOT = '/home/cos/Bureau/dev/boussole-politique/dry-run'
+ROOT = str(DRY_RUN_DIR)
 DOSS_DIRS = [f'{ROOT}/data/dossiers-16/json/dossierParlementaire',
              f'{ROOT}/data/dossiers-17/json/dossierParlementaire']
 SCR_DIRS  = [f'{ROOT}/data/scrutins-16/json', f'{ROOT}/data/scrutins-17/json']

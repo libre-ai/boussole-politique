@@ -1,3 +1,6 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 export const meta = {
   name: 'boussole-politique-dry-run',
   description: "Dry-run analytique sur l'open data AN par-dessus une fondation figée (corpus.json) : 7 analyses en éventail, vérification adverse de chacune, puis synthèse en rapport unique.",
@@ -8,7 +11,8 @@ export const meta = {
   ],
 };
 
-const DIR = '/home/cos/Bureau/dev/boussole-politique/dry-run';
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const DIR = path.join(REPO_ROOT, 'dry-run');
 const CRIB = `
 ENVIRONNEMENT (déjà en place, fondation vérifiée — NE PAS reconstruire) :
 - Module Python : ${DIR}/scripts/anlib.py. Charge ainsi :
@@ -194,7 +198,7 @@ const synth = await agent(
   `(législatures 16 close et 17 en cours) pour CONFRONTER les règles de tes specs v0.1→v0.5 à la donnée. ` +
   `Voici les résultats des 7 analyses, chacune vérifiée de façon adverse :\n\n${digest}\n\n` +
   `Les rapports détaillés sont dans ${DIR}/out/*.md (lis-les tous pour les tableaux et exemples). ` +
-  `La revue critique de référence est dans /home/cos/Bureau/dev/boussole-politique/revue-specs-2026-06-12.md.\n\n` +
+  `La revue critique de référence est dans ${REPO_ROOT}/revue-specs-2026-06-12.md.\n\n` +
   `ÉCRIS le rapport de synthèse dans ${DIR}/out/RAPPORT-DRY-RUN.md, structuré ainsi :\n` +
   `1. Verdict en 5 lignes : le dry-run valide-t-il la faisabilité du produit, et quel est le risque n°1 confirmé ?\n` +
   `2. Le corpus réel (chiffres par législature, coût des exclusions, biais).\n` +

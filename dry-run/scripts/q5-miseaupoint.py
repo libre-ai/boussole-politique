@@ -15,13 +15,14 @@ Valide §2.2 de la revue. Questions :
 Sortie : out/q5-miseaupoint.md (rapport) + out/q5-miseaupoint.json (chiffres machine).
 """
 from __future__ import annotations
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import sys, os, json, glob
-sys.path.insert(0, '/home/cos/Bureau/dev/boussole-politique/dry-run/scripts')
+sys.path.insert(0, str(SCRIPTS_DIR))
 import anlib
 from collections import Counter, defaultdict
 
-OUT = '/home/cos/Bureau/dev/boussole-politique/dry-run/out'
-DATA = '/home/cos/Bureau/dev/boussole-politique/dry-run/data'
+OUT = str(OUT_DIR)
+DATA = str(DATA_DIR)
 CORPUS = json.load(open(os.path.join(OUT, 'corpus.json'), encoding='utf-8'))
 
 SIDX = anlib.load_all_scrutins()

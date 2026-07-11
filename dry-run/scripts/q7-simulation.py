@@ -14,13 +14,14 @@ FORMULE PINNÉE (et aucune autre) :
 Source : positions_nominales() (groupe_ref = groupe au moment du vote) sur les votes de réf du corpus.
 """
 from __future__ import annotations
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import sys, json, os, glob, math, random, statistics
 from collections import defaultdict, Counter
 
-sys.path.insert(0, '/home/cos/Bureau/dev/boussole-politique/dry-run/scripts')
+sys.path.insert(0, str(SCRIPTS_DIR))
 import anlib
 
-OUT = '/home/cos/Bureau/dev/boussole-politique/dry-run/out'
+OUT = str(OUT_DIR)
 CORPUS = json.load(open(os.path.join(OUT, 'corpus.json')))
 
 # ---------------------------------------------------------------------------
@@ -35,7 +36,7 @@ def txt(x):
     return x
 
 GROUP_LABELS = {}
-for p in glob.glob('/home/cos/Bureau/dev/boussole-politique/dry-run/data/amo10-17/json/organe/PO*.json'):
+for p in glob.glob(str(DATA_DIR / "amo10-17" / "json" / "organe" / "PO*.json")):
     o = json.load(open(p))['organe']
     if o.get('codeType') == 'GP':
         GROUP_LABELS[o['uid']] = o.get('libelleAbrev') or o.get('libelle')
@@ -88,7 +89,7 @@ for l in CORPUS['lois']:
 
 # index acteur -> nom (amo10-17, leg17 + ré-élus)
 NAMES = {}
-for p in glob.glob('/home/cos/Bureau/dev/boussole-politique/dry-run/data/amo10-17/json/acteur/PA*.json'):
+for p in glob.glob(str(DATA_DIR / "amo10-17" / "json" / "acteur" / "PA*.json")):
     a = json.load(open(p))['acteur']
     uid = txt(a['uid'])
     ec = (a.get('etatCivil') or {}).get('ident') or {}

@@ -25,14 +25,15 @@ adopté/rejeté de la loi ? Un score de congruence agrégé par groupe sur des v
 quasi-unanimes converge vers ~même valeur pour tous les groupes (tout le monde a voté
 pareil). On quantifie l'écart inter-groupes.
 """
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import sys, json, statistics
 from collections import Counter, defaultdict
-sys.path.insert(0, '/home/cos/Bureau/dev/boussole-politique/dry-run/scripts')
+sys.path.insert(0, str(SCRIPTS_DIR))
 import anlib
 
-CORPUS = '/home/cos/Bureau/dev/boussole-politique/dry-run/out/corpus.json'
-OUT_JSON = '/home/cos/Bureau/dev/boussole-politique/dry-run/out/q2-polarisation.json'
-OUT_MD = '/home/cos/Bureau/dev/boussole-politique/dry-run/out/q2-polarisation.md'
+CORPUS = str(OUT_DIR / "corpus.json")
+OUT_JSON = str(OUT_DIR / "q2-polarisation.json")
+OUT_MD = str(OUT_DIR / "q2-polarisation.md")
 SIEGES = anlib.SIEGES_AN  # 577
 
 QUASI_UNANIME = 0.10   # part minorité < 10% des exprimés

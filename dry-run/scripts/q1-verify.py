@@ -18,11 +18,12 @@ l'entonnoir 266 -> 159 deux fois :
 Les deux voies sont comparées au headline ET entre elles (les écarts révèlent
 double-comptes / apostrophes / objet-vs-tableau / dénominateurs).
 """
+from workspace_paths import DATA_DIR, DRY_RUN_DIR, OUT_DIR, REPO_ROOT, SCRIPTS_DIR
 import json, glob, re, unicodedata, os
 from collections import Counter, defaultdict
 
-DATA = "/home/cos/Bureau/dev/boussole-politique/dry-run/data"
-OUT = "/home/cos/Bureau/dev/boussole-politique/dry-run/out"
+DATA = str(DATA_DIR)
+OUT = str(OUT_DIR)
 
 # --------------------------------------------------------------------------
 def aslist(x):
