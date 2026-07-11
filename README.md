@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/assets/repository-card.svg" alt="Une boussole relie des priorités citoyennes à des votes publics vérifiables." width="100%">
+</p>
+
 # Boussole Politique
 
 > **Compare tes positions aux votes, sans étiquette.**
