@@ -49,7 +49,7 @@ render_square() {
   local rendered="$TMP/icon-$size.png"
   rsvg-convert --format=png --width="$size" --height="$size" \
     "$BRAND/icon.svg" > "$rendered"
-  convert "$rendered" -background '#111827' -alpha remove -alpha off "$output"
+  convert "$rendered" -background '#111827' -alpha remove -alpha off "PNG24:$output"
 }
 
 cp "$BRAND/icon.svg" "$WEB/favicon.svg"
@@ -78,7 +78,7 @@ cat > "$TMP/social-card.svg" <<SVG
 </svg>
 SVG
 rsvg-convert --format=png --width=1200 --height=630 "$TMP/social-card.svg" > "$TMP/social-card.png"
-convert "$TMP/social-card.png" -background '#000000' -alpha remove -alpha off "$WEB/social-card.png"
+convert "$TMP/social-card.png" -background '#000000' -alpha remove -alpha off "PNG24:$WEB/social-card.png"
 
 cat > "$TMP/icon-size-sheet.svg" <<SVG
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480">
@@ -98,7 +98,7 @@ cat > "$TMP/icon-size-sheet.svg" <<SVG
 </svg>
 SVG
 rsvg-convert --format=png --width=1200 --height=480 "$TMP/icon-size-sheet.svg" > "$TMP/icon-size-sheet.png"
-convert "$TMP/icon-size-sheet.png" -background '#FFFFFF' -alpha remove -alpha off "$PROOFS/icon-size-sheet.png"
+convert "$TMP/icon-size-sheet.png" -background '#FFFFFF' -alpha remove -alpha off "PNG24:$PROOFS/icon-size-sheet.png"
 
 python3 - "$ROOT" <<'PY'
 from __future__ import annotations
