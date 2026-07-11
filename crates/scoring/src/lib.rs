@@ -165,9 +165,7 @@ pub fn group_majority(
 
 #[cfg(test)]
 mod tests {
-    use super::{
-        GroupExclusionReason, NonDisplayReason, ScoreEntry, group_majority, score,
-    };
+    use super::{GroupExclusionReason, NonDisplayReason, ScoreEntry, group_majority, score};
     use boussole_domain::{CitizenPosition, Polarity, VotePosition};
 
     const POSITIVE: Polarity = Polarity::VoteForMeansAgreement;

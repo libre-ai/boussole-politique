@@ -32,7 +32,7 @@ Le vivier Q8 est viable en volume, mais sa symétrie politique et sa couverture 
 - contrats Rust purs dans `crates/domain` et `crates/scoring` ;
 - aucun shell Dioxus métier ni serveur axum à ce stade.
 
-La toolchain Rust n’était pas disponible lors de la création initiale du dépôt : les gates Rust sont préparés mais ne sont pas encore déclarés passés. Voir `docs/implementation/contrats-rust-m2.md`.
+Les contrats Rust sont vérifiés avec la toolchain verrouillée `1.85.1`, en natif et pour `wasm32-unknown-unknown`. La CI exécute également deux générations successives des assets pour contrôler leur déterminisme. Voir `docs/implementation/contrats-rust-m2.md`.
 
 ## Contrôles
 
