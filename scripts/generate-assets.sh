@@ -12,7 +12,7 @@ PROOFS="$ROOT/proofs/brand"
 TMP=$(mktemp -d "$ROOT/.asset-build.XXXXXX")
 trap 'rm -rf "$TMP"' EXIT HUP INT TERM
 
-for tool in rsvg-convert xmllint python3 sha256sum identify base64; do
+for tool in rsvg-convert xmllint python3 sha256sum identify convert base64; do
   command -v "$tool" >/dev/null 2>&1 || {
     printf 'outil requis absent: %s\n' "$tool" >&2
     exit 1
@@ -45,9 +45,10 @@ for svg in "$BRAND"/*.svg; do
 done
 
 render_square() {
-  local size=$1 output=$2
-  rsvg-convert --format=png --background-color="#111827" --width="$size" --height="$size" \
-    "$BRAND/icon.svg" > "$output"
+  local size=$1 output=$2 rendered="$TMP/icon-$size.png"
+  rsvg-convert --format=png --width="$size" --height="$size" \
+    "$BRAND/icon.svg" > "$rendered"
+  convert "$rendered" -background '#111827' -alpha remove -alpha off "$output"
 }
 
 cp "$BRAND/icon.svg" "$WEB/favicon.svg"
@@ -75,7 +76,8 @@ cat > "$TMP/social-card.svg" <<SVG
   <path d="M0 620h1200" stroke="#22C55E" stroke-width="20"/>
 </svg>
 SVG
-rsvg-convert --format=png --background-color="#000000" --width=1200 --height=630 "$TMP/social-card.svg" > "$WEB/social-card.png"
+rsvg-convert --format=png --width=1200 --height=630 "$TMP/social-card.svg" > "$TMP/social-card.png"
+convert "$TMP/social-card.png" -background '#000000' -alpha remove -alpha off "$WEB/social-card.png"
 
 cat > "$TMP/icon-size-sheet.svg" <<SVG
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480">
@@ -94,7 +96,8 @@ cat > "$TMP/icon-size-sheet.svg" <<SVG
   <text x="1068" y="462" text-anchor="middle" fill="#6B7280" font-family="Inter, sans-serif" font-size="16">contenu signifiant dans le cercle</text>
 </svg>
 SVG
-rsvg-convert --format=png --background-color="#FFFFFF" --width=1200 --height=480 "$TMP/icon-size-sheet.svg" > "$PROOFS/icon-size-sheet.png"
+rsvg-convert --format=png --width=1200 --height=480 "$TMP/icon-size-sheet.svg" > "$TMP/icon-size-sheet.png"
+convert "$TMP/icon-size-sheet.png" -background '#FFFFFF' -alpha remove -alpha off "$PROOFS/icon-size-sheet.png"
 
 python3 - "$ROOT" <<'PY'
 from __future__ import annotations
