@@ -46,7 +46,7 @@ Cette migration supprime une pile de production sans perdre de capacité produit
 
 ### Template et design system
 
-La source cible annoncée est `client-kit/templates/dioxus-app`. Dans l'état local observé, elle existe encore sous `libre-ai/portal/templates/dioxus-app`, et `dioxus-app-template` est un miroir public dont l'automatisation de synchronisation reste à terminer.
+La source canonique est `libre-ai/client-kit/templates/dioxus-app`; `dioxus-app-template` en est le miroir public vérifié. Boussole Politique ne copie pas le domaine du template : son cœur métier reste renderer-independent.
 
 Au démarrage du repo :
 
