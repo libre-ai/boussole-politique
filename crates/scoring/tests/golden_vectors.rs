@@ -69,8 +69,8 @@ struct RealGroupScore {
 }
 
 fn fixture() -> Fixture {
-    let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-        .join("../../fixtures/scoring/vecteurs-test.json");
+    let path =
+        PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../fixtures/scoring/vecteurs-test.json");
     let bytes = fs::read(path).expect("golden fixture must be readable");
     serde_json::from_slice(&bytes).expect("golden fixture must match its versioned contract")
 }
@@ -126,9 +126,11 @@ fn inverse_polarity_golden_case_is_present() {
         .find(|case| case.nom == "polarite_inversee")
         .expect("the inverse-polarity regression vector is mandatory");
 
-    assert!(case.enonces.iter().all(|statement| {
-        statement.polarite == Polarity::VoteAgainstMeansAgreement
-    }));
+    assert!(
+        case.enonces
+            .iter()
+            .all(|statement| { statement.polarite == Polarity::VoteAgainstMeansAgreement })
+    );
     assert_eq!(case.attendu.congruence_millimes, Some(667));
 }
 
@@ -156,8 +158,9 @@ fn real_reference_outputs_remain_frozen_but_are_not_recomputed() {
     // Le fixture ne contient que les sorties agrégées de ces profils réels,
     // pas leurs entrées par énoncé. Les prétendre recalculées serait faux.
     assert!(fixture.cas_reels.profils.iter().all(|profile| {
-        profile.scores_par_groupe.iter().all(|score| {
-            score.congruence_millimes <= 1000
-        })
+        profile
+            .scores_par_groupe
+            .iter()
+            .all(|score| score.congruence_millimes <= 1000)
     }));
 }

@@ -1,0 +1,53 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rust-contracts:
+    name: Rust contracts
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: dtolnay/rust-toolchain@4be7066ada62dd38de10e7b70166bc74ed198c30 # stable
+        with:
+          toolchain: 1.85.1
+          components: clippy, rustfmt
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
+      - name: Verify renderer-independent contracts
+        run: ./scripts/check-rust.sh
+
+  brand-assets:
+    name: Deterministic brand assets
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - name: Install local rendering tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends librsvg2-bin libxml2-utils imagemagick
+      - name: Generate and verify assets twice
+        run: |
+          set -euo pipefail
+          ./scripts/generate-assets.sh
+          find assets/brand apps/web/assets proofs/brand -type f -print0 \
+            | sort -z \
+            | xargs -0 sha256sum > /tmp/assets-first.sha256
+          ./scripts/generate-assets.sh
+          find assets/brand apps/web/assets proofs/brand -type f -print0 \
+            | sort -z \
+            | xargs -0 sha256sum > /tmp/assets-second.sha256
+          diff -u /tmp/assets-first.sha256 /tmp/assets-second.sha256
+          git diff --exit-code
