@@ -1,0 +1,398 @@
+{
+  "result": {
+    "VOIE_A_voteRefs": {
+      "prom_loi": 266,
+      "sans_scrutin_AN": 82,
+      "scrutin_non_ensemble": 25,
+      "scrutin_ensemble_non_public": 0,
+      "jugeable": 159,
+      "perdues_total": 107,
+      "taux_survie_global_pct": 59.8,
+      "jugeable_leg16": 93,
+      "jugeable_leg17": 66,
+      "prom_leg16": 159,
+      "prom_leg17": 107
+    },
+    "familles": {
+      "PPL": {
+        "prom": 127,
+        "jug": 99,
+        "survie_pct": 78.0,
+        "part_prom_pct": 47.7,
+        "part_corpus_pct": 62.3,
+        "derive_pts": 14.6
+      },
+      "PJL": {
+        "prom": 48,
+        "jug": 36,
+        "survie_pct": 75.0,
+        "part_prom_pct": 18.0,
+        "part_corpus_pct": 22.6,
+        "derive_pts": 4.6
+      },
+      "RATIF": {
+        "prom": 65,
+        "jug": 8,
+        "survie_pct": 12.3,
+        "part_prom_pct": 24.4,
+        "part_corpus_pct": 5.0,
+        "derive_pts": -19.4
+      },
+      "ORGANIQUE": {
+        "prom": 11,
+        "jug": 11,
+        "survie_pct": 100.0,
+        "part_prom_pct": 4.1,
+        "part_corpus_pct": 6.9,
+        "derive_pts": 2.8
+      },
+      "CONSTIT": {
+        "prom": 1,
+        "jug": 1,
+        "survie_pct": 100.0,
+        "part_prom_pct": 0.4,
+        "part_corpus_pct": 0.6,
+        "derive_pts": 0.2
+      },
+      "FINANCE": {
+        "prom": 14,
+        "jug": 4,
+        "survie_pct": 28.6,
+        "part_prom_pct": 5.3,
+        "part_corpus_pct": 2.5,
+        "derive_pts": -2.8
+      },
+      "PPL_ART11": {
+        "prom": 0,
+        "jug": 0,
+        "survie_pct": null,
+        "part_prom_pct": 0.0,
+        "part_corpus_pct": 0.0,
+        "derive_pts": null
+      }
+    },
+    "ratif": {
+      "prom": 65,
+      "jug": 8,
+      "perdues": 57,
+      "survie_pct": 12.3,
+      "survie_leg16_pct": 17.9,
+      "survie_leg17_pct": 3.8,
+      "prom16": 39,
+      "jug16": 7,
+      "prom17": 26,
+      "jug17": 1,
+      "part_prom_pct": 24.4,
+      "part_corpus_pct": 5.0,
+      "derive_pts": -19.4
+    },
+    "finance": {
+      "prom": 14,
+      "jug": 4,
+      "perdues": 10,
+      "survie_pct": 28.6,
+      "survie_leg16_pct": 12.5,
+      "survie_leg17_pct": 50.0,
+      "prom16": 8,
+      "jug16": 1,
+      "prom17": 6,
+      "jug17": 3,
+      "part_corpus_pct": 2.5
+    },
+    "ppl": {
+      "prom": 127,
+      "jug": 99,
+      "part_prom_pct": 47.7,
+      "part_corpus_pct": 62.3,
+      "derive_pts": 14.6
+    },
+    "artefacts": {
+      "scrutin_non_ensemble_artefact_leg15": 11,
+      "scrutin_non_ensemble_reel": 14,
+      "scrutin_non_ensemble_total": 25
+    },
+    "scrutins_ensemble": {
+      "total_leg16": 221,
+      "total_leg17": 201,
+      "dans_loi_leg16": 138,
+      "dans_loi_leg17": 86,
+      "hors_loi_leg16": 83,
+      "hors_loi_leg17": 115,
+      "motions_censure_leg16": 34,
+      "motions_censure_leg17": 22
+    },
+    "VOIE_B_titre_orthogonale": {
+      "jugeable_indep": 195,
+      "fam_jug_indep": {
+        "PJL": 44,
+        "PPL": 104,
+        "RATIF": 21,
+        "ORGANIQUE": 11,
+        "FINANCE": 14,
+        "CONSTIT": 1
+      },
+      "indep_seulement_n": 41,
+      "corpus_seulement_n": 5,
+      "indep_seulement": [
+        [
+          "DLR5L15N42238",
+          "Projet de loi portant diverses dispositions d’adaptation au "
+        ],
+        [
+          "DLR5L15N42572",
+          "Projet de loi autorisant l’approbation de l’accord entre le "
+        ],
+        [
+          "DLR5L15N42835",
+          "Approbation de l’accord entre le Gouvernement de la Républiq"
+        ],
+        [
+          "DLR5L15N43285",
+          "Approbation de la convention d'entraide judiciaire en matièr"
+        ],
+        [
+          "DLR5L15N44752",
+          "Projet de loi ratifiant l’ordonnance n° 2021-1605 du 8 décem"
+        ],
+        [
+          "DLR5L16N45943",
+          "Loi de finances rectificative pour 2022"
+        ],
+        [
+          "DLR5L16N45973",
+          "Projet de loi autorisant la ratification du protocole au Tra"
+        ],
+        [
+          "DLR5L16N45988",
+          "Projet de loi de finances pour 2023"
+        ],
+        [
+          "DLR5L16N46269",
+          "Projet de loi d’orientation et de programmation du ministère"
+        ],
+        [
+          "DLR5L16N46346",
+          "Programmation des finances publiques pour les années 2023 à "
+        ],
+        [
+          "DLR5L16N46347",
+          "Financement de la sécurité sociale pour 2023"
+        ],
+        [
+          "DLR5L16N46472",
+          "Calculer la retraite de base des non-salariés agricoles en f"
+        ],
+        [
+          "DLR5L16N47066",
+          "Projet de loi de financement rectificative de la sécurité so"
+        ],
+        [
+          "DLR5L16N47118",
+          "Projet de loi pour contrôler l’immigration, améliorer l’inté"
+        ],
+        [
+          "DLR5L16N47439",
+          "Projet de loi autorisant l’approbation de l’accord entre le "
+        ]
+      ],
+      "corpus_seulement": [
+        [
+          "DLR5L15N43846",
+          "Renforcement de la parité dans les fonctions électives et ex",
+          "PPL"
+        ],
+        [
+          "DLR5L16N46880",
+          "Proposition de loi visant à faciliter la mise en oeuvre des ",
+          "PPL"
+        ],
+        [
+          "DLR5L16N47015",
+          "Favoriser l’accompagnement psychologique des femmes victimes",
+          "PPL"
+        ],
+        [
+          "DLR5L16N47037",
+          "Renforcer la protection des familles d’enfants touchés par u",
+          "PPL"
+        ],
+        [
+          "DLR5L17N51346",
+          "Création du cadre d'emploi des personnels de santé des servi",
+          "PPL"
+        ]
+      ]
+    },
+    "cross_check_corpus_fige": {
+      "n_dossiers_merged": 5593,
+      "frozen_n_lois": 159,
+      "A_jugeable_n": 159,
+      "A_seulement_vs_fige": [],
+      "fige_seulement_vs_A": [],
+      "identique": true
+    }
+  },
+  "samples": {
+    "ratif_perdues_leg16": [
+      "Accord entre le Gouvernement de la République française et le Gouverne",
+      "Ratification du traité entre la République française et la République ",
+      "Approbation de l’accord de siège entre la France et la Banque des règl",
+      "Approbation de la convention d’entraide judiciaire en matière pénale e",
+      "Approbation de l’accord avec l’Ouzbékistan relatif aux transports rout",
+      "Projet de loi autorisant l’approbation de l’accord global dans le doma"
+    ],
+    "ratif_jugeables": [
+      [
+        16,
+        906,
+        "Convention d’entraide judiciaire en matière pénale entre le "
+      ],
+      [
+        16,
+        907,
+        "Projet de loi autorisant l’approbation de l’accord pour la m"
+      ],
+      [
+        16,
+        1197,
+        "Approbation du premier amendement et du protocole à la conve"
+      ],
+      [
+        16,
+        1412,
+        "Ratification de la résolution A.1152 (32) relative aux amend"
+      ],
+      [
+        16,
+        2390,
+        "Accords entre la France et le Sénégal du 7 septembre 2021 et"
+      ],
+      [
+        16,
+        3208,
+        "Approbation des conventions entre la France et le Danemark e"
+      ],
+      [
+        16,
+        3209,
+        "Ratification du Traité d’entraide judiciaire en matière péna"
+      ],
+      [
+        17,
+        2460,
+        "Projet de loi autorisant la ratification de la résolution LP"
+      ]
+    ],
+    "finance_perdues": [
+      [
+        16,
+        "Financement de la sécurité sociale pour 2023"
+      ],
+      [
+        16,
+        "Loi de finances rectificative pour 2022"
+      ],
+      [
+        16,
+        "Projet de loi de financement de la sécurité sociale pour 202"
+      ],
+      [
+        16,
+        "Projet de loi de financement rectificative de la sécurité so"
+      ],
+      [
+        16,
+        "Projet de loi de finances de fin de gestion pour 2023"
+      ],
+      [
+        16,
+        "Projet de loi de finances pour 2023"
+      ],
+      [
+        16,
+        "Projet de loi de finances pour 2024"
+      ],
+      [
+        17,
+        "Projet de loi de financement de la sécurité sociale pour 202"
+      ],
+      [
+        17,
+        "Projet de loi de finances pour 2025"
+      ],
+      [
+        17,
+        "Projet de loi de finances pour 2026"
+      ]
+    ],
+    "finance_jugeables": [
+      [
+        16,
+        624,
+        "Projet de loi de finances rectificative pour 2022"
+      ],
+      [
+        17,
+        518,
+        "Projet de loi de finances de fin de gestion pour 2024"
+      ],
+      [
+        17,
+        4442,
+        "Projet de loi de finances de fin de gestion pour 2025"
+      ],
+      [
+        17,
+        4758,
+        "Projet de loi de financement de la sécurité sociale pour 202"
+      ]
+    ],
+    "artefact_leg15": [
+      "Lutter contre la précarité des accompagnants d’élèves en situation de ",
+      "Lutte contre le dérèglement climatique",
+      "Protéger la rémunération des agriculteurs",
+      "Ratification de la convention du Conseil de l'Europe contre le trafic ",
+      "Projet de loi portant diverses dispositions d’adaptation au droit de l",
+      "Proposition de loi visant à créer un ticket restaurant étudiant",
+      "Réforme des outils de gestion des risques climatiques en agriculture",
+      "Proposition de loi visant à réduire l'empreinte environnementale du nu",
+      "Lutte contre la maltraitance animale",
+      "Renforcer la prévention en santé au travail",
+      "Démocratiser le sport en France"
+    ],
+    "sans_scrutin_AN_sample": [
+      [
+        "FINANCE",
+        "Projet de loi de finances de fin de gestion pour 2023"
+      ],
+      [
+        "RATIF",
+        "Accord entre le Gouvernement de la République française"
+      ],
+      [
+        "RATIF",
+        "Ratification du traité entre la République française et"
+      ],
+      [
+        "FINANCE",
+        "Projet de loi de finances pour 2024"
+      ],
+      [
+        "PPL",
+        "Calculer la retraite de base des non-salariés agricoles"
+      ],
+      [
+        "RATIF",
+        "Approbation de l’accord de siège entre la France et la "
+      ],
+      [
+        "PJL",
+        "Approbation de l’accord entre le Gouvernement de la Rép"
+      ],
+      [
+        "RATIF",
+        "Approbation de la convention d’entraide judiciaire en m"
+      ]
+    ]
+  }
+}

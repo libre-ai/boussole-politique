@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Icône Boussole Politique</title>
+  <desc id="desc">Un repère circulaire relie deux directions identiques autour d’un centre vert neutre.</desc>
+  <rect id="background" width="512" height="512" fill="#111827"/>
+  <g id="bearing" fill="none" stroke="#E5E7EB" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="256" cy="256" r="148"/>
+    <path d="M256 76v32M436 256h-32M256 436v-32M76 256h32"/>
+  </g>
+  <g id="comparison" fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M166 166l58 58M288 288l58 58"/>
+    <rect x="132" y="132" width="48" height="48" rx="8" transform="rotate(45 156 156)" fill="#111827"/>
+    <rect x="332" y="332" width="48" height="48" rx="8" transform="rotate(45 356 356)" fill="#111827"/>
+  </g>
+  <circle id="brand-center" cx="256" cy="256" r="28" fill="#22C55E"/>
+</svg>

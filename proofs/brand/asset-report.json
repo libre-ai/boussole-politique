@@ -1,0 +1,36 @@
+{
+  "format": "boussole-politique.brand-asset-report.v1",
+  "machine_checks": {
+    "exact_dimensions": "pass",
+    "opaque_pngs": "checked_by_scripts/test-assets.py",
+    "remote_resources": "pass",
+    "maskable_safe_zone": "pass",
+    "manifest_hashes": "pass"
+  },
+  "contrast": [
+    {
+      "foreground": "#FFFFFF",
+      "background": "#111827",
+      "ratio": 17.73971700407407,
+      "wcag_aa_normal_text": true
+    },
+    {
+      "foreground": "#E5E7EB",
+      "background": "#111827",
+      "ratio": 14.328284912339392,
+      "wcag_aa_normal_text": true
+    },
+    {
+      "foreground": "#22C55E",
+      "background": "#111827",
+      "ratio": 7.785326203116029,
+      "wcag_aa_normal_text": true
+    }
+  ],
+  "visual_review": {
+    "sheet": "proofs/brand/icon-size-sheet.png",
+    "automated_preview": "generated",
+    "human_product_review": "pending",
+    "store_icon_review": "not_started"
+  }
+}

@@ -1,0 +1,1407 @@
+{
+ "meta": {
+  "format": "boussole-politique.vivier-report.v1",
+  "legislatures": [
+   16,
+   17
+  ],
+  "discriminance_defaut": 0.2,
+  "participation_defaut": 0.2,
+  "definition_discriminance": "min(pour, contre) / (pour + contre)",
+  "definition_participation": "(pour + contre + abstentions) / 577",
+  "avertissement": "Rapport exploratoire Python. Ne constitue ni une sélection VAA ni un dataset canonique."
+ },
+ "tous_scrutins_par_portee": {
+  "16": {
+   "amendement": 3173,
+   "article": 594,
+   "autre": 81,
+   "ensemble": 221,
+   "motion": 34,
+   "premiere_partie": 3
+  },
+  "17": {
+   "amendement": 6296,
+   "article": 815,
+   "autre": 59,
+   "ensemble": 200,
+   "motion": 22,
+   "premiere_partie": 5
+  }
+ },
+ "overrides": {
+  "format": "boussole-politique.dry-run.link-overrides.v1",
+  "status": "proposed_for_cross_review",
+  "n": 5,
+  "path": "fixtures/vivier-link-overrides.json"
+ },
+ "liens": {
+  "16": {
+   "ensemble": {
+    "titre": 36,
+    "titre_ambigu": 10,
+    "vote_ref": 175
+   },
+   "premiere_partie": {
+    "curated_override": 3
+   },
+   "amendement": {
+    "titre": 2349,
+    "titre_ambigu": 823,
+    "vote_ref": 1
+   }
+  },
+  "17": {
+   "ensemble": {
+    "dossier_ref": 48,
+    "titre": 20,
+    "titre_ambigu": 9,
+    "vote_ref": 123
+   },
+   "premiere_partie": {
+    "curated_override": 2,
+    "vote_ref": 3
+   },
+   "amendement": {
+    "dossier_ref": 1339,
+    "titre": 3429,
+    "titre_ambigu": 1528
+   }
+  }
+ },
+ "candidats_publics_lies_a_une_loi": {
+  "n": 7302,
+  "par_legislature": {
+   "16": 2511,
+   "17": 4791
+  },
+  "par_portee": {
+   "amendement": 6903,
+   "ensemble": 391,
+   "premiere_partie": 8
+  },
+  "par_sort": {
+   "adopté": 2051,
+   "rejeté": 5251
+  },
+  "par_type_vote": {
+   "SPO": 7224,
+   "SPS": 78
+  },
+  "par_methode_lien": {
+   "curated_override": 5,
+   "dossier_ref": 1375,
+   "titre": 5629,
+   "vote_ref": 293
+  },
+  "dossiers_distincts": 329,
+  "par_procedure": {
+   "Projet de loi ordinaire": 2897,
+   "Proposition de loi ordinaire": 2566,
+   "Projet de loi de finances de l'année": 1369,
+   "Projet de loi de finances rectificative": 217,
+   "Projet de loi de financement de la sécurité sociale": 202,
+   "Projet ou proposition de loi organique": 35,
+   "Projet de ratification des traités et conventions": 11,
+   "Projet ou proposition de loi constitutionnelle": 5
+  }
+ },
+ "vivier_core_avant_filtre": {
+  "n": 399,
+  "par_legislature": {
+   "16": 208,
+   "17": 191
+  },
+  "par_portee": {
+   "ensemble": 391,
+   "premiere_partie": 8
+  },
+  "par_sort": {
+   "adopté": 383,
+   "rejeté": 16
+  },
+  "par_type_vote": {
+   "SPO": 321,
+   "SPS": 78
+  },
+  "par_methode_lien": {
+   "curated_override": 5,
+   "dossier_ref": 48,
+   "titre": 54,
+   "vote_ref": 292
+  },
+  "dossiers_distincts": 294,
+  "par_procedure": {
+   "Proposition de loi ordinaire": 282,
+   "Projet de loi ordinaire": 74,
+   "Projet ou proposition de loi organique": 14,
+   "Projet de loi de finances rectificative": 9,
+   "Projet de ratification des traités et conventions": 9,
+   "Projet de loi de financement de la sécurité sociale": 6,
+   "Projet ou proposition de loi constitutionnelle": 3,
+   "Projet de loi de finances de l'année": 2
+  }
+ },
+ "vivier_core_filtre_defaut": {
+  "n": 117,
+  "par_legislature": {
+   "16": 63,
+   "17": 54
+  },
+  "par_portee": {
+   "ensemble": 112,
+   "premiere_partie": 5
+  },
+  "par_sort": {
+   "adopté": 103,
+   "rejeté": 14
+  },
+  "par_type_vote": {
+   "SPO": 62,
+   "SPS": 55
+  },
+  "par_methode_lien": {
+   "curated_override": 3,
+   "dossier_ref": 12,
+   "titre": 19,
+   "vote_ref": 83
+  },
+  "dossiers_distincts": 90,
+  "par_procedure": {
+   "Proposition de loi ordinaire": 54,
+   "Projet de loi ordinaire": 41,
+   "Projet de loi de finances rectificative": 8,
+   "Projet de loi de financement de la sécurité sociale": 5,
+   "Projet ou proposition de loi organique": 5,
+   "Projet de ratification des traités et conventions": 2,
+   "Projet ou proposition de loi constitutionnelle": 1,
+   "Projet de loi de finances de l'année": 1
+  }
+ },
+ "vivier_core_filtre_lien_fort": {
+  "n": 95,
+  "par_legislature": {
+   "16": 46,
+   "17": 49
+  },
+  "par_portee": {
+   "ensemble": 93,
+   "premiere_partie": 2
+  },
+  "par_sort": {
+   "adopté": 84,
+   "rejeté": 11
+  },
+  "par_type_vote": {
+   "SPO": 51,
+   "SPS": 44
+  },
+  "par_methode_lien": {
+   "dossier_ref": 12,
+   "vote_ref": 83
+  },
+  "dossiers_distincts": 77,
+  "par_procedure": {
+   "Proposition de loi ordinaire": 49,
+   "Projet de loi ordinaire": 31,
+   "Projet ou proposition de loi organique": 5,
+   "Projet de loi de finances rectificative": 4,
+   "Projet de ratification des traités et conventions": 2,
+   "Projet de loi de financement de la sécurité sociale": 2,
+   "Projet ou proposition de loi constitutionnelle": 1,
+   "Projet de loi de finances de l'année": 1
+  }
+ },
+ "vivier_amendements_filtre_defaut": {
+  "n": 3310,
+  "par_legislature": {
+   "16": 1010,
+   "17": 2300
+  },
+  "par_portee": {
+   "amendement": 3310
+  },
+  "par_sort": {
+   "adopté": 603,
+   "rejeté": 2707
+  },
+  "par_type_vote": {
+   "SPO": 3310
+  },
+  "par_methode_lien": {
+   "dossier_ref": 413,
+   "titre": 2897
+  },
+  "dossiers_distincts": 140,
+  "par_procedure": {
+   "Projet de loi de finances de l'année": 1091,
+   "Proposition de loi ordinaire": 1053,
+   "Projet de loi ordinaire": 790,
+   "Projet de loi de finances rectificative": 187,
+   "Projet de loi de financement de la sécurité sociale": 183,
+   "Projet ou proposition de loi organique": 4,
+   "Projet de ratification des traités et conventions": 2
+  }
+ },
+ "pool_total_filtre_defaut": {
+  "n": 3427,
+  "par_legislature": {
+   "16": 1073,
+   "17": 2354
+  },
+  "par_portee": {
+   "amendement": 3310,
+   "ensemble": 112,
+   "premiere_partie": 5
+  },
+  "par_sort": {
+   "adopté": 706,
+   "rejeté": 2721
+  },
+  "par_type_vote": {
+   "SPO": 3372,
+   "SPS": 55
+  },
+  "par_methode_lien": {
+   "curated_override": 3,
+   "dossier_ref": 425,
+   "titre": 2916,
+   "vote_ref": 83
+  },
+  "dossiers_distincts": 173,
+  "par_procedure": {
+   "Proposition de loi ordinaire": 1107,
+   "Projet de loi de finances de l'année": 1092,
+   "Projet de loi ordinaire": 831,
+   "Projet de loi de finances rectificative": 195,
+   "Projet de loi de financement de la sécurité sociale": 188,
+   "Projet ou proposition de loi organique": 9,
+   "Projet de ratification des traités et conventions": 4,
+   "Projet ou proposition de loi constitutionnelle": 1
+  }
+ },
+ "sensibilite": [
+  {
+   "discriminance_min": 0.1,
+   "participation_min": 0.1,
+   "n": 5933,
+   "ensemble": 183,
+   "premiere_partie": 7,
+   "amendement": 5743,
+   "adopte": 1227,
+   "rejete": 4706,
+   "dossiers": 244
+  },
+  {
+   "discriminance_min": 0.1,
+   "participation_min": 0.2,
+   "n": 3806,
+   "ensemble": 154,
+   "premiere_partie": 6,
+   "amendement": 3646,
+   "adopte": 823,
+   "rejete": 2983,
+   "dossiers": 192
+  },
+  {
+   "discriminance_min": 0.1,
+   "participation_min": 0.3,
+   "n": 2056,
+   "ensemble": 119,
+   "premiere_partie": 4,
+   "amendement": 1933,
+   "adopte": 435,
+   "rejete": 1621,
+   "dossiers": 130
+  },
+  {
+   "discriminance_min": 0.1,
+   "participation_min": 0.5,
+   "n": 507,
+   "ensemble": 80,
+   "premiere_partie": 2,
+   "amendement": 425,
+   "adopte": 135,
+   "rejete": 372,
+   "dossiers": 69
+  },
+  {
+   "discriminance_min": 0.2,
+   "participation_min": 0.1,
+   "n": 5326,
+   "ensemble": 130,
+   "premiere_partie": 6,
+   "amendement": 5190,
+   "adopte": 1053,
+   "rejete": 4273,
+   "dossiers": 219
+  },
+  {
+   "discriminance_min": 0.2,
+   "participation_min": 0.2,
+   "n": 3427,
+   "ensemble": 112,
+   "premiere_partie": 5,
+   "amendement": 3310,
+   "adopte": 706,
+   "rejete": 2721,
+   "dossiers": 173
+  },
+  {
+   "discriminance_min": 0.2,
+   "participation_min": 0.3,
+   "n": 1904,
+   "ensemble": 90,
+   "premiere_partie": 3,
+   "amendement": 1811,
+   "adopte": 372,
+   "rejete": 1532,
+   "dossiers": 111
+  },
+  {
+   "discriminance_min": 0.2,
+   "participation_min": 0.5,
+   "n": 478,
+   "ensemble": 66,
+   "premiere_partie": 2,
+   "amendement": 410,
+   "adopte": 118,
+   "rejete": 360,
+   "dossiers": 61
+  },
+  {
+   "discriminance_min": 0.3,
+   "participation_min": 0.1,
+   "n": 3736,
+   "ensemble": 83,
+   "premiere_partie": 5,
+   "amendement": 3648,
+   "adopte": 820,
+   "rejete": 2916,
+   "dossiers": 193
+  },
+  {
+   "discriminance_min": 0.3,
+   "participation_min": 0.2,
+   "n": 2472,
+   "ensemble": 73,
+   "premiere_partie": 4,
+   "amendement": 2395,
+   "adopte": 547,
+   "rejete": 1925,
+   "dossiers": 152
+  },
+  {
+   "discriminance_min": 0.3,
+   "participation_min": 0.3,
+   "n": 1399,
+   "ensemble": 61,
+   "premiere_partie": 2,
+   "amendement": 1336,
+   "adopte": 293,
+   "rejete": 1106,
+   "dossiers": 90
+  },
+  {
+   "discriminance_min": 0.3,
+   "participation_min": 0.5,
+   "n": 296,
+   "ensemble": 43,
+   "premiere_partie": 2,
+   "amendement": 251,
+   "adopte": 89,
+   "rejete": 207,
+   "dossiers": 45
+  }
+ ],
+ "premieres_parties_bloquees_par_lien": [
+  {
+   "legislature": 16,
+   "numero": 353,
+   "date": "2022-10-20",
+   "portee": "premiere_partie",
+   "sort": "rejeté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N46347",
+   "methode_lien": "curated_override",
+   "pour": 72,
+   "contre": 98,
+   "abstentions": 3,
+   "exprimes": 170,
+   "participation": 0.2998,
+   "part_minorite": 0.4235,
+   "objet": "la première partie du projet de loi de financement de la sécurité sociale pour 2023 (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 2808,
+   "date": "2023-10-25",
+   "portee": "premiere_partie",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N48683",
+   "methode_lien": "curated_override",
+   "pour": 74,
+   "contre": 69,
+   "abstentions": 1,
+   "exprimes": 143,
+   "participation": 0.2496,
+   "part_minorite": 0.4825,
+   "objet": "la première partie du projet de loi de financement de la sécurité sociale pour 2024 (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 3042,
+   "date": "2023-11-23",
+   "portee": "premiere_partie",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N48683",
+   "methode_lien": "curated_override",
+   "pour": 45,
+   "contre": 21,
+   "abstentions": 0,
+   "exprimes": 66,
+   "participation": 0.1144,
+   "part_minorite": 0.3182,
+   "objet": "la première partie du projet de loi de financement de la sécurité sociale pour 2024 (nouvelle lecture)."
+  },
+  {
+   "legislature": 17,
+   "numero": 3891,
+   "date": "2025-11-18",
+   "portee": "premiere_partie",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L17N53135",
+   "methode_lien": "curated_override",
+   "pour": 90,
+   "contre": 12,
+   "abstentions": 111,
+   "exprimes": 102,
+   "participation": 0.3692,
+   "part_minorite": 0.1176,
+   "objet": "la première partie du projet de loi de finances de fin de gestion pour 2025 (première lecture)."
+  },
+  {
+   "legislature": 17,
+   "numero": 4453,
+   "date": "2025-12-02",
+   "portee": "premiere_partie",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L17N52922",
+   "methode_lien": "curated_override",
+   "pour": 171,
+   "contre": 140,
+   "abstentions": 3,
+   "exprimes": 311,
+   "participation": 0.5442,
+   "part_minorite": 0.4502,
+   "objet": "la première partie du projet de loi de financement de la sécurité sociale pour 2026 (nouvelle lecture)."
+  }
+ ],
+ "motions": {
+  "n": 56,
+  "par_legislature": {
+   "16": 34,
+   "17": 22
+  },
+  "par_article": {
+   "49.2": 17,
+   "49.3": 39
+  },
+  "par_sort": {
+   "adopté": 1,
+   "rejeté": 55
+  }
+ },
+ "equilibre_groupes_pool_total": {
+  "16": {
+   "DEM": {
+    "pour": 154,
+    "contre": 916,
+    "egalite": 3,
+    "n_directionnel": 1070,
+    "part_cote_minoritaire": 0.1439,
+    "bidirectionnel": true
+   },
+   "ECO": {
+    "pour": 681,
+    "contre": 332,
+    "egalite": 6,
+    "n_directionnel": 1013,
+    "part_cote_minoritaire": 0.3277,
+    "bidirectionnel": true
+   },
+   "GDR": {
+    "pour": 661,
+    "contre": 227,
+    "egalite": 3,
+    "n_directionnel": 888,
+    "part_cote_minoritaire": 0.2556,
+    "bidirectionnel": true
+   },
+   "HOR": {
+    "pour": 149,
+    "contre": 918,
+    "egalite": 3,
+    "n_directionnel": 1067,
+    "part_cote_minoritaire": 0.1396,
+    "bidirectionnel": true
+   },
+   "LFI": {
+    "pour": 694,
+    "contre": 283,
+    "egalite": 1,
+    "n_directionnel": 977,
+    "part_cote_minoritaire": 0.2897,
+    "bidirectionnel": true
+   },
+   "LIOT": {
+    "pour": 481,
+    "contre": 342,
+    "egalite": 71,
+    "n_directionnel": 823,
+    "part_cote_minoritaire": 0.4156,
+    "bidirectionnel": true
+   },
+   "LR": {
+    "pour": 326,
+    "contre": 690,
+    "egalite": 24,
+    "n_directionnel": 1016,
+    "part_cote_minoritaire": 0.3209,
+    "bidirectionnel": true
+   },
+   "RE": {
+    "pour": 140,
+    "contre": 933,
+    "egalite": 0,
+    "n_directionnel": 1073,
+    "part_cote_minoritaire": 0.1305,
+    "bidirectionnel": true
+   },
+   "RN": {
+    "pour": 628,
+    "contre": 290,
+    "egalite": 4,
+    "n_directionnel": 918,
+    "part_cote_minoritaire": 0.3159,
+    "bidirectionnel": true
+   },
+   "SOC": {
+    "pour": 15,
+    "contre": 27,
+    "egalite": 0,
+    "n_directionnel": 42,
+    "part_cote_minoritaire": 0.3571,
+    "bidirectionnel": true
+   }
+  },
+  "17": {
+   "DEM": {
+    "pour": 467,
+    "contre": 1822,
+    "egalite": 22,
+    "n_directionnel": 2289,
+    "part_cote_minoritaire": 0.204,
+    "bidirectionnel": true
+   },
+   "DR": {
+    "pour": 612,
+    "contre": 1628,
+    "egalite": 28,
+    "n_directionnel": 2240,
+    "part_cote_minoritaire": 0.2732,
+    "bidirectionnel": true
+   },
+   "ECOS": {
+    "pour": 1317,
+    "contre": 989,
+    "egalite": 3,
+    "n_directionnel": 2306,
+    "part_cote_minoritaire": 0.4289,
+    "bidirectionnel": true
+   },
+   "EPR": {
+    "pour": 408,
+    "contre": 1928,
+    "egalite": 6,
+    "n_directionnel": 2336,
+    "part_cote_minoritaire": 0.1747,
+    "bidirectionnel": true
+   },
+   "GDR": {
+    "pour": 1117,
+    "contre": 817,
+    "egalite": 20,
+    "n_directionnel": 1934,
+    "part_cote_minoritaire": 0.4224,
+    "bidirectionnel": true
+   },
+   "HOR": {
+    "pour": 442,
+    "contre": 1857,
+    "egalite": 22,
+    "n_directionnel": 2299,
+    "part_cote_minoritaire": 0.1923,
+    "bidirectionnel": true
+   },
+   "LFI-NFP": {
+    "pour": 1275,
+    "contre": 969,
+    "egalite": 2,
+    "n_directionnel": 2244,
+    "part_cote_minoritaire": 0.4318,
+    "bidirectionnel": true
+   },
+   "LIOT": {
+    "pour": 511,
+    "contre": 1480,
+    "egalite": 115,
+    "n_directionnel": 1991,
+    "part_cote_minoritaire": 0.2567,
+    "bidirectionnel": true
+   },
+   "RN": {
+    "pour": 972,
+    "contre": 1269,
+    "egalite": 1,
+    "n_directionnel": 2241,
+    "part_cote_minoritaire": 0.4337,
+    "bidirectionnel": true
+   },
+   "SOC": {
+    "pour": 1235,
+    "contre": 1033,
+    "egalite": 18,
+    "n_directionnel": 2268,
+    "part_cote_minoritaire": 0.4555,
+    "bidirectionnel": true
+   }
+  }
+ },
+ "equilibre_groupes_core": {
+  "16": {
+   "DEM": {
+    "pour": 40,
+    "contre": 6,
+    "egalite": 0,
+    "n_directionnel": 46,
+    "part_cote_minoritaire": 0.1304,
+    "bidirectionnel": true
+   },
+   "ECO": {
+    "pour": 12,
+    "contre": 27,
+    "egalite": 1,
+    "n_directionnel": 39,
+    "part_cote_minoritaire": 0.3077,
+    "bidirectionnel": true
+   },
+   "GDR": {
+    "pour": 11,
+    "contre": 29,
+    "egalite": 0,
+    "n_directionnel": 40,
+    "part_cote_minoritaire": 0.275,
+    "bidirectionnel": true
+   },
+   "HOR": {
+    "pour": 40,
+    "contre": 6,
+    "egalite": 0,
+    "n_directionnel": 46,
+    "part_cote_minoritaire": 0.1304,
+    "bidirectionnel": true
+   },
+   "LFI": {
+    "pour": 7,
+    "contre": 37,
+    "egalite": 0,
+    "n_directionnel": 44,
+    "part_cote_minoritaire": 0.1591,
+    "bidirectionnel": true
+   },
+   "LIOT": {
+    "pour": 25,
+    "contre": 13,
+    "egalite": 4,
+    "n_directionnel": 38,
+    "part_cote_minoritaire": 0.3421,
+    "bidirectionnel": true
+   },
+   "LR": {
+    "pour": 29,
+    "contre": 15,
+    "egalite": 0,
+    "n_directionnel": 44,
+    "part_cote_minoritaire": 0.3409,
+    "bidirectionnel": true
+   },
+   "RE": {
+    "pour": 40,
+    "contre": 6,
+    "egalite": 0,
+    "n_directionnel": 46,
+    "part_cote_minoritaire": 0.1304,
+    "bidirectionnel": true
+   },
+   "RN": {
+    "pour": 20,
+    "contre": 24,
+    "egalite": 0,
+    "n_directionnel": 44,
+    "part_cote_minoritaire": 0.4545,
+    "bidirectionnel": true
+   },
+   "SOC": {
+    "pour": 3,
+    "contre": 7,
+    "egalite": 0,
+    "n_directionnel": 10,
+    "part_cote_minoritaire": 0.3,
+    "bidirectionnel": true
+   }
+  },
+  "17": {
+   "DEM": {
+    "pour": 39,
+    "contre": 10,
+    "egalite": 0,
+    "n_directionnel": 49,
+    "part_cote_minoritaire": 0.2041,
+    "bidirectionnel": true
+   },
+   "DR": {
+    "pour": 36,
+    "contre": 13,
+    "egalite": 0,
+    "n_directionnel": 49,
+    "part_cote_minoritaire": 0.2653,
+    "bidirectionnel": true
+   },
+   "ECOS": {
+    "pour": 12,
+    "contre": 34,
+    "egalite": 0,
+    "n_directionnel": 46,
+    "part_cote_minoritaire": 0.2609,
+    "bidirectionnel": true
+   },
+   "EPR": {
+    "pour": 37,
+    "contre": 12,
+    "egalite": 0,
+    "n_directionnel": 49,
+    "part_cote_minoritaire": 0.2449,
+    "bidirectionnel": true
+   },
+   "GDR": {
+    "pour": 13,
+    "contre": 34,
+    "egalite": 0,
+    "n_directionnel": 47,
+    "part_cote_minoritaire": 0.2766,
+    "bidirectionnel": true
+   },
+   "HOR": {
+    "pour": 35,
+    "contre": 13,
+    "egalite": 0,
+    "n_directionnel": 48,
+    "part_cote_minoritaire": 0.2708,
+    "bidirectionnel": true
+   },
+   "LFI-NFP": {
+    "pour": 13,
+    "contre": 34,
+    "egalite": 0,
+    "n_directionnel": 47,
+    "part_cote_minoritaire": 0.2766,
+    "bidirectionnel": true
+   },
+   "LIOT": {
+    "pour": 34,
+    "contre": 11,
+    "egalite": 1,
+    "n_directionnel": 45,
+    "part_cote_minoritaire": 0.2444,
+    "bidirectionnel": true
+   },
+   "RN": {
+    "pour": 29,
+    "contre": 15,
+    "egalite": 0,
+    "n_directionnel": 44,
+    "part_cote_minoritaire": 0.3409,
+    "bidirectionnel": true
+   },
+   "SOC": {
+    "pour": 20,
+    "contre": 22,
+    "egalite": 2,
+    "n_directionnel": 42,
+    "part_cote_minoritaire": 0.4762,
+    "bidirectionnel": true
+   }
+  }
+ },
+ "core_top_30_plus_serres": [
+  {
+   "legislature": 16,
+   "numero": 1771,
+   "date": "2023-06-05",
+   "portee": "ensemble",
+   "sort": "rejeté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N47569",
+   "methode_lien": "vote_ref",
+   "pour": 78,
+   "contre": 78,
+   "abstentions": 0,
+   "exprimes": 156,
+   "participation": 0.2704,
+   "part_minorite": 0.5,
+   "objet": "l'ensemble du projet de loi de règlement du budget et d'approbation des comptes de l'année 2022 (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 3546,
+   "date": "2024-03-19",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L16N49124",
+   "methode_lien": "vote_ref",
+   "pour": 260,
+   "contre": 259,
+   "abstentions": 30,
+   "exprimes": 519,
+   "participation": 0.9515,
+   "part_minorite": 0.499,
+   "objet": "l'ensemble du projet de loi relatif à l'organisation de la gouvernance de la sûreté nucléaire et de la radioprotection pour répondre au défi de la relance de la filière nucléaire (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 931,
+   "date": "2023-02-09",
+   "portee": "ensemble",
+   "sort": "rejeté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N46858",
+   "methode_lien": "vote_ref",
+   "pour": 183,
+   "contre": 184,
+   "abstentions": 4,
+   "exprimes": 367,
+   "participation": 0.643,
+   "part_minorite": 0.4986,
+   "objet": "l'ensemble de la proposition de loi visant à assurer un repas à un euro pour tous les étudiants (première lecture)."
+  },
+  {
+   "legislature": 17,
+   "numero": 4442,
+   "date": "2025-12-02",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L17N53135",
+   "methode_lien": "vote_ref",
+   "pour": 217,
+   "contre": 213,
+   "abstentions": 84,
+   "exprimes": 430,
+   "participation": 0.8908,
+   "part_minorite": 0.4953,
+   "objet": "l'ensemble du projet de loi de fin de gestion pour 2025 (texte de la commission mixte paritaire)."
+  },
+  {
+   "legislature": 16,
+   "numero": 3547,
+   "date": "2024-03-19",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L16N49123",
+   "methode_lien": "vote_ref",
+   "pour": 265,
+   "contre": 258,
+   "abstentions": 25,
+   "exprimes": 523,
+   "participation": 0.9497,
+   "part_minorite": 0.4933,
+   "objet": "l’ensemble du projet de loi organique modifiant la loi organique n° 2010-837 du 23 juillet 2010 relative à l’application du cinquième alinéa de l’article 13 de la Constitution (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 3101,
+   "date": "2023-11-30",
+   "portee": "ensemble",
+   "sort": "rejeté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N48766",
+   "methode_lien": "vote_ref",
+   "pour": 162,
+   "contre": 168,
+   "abstentions": 0,
+   "exprimes": 330,
+   "participation": 0.5719,
+   "part_minorite": 0.4909,
+   "objet": "l'ensemble de la proposition de loi visant à lutter contre l'inflation par l'encadrement des marges des industries agroalimentaires, du raffinage et de la grande distribution et établissant un prix d'achat plancher des matières premières agricoles (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 1770,
+   "date": "2023-06-05",
+   "portee": "ensemble",
+   "sort": "rejeté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N47568",
+   "methode_lien": "vote_ref",
+   "pour": 74,
+   "contre": 78,
+   "abstentions": 0,
+   "exprimes": 152,
+   "participation": 0.2634,
+   "part_minorite": 0.4868,
+   "objet": "l'ensemble du projet de loi de règlement du budget et d'approbation des comptes de l'année 2021 (première lecture)."
+  },
+  {
+   "legislature": 17,
+   "numero": 4696,
+   "date": "2025-12-09",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L17N52922",
+   "methode_lien": "vote_ref",
+   "pour": 247,
+   "contre": 234,
+   "abstentions": 93,
+   "exprimes": 481,
+   "participation": 0.9948,
+   "part_minorite": 0.4865,
+   "objet": "l'ensemble du projet de loi de financement de la sécurité sociale pour 2026 (nouvelle lecture)."
+  },
+  {
+   "legislature": 17,
+   "numero": 4758,
+   "date": "2025-12-16",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L17N52922",
+   "methode_lien": "vote_ref",
+   "pour": 247,
+   "contre": 232,
+   "abstentions": 90,
+   "exprimes": 479,
+   "participation": 0.9861,
+   "part_minorite": 0.4843,
+   "objet": "l'ensemble du projet de loi de financement de la sécurité sociale pour 2026 (lecture définitive)."
+  },
+  {
+   "legislature": 17,
+   "numero": 2458,
+   "date": "2025-06-17",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L16N49868",
+   "methode_lien": "vote_ref",
+   "pour": 275,
+   "contre": 252,
+   "abstentions": 21,
+   "exprimes": 527,
+   "participation": 0.9497,
+   "part_minorite": 0.4782,
+   "objet": "l'ensemble du projet de loi de simplification de la vie économique (première lecture)."
+  },
+  {
+   "legislature": 17,
+   "numero": 3182,
+   "date": "2025-10-28",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L17N52655",
+   "methode_lien": "vote_ref",
+   "pour": 279,
+   "contre": 247,
+   "abstentions": 9,
+   "exprimes": 526,
+   "participation": 0.9272,
+   "part_minorite": 0.4696,
+   "objet": "l'ensemble de la proposition de loi organique visant à reporter le renouvellement général des membres du congrès et des assemblées de province de la Nouvelle-Calédonie afin de permettre la poursuite de la discussion en vue d'un accord consensuel sur l'avenir institutionnel de la Nouvelle-Calédonie (texte de la commission mixte paritaire)."
+  },
+  {
+   "legislature": 17,
+   "numero": 1304,
+   "date": "2025-04-07",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L17N50579",
+   "methode_lien": "vote_ref",
+   "pour": 204,
+   "contre": 180,
+   "abstentions": 24,
+   "exprimes": 384,
+   "participation": 0.7071,
+   "part_minorite": 0.4688,
+   "objet": "l'ensemble de la proposition de loi organique visant à harmoniser le mode de scrutin aux élections municipales afin de garantir la vitalité démocratique, la cohésion municipale et la parité (première lecture)."
+  },
+  {
+   "legislature": 17,
+   "numero": 1303,
+   "date": "2025-04-07",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L15N43846",
+   "methode_lien": "vote_ref",
+   "pour": 206,
+   "contre": 181,
+   "abstentions": 25,
+   "exprimes": 387,
+   "participation": 0.714,
+   "part_minorite": 0.4677,
+   "objet": "l'ensemble de la proposition de loi visant à harmoniser le mode de scrutin aux élections municipales afin de garantir la vitalité démocratique, la cohésion municipale et la parité (deuxième lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 1387,
+   "date": "2023-04-06",
+   "portee": "ensemble",
+   "sort": "rejeté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N47218",
+   "methode_lien": "vote_ref",
+   "pour": 121,
+   "contre": 138,
+   "abstentions": 6,
+   "exprimes": 259,
+   "participation": 0.4593,
+   "part_minorite": 0.4672,
+   "objet": "l'ensemble de la proposition de loi visant à mieux manger en soutenant les Français face à l'inflation et en favorisant l'accès à une alimentation saine (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 1462,
+   "date": "2023-05-04",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N47411",
+   "methode_lien": "vote_ref",
+   "pour": 157,
+   "contre": 137,
+   "abstentions": 2,
+   "exprimes": 294,
+   "participation": 0.513,
+   "part_minorite": 0.466,
+   "objet": "l'ensemble de la proposition de loi portant abrogation de l'obligation vaccinale contre la covid-19 dans les secteurs médicaux, paramédicaux et d'aide à la personne et visant à la réintégration des professionnels et étudiants suspendus (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 3370,
+   "date": "2024-02-14",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N49021",
+   "methode_lien": "vote_ref",
+   "pour": 64,
+   "contre": 55,
+   "abstentions": 1,
+   "exprimes": 119,
+   "participation": 0.208,
+   "part_minorite": 0.4622,
+   "objet": "l'ensemble de la proposition de loi visant à faciliter la mise à disposition aux régions du réseau routier national non concédé (première lecture)."
+  },
+  {
+   "legislature": 17,
+   "numero": 6124,
+   "date": "2026-04-09",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L17N51711",
+   "methode_lien": "dossier_ref",
+   "pour": 78,
+   "contre": 67,
+   "abstentions": 0,
+   "exprimes": 145,
+   "participation": 0.2513,
+   "part_minorite": 0.4621,
+   "objet": "l'ensemble de la proposition de loi visant à renforcer la pénalisation de l’organisation de rave-parties (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 1777,
+   "date": "2023-06-06",
+   "portee": "ensemble",
+   "sort": "rejeté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N47978",
+   "methode_lien": "vote_ref",
+   "pour": 115,
+   "contre": 134,
+   "abstentions": 1,
+   "exprimes": 249,
+   "participation": 0.4333,
+   "part_minorite": 0.4618,
+   "objet": "l'ensemble du projet de loi d'approbation des comptes de la sécurité sociale pour l'année 2022 (première lecture)."
+  },
+  {
+   "legislature": 17,
+   "numero": 3273,
+   "date": "2025-10-30",
+   "portee": "ensemble",
+   "sort": "rejeté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L17N52787",
+   "methode_lien": "vote_ref",
+   "pour": 149,
+   "contre": 174,
+   "abstentions": 8,
+   "exprimes": 323,
+   "participation": 0.5737,
+   "part_minorite": 0.4613,
+   "objet": "l'ensemble de la proposition de loi visant à rendre systématique l'information du consommateur sur l'origine des denrées alimentaires par le moyen de l'étiquetage (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 3966,
+   "date": "2024-05-28",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L16N49726",
+   "methode_lien": "vote_ref",
+   "pour": 272,
+   "contre": 232,
+   "abstentions": 65,
+   "exprimes": 504,
+   "participation": 0.9861,
+   "part_minorite": 0.4603,
+   "objet": "l'ensemble du projet de loi d'orientation pour la souveraineté alimentaire et agricole et le renouvellement des générations en agriculture (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 181,
+   "date": "2022-07-27",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N45929",
+   "methode_lien": "vote_ref",
+   "pour": 153,
+   "contre": 130,
+   "abstentions": 3,
+   "exprimes": 283,
+   "participation": 0.4957,
+   "part_minorite": 0.4594,
+   "objet": "l'ensemble du projet de loi de règlement du budget et d'approbation des comptes de l'année 2021 (nouvelle lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 15,
+   "date": "2022-07-12",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N45927",
+   "methode_lien": "vote_ref",
+   "pour": 221,
+   "contre": 187,
+   "abstentions": 24,
+   "exprimes": 408,
+   "participation": 0.7487,
+   "part_minorite": 0.4583,
+   "objet": "l'ensemble du projet de loi maintenant provisoirement un dispositif de veille et de sécurité sanitaire en matière de lutte contre la covid-19 (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 1501,
+   "date": "2023-05-10",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N47443",
+   "methode_lien": "vote_ref",
+   "pour": 130,
+   "contre": 109,
+   "abstentions": 8,
+   "exprimes": 239,
+   "participation": 0.4281,
+   "part_minorite": 0.4561,
+   "objet": "l'ensemble de la proposition de loi visant à rendre obligatoire le pavoisement des drapeaux français et européen sur le fronton des mairies (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 823,
+   "date": "2023-01-10",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L16N46539",
+   "methode_lien": "vote_ref",
+   "pour": 286,
+   "contre": 238,
+   "abstentions": 35,
+   "exprimes": 524,
+   "participation": 0.9688,
+   "part_minorite": 0.4542,
+   "objet": "l'ensemble du projet de loi relatif à l'accélération de la production d'énergies renouvelables (première lecture)."
+  },
+  {
+   "legislature": 17,
+   "numero": 6184,
+   "date": "2026-04-14",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L16N49868",
+   "methode_lien": "dossier_ref",
+   "pour": 275,
+   "contre": 225,
+   "abstentions": 30,
+   "exprimes": 500,
+   "participation": 0.9185,
+   "part_minorite": 0.45,
+   "objet": "l'ensemble du projet de loi de simplification de la vie économique (texte de la commission mixte paritaire)."
+  },
+  {
+   "legislature": 16,
+   "numero": 2717,
+   "date": "2023-10-10",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPS",
+   "dossier_uid": "DLR5L16N48163",
+   "methode_lien": "vote_ref",
+   "pour": 310,
+   "contre": 251,
+   "abstentions": 7,
+   "exprimes": 561,
+   "participation": 0.9844,
+   "part_minorite": 0.4474,
+   "objet": "l'ensemble du projet de loi pour le plein emploi (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 3144,
+   "date": "2023-12-06",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N48312",
+   "methode_lien": "vote_ref",
+   "pour": 102,
+   "contre": 81,
+   "abstentions": 0,
+   "exprimes": 183,
+   "participation": 0.3172,
+   "part_minorite": 0.4426,
+   "objet": "l'ensemble de la proposition de loi visant à lutter contre les discriminations par la pratique de tests individuels et statistiques (première lecture)."
+  },
+  {
+   "legislature": 16,
+   "numero": 897,
+   "date": "2023-01-31",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N46539",
+   "methode_lien": "vote_ref",
+   "pour": 217,
+   "contre": 169,
+   "abstentions": 23,
+   "exprimes": 386,
+   "participation": 0.7088,
+   "part_minorite": 0.4378,
+   "objet": "l'ensemble du projet de loi relatif à l'accélération de la production d'énergies renouvelables (texte de la commission mixte paritaire)."
+  },
+  {
+   "legislature": 16,
+   "numero": 2965,
+   "date": "2023-11-14",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L16N48163",
+   "methode_lien": "vote_ref",
+   "pour": 190,
+   "contre": 147,
+   "abstentions": 5,
+   "exprimes": 337,
+   "participation": 0.5927,
+   "part_minorite": 0.4362,
+   "objet": "l'ensemble du projet de loi pour le plein emploi (texte de la commission mixte paritaire)."
+  },
+  {
+   "legislature": 17,
+   "numero": 6045,
+   "date": "2026-04-08",
+   "portee": "ensemble",
+   "sort": "adopté",
+   "type_vote": "SPO",
+   "dossier_uid": "DLR5L17N52750",
+   "methode_lien": "dossier_ref",
+   "pour": 131,
+   "contre": 100,
+   "abstentions": 12,
+   "exprimes": 231,
+   "participation": 0.4211,
+   "part_minorite": 0.4329,
+   "objet": "l'ensemble de la proposition de loi visant à simplifier le millefeuille territorial par la collectivité unique (première lecture)."
+  }
+ ],
+ "procedures_core": {
+  "Proposition de loi ordinaire": 54,
+  "Projet de loi ordinaire": 41,
+  "Projet de loi de finances rectificative": 8,
+  "Projet de loi de financement de la sécurité sociale": 5,
+  "Projet ou proposition de loi organique": 5,
+  "Projet de ratification des traités et conventions": 2,
+  "Projet ou proposition de loi constitutionnelle": 1,
+  "Projet de loi de finances de l'année": 1
+ },
+ "gates": {
+  "pool_non_vide": {
+   "statut": "passe",
+   "n_core_exploratoire": 117,
+   "n_core_lien_fort": 95
+  },
+  "deux_legislatures": {
+   "statut": "passe"
+  },
+  "sorts_adopte_et_rejete": {
+   "statut": "passe"
+  },
+  "groupes_bidirectionnels": {
+   "statut": "passe",
+   "note": "Mesure descriptive pour/contre, pas preuve d'équilibre idéologique."
+  },
+  "symetrie_du_vivier_core": {
+   "statut": "non_prouve",
+   "note": "Le cœur à lien fort reste déséquilibré par sort (84 adoptés / 11 rejetés) et certains groupes n'ont qu'environ 10 % de directions du côté minoritaire. La bidirectionnalité ne suffit pas."
+  },
+  "couverture_thematique": {
+   "statut": "non_prouve",
+   "note": "Aucune taxonomie thématique structurée dans les dumps inspectés."
+  },
+  "amendements_structurants": {
+   "statut": "non_prouve",
+   "note": "Le filtre détecte des amendements, pas leur importance normative."
+  },
+  "liens_source": {
+   "statut": "partiel",
+   "note": "Le titre est nécessaire pour une part importante, surtout en législature 16. Cinq premières parties disposent désormais d'overrides proposés mais non relus à deux."
+  },
+  "verdict_global": "conditionnel"
+ }
+}

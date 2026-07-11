@@ -1,0 +1,57 @@
+{
+  "format": "boussole-politique.dry-run.link-overrides.v1",
+  "status": "proposed_for_cross_review",
+  "note": "Overrides explicites pour les premières parties budgétaires sans lien direct ou voteRef exploitable. Chaque paire relie deux objets officiels AN par législature, année, type de budget et intitulé. Ils restent éditoriaux et doivent être relus avant usage canonique.",
+  "entries": [
+    {
+      "scrutin": { "legislature": 16, "numero": 353 },
+      "dossier_uid": "DLR5L16N46347",
+      "basis": [
+        "objet exact: première partie du projet de loi de financement de la sécurité sociale pour 2023",
+        "dossier exact: Financement de la sécurité sociale pour 2023",
+        "même législature et même millésime"
+      ],
+      "review": { "status": "proposed", "reviewers": 1 }
+    },
+    {
+      "scrutin": { "legislature": 16, "numero": 2808 },
+      "dossier_uid": "DLR5L16N48683",
+      "basis": [
+        "objet exact: première partie du projet de loi de financement de la sécurité sociale pour 2024 (première lecture)",
+        "dossier exact: Projet de loi de financement de la sécurité sociale pour 2024",
+        "même législature et même millésime"
+      ],
+      "review": { "status": "proposed", "reviewers": 1 }
+    },
+    {
+      "scrutin": { "legislature": 16, "numero": 3042 },
+      "dossier_uid": "DLR5L16N48683",
+      "basis": [
+        "objet exact: première partie du projet de loi de financement de la sécurité sociale pour 2024 (nouvelle lecture)",
+        "même dossier que le scrutin 2808, lecture explicitement distincte",
+        "même législature et même millésime"
+      ],
+      "review": { "status": "proposed", "reviewers": 1 }
+    },
+    {
+      "scrutin": { "legislature": 17, "numero": 3891 },
+      "dossier_uid": "DLR5L17N53135",
+      "basis": [
+        "objet exact: première partie du projet de loi de finances de fin de gestion pour 2025",
+        "dossier exact: Projet de loi de finances de fin de gestion pour 2025",
+        "même législature et même millésime"
+      ],
+      "review": { "status": "proposed", "reviewers": 1 }
+    },
+    {
+      "scrutin": { "legislature": 17, "numero": 4453 },
+      "dossier_uid": "DLR5L17N52922",
+      "basis": [
+        "objet exact: première partie du projet de loi de financement de la sécurité sociale pour 2026 (nouvelle lecture)",
+        "dossier exact: Projet de loi de financement de la sécurité sociale pour 2026",
+        "même législature et même millésime"
+      ],
+      "review": { "status": "proposed", "reviewers": 1 }
+    }
+  ]
+}

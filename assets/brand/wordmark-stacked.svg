@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">Boussole Politique</title>
+  <desc id="desc">Wordmark empilé de Boussole Politique avec son repère à deux directions.</desc>
+  <g transform="translate(244 20) scale(.453125)">
+    <g fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="256" cy="256" r="148"/>
+      <path d="M256 76v32M436 256h-32M256 436v-32M76 256h32"/>
+    </g>
+    <g fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M166 166l58 58M288 288l58 58"/>
+      <rect x="132" y="132" width="48" height="48" rx="8" transform="rotate(45 156 156)"/>
+      <rect x="332" y="332" width="48" height="48" rx="8" transform="rotate(45 356 356)"/>
+    </g>
+    <circle cx="256" cy="256" r="28" fill="#22C55E"/>
+  </g>
+  <text x="360" y="346" text-anchor="middle" fill="currentColor" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="70" font-weight="700" letter-spacing="-2">Boussole</text>
+  <text x="360" y="430" text-anchor="middle" fill="currentColor" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="70" font-weight="700" letter-spacing="-2">Politique</text>
+</svg>

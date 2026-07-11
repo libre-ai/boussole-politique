@@ -1,0 +1,121 @@
+{
+  "n": 11,
+  "par_famille": {
+    "FINANCE": 2,
+    "PJL": 3,
+    "PPL": 5,
+    "RATIF": 1
+  },
+  "cases": [
+    {
+      "uid": "DLR5L16N48839",
+      "famille": "FINANCE",
+      "titre": "Projet de loi de finances de fin de gestion pour 2023",
+      "scrutin": [
+        16,
+        2943
+      ],
+      "scrutin_date": "2023-11-08"
+    },
+    {
+      "uid": "DLR5L16N46472",
+      "famille": "PPL",
+      "titre": "Calculer la retraite de base des non-salariés agricoles ",
+      "scrutin": [
+        16,
+        654
+      ],
+      "scrutin_date": "2022-12-01"
+    },
+    {
+      "uid": "DLR5L16N46269",
+      "famille": "PJL",
+      "titre": "Projet de loi d’orientation et de programmation du minis",
+      "scrutin": [
+        16,
+        671
+      ],
+      "scrutin_date": "2022-12-07"
+    },
+    {
+      "uid": "DLR5L15N44752",
+      "famille": "PJL",
+      "titre": "Projet de loi ratifiant l’ordonnance n° 2021-1605 du 8 d",
+      "scrutin": [
+        16,
+        188
+      ],
+      "scrutin_date": "2022-08-03"
+    },
+    {
+      "uid": "DLR5L16N47118",
+      "famille": "PJL",
+      "titre": "Projet de loi pour contrôler l’immigration, améliorer l’",
+      "scrutin": [
+        16,
+        3213
+      ],
+      "scrutin_date": "2023-12-19"
+    },
+    {
+      "uid": "DLR5L16N45973",
+      "famille": "RATIF",
+      "titre": "Projet de loi autorisant la ratification du protocole au",
+      "scrutin": [
+        16,
+        184
+      ],
+      "scrutin_date": "2022-08-02"
+    },
+    {
+      "uid": "DLR5L16N45943",
+      "famille": "FINANCE",
+      "titre": "Loi de finances rectificative pour 2022",
+      "scrutin": [
+        16,
+        180
+      ],
+      "scrutin_date": "2022-07-26"
+    },
+    {
+      "uid": "DLR5L17N51115",
+      "famille": "PPL",
+      "titre": "Proposition de loi expérimentant l’encadrement des loyer",
+      "scrutin": [
+        17,
+        2262
+      ],
+      "scrutin_date": "2025-06-05"
+    },
+    {
+      "uid": "DLR5L17N51429",
+      "famille": "PPL",
+      "titre": "Proposition de loi visant à faciliter le maintien en rét",
+      "scrutin": [
+        17,
+        2958
+      ],
+      "scrutin_date": "2025-07-08"
+    },
+    {
+      "uid": "DLR5L17N51973",
+      "famille": "PPL",
+      "titre": "Garantir un cadre fiscal stable, juste et lisible pour n",
+      "scrutin": [
+        17,
+        2214
+      ],
+      "scrutin_date": "2025-06-02"
+    },
+    {
+      "uid": "DLR5L17N51485",
+      "famille": "PPL",
+      "titre": "Proposition de loi visant à convertir des centrales à ch",
+      "scrutin": [
+        17,
+        1306
+      ],
+      "scrutin_date": "2025-04-07"
+    }
+  ]
+}

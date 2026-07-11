@@ -1,0 +1,867 @@
+{
+ "sanity": {
+  "prom_loi": 266,
+  "sans_voteref_an": 82,
+  "voteref_non_ensemble": 25,
+  "voteref_non_public": 0,
+  "jugeable": 159,
+  "corpus_funnel": {
+   "prom_loi": 266,
+   "sans_voteref_an": 82,
+   "voteref_non_ensemble": 25,
+   "voteref_non_public": 0,
+   "jugeable": 159
+  },
+  "match": true,
+  "jugeable_by_leg_match": true
+ },
+ "funnel_global": {
+  "prom_loi": 266,
+  "sans_voteref_an": 82,
+  "voteref_non_ensemble": 25,
+  "voteref_non_public": 0,
+  "jugeable": 159
+ },
+ "funnel_by_leg": {
+  "prom_loi": {
+   "16": 157,
+   "17": 109
+  },
+  "sans_voteref_an": {
+   "16": 50,
+   "17": 32
+  },
+  "voteref_non_ensemble": {
+   "16": 14,
+   "17": 11
+  },
+  "voteref_non_public": {
+   "16": 0,
+   "17": 0
+  },
+  "jugeable_recompute": {
+   "16": 93,
+   "17": 66
+  },
+  "jugeable_corpus": {
+   "16": 93,
+   "17": 66
+  }
+ },
+ "ratifications": {
+  "prom_total": 65,
+  "in_corpus": 8,
+  "lost": 57,
+  "in_corpus_by_leg": {
+   "16": 7,
+   "17": 1
+  },
+  "lost_by_leg": {
+   "16": 32,
+   "17": 25
+  },
+  "lost_by_stage": {
+   "sans_voteref_an": 48,
+   "voteref_non_ensemble": 9
+  }
+ },
+ "main_levee": {
+  "total_sans_vote_public_ensemble": 107,
+  "dont_non_ratif_non_finance": 40,
+  "by_stage": {
+   "sans_voteref_an": 82,
+   "voteref_non_ensemble": 25
+  },
+  "voteref_non_ensemble_split": {
+   "total": 25,
+   "artefact_couverture_legislature": 11,
+   "perte_procedurale_reelle": 14,
+   "artefact_par_proc": {
+    "Proposition de loi ordinaire": 7,
+    "Projet de loi ordinaire": 3,
+    "Projet de ratification des traités et conventions": 1
+   },
+   "perte_reelle_par_proc": {
+    "Proposition de loi ordinaire": 3,
+    "Projet de ratification des traités et conventions": 8,
+    "Projet de loi de financement de la sécurité sociale": 1,
+    "Projet de loi de finances de l'année": 2
+   },
+   "artefact_echantillon": [
+    {
+     "leg": 17,
+     "titre": "Démocratiser le sport en France",
+     "proc": "Proposition de loi ordinaire"
+    },
+    {
+     "leg": 16,
+     "titre": "Lutte contre la maltraitance animale",
+     "proc": "Proposition de loi ordinaire"
+    },
+    {
+     "leg": 16,
+     "titre": "Lutte contre le dérèglement climatique",
+     "proc": "Projet de loi ordinaire"
+    },
+    {
+     "leg": 16,
+     "titre": "Lutter contre la précarité des accompagnants d’élèves en situation de handicap et des assistants d’éducation",
+     "proc": "Proposition de loi ordinaire"
+    },
+    {
+     "leg": 16,
+     "titre": "Projet de loi portant diverses dispositions d’adaptation au droit de l’Union européenne dans le domaine des transports, de l’environnement, de l’économie et des finances",
+     "proc": "Projet de loi ordinaire"
+    },
+    {
+     "leg": 16,
+     "titre": "Proposition de loi visant à créer un ticket restaurant étudiant",
+     "proc": "Proposition de loi ordinaire"
+    },
+    {
+     "leg": 16,
+     "titre": "Proposition de loi visant à réduire l'empreinte environnementale du numérique en France",
+     "proc": "Proposition de loi ordinaire"
+    },
+    {
+     "leg": 16,
+     "titre": "Protéger la rémunération des agriculteurs",
+     "proc": "Proposition de loi ordinaire"
+    }
+   ],
+   "perte_reelle_echantillon": [
+    {
+     "leg": 16,
+     "titre": "Accord entre la France et les Pays-Bas relatif à la coopération en matière de défense et au statut de leurs forces sur les territoires caribéens et sud-américain de la France et des Pays-Bas",
+     "proc": "Projet de ratification des traités et conventions",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       889,
+       "SPO",
+       "l'article unique du projet de loi autorisant l'approbation de l'accord entre le Gouvernement de la République française et le Gouvernement du Royaume des Pays-Bas relatif à la coopération en matière de défense et au statut de leurs forces sur les territoires caribéens et sud-américain de la République française et du Royaume des Pays-Bas (première lecture)."
+      ]
+     ]
+    },
+    {
+     "leg": 16,
+     "titre": "Améliorant l'efficacité des dispositifs de saisie et de confiscation des avoirs criminels",
+     "proc": "Proposition de loi ordinaire",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       1162,
+       "SPO",
+       "l'amendement n° 165 de Mme Ménard et l'amendement identique suivant à l'article 1er B du projet de loi relatif à l'accélération des procédures lièes à la construction de nouvelles installations nucléaires à proximité de sites nucléaires existants et au fonctionnement des installations existantes (première lecture)."
+      ]
+     ]
+    },
+    {
+     "leg": 16,
+     "titre": "Avenant entre la France et le Luxembourg au protocole d’accord relatif au renforcement de la coopération en matière de transports transfrontaliers et à la convention relative au financement d’aménagements visant à renforcer la desserte ferroviaire",
+     "proc": "Projet de ratification des traités et conventions",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       2105,
+       "SPO",
+       "l'article unique du projet de loi autorisant l'approbation de l'avenant entre le Gouvernement de la République française et le Gouvernement du Grand-Duché de Luxembourg au protocole d'accord du 20 mars 2018 relatif au renforcement de la coopération en matière de transports transfrontaliers et à la convention du 23 octobre 2020 relative au financement d'aménagements visant à renforcer la desserte ferroviaire et favoriser les mobilités durables (première lecture)."
+      ]
+     ]
+    },
+    {
+     "leg": 16,
+     "titre": "Projet de loi autorisant l'approbation de l'accord entre le Gouvernement de la République française et le Gouvernement de la Principauté d'Andorre relatif à l'exercice des activités professionnelles des membres de la famille du personnel diplomatique, consulaire, technique et administratif des missions officielles",
+     "proc": "Projet de ratification des traités et conventions",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       1626,
+       "SPO",
+       "l'article unique du projet de loi autorisant l'approbation de l'accord entre le Gouvernement de la République française et le Gouvernement de la Principauté d'Andorre relatif à l'exercice des activités professionnelles des membres de la famille du personnel diplomatique, consulaire, technique et administratif des missions officielles (première lecture)."
+      ]
+     ]
+    },
+    {
+     "leg": 16,
+     "titre": "Projet de loi autorisant la ratification du Protocole du 30 avril 2010 à la Convention internationale de 1996 sur la responsabilité et l’indemnisation pour les dommages liés au transport par mer de substances nocives et potentiellement dangereuses",
+     "proc": "Projet de ratification des traités et conventions",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       2389,
+       "SPO",
+       "l'article unique du projet de loi autorisant la ratification du Protocole du 30 avril 2010 à la Convention internationale de 1996 sur la responsabilité et l’indemnisation pour les dommages liés au transport par mer de substances nocives et potentiellement dangereuses (première lecture)."
+      ]
+     ]
+    },
+    {
+     "leg": 17,
+     "titre": "Convention des Nations unies sur la mer et conservation et utilisation durable de la diversité biologique marine des zones ne relevant pas de la juridiction nationale",
+     "proc": "Projet de ratification des traités et conventions",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       3971,
+       "SPO",
+       "l'article unique du projet de loi autorisant la ratification de l'accord se rapportant à la Convention des Nations unies sur le droit de la mer et portant sur la conservation et l'utilisation durable de la diversité biologique marine des zones ne relevant pas de la juridiction nationale (première lecture)."
+      ]
+     ]
+    },
+    {
+     "leg": 17,
+     "titre": "Projet de loi autorisant la ratification de la convention n°155  sur la sécurité et la santé des travailleurs, 1981",
+     "proc": "Projet de ratification des traités et conventions",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       3057,
+       "SPO",
+       "l'article unique du projet de loi autorisant la ratification de la convention n° 155 sur la sécurité et la santé des travailleurs, 1981 (première lecture)."
+      ]
+     ]
+    },
+    {
+     "leg": 17,
+     "titre": "Projet de loi autorisant l’approbation de la convention de coopération judiciaire internationale entre la France et le Myanmar",
+     "proc": "Projet de ratification des traités et conventions",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       4801,
+       "SPO",
+       "l'article unique du projet de loi autorisant l'approbation de la convention de coopération judiciaire internationale entre le Gouvernement de la République française et l'Organisation des Nations unies représentée par le Mécanisme d'enquête indépendant pour le Myanmar (première lecture)."
+      ]
+     ]
+    },
+    {
+     "leg": 17,
+     "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et la Communauté des Caraïbes relatif à l’adhésion au protocole sur les privilèges et immunités de la Communauté des Caraïbes du 14 janvier 1985",
+     "proc": "Projet de ratification des traités et conventions",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       6284,
+       "SPO",
+       "le projet de loi autorisant l'approbation de l'accord entre le Gouvernement de la République française et la Communauté des Caraïbes relatif à l'adhésion au protocole sur les privilèges et immunités de la Communauté des Caraïbes du 14 janvier 1985 (première lecture)."
+      ]
+     ]
+    },
+    {
+     "leg": 17,
+     "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+     "proc": "Projet de loi de financement de la sécurité sociale",
+     "n_motion_refs": 3,
+     "non_ens_objets": [
+      [
+       694,
+       "MOC",
+       "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Mathilde Panot et 91 députés."
+      ],
+      [
+       739,
+       "MOC",
+       "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Mathilde Panot et 70 députés."
+      ],
+      [
+       791,
+       "MOC",
+       "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Mathilde Panot et 73 députés."
+      ]
+     ]
+    },
+    {
+     "leg": 17,
+     "titre": "Projet de loi de finances pour 2025",
+     "proc": "Projet de loi de finances de l'année",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       438,
+       "SPS",
+       "la première partie du projet de loi de finances pour 2025 (première lecture)."
+      ]
+     ]
+    },
+    {
+     "leg": 17,
+     "titre": "Projet de loi de finances pour 2026",
+     "proc": "Projet de loi de finances de l'année",
+     "n_motion_refs": 6,
+     "non_ens_objets": [
+      [
+       4241,
+       "SPS",
+       "la première partie du projet de loi de finances pour 2026 (première lecture)."
+      ],
+      [
+       5154,
+       "MOC",
+       "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Mathilde Panot, Mme Cyrielle Chatelain, M. Stéphane Peu et 108 députés."
+      ],
+      [
+       5155,
+       "MOC",
+       "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Marine Le Pen, M. Éric CIotti et 102 députés."
+      ],
+      [
+       5193,
+       "MOC",
+       "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Cyrielle Chatelain, Mme Mathilde Panot, M. Stéphane Peu et 110 députés."
+      ],
+      [
+       5194,
+       "MOC",
+       "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Marine Le Pen, M. Éric Ciotti et 102 députés."
+      ],
+      [
+       5284,
+       "MOC",
+       "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par M. Stéphane Peu, Mme Mathilde Panot, Mme Cyrielle Chatelain et 110 députés."
+      ]
+     ]
+    },
+    {
+     "leg": 17,
+     "titre": "Proposition de loi relative à la restitution d'un bien culturel à la République de Côte d'Ivoire",
+     "proc": "Proposition de loi ordinaire",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       2936,
+       "SPO",
+       "l’article unique de la proposition de loi relative à la restitution d’un bien culturel à la République de Côte d’Ivoire (première lecture)."
+      ]
+     ]
+    },
+    {
+     "leg": 17,
+     "titre": "Proposition de loi élargissant la possibilité pour les collectivités territoriales et leurs groupements d'avoir recours au modèle de la société portuaire pour l'exploitation de leurs ports",
+     "proc": "Proposition de loi ordinaire",
+     "n_motion_refs": 0,
+     "non_ens_objets": [
+      [
+       4697,
+       "SPO",
+       "l'article unique de la proposition de loi élargissant la possibilité pour les collectivités territoriales et leurs groupements d'avoir recours au modèle de la société portuaire pour l'exploitation de leurs ports (première lecture)."
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "finances": {
+  "prom_total": 14,
+  "in_corpus": 4,
+  "lost": 10,
+  "with_censure_motion_ref": 2,
+  "by_proc": {
+   "Projet de loi de finances rectificative": 5,
+   "Projet de loi de finances de l'année": 4,
+   "Projet de loi de financement de la sécurité sociale": 5
+  },
+  "lost_by_leg": {
+   "16": 7,
+   "17": 3
+  }
+ },
+ "resolutions_motions": {
+  "16": {
+   "scrutins_total": 4106,
+   "scrutins_ensemble_public": 221,
+   "scrutins_ensemble_rattaches_loi_jugeable": 93,
+   "scrutins_ensemble_hors_loi_jugeable": 128,
+   "motions_de_censure": 34
+  },
+  "17": {
+   "scrutins_total": 7397,
+   "scrutins_ensemble_public": 201,
+   "scrutins_ensemble_rattaches_loi_jugeable": 66,
+   "scrutins_ensemble_hors_loi_jugeable": 135,
+   "motions_de_censure": 22
+  }
+ },
+ "importance_textes_structurants": {
+  "finance_prom": 14,
+  "finance_jugeable": 4,
+  "finance_perdues": 10,
+  "finance_part_perdue_pct": 71.4,
+  "finance_part_du_corpus_pct": 2.5
+ },
+ "representativity": {
+  "PJL ordinaire": {
+   "promulguees": 48,
+   "jugeables": 36,
+   "taux_survie_pct": 75.0,
+   "part_prom_pct": 18.0,
+   "part_corpus_pct": 22.6
+  },
+  "PPL ordinaire": {
+   "promulguees": 127,
+   "jugeables": 99,
+   "taux_survie_pct": 78.0,
+   "part_prom_pct": 47.7,
+   "part_corpus_pct": 62.3
+  },
+  "constitutionnelle": {
+   "promulguees": 1,
+   "jugeables": 1,
+   "taux_survie_pct": 100.0,
+   "part_prom_pct": 0.4,
+   "part_corpus_pct": 0.6
+  },
+  "finance/budget": {
+   "promulguees": 14,
+   "jugeables": 4,
+   "taux_survie_pct": 28.6,
+   "part_prom_pct": 5.3,
+   "part_corpus_pct": 2.5
+  },
+  "organique": {
+   "promulguees": 11,
+   "jugeables": 11,
+   "taux_survie_pct": 100.0,
+   "part_prom_pct": 4.1,
+   "part_corpus_pct": 6.9
+  },
+  "ratification": {
+   "promulguees": 65,
+   "jugeables": 8,
+   "taux_survie_pct": 12.3,
+   "part_prom_pct": 24.4,
+   "part_corpus_pct": 5.0
+  }
+ },
+ "representativity_by_leg": {
+  "16": {
+   "PJL ordinaire": {
+    "promulguees": 34,
+    "jugeables": 25,
+    "taux_survie_pct": 73.5,
+    "part_prom_pct": 21.7,
+    "part_corpus_pct": 26.9
+   },
+   "PPL ordinaire": {
+    "promulguees": 72,
+    "jugeables": 56,
+    "taux_survie_pct": 77.8,
+    "part_prom_pct": 45.9,
+    "part_corpus_pct": 60.2
+   },
+   "constitutionnelle": {
+    "promulguees": 1,
+    "jugeables": 1,
+    "taux_survie_pct": 100.0,
+    "part_prom_pct": 0.6,
+    "part_corpus_pct": 1.1
+   },
+   "finance/budget": {
+    "promulguees": 8,
+    "jugeables": 1,
+    "taux_survie_pct": 12.5,
+    "part_prom_pct": 5.1,
+    "part_corpus_pct": 1.1
+   },
+   "organique": {
+    "promulguees": 3,
+    "jugeables": 3,
+    "taux_survie_pct": 100.0,
+    "part_prom_pct": 1.9,
+    "part_corpus_pct": 3.2
+   },
+   "ratification": {
+    "promulguees": 39,
+    "jugeables": 7,
+    "taux_survie_pct": 17.9,
+    "part_prom_pct": 24.8,
+    "part_corpus_pct": 7.5
+   }
+  },
+  "17": {
+   "PJL ordinaire": {
+    "promulguees": 14,
+    "jugeables": 11,
+    "taux_survie_pct": 78.6,
+    "part_prom_pct": 12.8,
+    "part_corpus_pct": 16.7
+   },
+   "PPL ordinaire": {
+    "promulguees": 55,
+    "jugeables": 43,
+    "taux_survie_pct": 78.2,
+    "part_prom_pct": 50.5,
+    "part_corpus_pct": 65.2
+   },
+   "finance/budget": {
+    "promulguees": 6,
+    "jugeables": 3,
+    "taux_survie_pct": 50.0,
+    "part_prom_pct": 5.5,
+    "part_corpus_pct": 4.5
+   },
+   "organique": {
+    "promulguees": 8,
+    "jugeables": 8,
+    "taux_survie_pct": 100.0,
+    "part_prom_pct": 7.3,
+    "part_corpus_pct": 12.1
+   },
+   "ratification": {
+    "promulguees": 26,
+    "jugeables": 1,
+    "taux_survie_pct": 3.8,
+    "part_prom_pct": 23.9,
+    "part_corpus_pct": 1.5
+   }
+  }
+ },
+ "echantillons": {
+  "finance_perdues_TOUTES": [
+   {
+    "leg": 16,
+    "titre": "Financement de la sécurité sociale pour 2023",
+    "n_an_refs": 0,
+    "n_motion_refs": 0,
+    "stage": "sans_voteref_an",
+    "non_ens_objets": []
+   },
+   {
+    "leg": 16,
+    "titre": "Loi de finances rectificative pour 2022",
+    "n_an_refs": 0,
+    "n_motion_refs": 0,
+    "stage": "sans_voteref_an",
+    "non_ens_objets": []
+   },
+   {
+    "leg": 16,
+    "titre": "Projet de loi de financement de la sécurité sociale pour 2024",
+    "n_an_refs": 0,
+    "n_motion_refs": 0,
+    "stage": "sans_voteref_an",
+    "non_ens_objets": []
+   },
+   {
+    "leg": 16,
+    "titre": "Projet de loi de financement rectificative de la sécurité sociale pour 2023",
+    "n_an_refs": 0,
+    "n_motion_refs": 0,
+    "stage": "sans_voteref_an",
+    "non_ens_objets": []
+   },
+   {
+    "leg": 16,
+    "titre": "Projet de loi de finances de fin de gestion pour 2023",
+    "n_an_refs": 0,
+    "n_motion_refs": 0,
+    "stage": "sans_voteref_an",
+    "non_ens_objets": []
+   },
+   {
+    "leg": 16,
+    "titre": "Projet de loi de finances pour 2023",
+    "n_an_refs": 0,
+    "n_motion_refs": 0,
+    "stage": "sans_voteref_an",
+    "non_ens_objets": []
+   },
+   {
+    "leg": 16,
+    "titre": "Projet de loi de finances pour 2024",
+    "n_an_refs": 0,
+    "n_motion_refs": 0,
+    "stage": "sans_voteref_an",
+    "non_ens_objets": []
+   },
+   {
+    "leg": 17,
+    "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+    "n_an_refs": 3,
+    "n_motion_refs": 3,
+    "stage": "voteref_non_ensemble",
+    "non_ens_objets": [
+     [
+      694,
+      "MOC",
+      "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Mathilde Panot et 91 députés."
+     ],
+     [
+      739,
+      "MOC",
+      "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Mathilde Panot et 70 députés."
+     ],
+     [
+      791,
+      "MOC",
+      "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Mathilde Panot et 73 députés."
+     ]
+    ]
+   },
+   {
+    "leg": 17,
+    "titre": "Projet de loi de finances pour 2025",
+    "n_an_refs": 1,
+    "n_motion_refs": 0,
+    "stage": "voteref_non_ensemble",
+    "non_ens_objets": [
+     [
+      438,
+      "SPS",
+      "la première partie du projet de loi de finances pour 2025 (première lecture)."
+     ]
+    ]
+   },
+   {
+    "leg": 17,
+    "titre": "Projet de loi de finances pour 2026",
+    "n_an_refs": 7,
+    "n_motion_refs": 6,
+    "stage": "voteref_non_ensemble",
+    "non_ens_objets": [
+     [
+      4241,
+      "SPS",
+      "la première partie du projet de loi de finances pour 2026 (première lecture)."
+     ],
+     [
+      5154,
+      "MOC",
+      "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Mathilde Panot, Mme Cyrielle Chatelain, M. Stéphane Peu et 108 députés."
+     ],
+     [
+      5155,
+      "MOC",
+      "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Marine Le Pen, M. Éric CIotti et 102 députés."
+     ],
+     [
+      5193,
+      "MOC",
+      "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Cyrielle Chatelain, Mme Mathilde Panot, M. Stéphane Peu et 110 députés."
+     ],
+     [
+      5194,
+      "MOC",
+      "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par Mme Marine Le Pen, M. Éric Ciotti et 102 députés."
+     ],
+     [
+      5284,
+      "MOC",
+      "la motion de censure déposée en application de l'article 49, alinéa 3, de la Constitution par M. Stéphane Peu, Mme Mathilde Panot, Mme Cyrielle Chatelain et 110 députés."
+     ]
+    ]
+   }
+  ],
+  "finance_jugeables": [
+   {
+    "leg": 16,
+    "titre": "Projet de loi de finances rectificative pour 2022",
+    "ref_num": 624,
+    "ref_tc": "SPO"
+   },
+   {
+    "leg": 17,
+    "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+    "ref_num": 4758,
+    "ref_tc": "SPS"
+   },
+   {
+    "leg": 17,
+    "titre": "Projet de loi de finances de fin de gestion pour 2024",
+    "ref_num": 518,
+    "ref_tc": "SPO"
+   },
+   {
+    "leg": 17,
+    "titre": "Projet de loi de finances de fin de gestion pour 2025",
+    "ref_num": 4442,
+    "ref_tc": "SPS"
+   }
+  ],
+  "ratif_dans_corpus": [
+   {
+    "leg": 16,
+    "titre": "Convention d’entraide judiciaire en matière pénale entre le Gouvernement de la République française et le Gouvernement de la République du Sénégal, et de la convention d’extradition entre le Gouvernement de la République du Sénégal",
+    "ref_num": 906,
+    "ref_tc": "SPO"
+   },
+   {
+    "leg": 16,
+    "titre": "Projet de loi autorisant l’approbation de l’accord pour la mise en place d’un mécanisme d’échange et de partage de l’information maritime dans l’océan Indien occidental et de l’accord régional sur la coordination des opérations en mer dans l’océan Indien occidental",
+    "ref_num": 907,
+    "ref_tc": "SPO"
+   },
+   {
+    "leg": 16,
+    "titre": "Approbation du premier amendement et du protocole à la convention d'Espoo",
+    "ref_num": 1197,
+    "ref_tc": "SPO"
+   },
+   {
+    "leg": 16,
+    "titre": "Ratification de la résolution A.1152 (32) relative aux amendements à la Convention du 6 mars 1948 portant création de l’Organisation maritime internationale",
+    "ref_num": 1412,
+    "ref_tc": "SPO"
+   },
+   {
+    "leg": 16,
+    "titre": "Accords entre la France et le Sénégal du 7 septembre 2021 et entre la France et le Sri Lanka du 23 février 2022",
+    "ref_num": 2390,
+    "ref_tc": "SPO"
+   },
+   {
+    "leg": 16,
+    "titre": "Approbation des conventions entre la France et le Danemark et entre la France et la Grèce pour l’élimination de la double imposition en matière d’impôts sur le revenu et la prévention de l’évasion et de la fraude fiscales",
+    "ref_num": 3208,
+    "ref_tc": "SPO"
+   },
+   {
+    "leg": 16,
+    "titre": "Ratification du Traité d’entraide judiciaire en matière pénale entre la République française et la République du Kazakhstan",
+    "ref_num": 3209,
+    "ref_tc": "SPO"
+   },
+   {
+    "leg": 17,
+    "titre": "Projet de loi autorisant la ratification de la résolution LP.3(4) portant amendement de l’article 6 du Protocole de Londres de 1996 à la Convention de 1972 sur la prévention de la pollution des mers résultant de l’immersion de déchets et autres matières",
+    "ref_num": 2460,
+    "ref_tc": "SPS"
+   }
+  ],
+  "ratif_perdues_echantillon": [
+   {
+    "leg": 16,
+    "titre": "Accord entre la France et la Principauté d’Andorre concernant l’amélioration de la résilience climatique et de la viabilité des routes nationales 116, 20, 320 et 22",
+    "proc": "Projet de ratification des traités et conventions",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Accord entre la France et les Pays-Bas relatif à la coopération en matière de défense et au statut de leurs forces sur les territoires caribéens et sud-américain de la France et des Pays-Bas",
+    "proc": "Projet de ratification des traités et conventions",
+    "n_an_refs": 1
+   },
+   {
+    "leg": 16,
+    "titre": "Accord entre le Gouvernement de la République française et le Gouvernement du Royaume-Uni de Grande-Bretagne et d’Irlande du Nord relatif à la coopération sur les questions de sûreté maritime et portuaire",
+    "proc": "Projet de ratification des traités et conventions",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Approbation de la convention d’entraide judiciaire en matière pénale entre la France et la République de Maurice et de la convention d’extradition entre la France et la République de Maurice",
+    "proc": "Projet de ratification des traités et conventions",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Approbation de la convention entre la République française et la République de Moldavie pour l’élimination de la double imposition en matière d’impôts sur le revenu et pour la prévention de l’évasion et de la fraude fiscale",
+    "proc": "Projet de ratification des traités et conventions",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Approbation de l’accord avec l’Ouzbékistan relatif aux transports routiers internationaux de voyageurs et de marchandises et de l'accord avec la Tunisie sur le transport international routier de personnes",
+    "proc": "Projet de ratification des traités et conventions",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Approbation de l’accord de siège entre la France et la Banque des règlements internationaux relatif au statut et aux activités de la Banque des règlements internationaux en France, et de l’accord de sécurité sociale entre  la France et la BRI",
+    "proc": "Projet de ratification des traités et conventions",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Approbation de l’accord entre la France et Andorre concernant la démarcation et l’entretien de la frontière",
+    "proc": "Projet de ratification des traités et conventions",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Approbation de l’accord entre la France et le Canada relatif au déploiement d’agents de sûreté en vol",
+    "proc": "Projet de ratification des traités et conventions",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Approbation de l’accord entre le Gouvernement de la République française et la Cour pénale internationale sur l’exécution des peines prononcées par la Cour",
+    "proc": "Projet de ratification des traités et conventions",
+    "n_an_refs": 0
+   }
+  ],
+  "main_levee_echantillon": [
+   {
+    "leg": 16,
+    "titre": "Améliorant l'efficacité des dispositifs de saisie et de confiscation des avoirs criminels",
+    "proc": "Proposition de loi ordinaire",
+    "n_an_refs": 1
+   },
+   {
+    "leg": 16,
+    "titre": "Approbation de la convention d'entraide judiciaire en matière pénale entre le Gouvernement de la République française et le Gouvernement de la République de Singapour",
+    "proc": "Projet de loi ordinaire",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de l’Etat du Qatar relatif au statut de leurs forces",
+    "proc": "Projet de loi ordinaire",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Assurer la pérennité des établissements de spectacles cinématographiques et l'accès au cinéma dans les outre-mer",
+    "proc": "Proposition de loi ordinaire",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Calculer la retraite de base des non-salariés agricoles en fonction de leurs seules vingt-cinq meilleures années de revenus",
+    "proc": "Proposition de loi ordinaire",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Lutte contre la maltraitance animale",
+    "proc": "Proposition de loi ordinaire",
+    "n_an_refs": 1
+   },
+   {
+    "leg": 16,
+    "titre": "Lutte contre le dérèglement climatique",
+    "proc": "Projet de loi ordinaire",
+    "n_an_refs": 2
+   },
+   {
+    "leg": 16,
+    "titre": "Lutte contre les abus et les fraudes au compte personnel de formation",
+    "proc": "Proposition de loi ordinaire",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Lutter contre la précarité des accompagnants d’élèves en situation de handicap et des assistants d’éducation",
+    "proc": "Proposition de loi ordinaire",
+    "n_an_refs": 1
+   },
+   {
+    "leg": 16,
+    "titre": "Programmation des finances publiques pour les années 2023 à 2027",
+    "proc": "Projet de loi ordinaire",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Projet de loi d’orientation et de programmation du ministère de l’intérieur",
+    "proc": "Projet de loi ordinaire",
+    "n_an_refs": 0
+   },
+   {
+    "leg": 16,
+    "titre": "Projet de loi portant diverses dispositions d’adaptation au droit de l’Union européenne dans le domaine des transports, de l’environnement, de l’économie et des finances",
+    "proc": "Projet de loi ordinaire",
+    "n_an_refs": 2
+   }
+  ]
+ }
+}

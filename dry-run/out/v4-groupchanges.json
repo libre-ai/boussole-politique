@@ -1,0 +1,66 @@
+{
+  "multi_brut": 23,
+  "real_moves": 8,
+  "real_moves_detail": [
+    {
+      "acteur": "PA720066",
+      "abbrevs": [
+        "EPR",
+        "NI"
+      ]
+    },
+    {
+      "acteur": "PA720362",
+      "abbrevs": [
+        "EPR",
+        "NI",
+        "SOC"
+      ]
+    },
+    {
+      "acteur": "PA722150",
+      "abbrevs": [
+        "NI",
+        "SOC"
+      ]
+    },
+    {
+      "acteur": "PA793796",
+      "abbrevs": [
+        "LIOT",
+        "NI"
+      ]
+    },
+    {
+      "acteur": "PA794658",
+      "abbrevs": [
+        "EPR",
+        "HOR"
+      ]
+    },
+    {
+      "acteur": "PA794718",
+      "abbrevs": [
+        "NI",
+        "RN"
+      ]
+    },
+    {
+      "acteur": "PA822617",
+      "abbrevs": [
+        "LIOT",
+        "SOC"
+      ]
+    },
+    {
+      "acteur": "PA840119",
+      "abbrevs": [
+        "NI",
+        "RN"
+      ]
+    }
+  ],
+  "same_abbrev": 0,
+  "unresolvable": 15,
+  "unres_with_multi_abbrev": 0
+}

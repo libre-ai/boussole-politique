@@ -1,0 +1,133 @@
+{
+  "format": "boussole-politique.brand-assets.v1",
+  "name": "Boussole Politique",
+  "status": "proposed_for_human_review",
+  "source": "assets/brand/icon-source.svg",
+  "pipeline": "scripts/generate-assets.sh",
+  "license": "MIT",
+  "remote_resources": false,
+  "maskable_safe_zone": {
+    "canvas": [
+      512,
+      512
+    ],
+    "center": [
+      256,
+      256
+    ],
+    "safe_radius": 204.8,
+    "meaningful_content_radius": 190,
+    "passes": true
+  },
+  "palette": {
+    "ink": "#111827",
+    "white": "#FFFFFF",
+    "line": "#E5E7EB",
+    "libre_brand": "#22C55E"
+  },
+  "files": [
+    {
+      "path": "assets/brand/icon-source.svg",
+      "sha256": "7ce0e9c9199a87baaa72fbcc546533bcd015e7bd40ca4a2dff43f711cdfecc94",
+      "media_type": "image/svg+xml"
+    },
+    {
+      "path": "assets/brand/icon.svg",
+      "sha256": "7ce0e9c9199a87baaa72fbcc546533bcd015e7bd40ca4a2dff43f711cdfecc94",
+      "media_type": "image/svg+xml"
+    },
+    {
+      "path": "assets/brand/icon-monochrome.svg",
+      "sha256": "9497e8ecca15f8ae8d673f8994db43d56228ff12eefb4b6667cca56102659eaa",
+      "media_type": "image/svg+xml"
+    },
+    {
+      "path": "assets/brand/wordmark-horizontal.svg",
+      "sha256": "b2152208d835c8de9add226fa770a813079a84703d42caf2021e6cd4f4543550",
+      "media_type": "image/svg+xml"
+    },
+    {
+      "path": "assets/brand/wordmark-stacked.svg",
+      "sha256": "8d1f05442dc00b805af309c8f64f3eda16ae30e14601effa2d65e4c3eed9fe86",
+      "media_type": "image/svg+xml"
+    },
+    {
+      "path": "assets/brand/construction.md",
+      "sha256": "3b2e4cfaf9fee46eb0313f092ae19994d9f65e0ca2815f785877fbf814469df1",
+      "media_type": "text/markdown"
+    },
+    {
+      "path": "assets/brand/LICENSE.md",
+      "sha256": "1b16ae2fcc8de285511dc35c526ee72782067637ec48984a3a295534aba9be3a",
+      "media_type": "text/markdown"
+    },
+    {
+      "path": "apps/web/assets/favicon.svg",
+      "sha256": "7ce0e9c9199a87baaa72fbcc546533bcd015e7bd40ca4a2dff43f711cdfecc94",
+      "media_type": "image/svg+xml"
+    },
+    {
+      "path": "apps/web/assets/favicon-32.png",
+      "sha256": "ad30c489242e11e79394a8caee366af7cdfb4deef20b18248700263107409978",
+      "media_type": "image/png",
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    {
+      "path": "apps/web/assets/apple-touch-icon.png",
+      "sha256": "c388acbe448b16de271d1def7918c0333abf9b6b4058840f152c69ab35e529cb",
+      "media_type": "image/png",
+      "dimensions": [
+        180,
+        180
+      ]
+    },
+    {
+      "path": "apps/web/assets/icon-192.png",
+      "sha256": "1ff83b6537bec538392ee1748de7273ea7a09799ef247c22db72762ecdde0720",
+      "media_type": "image/png",
+      "dimensions": [
+        192,
+        192
+      ]
+    },
+    {
+      "path": "apps/web/assets/icon-512.png",
+      "sha256": "9926fa6ac359b82390e8ecc365f0460eac50d2ec8a0bd4a06a65a9597ad37f11",
+      "media_type": "image/png",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": "apps/web/assets/icon-maskable-192.png",
+      "sha256": "1ff83b6537bec538392ee1748de7273ea7a09799ef247c22db72762ecdde0720",
+      "media_type": "image/png",
+      "dimensions": [
+        192,
+        192
+      ]
+    },
+    {
+      "path": "apps/web/assets/icon-maskable-512.png",
+      "sha256": "9926fa6ac359b82390e8ecc365f0460eac50d2ec8a0bd4a06a65a9597ad37f11",
+      "media_type": "image/png",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    {
+      "path": "apps/web/assets/social-card.png",
+      "sha256": "a9700b040b20bb09d4622d19f59a9c9f74cebafd4d899bca76ec5923c57c2106",
+      "media_type": "image/png",
+      "dimensions": [
+        1200,
+        630
+      ]
+    }
+  ]
+}

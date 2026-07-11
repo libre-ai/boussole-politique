@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Icône monochrome Boussole Politique</title>
+  <desc id="desc">Version monochrome du repère à deux directions de Boussole Politique.</desc>
+  <g id="bearing" fill="none" stroke="#000000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="256" cy="256" r="148"/>
+    <path d="M256 76v32M436 256h-32M256 436v-32M76 256h32"/>
+  </g>
+  <g id="comparison" fill="none" stroke="#000000" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M166 166l58 58M288 288l58 58"/>
+    <rect x="132" y="132" width="48" height="48" rx="8" transform="rotate(45 156 156)" fill="#000000"/>
+    <rect x="332" y="332" width="48" height="48" rx="8" transform="rotate(45 356 356)" fill="#000000"/>
+  </g>
+  <circle id="brand-center" cx="256" cy="256" r="28" fill="#000000"/>
+</svg>

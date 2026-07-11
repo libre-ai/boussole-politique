@@ -1,0 +1,1471 @@
+{
+  "id": "q6-censure",
+  "valide": "revue §2.4 (branche 49.3 / motions de censure)",
+  "filter_note": "PIEGE: le mandat dit filtrer type_libelle=='motion de censure' mais cela ne matche QUE la leg17. En leg16 les motions portent type_libelle=='scrutin public solennel' avec type_code=='MOC'. Le filtre correct est type_code=='MOC'.",
+  "filter_check": {
+    "16": {
+      "n_par_type_code_MOC": 34,
+      "n_par_type_libelle_motion_de_censure": 0,
+      "type_libelle_distinct": {
+        "scrutin public solennel": 34
+      }
+    },
+    "17": {
+      "n_par_type_code_MOC": 22,
+      "n_par_type_libelle_motion_de_censure": 22,
+      "type_libelle_distinct": {
+        "motion de censure": 22
+      }
+    }
+  },
+  "par_leg": {
+    "16": {
+      "total": 34,
+      "n_49_2": 6,
+      "n_49_3": 28,
+      "adoptees": [],
+      "rejetees": 34,
+      "linkables_a_un_texte": 2
+    },
+    "17": {
+      "total": 22,
+      "n_49_2": 11,
+      "n_49_3": 11,
+      "adoptees": [
+        519
+      ],
+      "rejetees": 21,
+      "linkables_a_un_texte": 20
+    }
+  },
+  "dates_multi": {
+    "16": {
+      "n_dates_distinctes": 27,
+      "max_motions_un_jour": 3,
+      "dates_avec_plusieurs": {
+        "2022-10-24": 3,
+        "2022-10-31": 2,
+        "2023-03-20": 2,
+        "2023-10-20": 2,
+        "2023-10-30": 2,
+        "2024-06-03": 2
+      },
+      "n_dates_avec_plusieurs": 6,
+      "n_motions_sur_dates_multi": 13
+    },
+    "17": {
+      "n_dates_distinctes": 15,
+      "max_motions_un_jour": 2,
+      "dates_avec_plusieurs": {
+        "2025-02-05": 2,
+        "2025-10-16": 2,
+        "2026-01-14": 2,
+        "2026-01-23": 2,
+        "2026-01-27": 2,
+        "2026-02-02": 2,
+        "2026-02-25": 2
+      },
+      "n_dates_avec_plusieurs": 7,
+      "n_motions_sur_dates_multi": 14
+    }
+  },
+  "cardinalite_par_evenement_493": {
+    "1": 6,
+    "2": 3,
+    "4": 1,
+    "6": 1
+  },
+  "cardinalite_par_date_seance": {
+    "1": 29,
+    "2": 12,
+    "3": 1
+  },
+  "finance": {
+    "n_promulguees_total": 14,
+    "n_dans_corpus_jugeable": 4,
+    "n_exclues": 10,
+    "n_exclues_avec_493_lie": 3,
+    "detail": [
+      {
+        "uid": "DLR5L16N46347",
+        "titre": "Financement de la sécurité sociale pour 2023",
+        "procedure": "Projet de loi de financement de la sécurité sociale",
+        "leg": 16,
+        "in_corpus": false,
+        "has_public_ensemble_vote": false,
+        "n_an_refs": 0,
+        "motions_49_3_liees": []
+      },
+      {
+        "uid": "DLR5L16N48683",
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2024",
+        "procedure": "Projet de loi de financement de la sécurité sociale",
+        "leg": 16,
+        "in_corpus": false,
+        "has_public_ensemble_vote": false,
+        "n_an_refs": 0,
+        "motions_49_3_liees": []
+      },
+      {
+        "uid": "DLR5L16N47066",
+        "titre": "Projet de loi de financement rectificative de la sécurité sociale pour 2023",
+        "procedure": "Projet de loi de financement de la sécurité sociale",
+        "leg": 16,
+        "in_corpus": false,
+        "has_public_ensemble_vote": false,
+        "n_an_refs": 0,
+        "motions_49_3_liees": []
+      },
+      {
+        "uid": "DLR5L16N45988",
+        "titre": "Projet de loi de finances pour 2023",
+        "procedure": "Projet de loi de finances de l'année",
+        "leg": 16,
+        "in_corpus": false,
+        "has_public_ensemble_vote": false,
+        "n_an_refs": 0,
+        "motions_49_3_liees": []
+      },
+      {
+        "uid": "DLR5L16N48397",
+        "titre": "Projet de loi de finances pour 2024",
+        "procedure": "Projet de loi de finances de l'année",
+        "leg": 16,
+        "in_corpus": false,
+        "has_public_ensemble_vote": false,
+        "n_an_refs": 0,
+        "motions_49_3_liees": []
+      },
+      {
+        "uid": "DLR5L16N45943",
+        "titre": "Loi de finances rectificative pour 2022",
+        "procedure": "Projet de loi de finances rectificative",
+        "leg": 16,
+        "in_corpus": false,
+        "has_public_ensemble_vote": false,
+        "n_an_refs": 0,
+        "motions_49_3_liees": []
+      },
+      {
+        "uid": "DLR5L16N48839",
+        "titre": "Projet de loi de finances de fin de gestion pour 2023",
+        "procedure": "Projet de loi de finances rectificative",
+        "leg": 16,
+        "in_corpus": false,
+        "has_public_ensemble_vote": false,
+        "n_an_refs": 0,
+        "motions_49_3_liees": []
+      },
+      {
+        "uid": "DLR5L16N46617",
+        "titre": "Projet de loi de finances rectificative pour 2022",
+        "procedure": "Projet de loi de finances rectificative",
+        "leg": 16,
+        "in_corpus": true,
+        "has_public_ensemble_vote": true,
+        "n_an_refs": 1,
+        "motions_49_3_liees": []
+      },
+      {
+        "uid": "DLR5L17N50588",
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+        "procedure": "Projet de loi de financement de la sécurité sociale",
+        "leg": 17,
+        "in_corpus": false,
+        "has_public_ensemble_vote": false,
+        "n_an_refs": 3,
+        "motions_49_3_liees": [
+          {
+            "numero": 519,
+            "leg": 17,
+            "sort": "adopté",
+            "acte": "CMP-MOTION-VOTE"
+          },
+          {
+            "numero": 694,
+            "leg": 17,
+            "sort": "rejeté",
+            "acte": "ANNLEC-MOTION-VOTE"
+          },
+          {
+            "numero": 739,
+            "leg": 17,
+            "sort": "rejeté",
+            "acte": "ANNLEC-MOTION-VOTE"
+          },
+          {
+            "numero": 791,
+            "leg": 17,
+            "sort": "rejeté",
+            "acte": "ANNLEC-MOTION-VOTE"
+          }
+        ]
+      },
+      {
+        "uid": "DLR5L17N52922",
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "procedure": "Projet de loi de financement de la sécurité sociale",
+        "leg": 17,
+        "in_corpus": true,
+        "has_public_ensemble_vote": true,
+        "n_an_refs": 2,
+        "motions_49_3_liees": []
+      },
+      {
+        "uid": "DLR5L17N50198",
+        "titre": "Projet de loi de finances pour 2025",
+        "procedure": "Projet de loi de finances de l'année",
+        "leg": 17,
+        "in_corpus": false,
+        "has_public_ensemble_vote": false,
+        "n_an_refs": 1,
+        "motions_49_3_liees": [
+          {
+            "numero": 693,
+            "leg": 17,
+            "sort": "rejeté",
+            "acte": "CMP-MOTION-VOTE"
+          }
+        ]
+      },
+      {
+        "uid": "DLR5L17N52428",
+        "titre": "Projet de loi de finances pour 2026",
+        "procedure": "Projet de loi de finances de l'année",
+        "leg": 17,
+        "in_corpus": false,
+        "has_public_ensemble_vote": false,
+        "n_an_refs": 7,
+        "motions_49_3_liees": [
+          {
+            "numero": 5154,
+            "leg": 17,
+            "sort": "rejeté",
+            "acte": "ANNLEC-MOTION-VOTE"
+          },
+          {
+            "numero": 5155,
+            "leg": 17,
+            "sort": "rejeté",
+            "acte": "ANNLEC-MOTION-VOTE"
+          },
+          {
+            "numero": 5193,
+            "leg": 17,
+            "sort": "rejeté",
+            "acte": "ANNLEC-MOTION-VOTE"
+          },
+          {
+            "numero": 5194,
+            "leg": 17,
+            "sort": "rejeté",
+            "acte": "ANNLEC-MOTION-VOTE"
+          },
+          {
+            "numero": 5284,
+            "leg": 17,
+            "sort": "rejeté",
+            "acte": "ANLDEF-MOTION-VOTE"
+          },
+          {
+            "numero": 5285,
+            "leg": 17,
+            "sort": "rejeté",
+            "acte": "ANLDEF-MOTION-VOTE"
+          }
+        ]
+      },
+      {
+        "uid": "DLR5L17N50838",
+        "titre": "Projet de loi de finances de fin de gestion pour 2024",
+        "procedure": "Projet de loi de finances rectificative",
+        "leg": 17,
+        "in_corpus": true,
+        "has_public_ensemble_vote": true,
+        "n_an_refs": 2,
+        "motions_49_3_liees": []
+      },
+      {
+        "uid": "DLR5L17N53135",
+        "titre": "Projet de loi de finances de fin de gestion pour 2025",
+        "procedure": "Projet de loi de finances rectificative",
+        "leg": 17,
+        "in_corpus": true,
+        "has_public_ensemble_vote": true,
+        "n_an_refs": 1,
+        "motions_49_3_liees": []
+      }
+    ],
+    "structurant_hors_corpus": [
+      {
+        "uid": "DLR5L16N46347",
+        "titre": "Financement de la sécurité sociale pour 2023",
+        "leg": 16,
+        "procedure": "Projet de loi de financement de la sécurité sociale"
+      },
+      {
+        "uid": "DLR5L16N48683",
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2024",
+        "leg": 16,
+        "procedure": "Projet de loi de financement de la sécurité sociale"
+      },
+      {
+        "uid": "DLR5L16N47066",
+        "titre": "Projet de loi de financement rectificative de la sécurité sociale pour 2023",
+        "leg": 16,
+        "procedure": "Projet de loi de financement de la sécurité sociale"
+      },
+      {
+        "uid": "DLR5L16N45988",
+        "titre": "Projet de loi de finances pour 2023",
+        "leg": 16,
+        "procedure": "Projet de loi de finances de l'année"
+      },
+      {
+        "uid": "DLR5L16N48397",
+        "titre": "Projet de loi de finances pour 2024",
+        "leg": 16,
+        "procedure": "Projet de loi de finances de l'année"
+      },
+      {
+        "uid": "DLR5L17N50588",
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+        "leg": 17,
+        "procedure": "Projet de loi de financement de la sécurité sociale"
+      },
+      {
+        "uid": "DLR5L17N50198",
+        "titre": "Projet de loi de finances pour 2025",
+        "leg": 17,
+        "procedure": "Projet de loi de finances de l'année"
+      },
+      {
+        "uid": "DLR5L17N52428",
+        "titre": "Projet de loi de finances pour 2026",
+        "leg": 17,
+        "procedure": "Projet de loi de finances de l'année"
+      }
+    ]
+  },
+  "textes_engages_493": [
+    {
+      "uid": "DLR5L17N51427",
+      "leg": 17,
+      "titre": "Engagement de la responsabilité du Gouvernement sur l'article liminaire et la première partie du projet de loi de financement de la sécurité sociale pour 2025",
+      "titre_chemin": "49_3_plfssP1",
+      "procedure": "Engagement de la responsabilité gouvernementale",
+      "promulguee": false,
+      "is_loi_corpus": false,
+      "motions": [
+        694
+      ],
+      "n_motions": 1
+    },
+    {
+      "uid": "DLR5L17N50975",
+      "leg": 17,
+      "titre": "Engagement de la responsabilité du Gouvernement sur l’ensemble du projet de loi de financement de la sécurité sociale pour 2025, dans sa version résultant de la commission mixte paritaire",
+      "titre_chemin": "49al3CMPPLFSS2025",
+      "procedure": "Engagement de la responsabilité gouvernementale",
+      "promulguee": false,
+      "is_loi_corpus": false,
+      "motions": [
+        519
+      ],
+      "n_motions": 1
+    },
+    {
+      "uid": "DLR5L17N50198",
+      "leg": 17,
+      "titre": "Projet de loi de finances pour 2025",
+      "titre_chemin": "PLF2025",
+      "procedure": "Projet de loi de finances de l'année",
+      "promulguee": true,
+      "is_loi_corpus": false,
+      "motions": [
+        693
+      ],
+      "n_motions": 1
+    },
+    {
+      "uid": "DLR5L17N52428",
+      "leg": 17,
+      "titre": "Projet de loi de finances pour 2026",
+      "titre_chemin": "PLF_2026",
+      "procedure": "Projet de loi de finances de l'année",
+      "promulguee": true,
+      "is_loi_corpus": false,
+      "motions": [
+        5154,
+        5155,
+        5193,
+        5194,
+        5284,
+        5285
+      ],
+      "n_motions": 6
+    },
+    {
+      "uid": "DLR5L17N51462",
+      "leg": 17,
+      "titre": "Engagement de la responsabilité du Gouvernement sur la deuxième partie du projet de loi de financement de la sécurité sociale pour 2025, en nouvelle lecture",
+      "titre_chemin": "engagement_resp_P2_plfss2025",
+      "procedure": "Engagement de la responsabilité gouvernementale",
+      "promulguee": false,
+      "is_loi_corpus": false,
+      "motions": [
+        739
+      ],
+      "n_motions": 1
+    },
+    {
+      "uid": "DLR5L17N53689",
+      "leg": 17,
+      "titre": "Engagement de la responsabilité du Gouvernement sur le vote en lecture définitive du projet de loi de finances pour 2026",
+      "titre_chemin": "engagement_responsabilite_gouvernement_lectdefinitive_pfl_2026",
+      "procedure": "Engagement de la responsabilité gouvernementale",
+      "promulguee": false,
+      "is_loi_corpus": false,
+      "motions": [
+        5284,
+        5285
+      ],
+      "n_motions": 2
+    },
+    {
+      "uid": "DLR5L17N53597",
+      "leg": 17,
+      "titre": "Engagement de la responsabilité du Gouvernement sur la première partie du projet de loi de finances pour 2026",
+      "titre_chemin": "engagement_responsabilite_gouvernement_partie1_plf_2026",
+      "procedure": "Engagement de la responsabilité gouvernementale",
+      "promulguee": false,
+      "is_loi_corpus": false,
+      "motions": [
+        5154,
+        5155
+      ],
+      "n_motions": 2
+    },
+    {
+      "uid": "DLR5L17N51425",
+      "leg": 17,
+      "titre": "Engagement de la responsabilité du Gouvernement sur l’ensemble du projet de loi de finances pour 2025 dans sa version résultant de la commission mixte paritaire de M. le Premier ministre Premier ministre",
+      "titre_chemin": "engagement_responsabilite_gouvernement_plf_2025_cmp",
+      "procedure": "Engagement de la responsabilité gouvernementale",
+      "promulguee": false,
+      "is_loi_corpus": false,
+      "motions": [
+        693
+      ],
+      "n_motions": 1
+    },
+    {
+      "uid": "DLR5L17N53619",
+      "leg": 17,
+      "titre": "Engagement de la responsabilité du Gouvernement sur la deuxième partie et l'ensemble du projet de loi de finances pour 2026 de M. le Premier ministre",
+      "titre_chemin": "engagement_responsabilite_gouvernement_plf_2026_2emepartie",
+      "procedure": "Engagement de la responsabilité gouvernementale",
+      "promulguee": false,
+      "is_loi_corpus": false,
+      "motions": [
+        5193,
+        5194
+      ],
+      "n_motions": 2
+    },
+    {
+      "uid": "DLR5L17N51475",
+      "leg": 17,
+      "titre": "Engagement de la responsabilité du Gouvernement sur la troisième partie et l'ensemble du projet de loi de financement de la sécurité sociale pour 2025, en nouvelle lecture",
+      "titre_chemin": "engagement_responsabilite_plfss2025_nlle_lecture_P3",
+      "procedure": "Engagement de la responsabilité gouvernementale",
+      "promulguee": false,
+      "is_loi_corpus": false,
+      "motions": [
+        791
+      ],
+      "n_motions": 1
+    },
+    {
+      "uid": "DLR5L17N50588",
+      "leg": 17,
+      "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+      "titre_chemin": "plfss_pour_2025",
+      "procedure": "Projet de loi de financement de la sécurité sociale",
+      "promulguee": true,
+      "is_loi_corpus": false,
+      "motions": [
+        519,
+        694,
+        739,
+        791
+      ],
+      "n_motions": 4
+    }
+  ],
+  "motion_adoptee_519": {
+    "numero": 519,
+    "date": "2024-12-04",
+    "alinea": "49.3",
+    "sort": "adopté",
+    "pour": 331,
+    "contre": 0,
+    "abst": 0,
+    "nb_votants": 331,
+    "auteur": "Mme Mathilde Panot",
+    "texte_engage": [
+      {
+        "uid": "DLR5L17N50975",
+        "titre": "Engagement de la responsabilité du Gouvernement sur l’ensemble du projet de loi de financement de la sécurité sociale pour 2025, dans sa version résultant de la commission mixte paritaire",
+        "procedure": "Engagement de la responsabilité gouvernementale",
+        "acte": "AN21-MOTION-VOTE",
+        "titre_chemin": "49al3CMPPLFSS2025"
+      },
+      {
+        "uid": "DLR5L17N50588",
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+        "procedure": "Projet de loi de financement de la sécurité sociale",
+        "acte": "CMP-MOTION-VOTE",
+        "titre_chemin": "plfss_pour_2025"
+      }
+    ]
+  },
+  "motions_detail": {
+    "16": [
+      {
+        "numero": 1,
+        "date": "2022-07-11",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 146,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 146,
+        "auteur": "Mme Mathilde Panot",
+        "texte_engage": []
+      },
+      {
+        "numero": 358,
+        "date": "2022-10-24",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 239,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 239,
+        "auteur": "Mmes Cyrielle Chatelain et Mathilde Panot",
+        "texte_engage": []
+      },
+      {
+        "numero": 359,
+        "date": "2022-10-24",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 90,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 90,
+        "auteur": "Mme Marine Le Pen et 89 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 360,
+        "date": "2022-10-24",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 150,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 150,
+        "auteur": "M. Boris Vallaud",
+        "texte_engage": []
+      },
+      {
+        "numero": 485,
+        "date": "2022-10-31",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 90,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 90,
+        "auteur": "Mme Marine Le Pen et 88 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 486,
+        "date": "2022-10-31",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 218,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 218,
+        "auteur": "Mme Mathilde Panot et 74 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 494,
+        "date": "2022-11-04",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 188,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 188,
+        "auteur": "Mme Mathilde Panot et 74 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 632,
+        "date": "2022-11-25",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 85,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 85,
+        "auteur": "Mme Mathilde Panot et 74 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 634,
+        "date": "2022-11-28",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 93,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 93,
+        "auteur": "Mme Mathilde Panot et 74 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 664,
+        "date": "2022-12-02",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 87,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 87,
+        "auteur": "Mme Mathilde Panot",
+        "texte_engage": []
+      },
+      {
+        "numero": 744,
+        "date": "2022-12-11",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 78,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 78,
+        "auteur": "Mme Mathilde Panot et 74 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 780,
+        "date": "2022-12-13",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 102,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 102,
+        "auteur": "Mme Mathilde Panot et 74 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 822,
+        "date": "2022-12-17",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 101,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 101,
+        "auteur": "M. André Chassaigne",
+        "texte_engage": []
+      },
+      {
+        "numero": 1097,
+        "date": "2023-02-17",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 89,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 89,
+        "auteur": "Mme Marine Le Pen et 87 de ses collègues.",
+        "texte_engage": []
+      },
+      {
+        "numero": 1240,
+        "date": "2023-03-20",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 278,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 278,
+        "auteur": "M. Bertrand Pancher et 90 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 1241,
+        "date": "2023-03-20",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 94,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 94,
+        "auteur": "Mme Marine Le Pen et 87 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 1800,
+        "date": "2023-06-12",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 239,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 239,
+        "auteur": "M. Boris Vallaud",
+        "texte_engage": []
+      },
+      {
+        "numero": 2610,
+        "date": "2023-09-29",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 193,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 193,
+        "auteur": "M. Boris Vallaud",
+        "texte_engage": []
+      },
+      {
+        "numero": 2798,
+        "date": "2023-10-20",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 89,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 89,
+        "auteur": "Mme Marine Le Pen et 87 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 2799,
+        "date": "2023-10-20",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 219,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 219,
+        "auteur": "Mme Mathilde Panot et 102 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 2809,
+        "date": "2023-10-30",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 223,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 223,
+        "auteur": "Mmes Mathilde Panot et Cyrielle Chatelain",
+        "texte_engage": []
+      },
+      {
+        "numero": 2810,
+        "date": "2023-10-30",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 88,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 88,
+        "auteur": "Mme Marine Le Pen et 87 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 2887,
+        "date": "2023-11-04",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 89,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 89,
+        "auteur": "Mme Mathilde Panot et 77 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 2944,
+        "date": "2023-11-09",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 167,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 167,
+        "auteur": "Mme Mathilde Panot et 77 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 2989,
+        "date": "2023-11-15",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 143,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 143,
+        "auteur": "M. André Chassaigne",
+        "texte_engage": []
+      },
+      {
+        "numero": 3046,
+        "date": "2023-11-26",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 89,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 89,
+        "auteur": "Mme Mathilde Panot et 77 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 3067,
+        "date": "2023-11-29",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 145,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 145,
+        "auteur": "Mme Mathilde Panot et 74 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 3116,
+        "date": "2023-12-04",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 108,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 108,
+        "auteur": "Mme Mathilde Panot",
+        "texte_engage": []
+      },
+      {
+        "numero": 3210,
+        "date": "2023-12-16",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 75,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 75,
+        "auteur": "Mme Mathilde Panot et 77 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 3211,
+        "date": "2023-12-18",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 110,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 110,
+        "auteur": "Mme Mathilde Panot et 77 membres de l'Assemblée.",
+        "texte_engage": []
+      },
+      {
+        "numero": 3215,
+        "date": "2023-12-21",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 116,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 116,
+        "auteur": "Mmes Mathilde Panot",
+        "texte_engage": []
+      },
+      {
+        "numero": 3335,
+        "date": "2024-02-05",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 124,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 124,
+        "auteur": "Mme Mathilde Panot",
+        "texte_engage": []
+      },
+      {
+        "numero": 4020,
+        "date": "2024-06-03",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 222,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 222,
+        "auteur": "Mme Mathilde Panot",
+        "texte_engage": [
+          {
+            "uid": "DLR5L16N50060",
+            "titre": "Motion de censure déposée en application de l'article 49, alinéa 2, de la Constitution par Mme Mathilde Panot, M. André Chassaigne et 104 de leurs collègues",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "motion_censure_lfi_gdr_ecolo_3"
+          }
+        ]
+      },
+      {
+        "numero": 4021,
+        "date": "2024-06-03",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 89,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 89,
+        "auteur": "Mme Marine Le Pen et 87 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L16N50062",
+            "titre": "Motion de censure déposée en application de l'article 49, alinéa 2, de la Constitution par Marine Le Pen et 87 de ses collègues",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "motion_censure_RN_2"
+          }
+        ]
+      }
+    ],
+    "17": [
+      {
+        "numero": 1,
+        "date": "2024-10-08",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 197,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 197,
+        "auteur": "M. Boris Vallaud",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N50557",
+            "titre": "Motion de censure déposée en application de l'article 49, alinéa 2, de la Constitution par M. Boris Vallaud, Mmes Mathilde Panot et Cyrielle Chatelain, M. André Chassaigne et 188 de leurs collègues",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "motion_censure_soc_1024_1"
+          }
+        ]
+      },
+      {
+        "numero": 519,
+        "date": "2024-12-04",
+        "alinea": "49.3",
+        "sort": "adopté",
+        "pour": 331,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 331,
+        "auteur": "Mme Mathilde Panot",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N50975",
+            "titre": "Engagement de la responsabilité du Gouvernement sur l’ensemble du projet de loi de financement de la sécurité sociale pour 2025, dans sa version résultant de la commission mixte paritaire",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "49al3CMPPLFSS2025"
+          },
+          {
+            "uid": "DLR5L17N50588",
+            "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+            "procedure": "Projet de loi de financement de la sécurité sociale",
+            "acte": "CMP-MOTION-VOTE",
+            "titre_chemin": "plfss_pour_2025"
+          }
+        ]
+      },
+      {
+        "numero": 526,
+        "date": "2025-01-16",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 131,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 131,
+        "auteur": "Mme Mathilde Panot et 57 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N51256",
+            "titre": "Motion de censure, déposée en application de l'article 49, alinéa 2, de la Constitution, par Mme Mathilde Panot et 57 de ses collègues",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "motion_censure_panot_57_collegues"
+          }
+        ]
+      },
+      {
+        "numero": 693,
+        "date": "2025-02-05",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 128,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 128,
+        "auteur": "Mme Mathilde Panot et 90 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N51425",
+            "titre": "Engagement de la responsabilité du Gouvernement sur l’ensemble du projet de loi de finances pour 2025 dans sa version résultant de la commission mixte paritaire de M. le Premier ministre Premier ministre",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "engagement_responsabilite_gouvernement_plf_2025_cmp"
+          },
+          {
+            "uid": "DLR5L17N50198",
+            "titre": "Projet de loi de finances pour 2025",
+            "procedure": "Projet de loi de finances de l'année",
+            "acte": "CMP-MOTION-VOTE",
+            "titre_chemin": "PLF2025"
+          }
+        ]
+      },
+      {
+        "numero": 694,
+        "date": "2025-02-05",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 122,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 122,
+        "auteur": "Mme Mathilde Panot et 91 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N50588",
+            "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+            "procedure": "Projet de loi de financement de la sécurité sociale",
+            "acte": "ANNLEC-MOTION-VOTE",
+            "titre_chemin": "plfss_pour_2025"
+          },
+          {
+            "uid": "DLR5L17N51427",
+            "titre": "Engagement de la responsabilité du Gouvernement sur l'article liminaire et la première partie du projet de loi de financement de la sécurité sociale pour 2025",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "49_3_plfssP1"
+          }
+        ]
+      },
+      {
+        "numero": 739,
+        "date": "2025-02-10",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 115,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 115,
+        "auteur": "Mme Mathilde Panot et 70 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N50588",
+            "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+            "procedure": "Projet de loi de financement de la sécurité sociale",
+            "acte": "ANNLEC-MOTION-VOTE",
+            "titre_chemin": "plfss_pour_2025"
+          },
+          {
+            "uid": "DLR5L17N51462",
+            "titre": "Engagement de la responsabilité du Gouvernement sur la deuxième partie du projet de loi de financement de la sécurité sociale pour 2025, en nouvelle lecture",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "engagement_resp_P2_plfss2025"
+          }
+        ]
+      },
+      {
+        "numero": 791,
+        "date": "2025-02-12",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 121,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 121,
+        "auteur": "Mme Mathilde Panot et 73 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N50588",
+            "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+            "procedure": "Projet de loi de financement de la sécurité sociale",
+            "acte": "ANNLEC-MOTION-VOTE",
+            "titre_chemin": "plfss_pour_2025"
+          },
+          {
+            "uid": "DLR5L17N51475",
+            "titre": "Engagement de la responsabilité du Gouvernement sur la troisième partie et l'ensemble du projet de loi de financement de la sécurité sociale pour 2025, en nouvelle lecture",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "engagement_responsabilite_plfss2025_nlle_lecture_P3"
+          }
+        ]
+      },
+      {
+        "numero": 842,
+        "date": "2025-02-19",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 181,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 181,
+        "auteur": "M. Boris Vallaud et 65 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N51540",
+            "titre": "Motion de censure, déposée en application de l'article 49, alinéa 2, de la Constitution par M. Boris Vallaud et 65 de ses collègues",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "motion_censure_vallaud_65_collegues_2025"
+          }
+        ]
+      },
+      {
+        "numero": 2222,
+        "date": "2025-06-04",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 116,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 116,
+        "auteur": "Mme Aurélie Trouvé et 57 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N52167",
+            "titre": "Motion de censure déposée en application de l'article 49, alinéa 2, par Mme Aurélie Trouvé et 57 de ses collègues",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "motion_censure_trouve_303525"
+          }
+        ]
+      },
+      {
+        "numero": 2876,
+        "date": "2025-07-01",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 189,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 189,
+        "auteur": "M. Boris Vallaud et 65 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N52408",
+            "titre": "Motion de censure déposée en application de l'article 49 alinéa 2 par M. Boris Vallaud et 65 de ses collègues",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "motion_censure_socialistes"
+          }
+        ]
+      },
+      {
+        "numero": 3058,
+        "date": "2025-10-16",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 271,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 271,
+        "auteur": "Mme Mathilde Panot et 86 députés.",
+        "texte_engage": []
+      },
+      {
+        "numero": 3059,
+        "date": "2025-10-16",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 144,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 144,
+        "auteur": "Mme Marine Le Pen",
+        "texte_engage": []
+      },
+      {
+        "numero": 4986,
+        "date": "2026-01-14",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 256,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 256,
+        "auteur": "Mme Mathilde Panot et 57 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N53516",
+            "titre": "Motion de censure déposée en application de l'article 49, alinéa 2, de la Constitution par Mme Mathilde Panot et 57 de ses collègues",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "motion_censure_LFI_Panot_57_14"
+          }
+        ]
+      },
+      {
+        "numero": 4987,
+        "date": "2026-01-14",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 142,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 142,
+        "auteur": "Mme Marine Le Pen et 57 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N53517",
+            "titre": "Motion de censure déposée en application de l'article 49, alinéa 2, de la Constitution par Mme Marine Le Pen et 57 de ses collègues",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "motiondecensure_RN_15"
+          }
+        ]
+      },
+      {
+        "numero": 5154,
+        "date": "2026-01-23",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 269,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 269,
+        "auteur": "Mme Mathilde Panot",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N53597",
+            "titre": "Engagement de la responsabilité du Gouvernement sur la première partie du projet de loi de finances pour 2026",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "engagement_responsabilite_gouvernement_partie1_plf_2026"
+          },
+          {
+            "uid": "DLR5L17N52428",
+            "titre": "Projet de loi de finances pour 2026",
+            "procedure": "Projet de loi de finances de l'année",
+            "acte": "ANNLEC-MOTION-VOTE",
+            "titre_chemin": "PLF_2026"
+          }
+        ]
+      },
+      {
+        "numero": 5155,
+        "date": "2026-01-23",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 142,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 142,
+        "auteur": "Mme Marine Le Pen",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N53597",
+            "titre": "Engagement de la responsabilité du Gouvernement sur la première partie du projet de loi de finances pour 2026",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "engagement_responsabilite_gouvernement_partie1_plf_2026"
+          },
+          {
+            "uid": "DLR5L17N52428",
+            "titre": "Projet de loi de finances pour 2026",
+            "procedure": "Projet de loi de finances de l'année",
+            "acte": "ANNLEC-MOTION-VOTE",
+            "titre_chemin": "PLF_2026"
+          }
+        ]
+      },
+      {
+        "numero": 5193,
+        "date": "2026-01-27",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 267,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 267,
+        "auteur": "Mme Cyrielle Chatelain",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N53619",
+            "titre": "Engagement de la responsabilité du Gouvernement sur la deuxième partie et l'ensemble du projet de loi de finances pour 2026 de M. le Premier ministre",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "engagement_responsabilite_gouvernement_plf_2026_2emepartie"
+          },
+          {
+            "uid": "DLR5L17N52428",
+            "titre": "Projet de loi de finances pour 2026",
+            "procedure": "Projet de loi de finances de l'année",
+            "acte": "ANNLEC-MOTION-VOTE",
+            "titre_chemin": "PLF_2026"
+          }
+        ]
+      },
+      {
+        "numero": 5194,
+        "date": "2026-01-27",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 140,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 140,
+        "auteur": "Mme Marine Le Pen",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N53619",
+            "titre": "Engagement de la responsabilité du Gouvernement sur la deuxième partie et l'ensemble du projet de loi de finances pour 2026 de M. le Premier ministre",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "engagement_responsabilite_gouvernement_plf_2026_2emepartie"
+          },
+          {
+            "uid": "DLR5L17N52428",
+            "titre": "Projet de loi de finances pour 2026",
+            "procedure": "Projet de loi de finances de l'année",
+            "acte": "ANNLEC-MOTION-VOTE",
+            "titre_chemin": "PLF_2026"
+          }
+        ]
+      },
+      {
+        "numero": 5284,
+        "date": "2026-02-02",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 260,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 260,
+        "auteur": "M. Stéphane Peu",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N52428",
+            "titre": "Projet de loi de finances pour 2026",
+            "procedure": "Projet de loi de finances de l'année",
+            "acte": "ANLDEF-MOTION-VOTE",
+            "titre_chemin": "PLF_2026"
+          },
+          {
+            "uid": "DLR5L17N53689",
+            "titre": "Engagement de la responsabilité du Gouvernement sur le vote en lecture définitive du projet de loi de finances pour 2026",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "engagement_responsabilite_gouvernement_lectdefinitive_pfl_2026"
+          }
+        ]
+      },
+      {
+        "numero": 5285,
+        "date": "2026-02-02",
+        "alinea": "49.3",
+        "sort": "rejeté",
+        "pour": 135,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 135,
+        "auteur": "Mme Marine Le Pen",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N52428",
+            "titre": "Projet de loi de finances pour 2026",
+            "procedure": "Projet de loi de finances de l'année",
+            "acte": "ANLDEF-MOTION-VOTE",
+            "titre_chemin": "PLF_2026"
+          },
+          {
+            "uid": "DLR5L17N53689",
+            "titre": "Engagement de la responsabilité du Gouvernement sur le vote en lecture définitive du projet de loi de finances pour 2026",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "engagement_responsabilite_gouvernement_lectdefinitive_pfl_2026"
+          }
+        ]
+      },
+      {
+        "numero": 5730,
+        "date": "2026-02-25",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 140,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 140,
+        "auteur": "M. Jean-Philippe Tanguy et 59 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N53821",
+            "titre": "Motion de censure déposée en application de l'article 49, alinéa 2, de la Constitution par Jean-Philippe Tanguy et 59 de ses collègues",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "motion_censure_rn_022026"
+          }
+        ]
+      },
+      {
+        "numero": 5731,
+        "date": "2026-02-25",
+        "alinea": "49.2",
+        "sort": "rejeté",
+        "pour": 108,
+        "contre": 0,
+        "abst": 0,
+        "nb_votants": 108,
+        "auteur": "Mme Mathilde Panot et 57 députés.",
+        "texte_engage": [
+          {
+            "uid": "DLR5L17N53822",
+            "titre": "Motion de censure déposée en application de l'article 49, alinéa 2, de la Constitution par Mathilde Panot et 57 de ses collègues",
+            "procedure": "Engagement de la responsabilité gouvernementale",
+            "acte": "AN21-MOTION-VOTE",
+            "titre_chemin": "motion_censure_Panot_57_collegues_23022026"
+          }
+        ]
+      }
+    ]
+  },
+  "conclusion": {
+    "modele_signalrejet_singulier_faux": true,
+    "raison": "Plusieurs motions sont deposees le meme jour par des groupes differents (jusqu'a 3 le 2022-10-24), et un meme texte/49.3 attire jusqu'a 6 motions (PLF 2026). La cardinalite reelle est 0..n, pas 1.",
+    "lois_finance_493_trace_leg17": 3,
+    "lois_structurantes_hors_corpus": 8,
+    "lois_finance_promulguees_hors_corpus": 10
+  }
+}

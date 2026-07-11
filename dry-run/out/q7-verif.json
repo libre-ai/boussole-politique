@@ -1,0 +1,185 @@
+{
+ "corpus_refs": {
+  "16": 93,
+  "17": 66
+ },
+ "found_refs": {
+  "16": 93,
+  "17": 66
+ },
+ "missing_refs": {
+  "16": [],
+  "17": []
+ },
+ "dup_actor_in_scrutin": {
+  "16": 0,
+  "17": 0
+ },
+ "amo10_gap": {
+  "16": {
+   "n_actors": 605,
+   "n_unknown": 217,
+   "pct_unknown": 35.9
+  },
+  "17": {
+   "n_actors": 636,
+   "n_unknown": 60,
+   "pct_unknown": 9.4
+  }
+ },
+ "main": {
+  "16": {
+   "n_deputes": 594,
+   "spread_min": 0.2302,
+   "spread_p10": 0.4472,
+   "spread_p25": 0.56,
+   "spread_median": 0.6667,
+   "spread_mean": 0.6401,
+   "spread_p75": 0.73,
+   "spread_p90": 0.8,
+   "spread_max": 1.0,
+   "own_top1": 311,
+   "own_top1_pct": 52.4,
+   "own_top2": 511,
+   "own_top2_pct": 86.0,
+   "pct_spread_lt_15": 0.0,
+   "pct_spread_lt_30": 0.8
+  },
+  "17": {
+   "n_deputes": 612,
+   "spread_min": 0.2521,
+   "spread_p10": 0.4693,
+   "spread_p25": 0.5886,
+   "spread_median": 0.6667,
+   "spread_mean": 0.6662,
+   "spread_p75": 0.7619,
+   "spread_p90": 0.8462,
+   "spread_max": 1.0,
+   "own_top1": 397,
+   "own_top1_pct": 64.9,
+   "own_top2": 523,
+   "own_top2_pct": 85.5,
+   "pct_spread_lt_15": 0.0,
+   "pct_spread_lt_30": 0.3
+  }
+ },
+ "sensitivity": {
+  "16": {
+   "n": 594,
+   "median": 0.6667,
+   "mean": 0.6377,
+   "lt15_pct": 0.0,
+   "own_top1_pct": 76.9,
+   "own_top2_pct": 91.1
+  },
+  "17": {
+   "n": 612,
+   "median": 0.6667,
+   "mean": 0.6662,
+   "lt15_pct": 0.0,
+   "own_top1_pct": 72.4,
+   "own_top2_pct": 84.3
+  }
+ },
+ "examples": {
+  "panot_leg17": {
+   "name": "Mathilde Panot",
+   "own": "LFI-NFP",
+   "spread": 0.8065,
+   "best": [
+    "LFI-NFP",
+    1.0
+   ],
+   "worst": [
+    "DR",
+    0.1935
+   ],
+   "vals": {
+    "LFI-NFP": 1.0,
+    "GDR": 0.8214,
+    "ECOS": 0.8667,
+    "SOC": 0.5357,
+    "DEM": 0.2903,
+    "EPR": 0.3226,
+    "HOR": 0.2581,
+    "LIOT": 0.2258,
+    "DR": 0.1935,
+    "RN": 0.2903
+   }
+  },
+  "le pen_leg17": {
+   "name": "Marine Le Pen",
+   "own": "RN",
+   "spread": 0.7,
+   "best": [
+    "RN",
+    1.0
+   ],
+   "worst": [
+    "LFI-NFP",
+    0.3
+   ],
+   "vals": {
+    "LFI-NFP": 0.3,
+    "GDR": 0.3913,
+    "ECOS": 0.4091,
+    "SOC": 0.5,
+    "DEM": 0.7391,
+    "EPR": 0.6957,
+    "HOR": 0.7391,
+    "LIOT": 0.7826,
+    "DR": 0.8261,
+    "RN": 1.0
+   }
+  },
+  "vallaud_leg17": {
+   "name": "Boris Vallaud",
+   "own": "SOC",
+   "spread": 0.4282,
+   "best": [
+    "SOC",
+    0.9667
+   ],
+   "worst": [
+    "LFI-NFP",
+    0.5385
+   ],
+   "vals": {
+    "LFI-NFP": 0.5385,
+    "GDR": 0.7407,
+    "ECOS": 0.7241,
+    "SOC": 0.9667,
+    "DEM": 0.8333,
+    "EPR": 0.8333,
+    "HOR": 0.8,
+    "LIOT": 0.7667,
+    "DR": 0.7667,
+    "RN": 0.5862
+   }
+  },
+  "ciotti_leg16": {
+   "name": "Éric Ciotti",
+   "own": "LR",
+   "spread": 0.8333,
+   "best": [
+    "LR",
+    1.0
+   ],
+   "worst": [
+    "LFI",
+    0.1667
+   ],
+   "vals": {
+    "LFI": 0.1667,
+    "GDR": 0.4545,
+    "ECO": 0.2727,
+    "DEM": 0.9286,
+    "RE": 0.9286,
+    "HOR": 0.9286,
+    "LIOT": 0.6154,
+    "LR": 1.0,
+    "RN": 0.6923
+   }
+  }
+ }
+}

@@ -1,0 +1,354 @@
+{
+  "recensement": {
+    "leg16": {
+      "total": 34,
+      "n_49_2": 6,
+      "n_49_3": 28,
+      "n_unclassified": 0,
+      "adoptees": 0,
+      "rejetees": 34,
+      "libelles": {
+        "scrutin public solennel": 34
+      }
+    },
+    "leg17": {
+      "total": 22,
+      "n_49_2": 11,
+      "n_49_3": 11,
+      "n_unclassified": 0,
+      "adoptees": 1,
+      "rejetees": 21,
+      "libelles": {
+        "motion de censure": 22
+      }
+    },
+    "total": {
+      "total": 56,
+      "n_49_2": 17,
+      "n_49_3": 39,
+      "n_unclassified": 0,
+      "adoptees": 1,
+      "rejetees": 55,
+      "libelles": {
+        "scrutin public solennel": 34,
+        "motion de censure": 22
+      }
+    }
+  },
+  "adopted_detail": [
+    {
+      "leg": 17,
+      "numero": 519,
+      "date": "2024-12-04",
+      "alinea": "49.3",
+      "sort": "adopté",
+      "pour": 331,
+      "contre": 0,
+      "abst": 0,
+      "votants": 331,
+      "libelle": "motion de censure"
+    }
+  ],
+  "card_date_leg16": {
+    "distinct_dates": 27,
+    "hist": {
+      "1": 21,
+      "3": 1,
+      "2": 5
+    },
+    "dates_multi": {
+      "2022-10-24": 3,
+      "2022-10-31": 2,
+      "2023-03-20": 2,
+      "2023-10-20": 2,
+      "2023-10-30": 2,
+      "2024-06-03": 2
+    },
+    "max": 3,
+    "max_date": "2022-10-24"
+  },
+  "card_date_leg17": {
+    "distinct_dates": 15,
+    "hist": {
+      "1": 8,
+      "2": 7
+    },
+    "dates_multi": {
+      "2025-02-05": 2,
+      "2025-10-16": 2,
+      "2026-01-14": 2,
+      "2026-01-23": 2,
+      "2026-01-27": 2,
+      "2026-02-02": 2,
+      "2026-02-25": 2
+    },
+    "max": 2,
+    "max_date": "2025-02-05"
+  },
+  "card_date_combined_hist": {
+    "1": 29,
+    "3": 1,
+    "2": 12
+  },
+  "links": {
+    "leg16_dossiers_with_moc_voteref": 2,
+    "leg16_49_3_reliees": 0,
+    "leg17_motions_reliees_all": 20,
+    "leg17_49_3_reliees": 11,
+    "leg17_49_3_total": 11,
+    "leg16_49_3_total": 28,
+    "scrutin_selfref_moc_leg16": 0,
+    "scrutin_selfref_moc_leg17": 0
+  },
+  "card_event_493_leg17": {
+    "1": 6,
+    "2": 3,
+    "4": 1,
+    "6": 1
+  },
+  "max_motions_one_text_leg17": {
+    "n": 6,
+    "texts": [
+      {
+        "titreChemin": "PLF_2026",
+        "n": 6,
+        "scrutins": [
+          5154,
+          5155,
+          5193,
+          5194,
+          5284,
+          5285
+        ]
+      }
+    ]
+  },
+  "finance": {
+    "total_promulguees": 14,
+    "in_corpus": 4,
+    "exclues": 10,
+    "struct_hors_corpus_defA": 8,
+    "struct_hors_corpus_defB": 7,
+    "fin_excl_493_trace_leg17": [
+      {
+        "uid": "DLR5L17N50588",
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+        "motions": [
+          519,
+          694,
+          739,
+          791
+        ]
+      },
+      {
+        "uid": "DLR5L17N50198",
+        "titre": "Projet de loi de finances pour 2025",
+        "motions": [
+          693
+        ]
+      },
+      {
+        "uid": "DLR5L17N52428",
+        "titre": "Projet de loi de finances pour 2026",
+        "motions": [
+          5154,
+          5155,
+          5193,
+          5194,
+          5284,
+          5285
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "leg": 16,
+        "uid": "DLR5L16N48839",
+        "titre": "Projet de loi de finances de fin de gestion pour 2023",
+        "procedure": "Projet de loi de finances rectificative",
+        "in_corpus": false
+      },
+      {
+        "leg": 16,
+        "uid": "DLR5L16N48397",
+        "titre": "Projet de loi de finances pour 2024",
+        "procedure": "Projet de loi de finances de l'année",
+        "in_corpus": false
+      },
+      {
+        "leg": 16,
+        "uid": "DLR5L16N46347",
+        "titre": "Financement de la sécurité sociale pour 2023",
+        "procedure": "Projet de loi de financement de la sécurité sociale",
+        "in_corpus": false
+      },
+      {
+        "leg": 16,
+        "uid": "DLR5L16N45988",
+        "titre": "Projet de loi de finances pour 2023",
+        "procedure": "Projet de loi de finances de l'année",
+        "in_corpus": false
+      },
+      {
+        "leg": 16,
+        "uid": "DLR5L16N48683",
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2024",
+        "procedure": "Projet de loi de financement de la sécurité sociale",
+        "in_corpus": false
+      },
+      {
+        "leg": 16,
+        "uid": "DLR5L16N47066",
+        "titre": "Projet de loi de financement rectificative de la sécurité sociale pour 2023",
+        "procedure": "Projet de loi de financement de la sécurité sociale",
+        "in_corpus": false
+      },
+      {
+        "leg": 16,
+        "uid": "DLR5L16N46617",
+        "titre": "Projet de loi de finances rectificative pour 2022",
+        "procedure": "Projet de loi de finances rectificative",
+        "in_corpus": true
+      },
+      {
+        "leg": 16,
+        "uid": "DLR5L16N45943",
+        "titre": "Loi de finances rectificative pour 2022",
+        "procedure": "Projet de loi de finances rectificative",
+        "in_corpus": false
+      },
+      {
+        "leg": 17,
+        "uid": "DLR5L17N50588",
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2025",
+        "procedure": "Projet de loi de financement de la sécurité sociale",
+        "in_corpus": false
+      },
+      {
+        "leg": 17,
+        "uid": "DLR5L17N53135",
+        "titre": "Projet de loi de finances de fin de gestion pour 2025",
+        "procedure": "Projet de loi de finances rectificative",
+        "in_corpus": true
+      },
+      {
+        "leg": 17,
+        "uid": "DLR5L17N52922",
+        "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+        "procedure": "Projet de loi de financement de la sécurité sociale",
+        "in_corpus": true
+      },
+      {
+        "leg": 17,
+        "uid": "DLR5L17N50198",
+        "titre": "Projet de loi de finances pour 2025",
+        "procedure": "Projet de loi de finances de l'année",
+        "in_corpus": false
+      },
+      {
+        "leg": 17,
+        "uid": "DLR5L17N50838",
+        "titre": "Projet de loi de finances de fin de gestion pour 2024",
+        "procedure": "Projet de loi de finances rectificative",
+        "in_corpus": true
+      },
+      {
+        "leg": 17,
+        "uid": "DLR5L17N52428",
+        "titre": "Projet de loi de finances pour 2026",
+        "procedure": "Projet de loi de finances de l'année",
+        "in_corpus": false
+      }
+    ]
+  },
+  "dossier_493_motions_leg17": {
+    "DLR5L17N53597": {
+      "titreChemin": "engagement_responsabilite_gouvernement_partie1_plf_2026",
+      "n": 2,
+      "scrutins": [
+        5154,
+        5155
+      ]
+    },
+    "DLR5L17N50975": {
+      "titreChemin": "49al3CMPPLFSS2025",
+      "n": 1,
+      "scrutins": [
+        519
+      ]
+    },
+    "DLR5L17N50588": {
+      "titreChemin": "plfss_pour_2025",
+      "n": 4,
+      "scrutins": [
+        519,
+        694,
+        739,
+        791
+      ]
+    },
+    "DLR5L17N51475": {
+      "titreChemin": "engagement_responsabilite_plfss2025_nlle_lecture_P3",
+      "n": 1,
+      "scrutins": [
+        791
+      ]
+    },
+    "DLR5L17N51462": {
+      "titreChemin": "engagement_resp_P2_plfss2025",
+      "n": 1,
+      "scrutins": [
+        739
+      ]
+    },
+    "DLR5L17N51425": {
+      "titreChemin": "engagement_responsabilite_gouvernement_plf_2025_cmp",
+      "n": 1,
+      "scrutins": [
+        693
+      ]
+    },
+    "DLR5L17N50198": {
+      "titreChemin": "PLF2025",
+      "n": 1,
+      "scrutins": [
+        693
+      ]
+    },
+    "DLR5L17N53619": {
+      "titreChemin": "engagement_responsabilite_gouvernement_plf_2026_2emepartie",
+      "n": 2,
+      "scrutins": [
+        5193,
+        5194
+      ]
+    },
+    "DLR5L17N52428": {
+      "titreChemin": "PLF_2026",
+      "n": 6,
+      "scrutins": [
+        5154,
+        5155,
+        5193,
+        5194,
+        5284,
+        5285
+      ]
+    },
+    "DLR5L17N51427": {
+      "titreChemin": "49_3_plfssP1",
+      "n": 1,
+      "scrutins": [
+        694
+      ]
+    },
+    "DLR5L17N53689": {
+      "titreChemin": "engagement_responsabilite_gouvernement_lectdefinitive_pfl_2026",
+      "n": 2,
+      "scrutins": [
+        5284,
+        5285
+      ]
+    }
+  }
+}

@@ -1,0 +1,1410 @@
+{
+ "generated": "2026-06-13",
+ "mandat": "q5-miseaupoint : mises au point (corrections de vote) & art.16 RGPD",
+ "data_quality_flag_audit": {
+  "16": {
+   "n_scrutins": 4106,
+   "flag_has_mise_au_point_true": 935,
+   "real_map_au_moins_1_correction": 929,
+   "flag_fiable": false
+  },
+  "17": {
+   "n_scrutins": 7397,
+   "flag_has_mise_au_point_true": 7397,
+   "real_map_au_moins_1_correction": 1343,
+   "flag_fiable": false
+  }
+ },
+ "global_contexte": {
+  "16": {
+   "n_scrutins": 4106,
+   "n_scrutins_avec_map_reelle": 929,
+   "pct_scrutins_avec_map_reelle": 22.6,
+   "n_corrections_individuelles": 1907,
+   "transitions": {
+    "contre->pour": 423,
+    "pour->contre": 379,
+    "non_recense->pour": 361,
+    "non_recense->contre": 210,
+    "pour->nonvotant": 136,
+    "contre->nonvotant": 125,
+    "pour->abstention": 84,
+    "contre->abstention": 59,
+    "non_recense->abstention": 43,
+    "abstention->pour": 34,
+    "abstention->nonvotant": 26,
+    "abstention->contre": 26,
+    "nonvotant->pour": 1
+   }
+  },
+  "17": {
+   "n_scrutins": 7397,
+   "n_scrutins_avec_map_reelle": 1343,
+   "pct_scrutins_avec_map_reelle": 18.2,
+   "n_corrections_individuelles": 2827,
+   "transitions": {
+    "pour->contre": 703,
+    "contre->pour": 666,
+    "non_recense->pour": 365,
+    "non_recense->contre": 316,
+    "contre->nonvotant": 201,
+    "pour->nonvotant": 158,
+    "contre->abstention": 121,
+    "pour->abstention": 100,
+    "abstention->pour": 84,
+    "abstention->contre": 53,
+    "non_recense->abstention": 31,
+    "abstention->nonvotant": 23,
+    "nonvotant->pour": 3,
+    "non_recense->nonvotant": 2,
+    "contre->contre": 1
+   }
+  }
+ },
+ "votes_reference": {
+  "n_ref": 159,
+  "n_ref_avec_map": 80,
+  "pct_ref_avec_map": 50.3,
+  "n_corrections_sur_ref": 172,
+  "corrections_par_cible": {
+   "pours": 114,
+   "abstentions": 22,
+   "contres": 26,
+   "nonVotants": 10
+  },
+  "transitions_recorded_to_corrected": {
+   "non_recense->pour": 90,
+   "abstention->pour": 14,
+   "contre->abstention": 10,
+   "contre->pour": 10,
+   "non_recense->contre": 22,
+   "pour->nonvotant": 6,
+   "non_recense->abstention": 4,
+   "contre->nonvotant": 3,
+   "pour->contre": 3,
+   "abstention->nonvotant": 1,
+   "pour->abstention": 8,
+   "abstention->contre": 1
+  },
+  "n_corrections_basculantes_signe": 167,
+  "n_corrections_neutres": 5,
+  "pct_basculantes": 97.1
+ },
+ "par_legislature": {
+  "16": {
+   "n_ref": 93,
+   "n_ref_avec_map": 43,
+   "n_corrections": 75,
+   "n_basculantes": 72
+  },
+  "17": {
+   "n_ref": 66,
+   "n_ref_avec_map": 37,
+   "n_corrections": 97,
+   "n_basculantes": 95
+  }
+ },
+ "exemples_basculants": {
+  "total": 167,
+  "nommes_amo10": 143,
+  "deputes_partis_hors_amo10": 24,
+  "pour_contre_francs": 13,
+  "top30": [
+   {
+    "severity": 2,
+    "leg": 16,
+    "numero": 15,
+    "titre": "Maintien provisoire d'un dispositif de veille et de sécurité sanitaire en matière de lutte contre la covid-19",
+    "sort": "adopté",
+    "nom": "José Beaurain",
+    "acteur": "PA793158",
+    "groupe": "PO800520",
+    "recorded": "pour",
+    "corrected": "contre",
+    "transition": "pour -> contre"
+   },
+   {
+    "severity": 2,
+    "leg": 16,
+    "numero": 15,
+    "titre": "Maintien provisoire d'un dispositif de veille et de sécurité sanitaire en matière de lutte contre la covid-19",
+    "sort": "adopté",
+    "nom": "Jocelyn Dessigny",
+    "acteur": "PA793166",
+    "groupe": "PO800520",
+    "recorded": "pour",
+    "corrected": "contre",
+    "transition": "pour -> contre"
+   },
+   {
+    "severity": 2,
+    "leg": 16,
+    "numero": 1412,
+    "titre": "Ratification de la résolution A.1152 (32) relative aux amendements à la Convention du 6 mars 1948 portant création de l’Organisation maritime internationale",
+    "sort": "adopté",
+    "nom": "Jean-Luc Bourgeaux",
+    "acteur": "PA342240",
+    "groupe": "PO800508",
+    "recorded": "contre",
+    "corrected": "pour",
+    "transition": "contre -> pour"
+   },
+   {
+    "severity": 2,
+    "leg": 16,
+    "numero": 1801,
+    "titre": "Faciliter le passage et l’obtention de l’examen du permis de conduire",
+    "sort": "adopté",
+    "nom": "Julie Lechanteux",
+    "acteur": "PA796026",
+    "groupe": "PO800520",
+    "recorded": "contre",
+    "corrected": "pour",
+    "transition": "contre -> pour"
+   },
+   {
+    "severity": 2,
+    "leg": 16,
+    "numero": 3009,
+    "titre": "Transposition de l’accord national interprofessionnel relatif au partage de la valeur au sein de l’entreprise",
+    "sort": "adopté",
+    "nom": "René Pilato",
+    "acteur": "PA817211",
+    "groupe": "PO800490",
+    "recorded": "pour",
+    "corrected": "contre",
+    "transition": "pour -> contre"
+   },
+   {
+    "severity": 2,
+    "leg": 17,
+    "numero": 2244,
+    "titre": "Proposition de loi relative au droit de vote par correspondance des personnes détenues",
+    "sort": "adopté",
+    "nom": "Joël Bruneau",
+    "acteur": "PA840817",
+    "groupe": "LIOT",
+    "recorded": "contre",
+    "corrected": "pour",
+    "transition": "contre -> pour"
+   },
+   {
+    "severity": 2,
+    "leg": 17,
+    "numero": 2975,
+    "titre": "Projet de loi de programmation pour la refondation de Mayotte",
+    "sort": "adopté",
+    "nom": "Pouria Amirshahi",
+    "acteur": "PA610968",
+    "groupe": "ECOS",
+    "recorded": "contre",
+    "corrected": "pour",
+    "transition": "contre -> pour"
+   },
+   {
+    "severity": 2,
+    "leg": 17,
+    "numero": 2975,
+    "titre": "Projet de loi de programmation pour la refondation de Mayotte",
+    "sort": "adopté",
+    "nom": "Boris Tavernier",
+    "acteur": "PA841713",
+    "groupe": "ECOS",
+    "recorded": "contre",
+    "corrected": "pour",
+    "transition": "contre -> pour"
+   },
+   {
+    "severity": 2,
+    "leg": 17,
+    "numero": 2976,
+    "titre": "Département-Région de Mayotte",
+    "sort": "adopté",
+    "nom": "Pouria Amirshahi",
+    "acteur": "PA610968",
+    "groupe": "ECOS",
+    "recorded": "contre",
+    "corrected": "pour",
+    "transition": "contre -> pour"
+   },
+   {
+    "severity": 2,
+    "leg": 17,
+    "numero": 2976,
+    "titre": "Département-Région de Mayotte",
+    "sort": "adopté",
+    "nom": "Boris Tavernier",
+    "acteur": "PA841713",
+    "groupe": "ECOS",
+    "recorded": "contre",
+    "corrected": "pour",
+    "transition": "contre -> pour"
+   },
+   {
+    "severity": 2,
+    "leg": 17,
+    "numero": 5844,
+    "titre": "Proposition de loi visant à soutenir les collectivités territoriales dans la prévention et la gestion des inondations",
+    "sort": "adopté",
+    "nom": "Erwan Balanant",
+    "acteur": "PA719558",
+    "groupe": "DEM",
+    "recorded": "contre",
+    "corrected": "pour",
+    "transition": "contre -> pour"
+   },
+   {
+    "severity": 2,
+    "leg": 17,
+    "numero": 5844,
+    "titre": "Proposition de loi visant à soutenir les collectivités territoriales dans la prévention et la gestion des inondations",
+    "sort": "adopté",
+    "nom": "Richard Ramos",
+    "acteur": "PA720092",
+    "groupe": "DEM",
+    "recorded": "contre",
+    "corrected": "pour",
+    "transition": "contre -> pour"
+   },
+   {
+    "severity": 2,
+    "leg": 17,
+    "numero": 7039,
+    "titre": "Proposition de loi portant pérennisation du contrat de professionnalisation expérimental",
+    "sort": "adopté",
+    "nom": "Michel Castellani",
+    "acteur": "PA719138",
+    "groupe": "LIOT",
+    "recorded": "contre",
+    "corrected": "pour",
+    "transition": "contre -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 624,
+    "titre": "Projet de loi de finances rectificative pour 2022",
+    "sort": "adopté",
+    "nom": "Pierre Henriet",
+    "acteur": "PA722070",
+    "groupe": "HOR",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 837,
+    "titre": "Proposition de loi créant une aide universelle d'urgence pour les victimes de violences conjugales",
+    "sort": "adopté",
+    "nom": "Laurent Jacobelli",
+    "acteur": "PA794598",
+    "groupe": "RN",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 891,
+    "titre": "Limiter l'engrillagement des espaces naturels et protéger la propriété privée",
+    "sort": "adopté",
+    "nom": "Hubert Ott",
+    "acteur": "PA794830",
+    "groupe": "DEM",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 897,
+    "titre": "Projet de loi relatif à l’accélération de la production d’énergies renouvelables",
+    "sort": "adopté",
+    "nom": "Anne-Laure Blin",
+    "acteur": "PA774954",
+    "groupe": "DR",
+    "recorded": "non_recense",
+    "corrected": "contre",
+    "transition": "non_recense -> contre"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 906,
+    "titre": "Convention d’entraide judiciaire en matière pénale entre le Gouvernement de la République française et le Gouvernement de la République du Sénégal, et de la convention d’extradition entre le Gouvernement de la République du Sénégal",
+    "sort": "adopté",
+    "nom": "Michel Herbillon",
+    "acteur": "PA1630",
+    "groupe": "DR",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 906,
+    "titre": "Convention d’entraide judiciaire en matière pénale entre le Gouvernement de la République française et le Gouvernement de la République du Sénégal, et de la convention d’extradition entre le Gouvernement de la République du Sénégal",
+    "sort": "adopté",
+    "nom": "Jean-Yves Bony",
+    "acteur": "PA266793",
+    "groupe": "PO800508",
+    "recorded": "pour",
+    "corrected": "nonvotant",
+    "transition": "pour -> nonvotant"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 1114,
+    "titre": "Renforcer la protection des familles d’enfants touchés par une affection de longue durée",
+    "sort": "adopté",
+    "nom": "Jean-Philippe Tanguy",
+    "acteur": "PA795778",
+    "groupe": "RN",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 1254,
+    "titre": "Sécuriser l'approvisionnement des Français en produits de grande consommation",
+    "sort": "adopté",
+    "nom": "Dominique Potier",
+    "acteur": "PA607553",
+    "groupe": "SOC",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 1254,
+    "titre": "Sécuriser l'approvisionnement des Français en produits de grande consommation",
+    "sort": "adopté",
+    "nom": "Hervé Saulignac",
+    "acteur": "PA340343",
+    "groupe": "PO800496",
+    "recorded": "pour",
+    "corrected": "nonvotant",
+    "transition": "pour -> nonvotant"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 1361,
+    "titre": "Protéger les logements contre l’occupation illicite",
+    "sort": "adopté",
+    "nom": "Virginie Duby-Muller",
+    "acteur": "PA608826",
+    "groupe": "DR",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 1361,
+    "titre": "Protéger les logements contre l’occupation illicite",
+    "sort": "adopté",
+    "nom": "Hubert Brigand",
+    "acteur": "PA793508",
+    "groupe": "DR",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 1409,
+    "titre": "Projet de loi relatif aux jeux Olympiques et Paralympiques de 2024",
+    "sort": "adopté",
+    "nom": "Josiane Corneloup",
+    "acteur": "PA722390",
+    "groupe": "DR",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 1409,
+    "titre": "Projet de loi relatif aux jeux Olympiques et Paralympiques de 2024",
+    "sort": "adopté",
+    "nom": "Sophia Chikirou",
+    "acteur": "PA791812",
+    "groupe": "LFI-NFP",
+    "recorded": "non_recense",
+    "corrected": "contre",
+    "transition": "non_recense -> contre"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 1503,
+    "titre": "Faciliter la mobilité internationale des alternants pour un « Erasmus de l’apprentissage »",
+    "sort": "adopté",
+    "nom": "Jean-René Cazeneuve",
+    "acteur": "PA719472",
+    "groupe": "EPR",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 1533,
+    "titre": "Projet de loi  relatif à l’accélération des procédures liées à la construction de nouvelles installations nucléaires à proximité de sites nucléaires existants et au fonctionnement des installations existantes",
+    "sort": "adopté",
+    "nom": "Thibault Bazin",
+    "acteur": "PA642847",
+    "groupe": "DR",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 1834,
+    "titre": "Favoriser l’accompagnement psychologique des femmes victimes de fausse couche",
+    "sort": "adopté",
+    "nom": "Arthur Delaporte",
+    "acteur": "PA793394",
+    "groupe": "SOC",
+    "recorded": "non_recense",
+    "corrected": "pour",
+    "transition": "non_recense -> pour"
+   },
+   {
+    "severity": 1,
+    "leg": 16,
+    "numero": 2046,
+    "titre": "Proposition de loi visant à faciliter la mise en oeuvre des objectifs de « zéro artificialisation nette » au coeur des territoires",
+    "sort": "adopté",
+    "nom": "Jérémie Patrier-Leitus",
+    "acteur": "PA793398",
+    "groupe": "PO800514",
+    "recorded": "abstention",
+    "corrected": "pour",
+    "transition": "abstention -> pour"
+   }
+  ]
+ },
+ "detail_par_loi_ref": [
+  {
+   "leg": 16,
+   "numero": 1503,
+   "titre": "Faciliter la mobilité internationale des alternants pour un « Erasmus de l’apprentissage »",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3207,
+   "titre": "Restitution des restes humains appartenant aux collections publiques",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 2077,
+   "titre": "Maintenir provisoirement un dispositif de plafonnement de revalorisation de la variation a",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3218,
+   "titre": "Généralisation du contrat à durée indéterminée à des fins d’employabilité",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 1361,
+   "titre": "Protéger les logements contre l’occupation illicite",
+   "has_map": true,
+   "n_corrections": 3,
+   "n_basculantes": 3,
+   "cible": {
+    "pours": 3
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 1197,
+   "titre": "Approbation du premier amendement et du protocole à la convention d'Espoo",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 891,
+   "titre": "Limiter l'engrillagement des espaces naturels et protéger la propriété privée",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 1,
+    "abstentions": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 504,
+   "titre": "Réduire et encadrer les frais bancaires sur succession",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 1412,
+   "titre": "Ratification de la résolution A.1152 (32) relative aux amendements à la Convention du 6 ma",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 2217,
+   "titre": "Création d'un homicide routier et visant à lutter contre la violence routière",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "abstentions": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3205,
+   "titre": "Proposition de loi relative à l'ouverture à la concurrence du réseau de bus francilien de ",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "contres": 1,
+    "nonVotants": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 1410,
+   "titre": "Fusion des filières à responsabilité élargie des producteurs d’emballages ménagers et des ",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 0,
+   "cible": {
+    "abstentions": 2
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3458,
+   "titre": "Mieux protéger et accompagner les enfants victimes et co-victimes de violences intrafamili",
+   "has_map": true,
+   "n_corrections": 4,
+   "n_basculantes": 4,
+   "cible": {
+    "pours": 4
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 2046,
+   "titre": "Proposition de loi visant à faciliter la mise en oeuvre des objectifs de « zéro artificial",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 600,
+   "titre": "Proposition de loi relative à l'instauration d'un nombre minimum de soignants par patient ",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 4048,
+   "titre": "Accroître le financement des entreprises et l’attractivité de la France",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "contres": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 2965,
+   "titre": "Pour le plein emploi",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 1801,
+   "titre": "Faciliter le passage et l’obtention de l’examen du permis de conduire",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 1409,
+   "titre": "Projet de loi relatif aux jeux Olympiques et Paralympiques de 2024",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 1,
+    "contres": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3548,
+   "titre": "Accélération et à la simplification de la rénovation de l'habitat dégradé et des grandes o",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3336,
+   "titre": "Garantir le respect du droit à l'image des enfants",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 1533,
+   "titre": "Projet de loi  relatif à l’accélération des procédures liées à la construction de nouvelle",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 1254,
+   "titre": "Sécuriser l'approvisionnement des Français en produits de grande consommation",
+   "has_map": true,
+   "n_corrections": 3,
+   "n_basculantes": 3,
+   "cible": {
+    "pours": 2,
+    "nonVotants": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3457,
+   "titre": "Proposition de loi renforçant la sécurité des élus locaux et la protection des maires",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 2719,
+   "titre": "Orientation et programmation du ministère de la justice 2023-2027",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 837,
+   "titre": "Proposition de loi créant une aide universelle d'urgence pour les victimes de violences co",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3622,
+   "titre": "Proposition de loi visant à favoriser le réemploi des véhicules, au service des mobilités ",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 2796,
+   "titre": "Projet de loi visant à sécuriser et réguler l’espace numérique",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "abstentions": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 1041,
+   "titre": "Proposition de loi relative au renforcement de la sûreté dans les transports",
+   "has_map": true,
+   "n_corrections": 8,
+   "n_basculantes": 8,
+   "cible": {
+    "pours": 8
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 624,
+   "titre": "Projet de loi de finances rectificative pour 2022",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 2444,
+   "titre": "Projet de loi relatif à l’accélération de la reconstruction et de la réfection des bâtimen",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 4051,
+   "titre": "Prévenir les ingérences étrangères en France",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 1,
+    "nonVotants": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 2391,
+   "titre": "Lutter contre le dumping social sur le Transmanche",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 897,
+   "titre": "Projet de loi relatif à l’accélération de la production d’énergies renouvelables",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "contres": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 15,
+   "titre": "Maintien provisoire d'un dispositif de veille et de sécurité sanitaire en matière de lutte",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "contres": 2
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 906,
+   "titre": "Convention d’entraide judiciaire en matière pénale entre le Gouvernement de la République ",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 1,
+    "nonVotants": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3289,
+   "titre": "Liberté de recourir à l’interruption volontaire de grossesse",
+   "has_map": true,
+   "n_corrections": 3,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 1,
+    "nonVotants": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 6184,
+   "titre": "Projet de loi de simplification de la vie économique",
+   "has_map": true,
+   "n_corrections": 4,
+   "n_basculantes": 4,
+   "cible": {
+    "pours": 2,
+    "abstentions": 2
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3009,
+   "titre": "Transposition de l’accord national interprofessionnel relatif au partage de la valeur au s",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "contres": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3663,
+   "titre": "Projet de loi organique modifiant la loi organique n° 2010-837 du 23 juillet 2010 relative",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 1,
+    "abstentions": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3206,
+   "titre": "Améliorer l'accès aux soins par l'engagement territorial des professionnels",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 2256,
+   "titre": "Programmation militaire pour les années 2024 à 2030 et diverses dispositions intéressant l",
+   "has_map": true,
+   "n_corrections": 5,
+   "n_basculantes": 5,
+   "cible": {
+    "pours": 4,
+    "contres": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3220,
+   "titre": "Assurer une justice patrimoniale au sein de la famille",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3208,
+   "titre": "Approbation des conventions entre la France et le Danemark et entre la France et la Grèce ",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 2076,
+   "titre": "Proposition de loi visant à renforcer la prévention et la lutte contre l'intensification e",
+   "has_map": true,
+   "n_corrections": 3,
+   "n_basculantes": 3,
+   "cible": {
+    "pours": 3
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 1114,
+   "titre": "Renforcer la protection des familles d’enfants touchés par une affection de longue durée",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 3662,
+   "titre": "Projet de loi relatif à l’organisation de la gouvernance de la sûreté nucléaire et de la r",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 16,
+   "numero": 1834,
+   "titre": "Favoriser l’accompagnement psychologique des femmes victimes de fausse couche",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 653,
+   "titre": "Contre toutes les fraudes aux aides publiques",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 3018,
+   "titre": "Réformer le mode d'élection des membres du Conseil de Paris et des conseils municipaux de ",
+   "has_map": true,
+   "n_corrections": 3,
+   "n_basculantes": 3,
+   "cible": {
+    "pours": 2,
+    "nonVotants": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 2975,
+   "titre": "Projet de loi de programmation pour la refondation de Mayotte",
+   "has_map": true,
+   "n_corrections": 4,
+   "n_basculantes": 4,
+   "cible": {
+    "pours": 2,
+    "abstentions": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 2244,
+   "titre": "Proposition de loi relative au droit de vote par correspondance des personnes détenues",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 2880,
+   "titre": "Proposition de loi relative à la lutte contre l'antisémitisme dans l'enseignement supérieu",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 6286,
+   "titre": "Faciliter l’exercice en France des médecins diplômés au Royaume-Uni avant le Brexit",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 5829,
+   "titre": "Création du cadre d'emploi des personnels de santé des services d’incendie et de secours",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 4707,
+   "titre": "Proposition de loi relative à la protection sociale complémentaire des agents publics terr",
+   "has_map": true,
+   "n_corrections": 5,
+   "n_basculantes": 5,
+   "cible": {
+    "pours": 2,
+    "contres": 1,
+    "nonVotants": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 5728,
+   "titre": "Soins palliatifs et d’accompagnement",
+   "has_map": true,
+   "n_corrections": 4,
+   "n_basculantes": 4,
+   "cible": {
+    "pours": 4
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 6285,
+   "titre": "Proposition de loi visant à garantir le droit de visite des parlementaires et des bâtonnie",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 5844,
+   "titre": "Proposition de loi visant à soutenir les collectivités territoriales dans la prévention et",
+   "has_map": true,
+   "n_corrections": 3,
+   "n_basculantes": 3,
+   "cible": {
+    "pours": 3
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 5296,
+   "titre": "Projet de loi relatif à l’organisation des jeux Olympiques et Paralympiques de 2030",
+   "has_map": true,
+   "n_corrections": 4,
+   "n_basculantes": 4,
+   "cible": {
+    "pours": 2,
+    "contres": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 1319,
+   "titre": "Renforcer la stabilité économique et la compétitivité du secteur agroalimentaire",
+   "has_map": true,
+   "n_corrections": 4,
+   "n_basculantes": 2,
+   "cible": {
+    "contres": 2,
+    "abstentions": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 1624,
+   "titre": "Restaurer l'autorité de la justice à l'égard des mineurs délinquants et de leurs parents",
+   "has_map": true,
+   "n_corrections": 4,
+   "n_basculantes": 4,
+   "cible": {
+    "pours": 1,
+    "contres": 2,
+    "abstentions": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 1193,
+   "titre": "Contre les fraudes aux moyens de paiement scripturaux",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 790,
+   "titre": "Projet de loi d'urgence pour Mayotte",
+   "has_map": true,
+   "n_corrections": 3,
+   "n_basculantes": 3,
+   "cible": {
+    "pours": 3
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 789,
+   "titre": "Exercice de la démocratie agricole",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 1473,
+   "titre": "Proposition de loi visant à sortir la France du piège du narcotrafic",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "contres": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 4442,
+   "titre": "Projet de loi de finances de fin de gestion pour 2025",
+   "has_map": true,
+   "n_corrections": 3,
+   "n_basculantes": 3,
+   "cible": {
+    "pours": 1,
+    "abstentions": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 1553,
+   "titre": "Protéger les personnes engagées dans un projet parental des discriminations au travail",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 1303,
+   "titre": "Renforcement de la parité dans les fonctions électives et exécutives du bloc communal",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "abstentions": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 4758,
+   "titre": "Projet de loi de financement de la sécurité sociale pour 2026",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "contres": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 518,
+   "titre": "Projet de loi de finances de fin de gestion pour 2024",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "abstentions": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 5832,
+   "titre": "Simplifier la sortie de l’indivision successorale",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "pours": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 7039,
+   "titre": "Proposition de loi portant pérennisation du contrat de professionnalisation expérimental",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 3056,
+   "titre": "Simplification du droit de l'urbanisme et du logement",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "contres": 1,
+    "nonVotants": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 7004,
+   "titre": "Proposition de loi visant à étendre à toutes les communes la compensation financière prévu",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 1304,
+   "titre": "Proposition de loi organique visant à harmoniser le mode de scrutin aux élections municipa",
+   "has_map": true,
+   "n_corrections": 1,
+   "n_basculantes": 1,
+   "cible": {
+    "abstentions": 1
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 2976,
+   "titre": "Département-Région de Mayotte",
+   "has_map": true,
+   "n_corrections": 2,
+   "n_basculantes": 2,
+   "cible": {
+    "pours": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 7260,
+   "titre": "Projet de loi portant transposition de l’avenant n°3 du 25 février 2026 au protocole d’acc",
+   "has_map": true,
+   "n_corrections": 6,
+   "n_basculantes": 6,
+   "cible": {
+    "pours": 2,
+    "contres": 2,
+    "abstentions": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 1308,
+   "titre": "Renforcer les conditions d'accès à la nationalité française à Mayotte",
+   "has_map": true,
+   "n_corrections": 7,
+   "n_basculantes": 7,
+   "cible": {
+    "contres": 5,
+    "abstentions": 2
+   }
+  },
+  {
+   "leg": 17,
+   "numero": 1474,
+   "titre": "Proposition de loi organique fixant le statut du procureur national anti-stupéfiants",
+   "has_map": true,
+   "n_corrections": 6,
+   "n_basculantes": 6,
+   "cible": {
+    "pours": 6
+   }
+  }
+ ]
+}

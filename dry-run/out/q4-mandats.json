@@ -1,0 +1,476 @@
+{
+  "meta": {
+    "sieges_an": 577,
+    "amo10_actors": 577,
+    "amo10_groupes_po": 7139,
+    "n_lois": 159,
+    "by_leg": {
+      "16": 93,
+      "17": 66
+    },
+    "note": "AMO10 = snapshot des députés ACTIFS (leg 17). Pas d'historique leg 16."
+  },
+  "a_trou_deputes_partis": {
+    "leg16": {
+      "ref_votes_count": 93,
+      "distinct_acteurRef_all_scrutins": 617,
+      "distinct_acteurRef_in_AMO10_all": 392,
+      "distinct_acteurRef_NOT_in_AMO10_all": 225,
+      "distinct_acteurRef_ref_votes": 605,
+      "distinct_acteurRef_ref_votes_NOT_in_AMO10": 217
+    },
+    "leg17": {
+      "ref_votes_count": 66,
+      "distinct_acteurRef_all_scrutins": 642,
+      "distinct_acteurRef_in_AMO10_all": 576,
+      "distinct_acteurRef_NOT_in_AMO10_all": 66,
+      "distinct_acteurRef_ref_votes": 636,
+      "distinct_acteurRef_ref_votes_NOT_in_AMO10": 60
+    },
+    "union_both_legs_distinct": 827,
+    "union_both_legs_NOT_in_AMO10": 251,
+    "examples_gone_leg17_ids": [
+      "PA1327",
+      "PA267306",
+      "PA267561",
+      "PA2960",
+      "PA335758",
+      "PA408578",
+      "PA605694",
+      "PA605991",
+      "PA606098",
+      "PA607846",
+      "PA608016",
+      "PA642868",
+      "PA677483",
+      "PA695512",
+      "PA719282"
+    ]
+  },
+  "b_derivation_absent": {
+    "leg16": {
+      "ref_vote_types": {
+        "SPO": 81,
+        "SPS": 12
+      },
+      "listed_positions": {
+        "min": 36,
+        "max": 569,
+        "median": 146,
+        "mean": 196.8
+      },
+      "sum_nombreMembresGroupe": {
+        "min": 572,
+        "max": 577,
+        "median": 577,
+        "mean": 576.3
+      },
+      "derived_absent_577_minus_listed": {
+        "min": 8,
+        "max": 541,
+        "median": 431,
+        "mean": 380.2
+      },
+      "derived_absent_NMG_minus_listed": {
+        "min": 8,
+        "max": 541,
+        "median": 428,
+        "mean": 379.5
+      },
+      "ref_votes_listed_equals_sumNMG": "0/93",
+      "ref_votes_sumNMG_not_577": "17/93",
+      "distinct_sumNMG_totals": {
+        "572": 3,
+        "573": 4,
+        "574": 10,
+        "577": 76
+      },
+      "SPS_listed": {
+        "min": 148,
+        "max": 569,
+        "median": 539.5,
+        "mean": 477.2
+      },
+      "SPO_listed": {
+        "min": 36,
+        "max": 433,
+        "median": 124,
+        "mean": 155.3
+      }
+    },
+    "leg17": {
+      "ref_vote_types": {
+        "SPO": 43,
+        "SPS": 23
+      },
+      "listed_positions": {
+        "min": 44,
+        "max": 569,
+        "median": 186.0,
+        "mean": 272.0
+      },
+      "sum_nombreMembresGroupe": {
+        "min": 574,
+        "max": 577,
+        "median": 576.5,
+        "mean": 576.2
+      },
+      "derived_absent_577_minus_listed": {
+        "min": 8,
+        "max": 533,
+        "median": 391.0,
+        "mean": 305.0
+      },
+      "derived_absent_NMG_minus_listed": {
+        "min": 6,
+        "max": 533,
+        "median": 390.5,
+        "mean": 304.2
+      },
+      "ref_votes_listed_equals_sumNMG": "0/66",
+      "ref_votes_sumNMG_not_577": "33/66",
+      "distinct_sumNMG_totals": {
+        "574": 2,
+        "575": 16,
+        "576": 15,
+        "577": 33
+      },
+      "SPS_listed": {
+        "min": 408,
+        "max": 569,
+        "median": 517,
+        "mean": 505.4
+      },
+      "SPO_listed": {
+        "min": 44,
+        "max": 477,
+        "median": 132,
+        "mean": 147.2
+      }
+    }
+  },
+  "c_par_delegation": {
+    "leg16": {
+      "par_delegation_true_total": 2571,
+      "par_delegation_false_total": 15647,
+      "pct_express_votes_par_delegation": 14.1,
+      "distinct_actors_ever_par_delegation_in_ref_votes": 536,
+      "mean_pct_per_ref_vote": 11.5,
+      "max_pct_per_ref_vote": 44.2
+    },
+    "leg17": {
+      "par_delegation_true_total": 4456,
+      "par_delegation_false_total": 13348,
+      "pct_express_votes_par_delegation": 25.0,
+      "distinct_actors_ever_par_delegation_in_ref_votes": 594,
+      "mean_pct_per_ref_vote": 18.3,
+      "max_pct_per_ref_vote": 42.7
+    },
+    "example_max_delegation_ref_vote": {
+      "pct": 44.2,
+      "leg": 16,
+      "numero": 2519,
+      "titre": "L'industrie verte",
+      "delegated": 137,
+      "express_total": 310
+    }
+  },
+  "d_causes_nonvotants": {
+    "cause_labels": {
+      "PAN": "Président de l'Assemblée nationale (ne vote pas par tradition)",
+      "PSE": "Président de séance (préside, ne prend pas part au vote)",
+      "MG": "Membre du Gouvernement (mandat de député suspendu)"
+    },
+    "leg16": {
+      "nonvotant_causes_ref_votes": {
+        "PSE": 85
+      },
+      "distinct_actors_by_cause_ref_votes": {
+        "PSE": 7
+      },
+      "nonvotant_causes_all_scrutins": {
+        "MG": 28,
+        "PSE": 3930,
+        "PAN": 33
+      },
+      "distinct_actors_by_cause_all_scrutins": {
+        "MG": 22,
+        "PSE": 7,
+        "PAN": 1
+      },
+      "MG_actors_not_in_AMO10": 13,
+      "MG_actors_in_AMO10": 9
+    },
+    "leg17": {
+      "nonvotant_causes_ref_votes": {
+        "PAN": 57,
+        "PSE": 27,
+        "MG": 66
+      },
+      "distinct_actors_by_cause_ref_votes": {
+        "PAN": 1,
+        "PSE": 8,
+        "MG": 21
+      },
+      "nonvotant_causes_all_scrutins": {
+        "MG": 9991,
+        "PSE": 5174,
+        "PAN": 6734
+      },
+      "distinct_actors_by_cause_all_scrutins": {
+        "MG": 39,
+        "PSE": 11,
+        "PAN": 1
+      },
+      "MG_actors_not_in_AMO10": 23,
+      "MG_actors_in_AMO10": 16
+    },
+    "PAN_identity": {
+      "PA721908": "Yaël Braun-Pivet"
+    },
+    "MG_examples_in_AMO10": {
+      "PA794038": "Yannick Neuder",
+      "PA721024": "Anne Genetet",
+      "PA720480": "Charlotte Parmentier-Lecocq",
+      "PA795884": "Marc Ferracci",
+      "PA794994": "Alexandre Portier",
+      "PA608416": "Patrick Hetzel",
+      "PA759832": "Agnès Pannier-Runacher",
+      "PA605782": "Laurent Marcangeli"
+    }
+  },
+  "e_changements_groupe": {
+    "leg16": {
+      "deputies_with_multiple_groupe_ref": 54,
+      "deputies_total_in_scrutins": 617,
+      "pct_multi": 8.8,
+      "genuine_group_change_diff_label": 0,
+      "same_label_rename_churn": 0,
+      "unresolved_po_ref_outside_AMO10": 54,
+      "genuine_examples": [],
+      "examples_raw": [
+        {
+          "acteurRef": "PA720422",
+          "nom": "(hors AMO10)",
+          "n_distinct_groups": 2,
+          "transition_labels": [
+            "PO800490",
+            "PO793087",
+            "PO800490"
+          ]
+        },
+        {
+          "acteurRef": "PA333285",
+          "nom": "Guillaume Garot",
+          "n_distinct_groups": 2,
+          "transition_labels": [
+            "PO800496",
+            "PO830170",
+            "PO800496",
+            "PO830170"
+          ]
+        },
+        {
+          "acteurRef": "PA335054",
+          "nom": "Marietta Karamanli",
+          "n_distinct_groups": 2,
+          "transition_labels": [
+            "PO800496",
+            "PO830170",
+            "PO800496",
+            "PO830170"
+          ]
+        },
+        {
+          "acteurRef": "PA609332",
+          "nom": "Olivier Faure",
+          "n_distinct_groups": 2,
+          "transition_labels": [
+            "PO800496",
+            "PO830170",
+            "PO800496",
+            "PO830170"
+          ]
+        },
+        {
+          "acteurRef": "PA342415",
+          "nom": "Marie-Noëlle Battistel",
+          "n_distinct_groups": 2,
+          "transition_labels": [
+            "PO800496",
+            "PO830170",
+            "PO800496",
+            "PO830170"
+          ]
+        },
+        {
+          "acteurRef": "PA608172",
+          "nom": "Christine Pirès Beaune",
+          "n_distinct_groups": 2,
+          "transition_labels": [
+            "PO800496",
+            "PO830170",
+            "PO800496",
+            "PO830170"
+          ]
+        }
+      ]
+    },
+    "leg17": {
+      "deputies_with_multiple_groupe_ref": 23,
+      "deputies_total_in_scrutins": 642,
+      "pct_multi": 3.6,
+      "genuine_group_change_diff_label": 8,
+      "same_label_rename_churn": 0,
+      "unresolved_po_ref_outside_AMO10": 15,
+      "genuine_examples": [
+        {
+          "acteurRef": "PA822617",
+          "nom": "Martine Froger",
+          "transition": [
+            "LIOT",
+            "SOC"
+          ]
+        },
+        {
+          "acteurRef": "PA793796",
+          "nom": "David Taupiac",
+          "transition": [
+            "NI",
+            "LIOT"
+          ]
+        },
+        {
+          "acteurRef": "PA840119",
+          "nom": "Sandra Delannoy",
+          "transition": [
+            "RN",
+            "NI"
+          ]
+        },
+        {
+          "acteurRef": "PA720362",
+          "nom": "Belkhir Belhaddad",
+          "transition": [
+            "EPR",
+            "NI",
+            "SOC"
+          ]
+        },
+        {
+          "acteurRef": "PA720066",
+          "nom": "(hors AMO10)",
+          "transition": [
+            "EPR",
+            "NI"
+          ]
+        },
+        {
+          "acteurRef": "PA722150",
+          "nom": "Sacha Houlié",
+          "transition": [
+            "NI",
+            "SOC"
+          ]
+        },
+        {
+          "acteurRef": "PA794658",
+          "nom": "Philippe Fait",
+          "transition": [
+            "EPR",
+            "HOR"
+          ]
+        },
+        {
+          "acteurRef": "PA794718",
+          "nom": "Christine Engrand",
+          "transition": [
+            "RN",
+            "NI"
+          ]
+        }
+      ],
+      "examples_raw": [
+        {
+          "acteurRef": "PA720362",
+          "nom": "Belkhir Belhaddad",
+          "n_distinct_groups": 3,
+          "transition_labels": [
+            "EPR",
+            "NI",
+            "SOC"
+          ]
+        },
+        {
+          "acteurRef": "PA822617",
+          "nom": "Martine Froger",
+          "n_distinct_groups": 2,
+          "transition_labels": [
+            "LIOT",
+            "SOC"
+          ]
+        },
+        {
+          "acteurRef": "PA793796",
+          "nom": "David Taupiac",
+          "n_distinct_groups": 2,
+          "transition_labels": [
+            "NI",
+            "LIOT"
+          ]
+        },
+        {
+          "acteurRef": "PA840119",
+          "nom": "Sandra Delannoy",
+          "n_distinct_groups": 2,
+          "transition_labels": [
+            "RN",
+            "NI"
+          ]
+        },
+        {
+          "acteurRef": "PA841207",
+          "nom": "Charles Alloncle",
+          "n_distinct_groups": 2,
+          "transition_labels": [
+            "PO847173",
+            "UDDPLR"
+          ]
+        },
+        {
+          "acteurRef": "PA720066",
+          "nom": "(hors AMO10)",
+          "n_distinct_groups": 2,
+          "transition_labels": [
+            "EPR",
+            "NI",
+            "EPR"
+          ]
+        }
+      ]
+    },
+    "po0_sentinel_leg17": {
+      "scrutins_all_groups_PO0": 12,
+      "dates": {
+        "2024-12-02": 12
+      },
+      "note": "Sur ces scrutins le groupe_ref est anonymisé (PO0) -> groupe au moment du vote inconnu."
+    }
+  },
+  "verdict": {
+    "absent_derivable": false,
+    "raisons": [
+      "AMO10 est un snapshot (577) sans historique : on ne connaît pas la composition de l'AN À LA DATE du vote.",
+      "66 acteurRef leg17 (et 225 leg16) votent mais ne sont pas dans AMO10 (députés partis).",
+      "listed != sum(nombreMembresGroupe) dans 100% des votes de référence : le non-listé n'est PAS de l'absence prouvée.",
+      "Sur SPO (ordinaire) la ventilation nominale est partielle (mediane ~124-132 listés) -> '577-listed' surcompte massivement l'absence.",
+      "Le vote par délégation est un vote SANS présence physique -> 'présence' est intrinsèquement impropre."
+    ],
+    "ce_qui_est_honnete": [
+      "Un indicateur de PARTICIPATION (a pris part au scrutin = pour/contre/abstention, hors délégation) est calculable et borné par la donnée listée.",
+      "Les nonVotants à cause institutionnelle (PAN/PSE/MG) doivent être EXCLUS du dénominateur, pas comptés comme absents.",
+      "Le groupe doit venir de groupe_ref au moment du vote (datage par scrutin), jamais du mandat 'courant' AMO10.",
+      "Le 'changement de groupe' brut (54 leg16 / 23 leg17) sur-compte : seuls 8 (leg17) sont des mutations à libellé distinct ; le reste est du churn de PO-ref (renommage/constitution de groupe type UDDPLR) ou non résolvable (organes leg16 hors AMO10)."
+    ]
+  }
+}

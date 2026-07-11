@@ -1,0 +1,698 @@
+{
+ "note": "Vecteurs de test de la formule de congruence v2 (Boussole Politique). Spec EXÉCUTABLE : toute implémentation (Rust/WASM/Kotlin/Swift) doit reproduire ces sorties bit-à-bit.",
+ "formule": {
+  "citoyen": "v ∈ {-2,-1,+1,+2} ; sans_avis et passer = aucune entrée",
+  "elu": "pour→+1, contre→-1 ; abstention, nonvotant, absent = aucune entrée",
+  "polarite": "direction_normalisee = direction_vote_brute × polarite_enonce, polarite ∈ {-1,+1}",
+  "poids": "|v| (1 ou 2) — intensité du citoyen",
+  "accord": "sign(v) == sign(direction_normalisee)",
+  "congruence_millimes": "round_half_up(1000 * Σpoids_accords / Σpoids_comptés)",
+  "plancher": "si n < N_MIN → non affichable (jamais un %), N_MIN défaut = 10",
+  "agregation_groupe": "position majoritaire du groupe au scrutin (égalité → exclu)",
+  "arithmetique": "ENTIÈRE — garantit la parité bit-à-bit multi-cibles"
+ },
+ "n_min_defaut": 10,
+ "cas_synthetiques": [
+  {
+   "nom": "accord_parfait",
+   "description": "3 accords, intensités mêlées (2+2+1) → 1000‰",
+   "n_min": 0,
+   "enonces": [
+    {
+     "id": "E1",
+     "polarite": 1
+    },
+    {
+     "id": "E2",
+     "polarite": 1
+    },
+    {
+     "id": "E3",
+     "polarite": 1
+    }
+   ],
+   "citoyen": [
+    {
+     "enonce": "E1",
+     "valeur": 2
+    },
+    {
+     "enonce": "E2",
+     "valeur": 2
+    },
+    {
+     "enonce": "E3",
+     "valeur": -1
+    }
+   ],
+   "elu": [
+    {
+     "enonce": "E1",
+     "position": "pour"
+    },
+    {
+     "enonce": "E2",
+     "position": "pour"
+    },
+    {
+     "enonce": "E3",
+     "position": "contre"
+    }
+   ],
+   "attendu": {
+    "num": 5,
+    "den": 5,
+    "n": 3,
+    "congruence_millimes": 1000,
+    "affichable": true
+   }
+  },
+  {
+   "nom": "desaccord_total",
+   "description": "tout en opposition → 0‰",
+   "n_min": 0,
+   "enonces": [
+    {
+     "id": "E1",
+     "polarite": 1
+    },
+    {
+     "id": "E2",
+     "polarite": 1
+    }
+   ],
+   "citoyen": [
+    {
+     "enonce": "E1",
+     "valeur": 2
+    },
+    {
+     "enonce": "E2",
+     "valeur": -1
+    }
+   ],
+   "elu": [
+    {
+     "enonce": "E1",
+     "position": "contre"
+    },
+    {
+     "enonce": "E2",
+     "position": "pour"
+    }
+   ],
+   "attendu": {
+    "num": 0,
+    "den": 3,
+    "n": 2,
+    "congruence_millimes": 0,
+    "affichable": true
+   }
+  },
+  {
+   "nom": "accord_partiel",
+   "description": "2 accords (poids 2+1) sur 4 → 500‰",
+   "n_min": 0,
+   "enonces": [
+    {
+     "id": "E1",
+     "polarite": 1
+    },
+    {
+     "id": "E2",
+     "polarite": 1
+    },
+    {
+     "id": "E3",
+     "polarite": 1
+    },
+    {
+     "id": "E4",
+     "polarite": 1
+    }
+   ],
+   "citoyen": [
+    {
+     "enonce": "E1",
+     "valeur": 2
+    },
+    {
+     "enonce": "E2",
+     "valeur": -2
+    },
+    {
+     "enonce": "E3",
+     "valeur": 1
+    },
+    {
+     "enonce": "E4",
+     "valeur": -1
+    }
+   ],
+   "elu": [
+    {
+     "enonce": "E1",
+     "position": "pour"
+    },
+    {
+     "enonce": "E2",
+     "position": "pour"
+    },
+    {
+     "enonce": "E3",
+     "position": "contre"
+    },
+    {
+     "enonce": "E4",
+     "position": "contre"
+    }
+   ],
+   "attendu": {
+    "num": 3,
+    "den": 6,
+    "n": 4,
+    "congruence_millimes": 500,
+    "affichable": true
+   }
+  },
+  {
+   "nom": "intensite_poids",
+   "description": "+2 pèse 2× +1 : désaccord faible + accord fort → 667‰",
+   "n_min": 0,
+   "enonces": [
+    {
+     "id": "E1",
+     "polarite": 1
+    },
+    {
+     "id": "E2",
+     "polarite": 1
+    }
+   ],
+   "citoyen": [
+    {
+     "enonce": "E1",
+     "valeur": 1
+    },
+    {
+     "enonce": "E2",
+     "valeur": 2
+    }
+   ],
+   "elu": [
+    {
+     "enonce": "E1",
+     "position": "contre"
+    },
+    {
+     "enonce": "E2",
+     "position": "pour"
+    }
+   ],
+   "attendu": {
+    "num": 2,
+    "den": 3,
+    "n": 2,
+    "congruence_millimes": 667,
+    "affichable": true
+   }
+  },
+  {
+   "nom": "abstention_elu_exclue",
+   "description": "élu abstention sur E2 → E2 hors calcul (n=2)",
+   "n_min": 0,
+   "enonces": [
+    {
+     "id": "E1",
+     "polarite": 1
+    },
+    {
+     "id": "E2",
+     "polarite": 1
+    },
+    {
+     "id": "E3",
+     "polarite": 1
+    }
+   ],
+   "citoyen": [
+    {
+     "enonce": "E1",
+     "valeur": 2
+    },
+    {
+     "enonce": "E2",
+     "valeur": 2
+    },
+    {
+     "enonce": "E3",
+     "valeur": 2
+    }
+   ],
+   "elu": [
+    {
+     "enonce": "E1",
+     "position": "pour"
+    },
+    {
+     "enonce": "E2",
+     "position": "abstention"
+    },
+    {
+     "enonce": "E3",
+     "position": "contre"
+    }
+   ],
+   "attendu": {
+    "num": 2,
+    "den": 4,
+    "n": 2,
+    "congruence_millimes": 500,
+    "affichable": true
+   }
+  },
+  {
+   "nom": "nonvotant_elu_exclu",
+   "description": "élu non-votant sur E1 → exclu, jamais pénalisé (n=1)",
+   "n_min": 0,
+   "enonces": [
+    {
+     "id": "E1",
+     "polarite": 1
+    },
+    {
+     "id": "E2",
+     "polarite": 1
+    }
+   ],
+   "citoyen": [
+    {
+     "enonce": "E1",
+     "valeur": 2
+    },
+    {
+     "enonce": "E2",
+     "valeur": -2
+    }
+   ],
+   "elu": [
+    {
+     "enonce": "E1",
+     "position": "nonvotant"
+    },
+    {
+     "enonce": "E2",
+     "position": "contre"
+    }
+   ],
+   "attendu": {
+    "num": 2,
+    "den": 2,
+    "n": 1,
+    "congruence_millimes": 1000,
+    "affichable": true
+   }
+  },
+  {
+   "nom": "citoyen_sans_avis_exclu",
+   "description": "citoyen sans_avis sur E2 → E2 hors calcul (n=2)",
+   "n_min": 0,
+   "enonces": [
+    {
+     "id": "E1",
+     "polarite": 1
+    },
+    {
+     "id": "E2",
+     "polarite": 1
+    },
+    {
+     "id": "E3",
+     "polarite": 1
+    }
+   ],
+   "citoyen": [
+    {
+     "enonce": "E1",
+     "valeur": 2
+    },
+    {
+     "enonce": "E2",
+     "valeur": "sans_avis"
+    },
+    {
+     "enonce": "E3",
+     "valeur": -2
+    }
+   ],
+   "elu": [
+    {
+     "enonce": "E1",
+     "position": "pour"
+    },
+    {
+     "enonce": "E2",
+     "position": "pour"
+    },
+    {
+     "enonce": "E3",
+     "position": "pour"
+    }
+   ],
+   "attendu": {
+    "num": 2,
+    "den": 4,
+    "n": 2,
+    "congruence_millimes": 500,
+    "affichable": true
+   }
+  },
+  {
+   "nom": "polarite_inversee",
+   "description": "polarité -1 inverse la direction brute : contre devient accord avec une réponse citoyenne positive",
+   "n_min": 0,
+   "enonces": [
+    {
+     "id": "E1",
+     "polarite": -1
+    },
+    {
+     "id": "E2",
+     "polarite": -1
+    }
+   ],
+   "citoyen": [
+    {
+     "enonce": "E1",
+     "valeur": 2
+    },
+    {
+     "enonce": "E2",
+     "valeur": 1
+    }
+   ],
+   "elu": [
+    {
+     "enonce": "E1",
+     "position": "contre"
+    },
+    {
+     "enonce": "E2",
+     "position": "pour"
+    }
+   ],
+   "attendu": {
+    "num": 2,
+    "den": 3,
+    "n": 2,
+    "congruence_millimes": 667,
+    "affichable": true
+   }
+  },
+  {
+   "nom": "sous_plancher_faux_100",
+   "description": "1 énoncé, accord parfait MAIS n<N_MIN → non affichable (le faux 100 %)",
+   "n_min": 10,
+   "enonces": [
+    {
+     "id": "E1",
+     "polarite": 1
+    }
+   ],
+   "citoyen": [
+    {
+     "enonce": "E1",
+     "valeur": 2
+    }
+   ],
+   "elu": [
+    {
+     "enonce": "E1",
+     "position": "pour"
+    }
+   ],
+   "attendu": {
+    "num": 2,
+    "den": 2,
+    "n": 1,
+    "congruence_millimes": 1000,
+    "affichable": false
+   }
+  },
+  {
+   "nom": "tout_sans_avis",
+   "description": "aucune position tranchée → score indéfini (den=0)",
+   "n_min": 10,
+   "enonces": [
+    {
+     "id": "E1",
+     "polarite": 1
+    },
+    {
+     "id": "E2",
+     "polarite": 1
+    }
+   ],
+   "citoyen": [
+    {
+     "enonce": "E1",
+     "valeur": "sans_avis"
+    },
+    {
+     "enonce": "E2",
+     "valeur": "sans_avis"
+    }
+   ],
+   "elu": [
+    {
+     "enonce": "E1",
+     "position": "pour"
+    },
+    {
+     "enonce": "E2",
+     "position": "pour"
+    }
+   ],
+   "attendu": {
+    "num": 0,
+    "den": 0,
+    "n": 0,
+    "congruence_millimes": null,
+    "affichable": false
+   }
+  }
+ ],
+ "cas_reels": {
+  "source": "corpus dry-run figé (159 lois, leg 16+17) ; votes réels des députés comme positions citoyennes ±2",
+  "methode": "congruence(citoyen = votes du député, groupe = position majoritaire) — reproduit q7 en entier",
+  "profils": [
+   {
+    "citoyen": "Mathilde Panot",
+    "legislature": 17,
+    "groupe_origine": "LFI-NFP",
+    "n_enonces_juges": 31,
+    "note": "votes réels du député comme positions ±2",
+    "scores_par_groupe": [
+     {
+      "groupe": "LFI-NFP",
+      "congruence_millimes": 1000,
+      "pct": 100.0,
+      "n": 31
+     },
+     {
+      "groupe": "ECOS",
+      "congruence_millimes": 867,
+      "pct": 86.7,
+      "n": 30
+     },
+     {
+      "groupe": "GDR",
+      "congruence_millimes": 821,
+      "pct": 82.1,
+      "n": 28
+     },
+     {
+      "groupe": "SOC",
+      "congruence_millimes": 536,
+      "pct": 53.6,
+      "n": 28
+     },
+     {
+      "groupe": "EPR",
+      "congruence_millimes": 323,
+      "pct": 32.3,
+      "n": 31
+     },
+     {
+      "groupe": "DEM",
+      "congruence_millimes": 290,
+      "pct": 29.0,
+      "n": 31
+     },
+     {
+      "groupe": "RN",
+      "congruence_millimes": 290,
+      "pct": 29.0,
+      "n": 31
+     },
+     {
+      "groupe": "HOR",
+      "congruence_millimes": 258,
+      "pct": 25.8,
+      "n": 31
+     },
+     {
+      "groupe": "LIOT",
+      "congruence_millimes": 226,
+      "pct": 22.6,
+      "n": 31
+     },
+     {
+      "groupe": "DR",
+      "congruence_millimes": 194,
+      "pct": 19.4,
+      "n": 31
+     }
+    ]
+   },
+   {
+    "citoyen": "Marine Le Pen",
+    "legislature": 17,
+    "groupe_origine": "RN",
+    "n_enonces_juges": 23,
+    "note": "votes réels du député comme positions ±2",
+    "scores_par_groupe": [
+     {
+      "groupe": "RN",
+      "congruence_millimes": 1000,
+      "pct": 100.0,
+      "n": 23
+     },
+     {
+      "groupe": "DR",
+      "congruence_millimes": 826,
+      "pct": 82.6,
+      "n": 23
+     },
+     {
+      "groupe": "LIOT",
+      "congruence_millimes": 783,
+      "pct": 78.3,
+      "n": 23
+     },
+     {
+      "groupe": "DEM",
+      "congruence_millimes": 739,
+      "pct": 73.9,
+      "n": 23
+     },
+     {
+      "groupe": "HOR",
+      "congruence_millimes": 739,
+      "pct": 73.9,
+      "n": 23
+     },
+     {
+      "groupe": "EPR",
+      "congruence_millimes": 696,
+      "pct": 69.6,
+      "n": 23
+     },
+     {
+      "groupe": "SOC",
+      "congruence_millimes": 500,
+      "pct": 50.0,
+      "n": 20
+     },
+     {
+      "groupe": "ECOS",
+      "congruence_millimes": 409,
+      "pct": 40.9,
+      "n": 22
+     },
+     {
+      "groupe": "GDR",
+      "congruence_millimes": 391,
+      "pct": 39.1,
+      "n": 23
+     },
+     {
+      "groupe": "LFI-NFP",
+      "congruence_millimes": 300,
+      "pct": 30.0,
+      "n": 20
+     }
+    ]
+   },
+   {
+    "citoyen": "Éric Ciotti",
+    "legislature": 16,
+    "groupe_origine": "LR",
+    "n_enonces_juges": 14,
+    "note": "votes réels du député comme positions ±2",
+    "scores_par_groupe": [
+     {
+      "groupe": "LR",
+      "congruence_millimes": 1000,
+      "pct": 100.0,
+      "n": 14
+     },
+     {
+      "groupe": "DEM",
+      "congruence_millimes": 929,
+      "pct": 92.9,
+      "n": 14
+     },
+     {
+      "groupe": "RE",
+      "congruence_millimes": 929,
+      "pct": 92.9,
+      "n": 14
+     },
+     {
+      "groupe": "HOR",
+      "congruence_millimes": 929,
+      "pct": 92.9,
+      "n": 14
+     },
+     {
+      "groupe": "RN",
+      "congruence_millimes": 692,
+      "pct": 69.2,
+      "n": 13
+     },
+     {
+      "groupe": "LIOT",
+      "congruence_millimes": 615,
+      "pct": 61.5,
+      "n": 13
+     },
+     {
+      "groupe": "GDR",
+      "congruence_millimes": 455,
+      "pct": 45.5,
+      "n": 11
+     },
+     {
+      "groupe": "SOC",
+      "congruence_millimes": 333,
+      "pct": 33.3,
+      "n": 3
+     },
+     {
+      "groupe": "ECO",
+      "congruence_millimes": 273,
+      "pct": 27.3,
+      "n": 11
+     },
+     {
+      "groupe": "LFI",
+      "congruence_millimes": 167,
+      "pct": 16.7,
+      "n": 12
+     }
+    ]
+   }
+  ]
+ }
+}

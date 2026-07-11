@@ -1,0 +1,18 @@
+[package]
+name = "boussole-scoring"
+description = "Scoring entier et déterministe de Boussole Politique"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+boussole-domain = { path = "../domain" }
+
+[dev-dependencies]
+serde.workspace = true
+serde_json.workspace = true
+
+[lints]
+workspace = true

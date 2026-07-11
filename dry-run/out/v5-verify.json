@@ -1,0 +1,168 @@
+{
+  "n_ref": 159,
+  "n_ref_avec_map_reelle": 80,
+  "pct_ref_avec_map": 50.3,
+  "leg16_ref_avec_map": "43/93",
+  "leg17_ref_avec_map": "37/66",
+  "n_corrections_sur_ref": 172,
+  "corrections_par_cible": {
+    "pour": 114,
+    "abstention": 22,
+    "contre": 26,
+    "nonvotant": 10
+  },
+  "n_corrections_basculantes": 167,
+  "pct_basculantes": 97.1,
+  "n_corrections_neutres": 5,
+  "pour_contre_francs_sur_ref": 13,
+  "nonVotantsVolontaires_corrections_sur_ref": 0,
+  "transitions": {
+    "non_recense->pour": 90,
+    "non_recense->contre": 22,
+    "abstention->pour": 14,
+    "contre->abstention": 10,
+    "contre->pour": 10,
+    "pour->abstention": 8,
+    "pour->nonvotant": 6,
+    "non_recense->abstention": 4,
+    "contre->nonvotant": 3,
+    "pour->contre": 3,
+    "abstention->nonvotant": 1,
+    "abstention->contre": 1
+  },
+  "exemples_nommes_amo10": 148,
+  "exemples_deputes_hors_amo10": 24,
+  "dup_bucket_cases": [],
+  "francs_examples": [
+    {
+      "leg": 16,
+      "num": 1412,
+      "titre": "Ratification de la résolution A.1152 (32) relative",
+      "ref": "PA342240",
+      "nom": "Jean-Luc Bourgeaux",
+      "trans": "contre->pour"
+    },
+    {
+      "leg": 16,
+      "num": 1801,
+      "titre": "Faciliter le passage et l’obtention de l’examen du",
+      "ref": "PA796026",
+      "nom": "Julie Lechanteux",
+      "trans": "contre->pour"
+    },
+    {
+      "leg": 16,
+      "num": 15,
+      "titre": "Maintien provisoire d'un dispositif de veille et d",
+      "ref": "PA793158",
+      "nom": "José Beaurain",
+      "trans": "pour->contre"
+    },
+    {
+      "leg": 16,
+      "num": 15,
+      "titre": "Maintien provisoire d'un dispositif de veille et d",
+      "ref": "PA793166",
+      "nom": "Jocelyn Dessigny",
+      "trans": "pour->contre"
+    },
+    {
+      "leg": 16,
+      "num": 3009,
+      "titre": "Transposition de l’accord national interprofession",
+      "ref": "PA817211",
+      "nom": "René Pilato",
+      "trans": "pour->contre"
+    },
+    {
+      "leg": 17,
+      "num": 2975,
+      "titre": "Projet de loi de programmation pour la refondation",
+      "ref": "PA610968",
+      "nom": "Pouria Amirshahi",
+      "trans": "contre->pour"
+    },
+    {
+      "leg": 17,
+      "num": 2975,
+      "titre": "Projet de loi de programmation pour la refondation",
+      "ref": "PA841713",
+      "nom": "Boris Tavernier",
+      "trans": "contre->pour"
+    },
+    {
+      "leg": 17,
+      "num": 2244,
+      "titre": "Proposition de loi relative au droit de vote par c",
+      "ref": "PA840817",
+      "nom": "Joël Bruneau",
+      "trans": "contre->pour"
+    },
+    {
+      "leg": 17,
+      "num": 5844,
+      "titre": "Proposition de loi visant à soutenir les collectiv",
+      "ref": "PA719558",
+      "nom": "Erwan Balanant",
+      "trans": "contre->pour"
+    },
+    {
+      "leg": 17,
+      "num": 5844,
+      "titre": "Proposition de loi visant à soutenir les collectiv",
+      "ref": "PA720092",
+      "nom": "Richard Ramos",
+      "trans": "contre->pour"
+    },
+    {
+      "leg": 17,
+      "num": 7039,
+      "titre": "Proposition de loi portant pérennisation du contra",
+      "ref": "PA719138",
+      "nom": "Michel Castellani",
+      "trans": "contre->pour"
+    },
+    {
+      "leg": 17,
+      "num": 2976,
+      "titre": "Département-Région de Mayotte",
+      "ref": "PA610968",
+      "nom": "Pouria Amirshahi",
+      "trans": "contre->pour"
+    },
+    {
+      "leg": 17,
+      "num": 2976,
+      "titre": "Département-Région de Mayotte",
+      "ref": "PA841713",
+      "nom": "Boris Tavernier",
+      "trans": "contre->pour"
+    }
+  ],
+  "global": {
+    "16": {
+      "n_scrutins": 4106,
+      "n_with_real_map": 929,
+      "pct": 22.6,
+      "n_corrections": 1907,
+      "buggy_flag_true": 935
+    },
+    "17": {
+      "n_scrutins": 7397,
+      "n_with_real_map": 1343,
+      "pct": 18.2,
+      "n_corrections": 2827,
+      "buggy_flag_true": 7397
+    }
+  },
+  "per_leg_corrections": {
+    "16": {
+      "corr": 75,
+      "basc": 72
+    },
+    "17": {
+      "corr": 97,
+      "basc": 95
+    }
+  }
+}

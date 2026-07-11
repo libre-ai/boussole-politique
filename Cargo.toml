@@ -1,0 +1,21 @@
+[workspace]
+members = ["crates/domain", "crates/scoring"]
+resolver = "3"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+authors = ["Libre AI contributors"]
+repository = "https://github.com/libre-ai/boussole-politique"
+
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = "warn"

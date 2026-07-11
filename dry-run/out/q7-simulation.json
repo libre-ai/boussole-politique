@@ -1,0 +1,2378 @@
+{
+ "formula": "congruence = sum(|v| for accords) / sum(|v| for lois comptees); citoyen v in {-2,-1,1,2}; depute pour=+1 contre=-1 (abst/nonvotant EXCLUS); accord si sign(v)==sign(dir); denominateur = n lois comptees gardé.",
+ "corpus": {
+  "n_lois": 159,
+  "leg16": 93,
+  "leg17": 66
+ },
+ "group_labels_leg16_method": "identification nominale sur scrutin 3966 (deputes re-elus)",
+ "amo10_gap": {
+  "16": {
+   "n_actors_in_refs": 605,
+   "n_unknown_in_amo10": 217,
+   "pct_unknown": 35.9
+  },
+  "17": {
+   "n_actors_in_refs": 636,
+   "n_unknown_in_amo10": 60,
+   "pct_unknown": 9.4
+  }
+ },
+ "analysis1_depute_as_citizen": {
+  "16": {
+   "n_deputes": 594,
+   "spread_min": 0.2302,
+   "spread_p10": 0.4472,
+   "spread_p25": 0.56,
+   "spread_median": 0.6667,
+   "spread_mean": 0.6401,
+   "spread_p75": 0.73,
+   "spread_p90": 0.8,
+   "spread_max": 1.0,
+   "own_group_is_top1": 311,
+   "own_group_is_top2": 511,
+   "own_top1_pct": 52.4,
+   "own_top2_pct": 86.0,
+   "pct_spread_lt_15": 0.0,
+   "pct_spread_lt_30": 0.8
+  },
+  "17": {
+   "n_deputes": 612,
+   "spread_min": 0.2521,
+   "spread_p10": 0.4694,
+   "spread_p25": 0.5886,
+   "spread_median": 0.6667,
+   "spread_mean": 0.6662,
+   "spread_p75": 0.7619,
+   "spread_p90": 0.8462,
+   "spread_max": 1.0,
+   "own_group_is_top1": 397,
+   "own_group_is_top2": 523,
+   "own_top1_pct": 64.9,
+   "own_top2_pct": 85.5,
+   "pct_spread_lt_15": 0.0,
+   "pct_spread_lt_30": 0.3
+  }
+ },
+ "analysis1_samples": {
+  "16": [
+   {
+    "ref": "PA822617",
+    "name": "Martine Froger",
+    "own_group": "LIOT",
+    "spread": 0.2302,
+    "best_group": "LIOT",
+    "best": 0.9524,
+    "worst_group": "LFI",
+    "worst": 0.7222,
+    "own_score": 0.9524,
+    "own_rank": 1,
+    "n_groups": 9
+   },
+   {
+    "ref": "PA720976",
+    "name": "Max Mathiasin",
+    "own_group": "LIOT",
+    "spread": 0.2727,
+    "best_group": "LIOT",
+    "best": 1.0,
+    "worst_group": "DEM",
+    "worst": 0.7273,
+    "own_score": 1.0,
+    "own_rank": 1,
+    "n_groups": 9
+   },
+   {
+    "ref": "PA340343",
+    "name": "Hervé Saulignac",
+    "own_group": "GDR-old",
+    "spread": 0.2765,
+    "best_group": "LIOT",
+    "best": 0.9583,
+    "worst_group": "RN",
+    "worst": 0.6818,
+    "own_score": null,
+    "own_rank": null,
+    "n_groups": 9
+   },
+   {
+    "ref": "PA774958",
+    "name": "Gérard Leseul",
+    "own_group": "GDR-old",
+    "spread": 0.2812,
+    "best_group": "SOC",
+    "best": 1.0,
+    "worst_group": "RN",
+    "worst": 0.7188,
+    "own_score": null,
+    "own_rank": null,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA795762",
+    "name": "Elie Califer",
+    "own_group": "GDR-old",
+    "spread": 0.2857,
+    "best_group": "SOC",
+    "best": 1.0,
+    "worst_group": "LR",
+    "worst": 0.7143,
+    "own_score": null,
+    "own_rank": null,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA720960",
+    "name": "Olivier Serva",
+    "own_group": "LIOT",
+    "spread": 0.3,
+    "best_group": "LIOT",
+    "best": 1.0,
+    "worst_group": "LFI",
+    "worst": 0.7,
+    "own_score": 1.0,
+    "own_rank": 1,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA720100",
+    "name": "Aurélien Pradié",
+    "own_group": "LR",
+    "spread": 0.3,
+    "best_group": "LIOT",
+    "best": 0.8,
+    "worst_group": "LFI",
+    "worst": 0.5,
+    "own_score": 0.7,
+    "own_rank": 3,
+    "n_groups": 9
+   },
+   {
+    "ref": "PA608172",
+    "name": "Christine Pirès Beaune",
+    "own_group": "GDR-old",
+    "spread": 0.3043,
+    "best_group": "LIOT",
+    "best": 0.9565,
+    "worst_group": "RN",
+    "worst": 0.6522,
+    "own_score": null,
+    "own_rank": null,
+    "n_groups": 9
+   },
+   {
+    "ref": "PA267318",
+    "name": "Jean-Carles Grelier",
+    "own_group": "RE",
+    "spread": 1.0,
+    "best_group": "DEM",
+    "best": 1.0,
+    "worst_group": "LFI",
+    "worst": 0.0,
+    "own_score": 1.0,
+    "own_rank": 2,
+    "n_groups": 9
+   },
+   {
+    "ref": "PA330357",
+    "name": "PA330357",
+    "own_group": "RE",
+    "spread": 1.0,
+    "best_group": "DEM",
+    "best": 1.0,
+    "worst_group": "LFI",
+    "worst": 0.0,
+    "own_score": 1.0,
+    "own_rank": 2,
+    "n_groups": 9
+   },
+   {
+    "ref": "PA719624",
+    "name": "PA719624",
+    "own_group": "RE",
+    "spread": 1.0,
+    "best_group": "DEM",
+    "best": 1.0,
+    "worst_group": "LFI",
+    "worst": 0.0,
+    "own_score": 1.0,
+    "own_rank": 2,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA331835",
+    "name": "PA331835",
+    "own_group": "RE",
+    "spread": 0.9375,
+    "best_group": "DEM",
+    "best": 1.0,
+    "worst_group": "LFI",
+    "worst": 0.0625,
+    "own_score": 1.0,
+    "own_rank": 2,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA643089",
+    "name": "Jean-Louis Thiériot",
+    "own_group": "LR",
+    "spread": 0.9333,
+    "best_group": "DEM",
+    "best": 1.0,
+    "worst_group": "LFI",
+    "worst": 0.0667,
+    "own_score": 1.0,
+    "own_rank": 4,
+    "n_groups": 9
+   },
+   {
+    "ref": "PA1327",
+    "name": "PA1327",
+    "own_group": "LR",
+    "spread": 0.9231,
+    "best_group": "LR",
+    "best": 1.0,
+    "worst_group": "LFI",
+    "worst": 0.0769,
+    "own_score": 1.0,
+    "own_rank": 1,
+    "n_groups": 9
+   },
+   {
+    "ref": "PA607193",
+    "name": "Sophie Errante",
+    "own_group": "RE",
+    "spread": 0.9167,
+    "best_group": "DEM",
+    "best": 1.0,
+    "worst_group": "LFI",
+    "worst": 0.0833,
+    "own_score": 1.0,
+    "own_rank": 2,
+    "n_groups": 9
+   },
+   {
+    "ref": "PA421348",
+    "name": "PA421348",
+    "own_group": "HOR",
+    "spread": 0.9,
+    "best_group": "DEM",
+    "best": 1.0,
+    "worst_group": "LFI",
+    "worst": 0.1,
+    "own_score": 1.0,
+    "own_rank": 3,
+    "n_groups": 9
+   }
+  ],
+  "17": [
+   {
+    "ref": "PA719138",
+    "name": "Michel Castellani",
+    "own_group": "LIOT",
+    "spread": 0.2521,
+    "best_group": "LIOT",
+    "best": 0.8235,
+    "worst_group": "LFI-NFP",
+    "worst": 0.5714,
+    "own_score": 0.8235,
+    "own_rank": 1,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA795762",
+    "name": "Elie Califer",
+    "own_group": "SOC",
+    "spread": 0.2936,
+    "best_group": "SOC",
+    "best": 0.9143,
+    "worst_group": "LFI-NFP",
+    "worst": 0.6207,
+    "own_score": 0.9143,
+    "own_rank": 1,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA840955",
+    "name": "Pierre Pribetich",
+    "own_group": "SOC",
+    "spread": 0.3145,
+    "best_group": "SOC",
+    "best": 0.9697,
+    "worst_group": "LFI-NFP",
+    "worst": 0.6552,
+    "own_score": 0.9697,
+    "own_rank": 1,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA841633",
+    "name": "Peio Dufau",
+    "own_group": "SOC",
+    "spread": 0.3214,
+    "best_group": "ECOS",
+    "best": 0.9643,
+    "worst_group": "RN",
+    "worst": 0.6429,
+    "own_score": 0.931,
+    "own_rank": 3,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA841381",
+    "name": "Sophie Pantel",
+    "own_group": "SOC",
+    "spread": 0.3243,
+    "best_group": "SOC",
+    "best": 1.0,
+    "worst_group": "RN",
+    "worst": 0.6757,
+    "own_score": 1.0,
+    "own_rank": 1,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA267306",
+    "name": "PA267306",
+    "own_group": "GDR",
+    "spread": 0.3333,
+    "best_group": "GDR",
+    "best": 1.0,
+    "worst_group": "DEM",
+    "worst": 0.6667,
+    "own_score": 1.0,
+    "own_rank": 1,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA840175",
+    "name": "Dorine Bregman",
+    "own_group": "SOC",
+    "spread": 0.3333,
+    "best_group": "SOC",
+    "best": 1.0,
+    "worst_group": "DEM",
+    "worst": 0.6667,
+    "own_score": 1.0,
+    "own_rank": 1,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA720976",
+    "name": "Max Mathiasin",
+    "own_group": "LIOT",
+    "spread": 0.3421,
+    "best_group": "DEM",
+    "best": 0.8421,
+    "worst_group": "LFI-NFP",
+    "worst": 0.5,
+    "own_score": 0.8421,
+    "own_rank": 2,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA720100",
+    "name": "Aurélien Pradié",
+    "own_group": "NI",
+    "spread": 1.0,
+    "best_group": "LIOT",
+    "best": 1.0,
+    "worst_group": "LFI-NFP",
+    "worst": 0.0,
+    "own_score": null,
+    "own_rank": null,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA720430",
+    "name": "Ugo Bernalicis",
+    "own_group": "LFI-NFP",
+    "spread": 0.9545,
+    "best_group": "LFI-NFP",
+    "best": 1.0,
+    "worst_group": "DR",
+    "worst": 0.0455,
+    "own_score": 1.0,
+    "own_rank": 1,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA720952",
+    "name": "Aurélien Taché",
+    "own_group": "LFI-NFP",
+    "spread": 0.9524,
+    "best_group": "LFI-NFP",
+    "best": 1.0,
+    "worst_group": "DR",
+    "worst": 0.0476,
+    "own_score": 1.0,
+    "own_rank": 1,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA795298",
+    "name": "Jérôme Legavre",
+    "own_group": "LFI-NFP",
+    "spread": 0.95,
+    "best_group": "LFI-NFP",
+    "best": 1.0,
+    "worst_group": "DEM",
+    "worst": 0.05,
+    "own_score": 1.0,
+    "own_rank": 1,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA795482",
+    "name": "Manon Meunier",
+    "own_group": "LFI-NFP",
+    "spread": 0.95,
+    "best_group": "LFI-NFP",
+    "best": 1.0,
+    "worst_group": "DR",
+    "worst": 0.05,
+    "own_score": 1.0,
+    "own_rank": 1,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA642935",
+    "name": "Olivier Becht",
+    "own_group": "EPR",
+    "spread": 0.9375,
+    "best_group": "DEM",
+    "best": 1.0,
+    "worst_group": "LFI-NFP",
+    "worst": 0.0625,
+    "own_score": 0.9474,
+    "own_rank": 4,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA267794",
+    "name": "Michèle Tabarot",
+    "own_group": "DR",
+    "spread": 0.9375,
+    "best_group": "LIOT",
+    "best": 1.0,
+    "worst_group": "LFI-NFP",
+    "worst": 0.0625,
+    "own_score": 1.0,
+    "own_rank": 2,
+    "n_groups": 10
+   },
+   {
+    "ref": "PA793094",
+    "name": "Nicolas Ray",
+    "own_group": "DR",
+    "spread": 0.9259,
+    "best_group": "DR",
+    "best": 1.0,
+    "worst_group": "LFI-NFP",
+    "worst": 0.0741,
+    "own_score": 1.0,
+    "own_rank": 1,
+    "n_groups": 10
+   }
+  ]
+ },
+ "analysis2_group_two_methods": {
+  "16": {
+   "LFI": {
+    "method_a_mean_pairwise": 0.9996,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0004,
+    "n_members_scored": 76,
+    "n_laws_majority": 77
+   },
+   "GDR": {
+    "method_a_mean_pairwise": 0.9858,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0142,
+    "n_members_scored": 24,
+    "n_laws_majority": 75
+   },
+   "ECO": {
+    "method_a_mean_pairwise": 1.0,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0,
+    "n_members_scored": 23,
+    "n_laws_majority": 76
+   },
+   "SOC": {
+    "method_a_mean_pairwise": null,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": null,
+    "n_members_scored": 0,
+    "n_laws_majority": 19
+   },
+   "DEM": {
+    "method_a_mean_pairwise": 0.9969,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0031,
+    "n_members_scored": 54,
+    "n_laws_majority": 93
+   },
+   "RE": {
+    "method_a_mean_pairwise": 0.9972,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0028,
+    "n_members_scored": 184,
+    "n_laws_majority": 93
+   },
+   "HOR": {
+    "method_a_mean_pairwise": 0.991,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.009,
+    "n_members_scored": 33,
+    "n_laws_majority": 90
+   },
+   "LIOT": {
+    "method_a_mean_pairwise": 0.9759,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0241,
+    "n_members_scored": 21,
+    "n_laws_majority": 80
+   },
+   "LR": {
+    "method_a_mean_pairwise": 0.9646,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0354,
+    "n_members_scored": 63,
+    "n_laws_majority": 87
+   },
+   "RN": {
+    "method_a_mean_pairwise": 0.9935,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0065,
+    "n_members_scored": 89,
+    "n_laws_majority": 83
+   }
+  },
+  "17": {
+   "LFI-NFP": {
+    "method_a_mean_pairwise": 1.0,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0,
+    "n_members_scored": 72,
+    "n_laws_majority": 58
+   },
+   "GDR": {
+    "method_a_mean_pairwise": 0.9869,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0131,
+    "n_members_scored": 18,
+    "n_laws_majority": 58
+   },
+   "ECOS": {
+    "method_a_mean_pairwise": 0.9886,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0114,
+    "n_members_scored": 38,
+    "n_laws_majority": 61
+   },
+   "SOC": {
+    "method_a_mean_pairwise": 0.9929,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0071,
+    "n_members_scored": 67,
+    "n_laws_majority": 61
+   },
+   "DEM": {
+    "method_a_mean_pairwise": 0.9908,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0092,
+    "n_members_scored": 39,
+    "n_laws_majority": 66
+   },
+   "EPR": {
+    "method_a_mean_pairwise": 0.9882,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0118,
+    "n_members_scored": 110,
+    "n_laws_majority": 66
+   },
+   "HOR": {
+    "method_a_mean_pairwise": 0.9946,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0054,
+    "n_members_scored": 41,
+    "n_laws_majority": 66
+   },
+   "LIOT": {
+    "method_a_mean_pairwise": 0.9424,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0576,
+    "n_members_scored": 25,
+    "n_laws_majority": 62
+   },
+   "DR": {
+    "method_a_mean_pairwise": 0.9923,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0077,
+    "n_members_scored": 60,
+    "n_laws_majority": 64
+   },
+   "RN": {
+    "method_a_mean_pairwise": 1.0,
+    "method_b_majority": 1.0,
+    "delta_b_minus_a": 0.0,
+    "n_members_scored": 127,
+    "n_laws_majority": 62
+   }
+  }
+ },
+ "group_x_group_matrix": {
+  "16": {
+   "LFI": {
+    "LFI": {
+     "cong": 1.0,
+     "n": 77
+    },
+    "GDR": {
+     "cong": 0.918,
+     "n": 61
+    },
+    "ECO": {
+     "cong": 0.9062,
+     "n": 64
+    },
+    "SOC": {
+     "cong": 0.7059,
+     "n": 17
+    },
+    "DEM": {
+     "cong": 0.4416,
+     "n": 77
+    },
+    "RE": {
+     "cong": 0.4545,
+     "n": 77
+    },
+    "HOR": {
+     "cong": 0.4533,
+     "n": 75
+    },
+    "LIOT": {
+     "cong": 0.6061,
+     "n": 66
+    },
+    "LR": {
+     "cong": 0.4658,
+     "n": 73
+    },
+    "RN": {
+     "cong": 0.5797,
+     "n": 69
+    }
+   },
+   "GDR": {
+    "LFI": {
+     "cong": 0.918,
+     "n": 61
+    },
+    "GDR": {
+     "cong": 1.0,
+     "n": 75
+    },
+    "ECO": {
+     "cong": 0.8923,
+     "n": 65
+    },
+    "SOC": {
+     "cong": 0.8235,
+     "n": 17
+    },
+    "DEM": {
+     "cong": 0.6,
+     "n": 75
+    },
+    "RE": {
+     "cong": 0.6133,
+     "n": 75
+    },
+    "HOR": {
+     "cong": 0.5972,
+     "n": 72
+    },
+    "LIOT": {
+     "cong": 0.7656,
+     "n": 64
+    },
+    "LR": {
+     "cong": 0.6286,
+     "n": 70
+    },
+    "RN": {
+     "cong": 0.6866,
+     "n": 67
+    }
+   },
+   "ECO": {
+    "LFI": {
+     "cong": 0.9062,
+     "n": 64
+    },
+    "GDR": {
+     "cong": 0.8923,
+     "n": 65
+    },
+    "ECO": {
+     "cong": 1.0,
+     "n": 76
+    },
+    "SOC": {
+     "cong": 0.8824,
+     "n": 17
+    },
+    "DEM": {
+     "cong": 0.6579,
+     "n": 76
+    },
+    "RE": {
+     "cong": 0.6711,
+     "n": 76
+    },
+    "HOR": {
+     "cong": 0.6712,
+     "n": 73
+    },
+    "LIOT": {
+     "cong": 0.803,
+     "n": 66
+    },
+    "LR": {
+     "cong": 0.6528,
+     "n": 72
+    },
+    "RN": {
+     "cong": 0.6866,
+     "n": 67
+    }
+   },
+   "SOC": {
+    "LFI": {
+     "cong": 0.7059,
+     "n": 17
+    },
+    "GDR": {
+     "cong": 0.8235,
+     "n": 17
+    },
+    "ECO": {
+     "cong": 0.8824,
+     "n": 17
+    },
+    "SOC": {
+     "cong": 1.0,
+     "n": 19
+    },
+    "DEM": {
+     "cong": 0.7368,
+     "n": 19
+    },
+    "RE": {
+     "cong": 0.7368,
+     "n": 19
+    },
+    "HOR": {
+     "cong": 0.7059,
+     "n": 17
+    },
+    "LIOT": {
+     "cong": 1.0,
+     "n": 16
+    },
+    "LR": {
+     "cong": 0.6667,
+     "n": 18
+    },
+    "RN": {
+     "cong": 0.7857,
+     "n": 14
+    }
+   },
+   "DEM": {
+    "LFI": {
+     "cong": 0.4416,
+     "n": 77
+    },
+    "GDR": {
+     "cong": 0.6,
+     "n": 75
+    },
+    "ECO": {
+     "cong": 0.6579,
+     "n": 76
+    },
+    "SOC": {
+     "cong": 0.7368,
+     "n": 19
+    },
+    "DEM": {
+     "cong": 1.0,
+     "n": 93
+    },
+    "RE": {
+     "cong": 0.9892,
+     "n": 93
+    },
+    "HOR": {
+     "cong": 0.9889,
+     "n": 90
+    },
+    "LIOT": {
+     "cong": 0.8875,
+     "n": 80
+    },
+    "LR": {
+     "cong": 0.9425,
+     "n": 87
+    },
+    "RN": {
+     "cong": 0.7952,
+     "n": 83
+    }
+   },
+   "RE": {
+    "LFI": {
+     "cong": 0.4545,
+     "n": 77
+    },
+    "GDR": {
+     "cong": 0.6133,
+     "n": 75
+    },
+    "ECO": {
+     "cong": 0.6711,
+     "n": 76
+    },
+    "SOC": {
+     "cong": 0.7368,
+     "n": 19
+    },
+    "DEM": {
+     "cong": 0.9892,
+     "n": 93
+    },
+    "RE": {
+     "cong": 1.0,
+     "n": 93
+    },
+    "HOR": {
+     "cong": 1.0,
+     "n": 90
+    },
+    "LIOT": {
+     "cong": 0.9,
+     "n": 80
+    },
+    "LR": {
+     "cong": 0.954,
+     "n": 87
+    },
+    "RN": {
+     "cong": 0.8072,
+     "n": 83
+    }
+   },
+   "HOR": {
+    "LFI": {
+     "cong": 0.4533,
+     "n": 75
+    },
+    "GDR": {
+     "cong": 0.5972,
+     "n": 72
+    },
+    "ECO": {
+     "cong": 0.6712,
+     "n": 73
+    },
+    "SOC": {
+     "cong": 0.7059,
+     "n": 17
+    },
+    "DEM": {
+     "cong": 0.9889,
+     "n": 90
+    },
+    "RE": {
+     "cong": 1.0,
+     "n": 90
+    },
+    "HOR": {
+     "cong": 1.0,
+     "n": 90
+    },
+    "LIOT": {
+     "cong": 0.8961,
+     "n": 77
+    },
+    "LR": {
+     "cong": 0.9524,
+     "n": 84
+    },
+    "RN": {
+     "cong": 0.8025,
+     "n": 81
+    }
+   },
+   "LIOT": {
+    "LFI": {
+     "cong": 0.6061,
+     "n": 66
+    },
+    "GDR": {
+     "cong": 0.7656,
+     "n": 64
+    },
+    "ECO": {
+     "cong": 0.803,
+     "n": 66
+    },
+    "SOC": {
+     "cong": 1.0,
+     "n": 16
+    },
+    "DEM": {
+     "cong": 0.8875,
+     "n": 80
+    },
+    "RE": {
+     "cong": 0.9,
+     "n": 80
+    },
+    "HOR": {
+     "cong": 0.8961,
+     "n": 77
+    },
+    "LIOT": {
+     "cong": 1.0,
+     "n": 80
+    },
+    "LR": {
+     "cong": 0.8684,
+     "n": 76
+    },
+    "RN": {
+     "cong": 0.8592,
+     "n": 71
+    }
+   },
+   "LR": {
+    "LFI": {
+     "cong": 0.4658,
+     "n": 73
+    },
+    "GDR": {
+     "cong": 0.6286,
+     "n": 70
+    },
+    "ECO": {
+     "cong": 0.6528,
+     "n": 72
+    },
+    "SOC": {
+     "cong": 0.6667,
+     "n": 18
+    },
+    "DEM": {
+     "cong": 0.9425,
+     "n": 87
+    },
+    "RE": {
+     "cong": 0.954,
+     "n": 87
+    },
+    "HOR": {
+     "cong": 0.9524,
+     "n": 84
+    },
+    "LIOT": {
+     "cong": 0.8684,
+     "n": 76
+    },
+    "LR": {
+     "cong": 1.0,
+     "n": 87
+    },
+    "RN": {
+     "cong": 0.8333,
+     "n": 78
+    }
+   },
+   "RN": {
+    "LFI": {
+     "cong": 0.5797,
+     "n": 69
+    },
+    "GDR": {
+     "cong": 0.6866,
+     "n": 67
+    },
+    "ECO": {
+     "cong": 0.6866,
+     "n": 67
+    },
+    "SOC": {
+     "cong": 0.7857,
+     "n": 14
+    },
+    "DEM": {
+     "cong": 0.7952,
+     "n": 83
+    },
+    "RE": {
+     "cong": 0.8072,
+     "n": 83
+    },
+    "HOR": {
+     "cong": 0.8025,
+     "n": 81
+    },
+    "LIOT": {
+     "cong": 0.8592,
+     "n": 71
+    },
+    "LR": {
+     "cong": 0.8333,
+     "n": 78
+    },
+    "RN": {
+     "cong": 1.0,
+     "n": 83
+    }
+   }
+  },
+  "17": {
+   "LFI-NFP": {
+    "LFI-NFP": {
+     "cong": 1.0,
+     "n": 58
+    },
+    "GDR": {
+     "cong": 0.82,
+     "n": 50
+    },
+    "ECOS": {
+     "cong": 0.8679,
+     "n": 53
+    },
+    "SOC": {
+     "cong": 0.6226,
+     "n": 53
+    },
+    "DEM": {
+     "cong": 0.431,
+     "n": 58
+    },
+    "EPR": {
+     "cong": 0.431,
+     "n": 58
+    },
+    "HOR": {
+     "cong": 0.3966,
+     "n": 58
+    },
+    "LIOT": {
+     "cong": 0.4,
+     "n": 55
+    },
+    "DR": {
+     "cong": 0.375,
+     "n": 56
+    },
+    "RN": {
+     "cong": 0.4545,
+     "n": 55
+    }
+   },
+   "GDR": {
+    "LFI-NFP": {
+     "cong": 0.82,
+     "n": 50
+    },
+    "GDR": {
+     "cong": 1.0,
+     "n": 58
+    },
+    "ECOS": {
+     "cong": 0.9821,
+     "n": 56
+    },
+    "SOC": {
+     "cong": 0.8519,
+     "n": 54
+    },
+    "DEM": {
+     "cong": 0.6207,
+     "n": 58
+    },
+    "EPR": {
+     "cong": 0.6207,
+     "n": 58
+    },
+    "HOR": {
+     "cong": 0.6207,
+     "n": 58
+    },
+    "LIOT": {
+     "cong": 0.6182,
+     "n": 55
+    },
+    "DR": {
+     "cong": 0.5965,
+     "n": 57
+    },
+    "RN": {
+     "cong": 0.6,
+     "n": 55
+    }
+   },
+   "ECOS": {
+    "LFI-NFP": {
+     "cong": 0.8679,
+     "n": 53
+    },
+    "GDR": {
+     "cong": 0.9821,
+     "n": 56
+    },
+    "ECOS": {
+     "cong": 1.0,
+     "n": 61
+    },
+    "SOC": {
+     "cong": 0.8246,
+     "n": 57
+    },
+    "DEM": {
+     "cong": 0.6066,
+     "n": 61
+    },
+    "EPR": {
+     "cong": 0.6066,
+     "n": 61
+    },
+    "HOR": {
+     "cong": 0.6066,
+     "n": 61
+    },
+    "LIOT": {
+     "cong": 0.6102,
+     "n": 59
+    },
+    "DR": {
+     "cong": 0.5902,
+     "n": 61
+    },
+    "RN": {
+     "cong": 0.5965,
+     "n": 57
+    }
+   },
+   "SOC": {
+    "LFI-NFP": {
+     "cong": 0.6226,
+     "n": 53
+    },
+    "GDR": {
+     "cong": 0.8519,
+     "n": 54
+    },
+    "ECOS": {
+     "cong": 0.8246,
+     "n": 57
+    },
+    "SOC": {
+     "cong": 1.0,
+     "n": 61
+    },
+    "DEM": {
+     "cong": 0.8361,
+     "n": 61
+    },
+    "EPR": {
+     "cong": 0.8361,
+     "n": 61
+    },
+    "HOR": {
+     "cong": 0.8361,
+     "n": 61
+    },
+    "LIOT": {
+     "cong": 0.8448,
+     "n": 58
+    },
+    "DR": {
+     "cong": 0.8167,
+     "n": 60
+    },
+    "RN": {
+     "cong": 0.7069,
+     "n": 58
+    }
+   },
+   "DEM": {
+    "LFI-NFP": {
+     "cong": 0.431,
+     "n": 58
+    },
+    "GDR": {
+     "cong": 0.6207,
+     "n": 58
+    },
+    "ECOS": {
+     "cong": 0.6066,
+     "n": 61
+    },
+    "SOC": {
+     "cong": 0.8361,
+     "n": 61
+    },
+    "DEM": {
+     "cong": 1.0,
+     "n": 66
+    },
+    "EPR": {
+     "cong": 0.9697,
+     "n": 66
+    },
+    "HOR": {
+     "cong": 0.9697,
+     "n": 66
+    },
+    "LIOT": {
+     "cong": 0.9194,
+     "n": 62
+    },
+    "DR": {
+     "cong": 0.9531,
+     "n": 64
+    },
+    "RN": {
+     "cong": 0.871,
+     "n": 62
+    }
+   },
+   "EPR": {
+    "LFI-NFP": {
+     "cong": 0.431,
+     "n": 58
+    },
+    "GDR": {
+     "cong": 0.6207,
+     "n": 58
+    },
+    "ECOS": {
+     "cong": 0.6066,
+     "n": 61
+    },
+    "SOC": {
+     "cong": 0.8361,
+     "n": 61
+    },
+    "DEM": {
+     "cong": 0.9697,
+     "n": 66
+    },
+    "EPR": {
+     "cong": 1.0,
+     "n": 66
+    },
+    "HOR": {
+     "cong": 0.9697,
+     "n": 66
+    },
+    "LIOT": {
+     "cong": 0.8871,
+     "n": 62
+    },
+    "DR": {
+     "cong": 0.9219,
+     "n": 64
+    },
+    "RN": {
+     "cong": 0.8548,
+     "n": 62
+    }
+   },
+   "HOR": {
+    "LFI-NFP": {
+     "cong": 0.3966,
+     "n": 58
+    },
+    "GDR": {
+     "cong": 0.6207,
+     "n": 58
+    },
+    "ECOS": {
+     "cong": 0.6066,
+     "n": 61
+    },
+    "SOC": {
+     "cong": 0.8361,
+     "n": 61
+    },
+    "DEM": {
+     "cong": 0.9697,
+     "n": 66
+    },
+    "EPR": {
+     "cong": 0.9697,
+     "n": 66
+    },
+    "HOR": {
+     "cong": 1.0,
+     "n": 66
+    },
+    "LIOT": {
+     "cong": 0.9194,
+     "n": 62
+    },
+    "DR": {
+     "cong": 0.9531,
+     "n": 64
+    },
+    "RN": {
+     "cong": 0.8548,
+     "n": 62
+    }
+   },
+   "LIOT": {
+    "LFI-NFP": {
+     "cong": 0.4,
+     "n": 55
+    },
+    "GDR": {
+     "cong": 0.6182,
+     "n": 55
+    },
+    "ECOS": {
+     "cong": 0.6102,
+     "n": 59
+    },
+    "SOC": {
+     "cong": 0.8448,
+     "n": 58
+    },
+    "DEM": {
+     "cong": 0.9194,
+     "n": 62
+    },
+    "EPR": {
+     "cong": 0.8871,
+     "n": 62
+    },
+    "HOR": {
+     "cong": 0.9194,
+     "n": 62
+    },
+    "LIOT": {
+     "cong": 1.0,
+     "n": 62
+    },
+    "DR": {
+     "cong": 0.9677,
+     "n": 62
+    },
+    "RN": {
+     "cong": 0.8448,
+     "n": 58
+    }
+   },
+   "DR": {
+    "LFI-NFP": {
+     "cong": 0.375,
+     "n": 56
+    },
+    "GDR": {
+     "cong": 0.5965,
+     "n": 57
+    },
+    "ECOS": {
+     "cong": 0.5902,
+     "n": 61
+    },
+    "SOC": {
+     "cong": 0.8167,
+     "n": 60
+    },
+    "DEM": {
+     "cong": 0.9531,
+     "n": 64
+    },
+    "EPR": {
+     "cong": 0.9219,
+     "n": 64
+    },
+    "HOR": {
+     "cong": 0.9531,
+     "n": 64
+    },
+    "LIOT": {
+     "cong": 0.9677,
+     "n": 62
+    },
+    "DR": {
+     "cong": 1.0,
+     "n": 64
+    },
+    "RN": {
+     "cong": 0.8833,
+     "n": 60
+    }
+   },
+   "RN": {
+    "LFI-NFP": {
+     "cong": 0.4545,
+     "n": 55
+    },
+    "GDR": {
+     "cong": 0.6,
+     "n": 55
+    },
+    "ECOS": {
+     "cong": 0.5965,
+     "n": 57
+    },
+    "SOC": {
+     "cong": 0.7069,
+     "n": 58
+    },
+    "DEM": {
+     "cong": 0.871,
+     "n": 62
+    },
+    "EPR": {
+     "cong": 0.8548,
+     "n": 62
+    },
+    "HOR": {
+     "cong": 0.8548,
+     "n": 62
+    },
+    "LIOT": {
+     "cong": 0.8448,
+     "n": 58
+    },
+    "DR": {
+     "cong": 0.8833,
+     "n": 60
+    },
+    "RN": {
+     "cong": 1.0,
+     "n": 62
+    }
+   }
+  }
+ },
+ "analysis3_denominator_dist": {
+  "16": {
+   "n_pairs_sampled": 30000,
+   "min": 0,
+   "p10": 5.0,
+   "p25": 9.0,
+   "median": 12.0,
+   "mean": 12.8,
+   "p75": 17.0,
+   "p90": 21.0,
+   "max": 54,
+   "pct_lt_5": 8.3,
+   "pct_lt_10": 30.8,
+   "total_laws_ref": 93
+  },
+  "17": {
+   "n_pairs_sampled": 30000,
+   "min": 0,
+   "p10": 3.0,
+   "p25": 11.0,
+   "median": 16.0,
+   "mean": 15.0,
+   "p75": 20.0,
+   "p90": 23.0,
+   "max": 46,
+   "pct_lt_5": 11.7,
+   "pct_lt_10": 22.4,
+   "total_laws_ref": 66
+  }
+ },
+ "analysis3_rank_instability": {
+  "16": {
+   "citizen": "RE",
+   "n_deputes_scored": 605,
+   "naive_top10_median_n": 56.5,
+   "naive_top10_perfect_smalln": 0,
+   "robust_top10_median_n": 56.5,
+   "n_deputes_with_perfect_score": 269,
+   "n_perfect_with_n_lt_10": 19,
+   "n_perfect_with_n_ge_20": 212,
+   "leaderboard_pure_cong_top20_with_n_lt_10": 1,
+   "example_pathology": {
+    "perfect_smalln": {
+     "name": "PA720170",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 2,
+     "rank_pure_cong": 218
+    },
+    "robust_midcong": {
+     "name": "PA794638",
+     "group": "RN",
+     "cong": 0.8103,
+     "n": 58,
+     "rank_pure_cong": 365
+    }
+   }
+  },
+  "17": {
+   "citizen": "EPR",
+   "n_deputes_scored": 636,
+   "naive_top10_median_n": 41.0,
+   "naive_top10_perfect_smalln": 0,
+   "robust_top10_median_n": 41.0,
+   "n_deputes_with_perfect_score": 131,
+   "n_perfect_with_n_lt_10": 33,
+   "n_perfect_with_n_ge_20": 78,
+   "leaderboard_pure_cong_top20_with_n_lt_10": 9,
+   "example_pathology": {
+    "perfect_smalln": {
+     "name": "Alexandra Martin (Gironde)",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 1,
+     "rank_pure_cong": 25
+    },
+    "robust_midcong": {
+     "name": "Marine Hamelet",
+     "group": "RN",
+     "cong": 0.8302,
+     "n": 53,
+     "rank_pure_cong": 340
+    }
+   }
+  }
+ },
+ "analysis3_spurious_perfect_prob": {
+  "note": "P(votant reellement aligne a p=0.82 affiche 100% par hasard sur k lois)",
+  "p_align": 0.82,
+  "k3": 0.551,
+  "k5": 0.371,
+  "k10": 0.137
+ },
+ "analysis3_top_examples": {
+  "16": {
+   "naive_top10": [
+    {
+     "name": "PA795926",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 75
+    },
+    {
+     "name": "Anthony Brosse",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 67
+    },
+    {
+     "name": "PA795934",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 64
+    },
+    {
+     "name": "Caroline Yadan",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 57
+    },
+    {
+     "name": "PA721828",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 57
+    },
+    {
+     "name": "Pierre Cazeneuve",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 56
+    },
+    {
+     "name": "Jean-François Rousset",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 56
+    },
+    {
+     "name": "PA794510",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 55
+    },
+    {
+     "name": "Éric Martineau",
+     "group": "DEM",
+     "cong": 1.0,
+     "n": 55
+    },
+    {
+     "name": "PA795508",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 54
+    }
+   ],
+   "robust_top10": [
+    {
+     "name": "PA795926",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 75
+    },
+    {
+     "name": "Anthony Brosse",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 67
+    },
+    {
+     "name": "PA795934",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 64
+    },
+    {
+     "name": "Caroline Yadan",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 57
+    },
+    {
+     "name": "PA721828",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 57
+    },
+    {
+     "name": "Pierre Cazeneuve",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 56
+    },
+    {
+     "name": "Jean-François Rousset",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 56
+    },
+    {
+     "name": "PA794510",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 55
+    },
+    {
+     "name": "Éric Martineau",
+     "group": "DEM",
+     "cong": 1.0,
+     "n": 55
+    },
+    {
+     "name": "PA795508",
+     "group": "RE",
+     "cong": 1.0,
+     "n": 54
+    }
+   ],
+   "naive_bottom10": [
+    {
+     "name": "PA718860",
+     "group": "LFI",
+     "cong": 0.0,
+     "n": 3
+    },
+    {
+     "name": "Jean-Philippe Nilor",
+     "group": "LFI",
+     "cong": 0.125,
+     "n": 16
+    },
+    {
+     "name": "PA720422",
+     "group": "LFI",
+     "cong": 0.125,
+     "n": 16
+    },
+    {
+     "name": "François Ruffin",
+     "group": "LFI",
+     "cong": 0.1333,
+     "n": 15
+    },
+    {
+     "name": "Ugo Bernalicis",
+     "group": "LFI",
+     "cong": 0.1429,
+     "n": 21
+    },
+    {
+     "name": "Jérôme Legavre",
+     "group": "LFI",
+     "cong": 0.1481,
+     "n": 27
+    },
+    {
+     "name": "Hendrik Davi",
+     "group": "LFI",
+     "cong": 0.1786,
+     "n": 28
+    },
+    {
+     "name": "PA1206",
+     "group": "NI",
+     "cong": 0.1818,
+     "n": 11
+    },
+    {
+     "name": "Aymeric Caron",
+     "group": "LFI",
+     "cong": 0.1875,
+     "n": 16
+    },
+    {
+     "name": "Clémentine Autain",
+     "group": "LFI",
+     "cong": 0.1875,
+     "n": 16
+    }
+   ]
+  },
+  "17": {
+   "naive_top10": [
+    {
+     "name": "Anthony Brosse",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 47
+    },
+    {
+     "name": "Christophe Marion",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 47
+    },
+    {
+     "name": "Vincent Caure",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 43
+    },
+    {
+     "name": "Jean-Luc Fugit",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 42
+    },
+    {
+     "name": "Florent Boudié",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 41
+    },
+    {
+     "name": "Jean-François Rousset",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 41
+    },
+    {
+     "name": "Nicole Le Peih",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 41
+    },
+    {
+     "name": "Sophie Mette",
+     "group": "DEM",
+     "cong": 1.0,
+     "n": 40
+    },
+    {
+     "name": "Anne-Sophie Ronceret",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 38
+    },
+    {
+     "name": "Pascal Lecamp",
+     "group": "DEM",
+     "cong": 1.0,
+     "n": 37
+    }
+   ],
+   "robust_top10": [
+    {
+     "name": "Anthony Brosse",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 47
+    },
+    {
+     "name": "Christophe Marion",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 47
+    },
+    {
+     "name": "Vincent Caure",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 43
+    },
+    {
+     "name": "Jean-Luc Fugit",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 42
+    },
+    {
+     "name": "Florent Boudié",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 41
+    },
+    {
+     "name": "Jean-François Rousset",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 41
+    },
+    {
+     "name": "Nicole Le Peih",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 41
+    },
+    {
+     "name": "Sophie Mette",
+     "group": "DEM",
+     "cong": 1.0,
+     "n": 40
+    },
+    {
+     "name": "Anne-Sophie Ronceret",
+     "group": "EPR",
+     "cong": 1.0,
+     "n": 38
+    },
+    {
+     "name": "Pascal Lecamp",
+     "group": "DEM",
+     "cong": 1.0,
+     "n": 37
+    }
+   ],
+   "naive_bottom10": [
+    {
+     "name": "Jérôme Legavre",
+     "group": "LFI-NFP",
+     "cong": 0.1,
+     "n": 20
+    },
+    {
+     "name": "Ugo Bernalicis",
+     "group": "LFI-NFP",
+     "cong": 0.1818,
+     "n": 22
+    },
+    {
+     "name": "Louis Boyard",
+     "group": "LFI-NFP",
+     "cong": 0.1818,
+     "n": 22
+    },
+    {
+     "name": "Aurélien Taché",
+     "group": "LFI-NFP",
+     "cong": 0.1905,
+     "n": 21
+    },
+    {
+     "name": "Jean-Philippe Nilor",
+     "group": "LFI-NFP",
+     "cong": 0.1905,
+     "n": 21
+    },
+    {
+     "name": "Loïc Prud'homme",
+     "group": "LFI-NFP",
+     "cong": 0.1905,
+     "n": 21
+    },
+    {
+     "name": "Aurélien Saintoul",
+     "group": "LFI-NFP",
+     "cong": 0.2,
+     "n": 30
+    },
+    {
+     "name": "Manon Meunier",
+     "group": "LFI-NFP",
+     "cong": 0.2,
+     "n": 20
+    },
+    {
+     "name": "Manuel Bompard",
+     "group": "LFI-NFP",
+     "cong": 0.2143,
+     "n": 28
+    },
+    {
+     "name": "Sébastien Delogu",
+     "group": "LFI-NFP",
+     "cong": 0.2222,
+     "n": 18
+    }
+   ]
+  }
+ },
+ "analysis4_archetypes": {
+  "16": {
+   "toujours_pour": {
+    "LFI": {
+     "cong": 0.4545,
+     "n": 77
+    },
+    "GDR": {
+     "cong": 0.6133,
+     "n": 75
+    },
+    "ECO": {
+     "cong": 0.6711,
+     "n": 76
+    },
+    "SOC": {
+     "cong": 0.7368,
+     "n": 19
+    },
+    "DEM": {
+     "cong": 0.9892,
+     "n": 93
+    },
+    "RE": {
+     "cong": 1.0,
+     "n": 93
+    },
+    "HOR": {
+     "cong": 1.0,
+     "n": 90
+    },
+    "LIOT": {
+     "cong": 0.9,
+     "n": 80
+    },
+    "LR": {
+     "cong": 0.954,
+     "n": 87
+    },
+    "RN": {
+     "cong": 0.8072,
+     "n": 83
+    },
+    "_spread": 0.5455
+   },
+   "toujours_contre": {
+    "LFI": {
+     "cong": 0.5455,
+     "n": 77
+    },
+    "GDR": {
+     "cong": 0.3867,
+     "n": 75
+    },
+    "ECO": {
+     "cong": 0.3289,
+     "n": 76
+    },
+    "SOC": {
+     "cong": 0.2632,
+     "n": 19
+    },
+    "DEM": {
+     "cong": 0.0108,
+     "n": 93
+    },
+    "RE": {
+     "cong": 0.0,
+     "n": 93
+    },
+    "HOR": {
+     "cong": 0.0,
+     "n": 90
+    },
+    "LIOT": {
+     "cong": 0.1,
+     "n": 80
+    },
+    "LR": {
+     "cong": 0.046,
+     "n": 87
+    },
+    "RN": {
+     "cong": 0.1928,
+     "n": 83
+    },
+    "_spread": 0.5455
+   },
+   "suiveur_majorite_AN": {
+    "LFI": {
+     "cong": 0.4545,
+     "n": 77
+    },
+    "GDR": {
+     "cong": 0.6133,
+     "n": 75
+    },
+    "ECO": {
+     "cong": 0.6711,
+     "n": 76
+    },
+    "SOC": {
+     "cong": 0.7368,
+     "n": 19
+    },
+    "DEM": {
+     "cong": 0.9892,
+     "n": 93
+    },
+    "RE": {
+     "cong": 1.0,
+     "n": 93
+    },
+    "HOR": {
+     "cong": 1.0,
+     "n": 90
+    },
+    "LIOT": {
+     "cong": 0.9,
+     "n": 80
+    },
+    "LR": {
+     "cong": 0.954,
+     "n": 87
+    },
+    "RN": {
+     "cong": 0.8072,
+     "n": 83
+    },
+    "_spread": 0.5455
+   },
+   "opposant_majorite_AN": {
+    "LFI": {
+     "cong": 0.5455,
+     "n": 77
+    },
+    "GDR": {
+     "cong": 0.3867,
+     "n": 75
+    },
+    "ECO": {
+     "cong": 0.3289,
+     "n": 76
+    },
+    "SOC": {
+     "cong": 0.2632,
+     "n": 19
+    },
+    "DEM": {
+     "cong": 0.0108,
+     "n": 93
+    },
+    "RE": {
+     "cong": 0.0,
+     "n": 93
+    },
+    "HOR": {
+     "cong": 0.0,
+     "n": 90
+    },
+    "LIOT": {
+     "cong": 0.1,
+     "n": 80
+    },
+    "LR": {
+     "cong": 0.046,
+     "n": 87
+    },
+    "RN": {
+     "cong": 0.1928,
+     "n": 83
+    },
+    "_spread": 0.5455
+   },
+   "aleatoire_graine42": {
+    "LFI": {
+     "cong": 0.4286,
+     "n": 77
+    },
+    "GDR": {
+     "cong": 0.5041,
+     "n": 75
+    },
+    "ECO": {
+     "cong": 0.5246,
+     "n": 76
+    },
+    "SOC": {
+     "cong": 0.4062,
+     "n": 19
+    },
+    "DEM": {
+     "cong": 0.649,
+     "n": 93
+    },
+    "RE": {
+     "cong": 0.6424,
+     "n": 93
+    },
+    "HOR": {
+     "cong": 0.6327,
+     "n": 90
+    },
+    "LIOT": {
+     "cong": 0.625,
+     "n": 80
+    },
+    "LR": {
+     "cong": 0.6879,
+     "n": 87
+    },
+    "RN": {
+     "cong": 0.625,
+     "n": 83
+    },
+    "_spread": 0.2817
+   }
+  },
+  "17": {
+   "toujours_pour": {
+    "LFI-NFP": {
+     "cong": 0.431,
+     "n": 58
+    },
+    "GDR": {
+     "cong": 0.6207,
+     "n": 58
+    },
+    "ECOS": {
+     "cong": 0.6066,
+     "n": 61
+    },
+    "SOC": {
+     "cong": 0.8361,
+     "n": 61
+    },
+    "DEM": {
+     "cong": 1.0,
+     "n": 66
+    },
+    "EPR": {
+     "cong": 0.9697,
+     "n": 66
+    },
+    "HOR": {
+     "cong": 0.9697,
+     "n": 66
+    },
+    "LIOT": {
+     "cong": 0.9194,
+     "n": 62
+    },
+    "DR": {
+     "cong": 0.9531,
+     "n": 64
+    },
+    "RN": {
+     "cong": 0.871,
+     "n": 62
+    },
+    "_spread": 0.569
+   },
+   "toujours_contre": {
+    "LFI-NFP": {
+     "cong": 0.569,
+     "n": 58
+    },
+    "GDR": {
+     "cong": 0.3793,
+     "n": 58
+    },
+    "ECOS": {
+     "cong": 0.3934,
+     "n": 61
+    },
+    "SOC": {
+     "cong": 0.1639,
+     "n": 61
+    },
+    "DEM": {
+     "cong": 0.0,
+     "n": 66
+    },
+    "EPR": {
+     "cong": 0.0303,
+     "n": 66
+    },
+    "HOR": {
+     "cong": 0.0303,
+     "n": 66
+    },
+    "LIOT": {
+     "cong": 0.0806,
+     "n": 62
+    },
+    "DR": {
+     "cong": 0.0469,
+     "n": 64
+    },
+    "RN": {
+     "cong": 0.129,
+     "n": 62
+    },
+    "_spread": 0.569
+   },
+   "suiveur_majorite_AN": {
+    "LFI-NFP": {
+     "cong": 0.431,
+     "n": 58
+    },
+    "GDR": {
+     "cong": 0.6207,
+     "n": 58
+    },
+    "ECOS": {
+     "cong": 0.6066,
+     "n": 61
+    },
+    "SOC": {
+     "cong": 0.8361,
+     "n": 61
+    },
+    "DEM": {
+     "cong": 1.0,
+     "n": 66
+    },
+    "EPR": {
+     "cong": 0.9697,
+     "n": 66
+    },
+    "HOR": {
+     "cong": 0.9697,
+     "n": 66
+    },
+    "LIOT": {
+     "cong": 0.9194,
+     "n": 62
+    },
+    "DR": {
+     "cong": 0.9531,
+     "n": 64
+    },
+    "RN": {
+     "cong": 0.871,
+     "n": 62
+    },
+    "_spread": 0.569
+   },
+   "opposant_majorite_AN": {
+    "LFI-NFP": {
+     "cong": 0.569,
+     "n": 58
+    },
+    "GDR": {
+     "cong": 0.3793,
+     "n": 58
+    },
+    "ECOS": {
+     "cong": 0.3934,
+     "n": 61
+    },
+    "SOC": {
+     "cong": 0.1639,
+     "n": 61
+    },
+    "DEM": {
+     "cong": 0.0,
+     "n": 66
+    },
+    "EPR": {
+     "cong": 0.0303,
+     "n": 66
+    },
+    "HOR": {
+     "cong": 0.0303,
+     "n": 66
+    },
+    "LIOT": {
+     "cong": 0.0806,
+     "n": 62
+    },
+    "DR": {
+     "cong": 0.0469,
+     "n": 64
+    },
+    "RN": {
+     "cong": 0.129,
+     "n": 62
+    },
+    "_spread": 0.569
+   },
+   "aleatoire_graine42": {
+    "LFI-NFP": {
+     "cong": 0.3913,
+     "n": 58
+    },
+    "GDR": {
+     "cong": 0.5,
+     "n": 58
+    },
+    "ECOS": {
+     "cong": 0.4752,
+     "n": 61
+    },
+    "SOC": {
+     "cong": 0.604,
+     "n": 61
+    },
+    "DEM": {
+     "cong": 0.6204,
+     "n": 66
+    },
+    "EPR": {
+     "cong": 0.5926,
+     "n": 66
+    },
+    "HOR": {
+     "cong": 0.6204,
+     "n": 66
+    },
+    "LIOT": {
+     "cong": 0.6078,
+     "n": 62
+    },
+    "DR": {
+     "cong": 0.6415,
+     "n": 64
+    },
+    "RN": {
+     "cong": 0.505,
+     "n": 62
+    },
+    "_spread": 0.2502
+   }
+  }
+ }
+}

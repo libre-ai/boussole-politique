@@ -1,0 +1,529 @@
+{
+ "corpus_total": 159,
+ "leg16_n": 93,
+ "leg17_n": 66,
+ "cc_censure_partielle_total": 19,
+ "cc_censure_partielle_leg16": 12,
+ "cc_censure_partielle_leg17": 7,
+ "cc_conforme_total": 21,
+ "cc_conforme_avec_reserve_total": 4,
+ "saisine_cc_total": 45,
+ "saisine_cc_leg16": 22,
+ "saisine_cc_leg17": 23,
+ "_saisine_raw_total": 45,
+ "_saisine_corpus_minus_raw": [],
+ "_saisine_raw_minus_corpus": [],
+ "cc_saisine_sans_conclusion": 1,
+ "_cc_concl_fam_counts": {
+  "TCD01": 21,
+  "TCD02": 19,
+  "TCD03": 4
+ },
+ "drift_lecture_posterieure_total": 20,
+ "drift_lecture_posterieure_leg16": 18,
+ "drift_lecture_posterieure_leg17": 2,
+ "drift_cmp_ref_premiere_lecture_literal": 23,
+ "version_drift_flag_corpus": 0,
+ "union_texte_juge_diff_promulgue_total": 35,
+ "union_leg16": 27,
+ "union_leg17": 8,
+ "union_frac_total": 0.2201,
+ "union_frac_leg16": 0.2903,
+ "union_frac_leg17": 0.1212,
+ "union_overlap_censure_et_drift": 4,
+ "union_seul_censure": 15,
+ "union_seul_drift": 16,
+ "drift_prouve_par_scrutin_non_lie": 16,
+ "_drift_prouve_l16": 15,
+ "_drift_prouve_l17": 1,
+ "immigration_2024_dans_corpus": false,
+ "_censure_list": [
+  [
+   16,
+   "2022-843 DC",
+   "Mesures d’urgence pour la protection du pouvoir d’achat"
+  ],
+  [
+   16,
+   "2023-848 DC",
+   "Projet de loi relatif à l’accélération de la production d’én"
+  ],
+  [
+   16,
+   "2023-850 DC",
+   "Projet de loi relatif aux jeux Olympiques et Paralympiques d"
+  ],
+  [
+   16,
+   "2023-851 DC",
+   "Projet de loi  relatif à l’accélération des procédures liées"
+  ],
+  [
+   16,
+   "2023-853 DC",
+   "Protéger les logements contre l’occupation illicite"
+  ],
+  [
+   16,
+   "2023-854 DC",
+   "Programmation militaire pour les années 2024 à 2030 et diver"
+  ],
+  [
+   16,
+   "2023-855 DC",
+   "Orientation et programmation du ministère de la justice 2023"
+  ],
+  [
+   16,
+   "2023-856 DC",
+   "L'ouverture, la modernisation et la responsabilité du corps "
+  ],
+  [
+   16,
+   "2023-858 DC",
+   "Pour le plein emploi"
+  ],
+  [
+   16,
+   "2024-865 DC",
+   "Projet de loi visant à renforcer la lutte contre les dérives"
+  ],
+  [
+   16,
+   "2024-866 DC",
+   "Projet de loi visant à sécuriser et réguler l’espace numériq"
+  ],
+  [
+   16,
+   "2025-876 DC",
+   "Souveraineté en matière agricole et renouvellement des génér"
+  ],
+  [
+   17,
+   "2025-878 DC",
+   "Proposition de loi relative au renforcement de la sûreté dan"
+  ],
+  [
+   17,
+   "2025-885 DC",
+   "Proposition de loi visant à sortir la France du piège du nar"
+  ],
+  [
+   17,
+   "2025-886 DC",
+   "Restaurer l'autorité de la justice à l'égard des mineurs dél"
+  ],
+  [
+   17,
+   "2025-887 DC",
+   "Contre toutes les fraudes aux aides publiques"
+  ],
+  [
+   17,
+   "2025-896 DC",
+   "Simplification du droit de l'urbanisme et du logement"
+  ],
+  [
+   17,
+   "2025-899 DC",
+   "Projet de loi de financement de la sécurité sociale pour 202"
+  ],
+  [
+   17,
+   "2026-903 DC",
+   "Projet de loi de simplification de la vie économique"
+  ]
+ ],
+ "_drift_detail": [
+  [
+   16,
+   "DLR5L16N45927",
+   "Maintien provisoire d'un dispositif de veille et de séc",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N45942",
+   "Mesures d’urgence pour la protection du pouvoir d’achat",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N46734",
+   "Projet de loi portant diverses dispositions d'adaptatio",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N46753",
+   "Ouvrir le tiers financement à l’État, à ses établisseme",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N46868",
+   "Mesures pour bâtir la société du bien vieillir en Franc",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N46880",
+   "Proposition de loi visant à faciliter la mise en oeuvre",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N47037",
+   "Renforcer la protection des familles d’enfants touchés ",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N47616",
+   "Restitution des biens culturels ayant fait l’objet de s",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N47637",
+   "Services express régionaux métropolitains",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N47755",
+   "Revaloriser le métier de secrétaire de mairie",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N47884",
+   "Projet de loi visant à sécuriser et réguler l’espace nu",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N47917",
+   "L'industrie verte",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N48422",
+   "Soutenir l’engagement bénévole et simplifier la vie ass",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N48681",
+   "Mesures d’urgence pour adapter les dispositions du code",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N48908",
+   "Projet de loi portant diverses dispositions d’adaptatio",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N49023",
+   "Assurer une justice patrimoniale au sein de la famille",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N49455",
+   "Protéger la population des risques liés aux substances ",
+   "AN1-DEBATS-DEC",
+   [
+    "AN2-DEBATS-DEC"
+   ]
+  ],
+  [
+   16,
+   "DLR5L16N49726",
+   "Souveraineté en matière agricole et renouvellement des ",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   17,
+   "DLR5L17N50715",
+   "Contre toutes les fraudes aux aides publiques",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ],
+  [
+   17,
+   "DLR5L17N52635",
+   "Projet de loi relatif à la restitution de biens culture",
+   "AN1-DEBATS-DEC",
+   [
+    "CMP-DEBATS-AN-DEC"
+   ]
+  ]
+ ],
+ "_overlap_list": [
+  [
+   16,
+   "Mesures d’urgence pour la protection du pouvoir d’achat"
+  ],
+  [
+   16,
+   "Projet de loi visant à sécuriser et réguler l’espace nu"
+  ],
+  [
+   16,
+   "Souveraineté en matière agricole et renouvellement des "
+  ],
+  [
+   17,
+   "Contre toutes les fraudes aux aides publiques"
+  ]
+ ],
+ "_proof_samples": [
+  [
+   16,
+   "Restitution des biens culturels ayant fait l’",
+   2118,
+   "2282",
+   "2023-07-13",
+   "l'ensemble du projet de loi relatif à la restitution des biens culture"
+  ],
+  [
+   16,
+   "Ouvrir le tiers financement à l’État, à ses é",
+   876,
+   "1255",
+   "2023-03-22",
+   "l'ensemble de la proposition de loi visant à ouvrir le tiers financeme"
+  ],
+  [
+   16,
+   "Mesures d’urgence pour la protection du pouvo",
+   81,
+   "186",
+   "2022-08-03",
+   "l'ensemble du projet de loi portant mesures d'urgence pour la protecti"
+  ],
+  [
+   16,
+   "Proposition de loi visant à faciliter la mise",
+   2046,
+   "2257",
+   "2023-07-12",
+   "l'ensemble de la proposition de loi visant à faciliter la mise en œuvr"
+  ],
+  [
+   16,
+   "Mesures d’urgence pour adapter les dispositio",
+   2710,
+   "2966",
+   "2023-11-14",
+   "la motion de rejet préalable, déposée par Mme Mathilde Panot, du proje"
+  ],
+  [
+   16,
+   "Soutenir l’engagement bénévole et simplifier ",
+   3305,
+   "3657",
+   "2024-04-08",
+   "l'ensemble de la proposition de loi visant à soutenir l'engagement bén"
+  ],
+  [
+   16,
+   "Services express régionaux métropolitains",
+   1894,
+   "2983",
+   "2023-11-15",
+   "l'ensemble de la proposition de loi relative aux services express régi"
+  ],
+  [
+   16,
+   "Revaloriser le métier de secrétaire de mairie",
+   2982,
+   "3214",
+   "2023-12-20",
+   "l'ensemble de la proposition de loi visant à revaloriser le métier de "
+  ],
+  [
+   16,
+   "Projet de loi visant à sécuriser et réguler l",
+   2796,
+   "3668",
+   "2024-04-10",
+   "l'ensemble du projet de loi visant à sécuriser et réguler l'espace num"
+  ],
+  [
+   16,
+   "L'industrie verte",
+   2519,
+   "2721",
+   "2023-10-10",
+   "l'ensemble du projet de loi relatif à l'industrie verte (texte de la c"
+  ],
+  [
+   16,
+   "Maintien provisoire d'un dispositif de veille",
+   15,
+   "122",
+   "2022-07-25",
+   "l'ensemble du projet de loi mettant fin aux régimes d'exception créés "
+  ],
+  [
+   16,
+   "Assurer une justice patrimoniale au sein de l",
+   3220,
+   "3894",
+   "2024-05-23",
+   "l’ensemble de la proposition de loi visant à assurer une justice patri"
+  ]
+ ],
+ "_b_literal_list": [
+  [
+   16,
+   "Assurer une justice patrimoniale au sein de la famille"
+  ],
+  [
+   16,
+   "Faciliter la transformation des bureaux en logements"
+  ],
+  [
+   16,
+   "Interdire les dispositifs électroniques de vapotage à u"
+  ],
+  [
+   16,
+   "L'industrie verte"
+  ],
+  [
+   16,
+   "Maintien provisoire d'un dispositif de veille et de séc"
+  ],
+  [
+   16,
+   "Mesures d’urgence pour adapter les dispositions du code"
+  ],
+  [
+   16,
+   "Mesures d’urgence pour la protection du pouvoir d’achat"
+  ],
+  [
+   16,
+   "Mesures pour bâtir la société du bien vieillir en Franc"
+  ],
+  [
+   16,
+   "Ouvrir le tiers financement à l’État, à ses établisseme"
+  ],
+  [
+   16,
+   "Projet de loi portant diverses dispositions d'adaptatio"
+  ],
+  [
+   16,
+   "Projet de loi portant diverses dispositions d’adaptatio"
+  ],
+  [
+   16,
+   "Projet de loi visant à sécuriser et réguler l’espace nu"
+  ],
+  [
+   16,
+   "Proposition de loi visant à faciliter la mise en oeuvre"
+  ],
+  [
+   16,
+   "Proposition de loi visant à renforcer l'accès des femme"
+  ],
+  [
+   16,
+   "Remédier aux déséquilibres du marché locatif en zone te"
+  ],
+  [
+   16,
+   "Renforcer la protection des familles d’enfants touchés "
+  ],
+  [
+   16,
+   "Restitution des biens culturels ayant fait l’objet de s"
+  ],
+  [
+   16,
+   "Revaloriser le métier de secrétaire de mairie"
+  ],
+  [
+   16,
+   "Services express régionaux métropolitains"
+  ],
+  [
+   16,
+   "Soutenir l’engagement bénévole et simplifier la vie ass"
+  ],
+  [
+   16,
+   "Souveraineté en matière agricole et renouvellement des "
+  ],
+  [
+   17,
+   "Contre toutes les fraudes aux aides publiques"
+  ],
+  [
+   17,
+   "Projet de loi relatif à la restitution de biens culture"
+  ]
+ ]
+}
