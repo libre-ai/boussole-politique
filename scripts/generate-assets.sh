@@ -45,7 +45,8 @@ for svg in "$BRAND"/*.svg; do
 done
 
 render_square() {
-  local size=$1 output=$2 rendered="$TMP/icon-$size.png"
+  local size=$1 output=$2
+  local rendered="$TMP/icon-$size.png"
   rsvg-convert --format=png --width="$size" --height="$size" \
     "$BRAND/icon.svg" > "$rendered"
   convert "$rendered" -background '#111827' -alpha remove -alpha off "$output"
