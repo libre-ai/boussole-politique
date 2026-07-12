@@ -16,7 +16,7 @@ La formulation méthodologique canonique est :
 
 Le projet est un prototype méthodologique et technique. Il ne constitue ni une application électorale, ni une consigne de vote, ni un classement des élus, ni un score de confiance morale.
 
-Le vivier Q8 est viable en volume, mais sa symétrie politique et sa couverture thématique ne sont pas encore démontrées. La sélection VAA reste le risque méthodologique principal et nécessite une revue indépendante.
+Le vivier Q8 est viable en volume, mais sa symétrie politique et sa couverture thématique ne sont pas encore démontrées. La gate M1 reste donc `conditional` et interdit une sélection canonique : 95 candidats cœur ont un lien source fort, dont 84 scrutins adoptés contre 11 rejetés. La sélection VAA reste le risque méthodologique principal et nécessite une revue indépendante.
 
 ## Principes
 
@@ -44,6 +44,7 @@ Les contrats Rust sont vérifiés avec la toolchain verrouillée `1.85.1`, en na
 ./scripts/generate-assets.sh
 python3 scripts/test-assets.py
 ./scripts/check-rust.sh
+python3 scripts/verify-m1-sensitivity.py
 ```
 
 Le dernier script requiert la toolchain définie dans `rust-toolchain.toml`, avec la cible `wasm32-unknown-unknown`.
