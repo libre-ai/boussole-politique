@@ -64,7 +64,10 @@ def main() -> int:
             archive = DATA / f"{name}.json.zip"
             destination = DATA / name
             if destination.exists():
-                continue
+                raise RuntimeError(
+                    f"refusing pre-existing extracted snapshot: dry-run/data/{name}; "
+                    "remove or move it before generating archive-bound evidence"
+                )
             destination.mkdir()
             created.append(destination)
             safe_extract(archive, destination)
