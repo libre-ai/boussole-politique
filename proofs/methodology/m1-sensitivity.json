@@ -1,0 +1,31 @@
+{
+  "blocking_gates": [
+    "political_symmetry_unproven",
+    "thematic_coverage_unproven",
+    "source_links_partially_reviewed"
+  ],
+  "canonical_selection_authorized": false,
+  "format": "boussole-politique.m1-sensitivity-evidence.v1",
+  "inputs": {
+    "amo10-17.json.zip": "0762983555ebc277d37e75ca20011274a74aa0b2537579bd388536de94c01e67",
+    "dossiers-16.json.zip": "6a2369c01a44711362b7c9a79ed13c001400cbb00dc6bade7b05499d2e6d478e",
+    "dossiers-17.json.zip": "a84bb785d17e8eb43cb975ae6898544151757ff4c36f7cf7e346b0e3a476f787",
+    "scrutins-16.json.zip": "adc5e57d3ad5904fd11e176b531b3d525d4ecfdf78db9587f93a14452601126b",
+    "scrutins-17.json.zip": "1c16a2eb85c7570aab6e67436e69133dc076e122055ef1927108cebc3043f728"
+  },
+  "observations": {
+    "core_candidates": 117,
+    "parameter_combinations": 12,
+    "strong_link_adopted": 84,
+    "strong_link_core_candidates": 95,
+    "strong_link_rejected": 11,
+    "two_runs_byte_identical": true
+  },
+  "outputs": {
+    "q8-vivier-elargi.json": "290af49bbe5fc98fa7d5280718aa6652ce32da29870a0bdc1526f6dbaeb8f67d",
+    "q8-vivier-elargi.md": "4a7d12851a28415a64690ba4b34c21bc32744d9a263fdcf71eb54f338b7dfe79"
+  },
+  "pwa_product_claim_authorized": false,
+  "registration_status": "registered_after_exploratory_q8_before_canonical_selection",
+  "verdict": "conditional"
+}

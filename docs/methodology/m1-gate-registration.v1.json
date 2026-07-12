@@ -1,0 +1,65 @@
+{
+  "format": "boussole-politique.m1-gate-registration.v1",
+  "status": "registered_after_exploratory_q8_before_canonical_selection",
+  "scope": {
+    "legislatures": [16, 17],
+    "candidate_scopes": ["ensemble", "premiere_partie"],
+    "strong_link_methods": ["dossier_ref", "vote_ref"],
+    "excluded_from_core": ["amendement", "motion"]
+  },
+  "parameter_grid": {
+    "discriminance_min": [0.1, 0.2, 0.3],
+    "participation_min": [0.1, 0.2, 0.3, 0.5],
+    "working_default": {
+      "discriminance_min": 0.2,
+      "participation_min": 0.2
+    }
+  },
+  "metrics": [
+    "candidate_count",
+    "legislature_coverage",
+    "adopted_rejected_distribution",
+    "group_majority_bidirectionality",
+    "minority_side_share_by_group",
+    "source_link_strength",
+    "thematic_coverage"
+  ],
+  "gates": {
+    "volume": {
+      "required": true,
+      "rule": "at_least_10_strong_link_core_candidates_per_legislature"
+    },
+    "outcome_diversity": {
+      "required": true,
+      "rule": "contains_adopted_and_rejected_scrutins"
+    },
+    "group_bidirectionality": {
+      "required": true,
+      "rule": "every_observed_main_group_has_for_and_against_majorities",
+      "caveat": "descriptive_only_not_ideological_balance"
+    },
+    "political_symmetry": {
+      "required": true,
+      "rule": "independent_review_accepts_distribution_and_minority_side_shares"
+    },
+    "thematic_coverage": {
+      "required": true,
+      "rule": "versioned_public_taxonomy_mapping_exists"
+    },
+    "source_links": {
+      "required": true,
+      "rule": "canonical_selection_uses_only_reviewed_strong_links"
+    }
+  },
+  "decision": {
+    "pass": "all_required_gates_pass",
+    "conditional": "volume_is_viable_but_at_least_one_required_quality_gate_is_unproven",
+    "fail": "volume_or_two_legislature_coverage_fails"
+  },
+  "non_goals": [
+    "select_statements",
+    "choose_political_polarity",
+    "claim_ideological_neutrality",
+    "publish_a_ranking"
+  ]
+}
