@@ -1,6 +1,7 @@
 # Boussole Politique — État & roadmap
 
-> Plan vivant du projet. Tenu à jour à chaque chantier. Dernière révision : **2026-07-11**.
+> Plan vivant du projet. Tenu à jour à chaque chantier. Dernière révision : **2026-07-14**.
+> Cockpit local : `docs/product-readiness.md`.
 > Mode : *monde idéal* (sans contrainte de temps/budget ; on n'arbitre que sur l'exactitude, la
 > complétude, la qualité). La roadmap aval reprend et actualise `revue-specs-2026-06-12.md` §5.
 
@@ -16,7 +17,7 @@
 | **Spec v1 + architecture + chartes MVP** | **2026-07-11** | 🟡 propositions à valider |
 | **Contrat de polarité exécutable** | **2026-07-11** | ✅ formule + 10e vecteur synthétique |
 | **Identité et assets PWA provisoires** | **2026-07-11** | 🟡 génération/hash/dimensions/safe zone passent ; revue humaine en attente |
-| **Workspace `domain` + `scoring`** | **2026-07-11** | 🟡 code et tests d’or préparés ; gates Rust non exécutables sans toolchain |
+| **Workspace `domain` + `scoring`** | **2026-07-11** | 🟡 code et tests d’or préparés ; gates Rust prouvés en CI avec toolchain verrouillée |
 
 Q8 trouve un vivier cœur de **117 scrutins exploratoires** (overrides proposés inclus), dont **95 à lien
 source fort**, au filtre de travail (discriminance ≥ 0,20 ; participation ≥ 0,20), sur les deux
@@ -27,8 +28,7 @@ politique, couverture thématique et caractère structurant des amendements.
 Les assets de marque sont reproductibles deux fois à hashes identiques dans l’environnement local ; les
 contrôles XML, dimensions, opacité, contrastes, manifest et zone sûre maskable passent. La piste visuelle
 reste une **proposition**, pas une icône de store validée. Le workspace Rust contient les contrats purs
-et les dix tests synthétiques, mais `cargo`, `rustc` et `rustup` sont absents : aucune compilation native
-ou WASM, aucun fmt/clippy et aucun test Rust ne sont encore prouvés.
+et les dix tests synthétiques ; la CI atteste aussi `fmt`/`clippy`/tests/`build` WASM avec la toolchain verrouillée `1.85.1`. En local, l’exécution manuelle dépend simplement de l’outillage installé.
 
 ## 2. Registre de décisions (ADR)
 
@@ -81,7 +81,7 @@ ou WASM, aucun fmt/clippy et aucun test Rust ne sont encore prouvés.
   académique).
 - **F.** **Backlog éditorial** : résumés neutres des énoncés + **FALC** + glossaire (dépend de E).
 - **G0.** 🟡 **Contrats Rust purs** : `domain` + `scoring`, arithmétique entière et tests d’or préparés.
-  Fermer les gates fmt/clippy/tests/build WASM dès qu’une toolchain verrouillée est disponible ; ne pas
+  Les gates fmt/clippy/tests/build WASM sont prouvés en CI avec la toolchain verrouillée `1.85.1` ; la reprise locale reste dépendante de l’outillage installé. Ne pas
   prétendre que les trois profils réels sont recalculés tant que leurs entrées par énoncé manquent.
 - **G.** **App web** : seulement après G0 validé, instancier le shell Dioxus 0.7, puis deck, reveal par
   lot, export/import, `storage.persist()` (Safari ITP) et RGAA AA.
