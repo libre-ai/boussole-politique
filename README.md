@@ -57,6 +57,7 @@ Le dernier script requiert la toolchain définie dans `rust-toolchain.toml`, ave
 - `docs/methodology/selection-v1.md`
 - `modele-donnees-v2.md`
 - `formule-congruence.md`
+- `docs/product-readiness.md`
 - `roadmap.md`
 
 ## Données
