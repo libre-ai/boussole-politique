@@ -59,7 +59,7 @@ Public data/method reads require no authentication. Build publication uses relea
 
 ## Runtime boundaries
 
-TypeScript owns questionnaire, local persistence, upgrade preview and explanation UI. Rust/WASM owns pure deterministic scoring and method validation only: no network, clock, storage, randomness or personal identifiers. Inputs/outputs are canonical contract values. Dataset extraction tooling may use Rust CLI but cannot share user runtime.
+TypeScript owns questionnaire, local persistence, upgrade preview and explanation UI. Boussole Scoring v2 is a candidate Rust/WASM boundary for pure deterministic comparison and method validation only; this amendment implements no engine. The future component has no network, clock, storage, randomness, identity or personal identifier. Inputs/outputs are canonical local contract values. Dataset extraction tooling cannot share user runtime.
 
 ## Accessibility and degraded mode
 
@@ -67,10 +67,12 @@ The complete questionnaire and result work offline after dataset load. Statement
 
 ## Contracts
 
-- Public Vote Dataset v1 — `contracts/schemas/public-vote-dataset.v1.schema.json` ;
-- Boussole Method v1 — `contracts/schemas/boussole-method.v1.schema.json` ;
-- Local Comparison v1 — `contracts/schemas/local-comparison.v1.schema.json` ;
-- pure scoring — `contracts/wit/boussole-scoring-v1/world.wit`.
+- Public Vote Dataset v2 — `contracts/schemas/public-vote-dataset.v2.schema.json` ;
+- Boussole Method v2 — `contracts/schemas/boussole-method.v2.schema.json` ;
+- Local Response Set v2 — `contracts/schemas/boussole-response-set.v2.schema.json` ;
+- Local Comparison v2 — `contracts/schemas/local-comparison.v2.schema.json` ;
+- pure scoring candidate — `contracts/wit/boussole-scoring-v2/world.wit` and `SEMANTICS.md` ;
+- public test vectors — `contracts/fixtures/boussole-scoring-v2/golden-vectors.v1.json`.
 
 No API accepts responses.
 
@@ -86,7 +88,7 @@ Golden scoring vectors run in Rust/WASM and independent reference implementation
 4. dataset extraction/provenance pipeline — Proof + Experiences ;
 5. methodological/legal/accessibility/privacy gate — independent reviewers + Infrastructure and Release.
 
-Public scoring feature flag remains compile/release-disabled until package 5 succeeds.
+Public scoring remains compile/release-disabled until distinct named methodology and France/EU privacy reviewers approve the exact method/dataset hashes. No agent, dataset editor or future implementer can approve its own output.
 
 ## Release and rollback
 
