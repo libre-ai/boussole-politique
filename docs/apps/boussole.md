@@ -59,7 +59,7 @@ Public data/method reads require no authentication. Build publication uses relea
 
 ## Runtime boundaries
 
-TypeScript owns questionnaire, local persistence, upgrade preview and explanation UI. Boussole Scoring v2 is a candidate Rust/WASM boundary for pure deterministic comparison and method validation only; this amendment implements no engine. The future component has no network, clock, storage, randomness, identity or personal identifier. Inputs/outputs are canonical local contract values. Dataset extraction tooling cannot share user runtime.
+TypeScript owns questionnaire, local persistence, upgrade preview and explanation UI. Boussole Scoring v2 is a candidate Rust/WASM boundary for pure deterministic comparison and method validation only; this amendment implements no engine. The future component has no network, clock, storage, randomness or respondent/user identifier. Inputs include public professional reviewer attestations bound to method/dataset hashes, but those identifiers are never linked to local responses or emitted in results/errors. Inputs/outputs are canonical local contract values. Dataset extraction tooling cannot share user runtime.
 
 ## Accessibility and degraded mode
 
