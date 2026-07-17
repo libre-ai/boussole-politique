@@ -51,7 +51,7 @@ Failure shows no guessed score and preserves source/method access.
 
 ## Data
 
-Git/contracts own identity-free aggregate statements, vote counts, extraction provenance, opaque review references and methods. Every dataset declares a hash-bound publication policy with a group-size floor of at least 5, small-group exclusion, prohibited identity fields and a review expiry; a real review may require a higher threshold. Roll-call sources are admitted only as aggregates and statement wording never targets a natural person. User responses and results are IndexedDB/local memory only until deletion. No server table, cookie identity or analytics ID is allowed. Dataset source licence and permitted redistribution are explicit per field/artifact. Migration source is approved public vote datasets and methods; no historical user response enters the new app.
+Git/contracts own identity-free aggregate statements, vote counts, extraction provenance, opaque review references and methods. Every dataset declares a hash-bound publication policy with a group-size floor of at least 5, small-group exclusion, prohibited identity fields and a review expiry; a real review may require a higher threshold. Roll-call sources are admitted only as aggregates. Each statement declares a public-policy subject and prohibited person targeting; its human wording is hash-bound and any change requires a fresh privacy attestation. User responses and results are IndexedDB/local memory only until deletion. No server table, cookie identity or analytics ID is allowed. Dataset source licence and permitted redistribution are explicit per field/artifact. Migration source is approved public vote datasets and methods; no historical user response enters the new app.
 
 ## Authentication and authorization
 
@@ -78,7 +78,7 @@ No API accepts responses.
 
 ## Evidence
 
-Golden scoring vectors run in Rust/WASM and independent reference implementation. Dataset tests validate sources, aggregation floors, small-group exclusion, publication expiry, denominators, abstentions, attestations and licences. Network interception proves zero response/result transmission. Browser tests cover offline, upgrade preview, delete, keyboard and screen readers. Release evidence includes the independent methodological and legal/privacy approvals defined by ADR-0002.
+Golden scoring vectors run in Rust/WASM and independent reference implementation. Dataset tests validate sources, aggregation floors, small-group exclusion, publication expiry, person-targeting declarations, wording reapproval, denominators, abstentions, attestations and licences. Network interception proves zero response/result transmission. Browser tests cover offline, upgrade preview, delete, keyboard and screen readers. Release evidence includes the independent methodological and legal/privacy approvals defined by ADR-0002.
 
 ## Work packages
 
