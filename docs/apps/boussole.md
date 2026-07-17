@@ -41,7 +41,7 @@ Method/dataset versions are immutable and content-addressed. Result binds exact 
 | `boussole.public_scoring_disabled` | independent release approvals absent |
 | `boussole.dataset_unsourced` | vote/statement lacks source and extraction method |
 | `boussole.wording_asymmetric` | review gate detects unequal framing contract |
-| `boussole.coverage_insufficient` | declared scope/coverage threshold not met |
+| `boussole.coverage_insufficient` | hash-bound aggregation floor or stricter dataset threshold not met |
 | `boussole.denominator_hidden` | result cannot expose votes considered/omitted |
 | `boussole.method_version_unknown` | scoring core lacks approved method vector |
 | `boussole.response_transmission_forbidden` | request attempts network upload of positions |
@@ -51,11 +51,11 @@ Failure shows no guessed score and preserves source/method access.
 
 ## Data
 
-Git/contracts own published statements, vote records, extraction provenance, review references and methods. User responses and results are IndexedDB/local memory only until deletion. No server table, cookie identity or analytics ID is allowed. Dataset source licence and permitted redistribution are explicit per field/artifact. Migration source is approved public vote datasets and methods; no historical user response enters the new app.
+Git/contracts own identity-free aggregate statements, vote counts, extraction provenance, opaque review references and methods. Every dataset declares a hash-bound publication policy with a group-size floor of at least 5, small-group exclusion, prohibited identity fields and a review expiry; a real review may require a higher threshold. Roll-call sources are admitted only as aggregates and statement wording never targets a natural person. User responses and results are IndexedDB/local memory only until deletion. No server table, cookie identity or analytics ID is allowed. Dataset source licence and permitted redistribution are explicit per field/artifact. Migration source is approved public vote datasets and methods; no historical user response enters the new app.
 
 ## Authentication and authorization
 
-Public data/method reads require no authentication. Build publication uses release identity and attenuated Biscuit with `tenant("public")`, restricted to dataset/method hash and `publish`. Review references are public professional attestations with consent, not account data in the application. There is no browser session or internal token in scoring.
+Public data/method reads require no authentication. Build publication uses release identity and attenuated Biscuit with `tenant("public")`, restricted to dataset/method hash and `publish`. Payloads carry only opaque `rev_*` reviewer IDs plus sanitized HTTPS attestation citations and hashes. The release caller verifies professional capacity and explicit publication consent; those attestations are not account data and are never resolved by the scorer. There is no browser session or internal token in scoring.
 
 ## Runtime boundaries
 
@@ -78,7 +78,7 @@ No API accepts responses.
 
 ## Evidence
 
-Golden scoring vectors run in Rust/WASM and independent reference implementation. Dataset tests validate sources, coverage, denominators, abstentions and licences. Network interception proves zero response/result transmission. Browser tests cover offline, upgrade preview, delete, keyboard and screen readers. Release evidence includes the independent methodological and legal/privacy approvals defined by ADR-0002.
+Golden scoring vectors run in Rust/WASM and independent reference implementation. Dataset tests validate sources, aggregation floors, small-group exclusion, publication expiry, denominators, abstentions, attestations and licences. Network interception proves zero response/result transmission. Browser tests cover offline, upgrade preview, delete, keyboard and screen readers. Release evidence includes the independent methodological and legal/privacy approvals defined by ADR-0002.
 
 ## Work packages
 
