@@ -76,6 +76,26 @@ domain (`boussole.local_state_corrupt`).
 - **Public scoring** stays compile-disabled until the two methodological and
   legal approvals required by `ADR-0002`.
 
+## Increment 4 — IndexedDB adapter
+
+`src/persistence/indexed-db-response-store.ts` is the on-device implementation of
+`LocalResponseStore`, persisting the single encoded response-set string. The
+`IDBFactory` is **injected** (a real `indexedDB` in the browser, a fake in tests),
+so the adapter never reaches for an ambient global and is testable off-browser. It
+mirrors the practices IndexedDB adapter's transaction discipline: completion
+handlers are attached synchronously with the request, so a transaction can never
+auto-commit before completion is observed.
+
+The fail-closed decode stays in the persistence core — the adapter only reads the
+stored string and hands it to `deserializeResponseSet`, so a corrupt or tampered
+record surfaces as a `corrupt` result (`boussole.local_state_corrupt`), never a
+rehydrated invalid set. It uses IndexedDB, no network (the `check-no-transmission`
+gate covers it).
+
+Verified against `fake-indexeddb` (real round-trip, not stubs): save/load, re-save
+overwrites the single set, clear empties, a seeded corrupt record loads as `corrupt`,
+and an un-openable factory rejects.
+
 ## License
 
 EUPL-1.2.
