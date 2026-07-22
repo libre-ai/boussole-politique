@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import type { ExportedResponseSet } from "../domain/response-set";
 import { DataOwnership } from "./data-ownership";
 
-const noop = (): void => {};
+const noop = async (): Promise<void> => {};
 const exportEmpty = (): ExportedResponseSet | null => null;
 
 describe("DataOwnership", () => {
