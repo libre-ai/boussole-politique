@@ -1,6 +1,7 @@
 import { StatusMessage } from "@libre-ai/ui";
 import { useQuestionnaire } from "../client/use-questionnaire";
 import type { LocalResponseStore } from "../persistence/local-response-store";
+import { DataOwnership } from "./data-ownership";
 import { QUESTIONNAIRE_STATEMENTS } from "./fixture";
 import { Questionnaire } from "./questionnaire";
 
@@ -25,6 +26,13 @@ export function QuestionnaireApp({ store }: { readonly store?: LocalResponseStor
         onAnswer={controller.answer}
         onSkip={controller.skip}
       />
+      {controller.status === "corrupt" ? null : (
+        <DataOwnership
+          exportData={controller.exportData}
+          onDeleteAll={controller.deleteAll}
+          hasResponses={controller.set.responses.length > 0}
+        />
+      )}
     </>
   );
 }

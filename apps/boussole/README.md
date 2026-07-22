@@ -140,7 +140,36 @@ baseline (empty questionnaire, no store required), and the interactive hook
   (response set, statement IDs, answers) is transmitted; the service worker's
   `fetch` is shell-only (GET, same-origin, allowlisted paths).
 
-Deferred (out of scope): scoring UI, dataset/method upgrade UI, export/delete UI.
+Deferred (out of scope): scoring UI, dataset/method upgrade UI.
+
+## Increment 6 — data-ownership controls
+
+An enhanced-only "Mes données" region (`src/ui/data-ownership.tsx`) surfaces the
+export and delete behaviour the domain already carries, closing the "you own your
+data" loop:
+
+- **Export** — `useQuestionnaire().exportData()` returns the non-identifying
+  `boussole-response-set.v2` document (or `null` when empty); the component writes
+  it to a local `boussole-reponses.json` via a `Blob` + object URL + anchor
+  download. This touches **no network primitive**, so `check-no-transmission` stays
+  green with no allowlist entry (unlike the service worker, this path has no
+  `fetch` at all); the helper lives inside the app so the guard scans it.
+- **Delete** — `useQuestionnaire().deleteAll()` empties the responses through the
+  domain (binding kept) and persists the emptied set, so a reload restores an empty
+  questionnaire rather than the old answers. Deletion goes through an in-page
+  two-step confirmation (never `window.confirm`), with an `aria-live` success
+  message.
+
+The region is `lai-enhanced-only` (a no-JS user has no client store to export or
+delete), so the no-JS baseline is unchanged; export is disabled with a notice when
+there is nothing to export. Three-engine e2e assert the download (filename +
+document + **zero cross-origin traffic**), the confirmed delete round-trip, and the
+cancel path.
+
+Still deferred: dataset/method **upgrade UI** (blocked upstream on the public
+dataset loader — a deliberate no-transmission decision), and **public scoring**
+(gated by `ADR-0002`, compile-disabled until two methodological and legal
+approvals).
 
 ## Increment 4 — IndexedDB adapter
 

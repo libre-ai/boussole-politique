@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import {
+  deleteResponses,
+  type ExportedResponseSet,
+  exportResponseSet,
   type ResponseSet,
   recordResponse,
   skipStatement,
@@ -21,6 +24,13 @@ export interface QuestionnaireController {
   readonly status: QuestionnaireStatus;
   readonly answer: (statementId: string, value: number) => void;
   readonly skip: (statementId: string) => void;
+  // Data-ownership: `exportData` returns the current responses as a non-identifying
+  // export document (null when empty, mirroring the domain's empty-refusal); the
+  // caller turns it into a LOCAL file download — never a network upload. `deleteAll`
+  // erases every response through the domain and persists the emptied set (binding
+  // kept), so a reload restores an empty questionnaire rather than the old answers.
+  readonly exportData: () => ExportedResponseSet | null;
+  readonly deleteAll: () => void;
 }
 
 // The interactive controller. Without a store (SSR) it stays at the empty set with
@@ -59,6 +69,13 @@ export function useQuestionnaire(store?: LocalResponseStore): QuestionnaireContr
     skip(statementId) {
       const next = skipStatement(set, statementId);
       if (next.ok) commit(next.value);
+    },
+    exportData() {
+      const result = exportResponseSet(set);
+      return result.ok ? result.value : null;
+    },
+    deleteAll() {
+      commit(deleteResponses(set));
     },
   };
 }

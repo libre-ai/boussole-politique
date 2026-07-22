@@ -6,17 +6,17 @@ export default defineConfig({
   projects: [
     {
       name: "chromium",
-      testMatch: /questionnaire\.e2e\.ts/,
+      testMatch: /(questionnaire|data-ownership)\.e2e\.ts/,
       use: { ...devices["Desktop Chrome"] },
     },
     {
       name: "firefox",
-      testMatch: /questionnaire\.e2e\.ts/,
+      testMatch: /(questionnaire|data-ownership)\.e2e\.ts/,
       use: { ...devices["Desktop Firefox"] },
     },
     {
       name: "webkit",
-      testMatch: /questionnaire\.e2e\.ts/,
+      testMatch: /(questionnaire|data-ownership)\.e2e\.ts/,
       use: { ...devices["Desktop Safari"] },
     },
     {
