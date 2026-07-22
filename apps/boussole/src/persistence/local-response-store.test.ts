@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-
+import { encryptString } from "../crypto/symmetric-encryption";
 import {
   type DatasetBinding,
   type ResponseSet,
@@ -167,5 +167,83 @@ describe("createInMemoryResponseStore", () => {
     const store = createInMemoryResponseStore(tampered);
     const result = await store.load();
     expect(result).toEqual({ status: "corrupt", refusal: "boussole.local_state_corrupt" });
+  });
+});
+
+describe("createInMemoryResponseStore — encryption", () => {
+  test("detects and returns encrypted envelope on load", async () => {
+    const crypto = globalThis.crypto.subtle;
+    const plaintext = serializeResponseSet(populated());
+    const passphrase = "test-pin";
+
+    const envelope = await encryptString(plaintext, passphrase, crypto);
+    const encryptedString = JSON.stringify(envelope);
+
+    const store = createInMemoryResponseStore(encryptedString);
+    const result = await store.load();
+
+    expect(result.status).toBe("encrypted");
+    if (result.status === "encrypted") {
+      expect(result.envelope.version).toBe(1);
+      expect(result.envelope.salt).toBe(envelope.salt);
+    }
+  });
+
+  test("decrypts with correct passphrase", async () => {
+    const crypto = globalThis.crypto.subtle;
+    const set = populated();
+    const plaintext = serializeResponseSet(set);
+    const passphrase = "correct-pin";
+
+    const envelope = await encryptString(plaintext, passphrase, crypto);
+    const encryptedString = JSON.stringify(envelope);
+    const store = createInMemoryResponseStore(encryptedString);
+
+    const loadResult = await store.load();
+    expect(loadResult.status).toBe("encrypted");
+
+    if (loadResult.status === "encrypted") {
+      const decrypted = await store.decryptEnvelope(loadResult.envelope, passphrase);
+      expect(decrypted.status).toBe("loaded");
+      if (decrypted.status === "loaded") {
+        expect(decrypted.set.binding).toEqual(set.binding);
+        expect(decrypted.set.responses).toEqual(set.responses);
+      }
+    }
+  });
+
+  test("returns corrupt on wrong passphrase", async () => {
+    const crypto = globalThis.crypto.subtle;
+    const plaintext = serializeResponseSet(populated());
+    const passphrase = "correct-pin";
+
+    const envelope = await encryptString(plaintext, passphrase, crypto);
+    const encryptedString = JSON.stringify(envelope);
+    const store = createInMemoryResponseStore(encryptedString);
+
+    const loadResult = await store.load();
+    expect(loadResult.status).toBe("encrypted");
+
+    if (loadResult.status === "encrypted") {
+      const decrypted = await store.decryptEnvelope(loadResult.envelope, "wrong-pin");
+      expect(decrypted.status).toBe("corrupt");
+      if (decrypted.status === "corrupt") {
+        expect(decrypted.refusal).toBe("boussole.local_state_corrupt");
+      }
+    }
+  });
+
+  test("loads plaintext data when no encryption is present", async () => {
+    const set = populated();
+    const plaintext = serializeResponseSet(set);
+
+    const store = createInMemoryResponseStore(plaintext);
+    const result = await store.load();
+
+    expect(result.status).toBe("loaded");
+    if (result.status === "loaded") {
+      expect(result.set.binding).toEqual(set.binding);
+      expect(result.set.responses).toEqual(set.responses);
+    }
   });
 });

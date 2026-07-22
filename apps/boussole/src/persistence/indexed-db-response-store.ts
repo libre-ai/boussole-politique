@@ -7,11 +7,15 @@
 // adapter is testable off-browser (fake-indexeddb) and never reaches for an ambient
 // global. Mirrors the practices IndexedDB adapter's transaction discipline: handlers
 // are attached synchronously with the request so a transaction can never auto-commit
-// before completion is observed.
+// before completion is observed. At-rest encryption (AES-256-GCM) protects the
+// stored response set from device backups; decryption requires the user's PIN.
 
+import type { EncryptedEnvelope } from "../crypto/symmetric-encryption";
+import { decryptString, decryptWithKey, encryptWithKey } from "../crypto/symmetric-encryption";
 import type { ResponseSet } from "../domain/response-set";
 import {
   deserializeResponseSet,
+  type EncryptionContext,
   type LoadResult,
   type LocalResponseStore,
   serializeResponseSet,
@@ -110,9 +114,41 @@ export function createIndexedDbResponseStore(
     }
   }
 
+  function tryParseEncryptedEnvelope(data: string): EncryptedEnvelope | undefined {
+    try {
+      const parsed = JSON.parse(data);
+      if (
+        typeof parsed === "object" &&
+        parsed !== null &&
+        parsed.version === 1 &&
+        typeof parsed.salt === "string" &&
+        typeof parsed.nonce === "string" &&
+        typeof parsed.ciphertext === "string" &&
+        typeof parsed.tag === "string"
+      ) {
+        return parsed as EncryptedEnvelope;
+      }
+    } catch {
+      // Not encrypted, or not JSON
+    }
+    return undefined;
+  }
+
   return {
-    async save(set: ResponseSet): Promise<void> {
-      const record: ResponseRecord = { key: RECORD_KEY, raw: serializeResponseSet(set) };
+    async save(set: ResponseSet, encryption?: EncryptionContext): Promise<void> {
+      if (!encryption) {
+        throw new Error("save() requires an EncryptionContext (passphrase must be set first)");
+      }
+
+      const plaintext = serializeResponseSet(set);
+      const envelope = await encryptWithKey(
+        plaintext,
+        encryption.key,
+        encryption.salt,
+        globalThis.crypto.subtle,
+      );
+
+      const record: ResponseRecord = { key: RECORD_KEY, raw: JSON.stringify(envelope) };
       await withStore("readwrite", (store) => store.put(record));
     },
 
@@ -121,10 +157,43 @@ export function createIndexedDbResponseStore(
         store.get(RECORD_KEY),
       );
       if (record === undefined) return { status: "empty" };
+
+      // Check if the stored data is an encrypted envelope
+      const envelope = tryParseEncryptedEnvelope(record.raw);
+      if (envelope) {
+        return { status: "encrypted", envelope };
+      }
+
+      // Try to deserialize as plaintext
       const outcome = deserializeResponseSet(record.raw);
       return outcome.ok
         ? { status: "loaded", set: outcome.value }
         : { status: "corrupt", refusal: outcome.refusal };
+    },
+
+    async decryptEnvelope(envelope: EncryptedEnvelope, passphrase: string): Promise<LoadResult> {
+      try {
+        const decrypted = await decryptString(envelope, passphrase);
+        const outcome = deserializeResponseSet(decrypted);
+        return outcome.ok
+          ? { status: "loaded", set: outcome.value, envelope }
+          : { status: "corrupt", refusal: outcome.refusal };
+      } catch {
+        // Decryption failed (wrong passphrase or corrupted envelope)
+        return { status: "corrupt", refusal: "boussole.local_state_corrupt" };
+      }
+    },
+    async decryptEnvelopeWithKey(envelope: EncryptedEnvelope, key: CryptoKey): Promise<LoadResult> {
+      try {
+        const decrypted = await decryptWithKey(envelope, key);
+        const outcome = deserializeResponseSet(decrypted);
+        return outcome.ok
+          ? { status: "loaded", set: outcome.value, envelope }
+          : { status: "corrupt", refusal: outcome.refusal };
+      } catch {
+        // Decryption failed (wrong key or corrupted envelope)
+        return { status: "corrupt", refusal: "boussole.local_state_corrupt" };
+      }
     },
 
     async clear(): Promise<void> {

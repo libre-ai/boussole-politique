@@ -6,6 +6,18 @@ const STATEMENT = "stmt-services-publics";
 async function answerFirst(page: import("@playwright/test").Page): Promise<void> {
   await expect(page.locator("html")).toHaveAttribute("data-hydrated", "true");
   await page.getByRole("group", { name: STATEMENT }).getByRole("button", { name: "+3" }).click();
+
+  // First save triggers passphrase gate (needs-passphrase status)
+  await expect(page.getByTestId("passphrase-gate")).toBeVisible();
+
+  // Set a passphrase (minimum 12 characters)
+  const testPassphrase = "test-passphrase-data-ownership";
+  await page.fill('input[id="passphrase-input"]', testPassphrase);
+  await page.fill('input[id="confirm-input"]', testPassphrase);
+  await page.click('button[data-testid="submit-passphrase"]');
+
+  // After passphrase is set, gate disappears and questionnaire becomes visible
+  await expect(page.getByTestId("passphrase-gate")).not.toBeVisible();
   await expect(page.getByTestId("progress")).toContainText("1 / 4");
 }
 
@@ -42,15 +54,32 @@ test("deletes all responses after in-page confirmation and stays empty on reload
   page,
 }) => {
   await page.goto("/");
-  await answerFirst(page);
+  const testPassphrase = "test-passphrase-delete-123";
 
+  // answerFirst will set a passphrase and show questionnaire
+  await expect(page.locator("html")).toHaveAttribute("data-hydrated", "true");
+  await page.getByRole("group", { name: STATEMENT }).getByRole("button", { name: "+3" }).click();
+  await expect(page.getByTestId("passphrase-gate")).toBeVisible();
+  await page.fill('input[id="passphrase-input"]', testPassphrase);
+  await page.fill('input[id="confirm-input"]', testPassphrase);
+  await page.click('button[data-testid="submit-passphrase"]');
+  await expect(page.getByTestId("passphrase-gate")).not.toBeVisible();
+  await expect(page.getByTestId("progress")).toContainText("1 / 4");
+
+  // Delete all responses
   await page.getByRole("button", { name: "Supprimer mes réponses" }).click();
   await page.getByRole("button", { name: "Confirmer la suppression" }).click();
   await expect(page.getByTestId("delete-done")).toBeVisible();
 
-  // The emptied set is persisted: a reload restores an empty questionnaire, binding
-  // kept (still 4 statements), old answer gone.
+  // Reload: encrypted empty set triggers passphrase gate
   await page.reload();
+  await expect(page.getByTestId("passphrase-gate")).toBeVisible();
+
+  // Enter the same passphrase to decrypt the empty set
+  await page.fill('input[id="passphrase-input"]', testPassphrase);
+  await page.click('button[data-testid="submit-passphrase"]');
+
+  // Verify the set is now empty: binding kept (still 4 statements), all answers gone
   await expect(page.getByTestId("progress")).toContainText("0 / 4");
   await expect(page.getByTestId(`state-${STATEMENT}`)).toContainText("Sans réponse");
 });
