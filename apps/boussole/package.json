@@ -9,10 +9,23 @@
   },
   "scripts": {
     "check:bun": "bun ../../tools/quality/check-bun-minimum.ts",
+    "prebuild": "bun run check:bun",
+    "build": "bun scripts/build.ts",
+    "prestart": "bun run check:bun",
+    "start": "bun src/server/index.ts",
     "pretest": "bun run check:bun",
-    "test": "bun test"
+    "test": "bun test",
+    "pretest:e2e": "bun run check:bun",
+    "test:e2e": "bun run build && playwright test"
+  },
+  "dependencies": {
+    "@libre-ai/ui": "workspace:*",
+    "@libre-ai/web-platform": "workspace:*",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
+    "@playwright/test": "catalog:testing",
     "fake-indexeddb": "catalog:testing"
   }
 }

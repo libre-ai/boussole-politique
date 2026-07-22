@@ -76,6 +76,72 @@ domain (`boussole.local_state_corrupt`).
 - **Public scoring** stays compile-disabled until the two methodological and
   legal approvals required by `ADR-0002`.
 
+## Increment 5 — client shell (walking skeleton)
+
+The questionnaire is now a fully working **local-first web app**: an accessible
+SSR baseline instantiates the bun-app pattern, hydrating on the client into an
+interactive questionnaire that persists answers to IndexedDB and restores them
+on reload — **entirely device-local**, no network path for user data.
+
+### Server & rendering
+
+`src/server/handler.ts` routes `/` via `renderSsrDocument()`, serving the app
+as HTML; the `boussoleDocument()` descriptor (shared/document.tsx) specifies the
+questionnaire component, the production client bundle (`/assets/app.js`), and the
+PWA manifest. A `/api/health` health-check confirms the server is running.
+
+### No-JavaScript baseline
+
+`src/ui/questionnaire.tsx` renders statements as read-only: each statement
+displays its current state (answered, skipped, or unanswered) and the full
+`[-5, -3, 0, 3, 5]` scale as static prose. Interactive buttons live under the
+`lai-enhanced-only` class, hidden by default; they appear only after hydration.
+A user without JavaScript still gets the full questionnaire, fully accessible
+via SkipLink, fieldset/legend, and explicit labels — no colour-only signalling.
+
+### Client hydration & persistence
+
+`src/client/app.tsx` hydrates the SSR markup with `hydrateDocument()`, injecting
+the `createIndexedDbResponseStore()` adapter (real IndexedDB in the browser). The
+`useQuestionnaire()` hook (use-questionnaire.ts) manages the interactive state:
+on mount, it loads the persisted response set from IndexedDB; after each
+interaction (answer, skip), it commits to both the React component state and the
+store. A corrupt local store is surfaced fail-closed (status: `"corrupt"`), never
+rehydrated. The initial hydration render matches the server output exactly, so
+the transition is seamless.
+
+### PWA shell
+
+The build pipeline (`scripts/build.ts`) generates the app bundle, CSS foundation
+
+- Tailwind utilities, and a static offline document (`/static/index.html`). The
+  service worker (`scripts/build-service-worker.ts`) is generated at build time
+  with a hash-versioned cache name; it installs by fetching the shell asset list
+  (app bundle, styles, icon, manifest, static document), serves them cache-first
+  for GET requests (same-origin only, paths in the allowlist), and cleans up old
+  cache versions on activation. The single `fetch` listener is **shell-only** and
+  is the documented exception in the `check-no-transmission` allowlist.
+
+### Evidence
+
+Unit tests verify the static render (no-JS baseline visible), the SSR wrapper
+baseline (empty questionnaire, no store required), and the interactive hook
+(mounting with IndexedDB, loading, answering, persisting). Playwright e2e tests
+(chromium, firefox, webkit) confirm:
+
+- **No-JS baseline**: statements render read-only; interactive buttons are
+  `display:none`; the state is readable without JavaScript.
+- **PWA offline**: the service worker caches the shell; after registration, a
+  page reload offline serves the cached assets and the interactive app remains
+  responsive.
+- **Round-trip**: answering a statement → reloading → verifying the answer is
+  restored from IndexedDB.
+- **No transmission**: a network-interception assertion confirms no user data
+  (response set, statement IDs, answers) is transmitted; the service worker's
+  `fetch` is shell-only (GET, same-origin, allowlisted paths).
+
+Deferred (out of scope): scoring UI, dataset/method upgrade UI, export/delete UI.
+
 ## Increment 4 — IndexedDB adapter
 
 `src/persistence/indexed-db-response-store.ts` is the on-device implementation of
