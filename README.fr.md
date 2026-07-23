@@ -35,7 +35,7 @@ Boussole Politique est reconstruite à partir de contrats verrouillés. **Elle n
 | **Cœur de calcul candidat** — comparaison WASM déterministe    | ⏳ suite      | Monde WIT et vecteurs de test golden verrouillés ; implémentation Rust/WASM en attente                                                                                                                          |
 | Examen et publication du jeu de données/méthode public         | ⏳ en attente | Examinateurs indépendants (méthodologie et légalité/confidentialité) requis (ADR-0002) ; aucun calcul public jusqu'à approbation explicite                                                                      |
 
-Ce dépôt est `private` jusqu'à ce qu'un audit de secrets autorise sa réouverture publique (vague 4). **Cible de référence :** gouvernance des applications électorales (ex. Wahl-O-Mat, iSideWith) — sourçage transparent et calcul local déterministe plutôt que recommandation.
+Ce dépôt est une réserve publique, volontairement sans code produit jusqu'à l'activation (vague 4). **Cible de référence :** gouvernance des applications électorales (ex. Wahl-O-Mat, iSideWith) — sourçage transparent et calcul local déterministe plutôt que recommandation.
 
 ## Comment ça fonctionne
 
