@@ -1,75 +1,76 @@
-> [!WARNING]
-> **Frozen on 2026-07-16 — reserved as the future home of Boussole Politique ([monorepo ADR-0008](https://github.com/libre-ai/libre-ai/blob/main/docs/adr/0008-multi-repo-target-topology-and-brand.md)).**
-> Boussole Politique is being rebuilt from locked contracts in the canonical base repository [`libre-ai/libre-ai`](https://github.com/libre-ai/libre-ai) (target: `apps/boussole`). This repository will reopen as the real product repository when the owner activates it. Everything below describes the pre-freeze state and no longer reflects the current architecture or roadmap.
+**English** · [Français](README.fr.md)
 
-<p align="center">
-  <img src=".github/assets/repository-card.svg" alt="Une boussole relie des priorités citoyennes à des votes publics vérifiables." width="100%">
-</p>
+> [!NOTE]
+> **Reserved · future home of Boussole Politique** — rebuilt in the canonical base repository [`libre-ai/libre-ai`](https://github.com/libre-ai/libre-ai) ([multi-repo topology, ADR-0008](https://github.com/libre-ai/libre-ai/blob/main/docs/adr/0008-multi-repo-target-topology-and-brand.md)).
+> This repository will reopen as the real product repository when the owner activates it, consuming the base as a versioned dependency. The foundations described below are **being built now** — with links to the code that already exists.
 
 # Boussole Politique
 
-> **Compare tes positions aux votes, sans étiquette.**
+**Compare your civic priorities to sourced public votes — locally, privately, without profiling.** A person responds to symmetric sourced statements, and Boussole computes a transparent comparison with exact denominators, abstentions, and missing data visible — all on device. No political label, no voting advice, no account required. Political opinion data stays encrypted, local, and under user control.
 
-Boussole Politique est une application civique local-first en cours de construction. Elle présente des énoncés parlementaires sans étiquette politique, permet de se positionner localement, puis compare ces positions aux votes publics des élus et des groupes.
+The canonical brief it answers: _"show me where my positions align with the public record"_ — independent of any ideological label or endorsement, using only data the person confirms and audits themselves.
 
-La formulation méthodologique canonique est :
+## Why it's different
 
-> **A voté comme toi sur les énoncés que tu as jugés.**
+- **Transparent method, not a recommendation.** Every comparison shows you the scoring formula, dataset version, selection method, which votes were considered or missing, and who reviewed it — before you respond. The result binds your exact response set and method version; if either changes, it recomputes.
+- **Local by default, encrypted at rest.** Responses never leave your device. Art. 9 political-opinion data is persisted locally under an AES-256-GCM envelope, keyed to a mandatory passphrase (minimum 12 chars, PBKDF2-SHA256 600k). No server, no analytics, no profile.
+- **Deny public scoring without review.** Public voting datasets and scoring methods are published only after independent methodological _and_ privacy/legal reviewers explicitly approve exact dataset/method hashes. No automatic publication, no agent self-approval.
+- **Sources visible, aggregates only.** Every public vote is sourced (legislative record, public survey, published poll). Individual identities are never computed or exposed; only aggregated vote counts above a minimum threshold (at least 5, small-group exclusion). Sources and extraction methods are documented and reviewable.
+- **Deterministic and auditable.** The same person, responses, method and dataset always produce identical results. Comparison is computed locally by a deterministic WASM component; results can be reproduced offline.
+- **Accessible offline.** The full questionnaire, dataset, and scoring are available offline after one download. Keyboard and screen reader accessible; no graphics-only indicators.
 
-## Statut
+## Status — spec-published, foundations under construction
 
-Le projet est un prototype méthodologique et technique. Il ne constitue ni une application électorale, ni une consigne de vote, ni un classement des élus, ni un score de confiance morale.
+Boussole Politique is being rebuilt from locked contracts. It is **not released yet**; the client-side questionnaire and local persistence come first, and a good part already exists and is proven in the base repository:
 
-Le vivier Q8 est viable en volume, mais sa symétrie politique et sa couverture thématique ne sont pas encore démontrées. La gate M1 reste donc `conditional` et interdit une sélection canonique : 95 candidats cœur ont un lien source fort, dont 84 scrutins adoptés contre 11 rejetés. La sélection VAA reste le risque méthodologique principal et nécessite une revue indépendante.
+| Foundation                                                      | State        | Evidence                                                                                                                                                                                        |
+| --------------------------------------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`boussole-method.v2`** — locked method/scoring schema         | ✅ published | Schema committed; WIT world and normative semantics ([contracts/wit/boussole-scoring-v2/world.wit](https://github.com/libre-ai/libre-ai/blob/main/contracts/wit/boussole-scoring-v2/world.wit)) |
+| **`boussole-response-set.v2`** — locked local response schema   | ✅ published | Schema committed; response persistence validated                                                                                                                                                |
+| **Client questionnaire** — accessible SSR baseline              | ✅ built     | React PWA, hydrating local-only; keyboard/screen reader accessible; offline capable ([#186](https://github.com/libre-ai/libre-ai/pull/186))                                                     |
+| **IndexedDB adapter** — persistent local response store         | ✅ built     | Symmetric encryption AES-256-GCM, passphrase-gated; tested offline restore ([#185](https://github.com/libre-ai/libre-ai/pull/185), [#206](https://github.com/libre-ai/libre-ai/pull/206))       |
+| **Data ownership controls** — export / confirmed delete         | ✅ built     | User-initiated local export (non-identifying) and irreversible delete; no server erasure needed ([#189](https://github.com/libre-ai/libre-ai/pull/189))                                         |
+| **Dataset upgrade preview** — recompute with new method/dataset | ✅ built     | User can preview impact before accepting; response migration compatible ([#160](https://github.com/libre-ai/libre-ai/pull/160))                                                                 |
+| **No-transmission guard** — network interception proof          | ✅ tested    | E2E tests confirm zero response/result transmission on the wire ([#182](https://github.com/libre-ai/libre-ai/pull/182))                                                                         |
+| **Scoring core candidate** — pure WASM deterministic comparison | ⏳ next      | WIT world and golden test vectors locked; Rust/WASM implementation pending                                                                                                                      |
+| Public dataset/method review and publication                    | ⏳ pending   | Independent methodological and legal/privacy approvers required (ADR-0002); no public scoring until explicit approval                                                                           |
 
-## Principes
+This repository is `private` until a secrets audit clears it for public reopening (wave 4). **Benchmark target:** Voting Advice Application governance (e.g. Wahl-O-Mat, iSideWith) — transparent sourcing and deterministic local scoring rather than recommendation.
 
-- aucune position politique individuelle ne quitte l’appareil par défaut ;
-- aucun compte, aucune télémétrie, aucun push et aucun LLM dans le MVP ;
-- abstentions et non-votes exclus du score et affichés séparément ;
-- aucun score sans `n` ni dénominateur ;
-- groupe politique pris au moment du vote ;
-- faits exhaustifs dans leur périmètre, sélection VAA curatée et versionnée ;
-- aucun palmarès national.
+## How it works
 
-## État du dépôt
+1. **Inspect first** — user reads dataset version, public voting sources, selection method, scoring formula, treatment of abstentions and missing data, review evidence, and any limitations — all before responding.
+2. **Respond locally** — user answers symmetric sourced statements. Responses are saved only to IndexedDB under passphrase-gated AES-256-GCM encryption, never transmitted or logged.
+3. **Compute locally** — deterministic WASM evaluates the person's response set against the public vote dataset using the approved method. Comparison is transparent: visible denominator, missing votes, per-statement contribution, and any abstentions.
+4. **Export or delete** — user can export a non-identifying local result (response hashes, dataset version, comparison result) for their records, or irreversibly delete all local responses. No server table, no account, no recovery.
 
-- spécification v1 et architecture cible dans `docs/` ;
-- dry-run reproductible sur les données AN des législatures 16 et 17 ;
-- identité visuelle provisoire et pipeline déterministe dans `assets/brand/` et `scripts/generate-assets.sh` ;
-- contrats Rust purs dans `crates/domain` et `crates/scoring` ;
-- aucun shell Dioxus métier ni serveur axum à ce stade.
+## Architecture — built from interoperable bricks
 
-Les contrats Rust sont vérifiés avec la toolchain verrouillée `1.85.1`, en natif et pour `wasm32-unknown-unknown`. La CI exécute également deux générations successives des assets pour contrôler leur déterminisme. Voir `docs/implementation/contrats-rust-m2.md`.
+Boussole Politique is a product assembled from independently versioned bricks; each is usable and testable on its own, and the product is their composition (the multi-repo target of [ADR-0008](https://github.com/libre-ai/libre-ai/blob/main/docs/adr/0008-multi-repo-target-topology-and-brand.md)).
 
-## Contrôles
+| Brick                                              | Role                                                         | Interface it exposes / consumes                                                                                                                                                                                                                                                  |
+| -------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`boussole-method.v2` schema**                    | Locked method definition and scoring contract                | JSON Schema + WIT world; defines statement grouping, aggregation floor, small-group exclusion, method version binding                                                                                                                                                            |
+| **`boussole-response-set.v2` schema**              | Locked user response envelope                                | JSON Schema; persisted to IndexedDB, encrypted; binds exact dataset/method version and response hashes                                                                                                                                                                           |
+| **Client questionnaire (React PWA)**               | SSR baseline, local questionnaire UI, persistence controller | GET dataset, render statements, accept/skip/delete responses, encrypt-to-IndexedDB, preview upgrades                                                                                                                                                                             |
+| **IndexedDB store + symmetric encryption**         | Persistent local storage with at-rest encryption             | AES-256-GCM envelope keyed to mandatory passphrase; PBKDF2-SHA256 600k derivation; local-only, no unlock key escapes                                                                                                                                                             |
+| **Scoring core candidate** (Rust → WASM component) | Deterministic comparison engine (pending)                    | WIT world `boussole-scoring-v2`: `compare(method, dataset, response_set) → comparison`, capability-free                                                                                                                                                                          |
+| **Contracts** — locked interoperability            | Sourced facts, voting dataset, scoring semantics             | `boussole-method.v2`, `boussole-response-set.v2`, WIT world, `SEMANTICS.md`, golden test vectors ([contracts/fixtures/boussole-scoring-v2/golden-vectors.v1.json](https://github.com/libre-ai/libre-ai/blob/main/contracts/fixtures/boussole-scoring-v2/golden-vectors.v1.json)) |
 
-```sh
-./scripts/generate-assets.sh
-python3 scripts/test-assets.py
-./scripts/check-rust.sh
-python3 scripts/verify-m1-sensitivity.py
-```
+The questionnaire app performs authorization (passphrase gates read/write), passes canonical request/response bytes to the scoring engine (when ready), and the engine holds no token and performs no I/O. Any consumer that speaks the contracts can validate the same comparison locally.
 
-Le dernier script requiert la toolchain définie dans `rust-toolchain.toml`, avec la cible `wasm32-unknown-unknown`.
+## Where the work happens
 
-## Documentation centrale
+All active development is in the base repository, under:
 
-- `docs/spec-v1.md`
-- `docs/architecture-cible.md`
-- `docs/charte-neutralite.md`
-- `docs/methodology/selection-v1.md`
-- `modele-donnees-v2.md`
-- `formule-congruence.md`
-- `docs/product-readiness.md`
-- `roadmap.md`
+- `apps/boussole` — the product host (PWA questionnaire, local persistence, upgrade preview, export/delete UI)
+- `contracts/schemas/boussole-method.v2.schema.json` and `boussole-response-set.v2.schema.json` — locked schemas
+- `contracts/wit/boussole-scoring-v2/` — WIT world definition, normative semantics, and golden test vectors
+- `contracts/fixtures/boussole-scoring-v2/golden-vectors.v1.json` — conformance test suite for the pending Rust/WASM core
+- [`docs/apps/boussole.md`](https://github.com/libre-ai/libre-ai/blob/main/docs/apps/boussole.md) — the full product brief
 
-## Données
+To follow progress or contribute, open issues and pull requests in [`libre-ai/libre-ai`](https://github.com/libre-ai/libre-ai). This repository stays reserved until activation.
 
-Les archives officielles nécessaires au dry-run sont conservées dans `dry-run/data/*.zip`. Leurs répertoires extraits locaux sont ignorés par Git afin d’éviter environ 370 Mio de duplication.
+## License
 
-Les cinq overrides budgétaires de `dry-run/fixtures/vivier-link-overrides.json` sont encore proposés pour relecture croisée et ne sont pas canoniques.
-
-## Licence
-
-Code et assets originaux : MIT, voir `LICENSE` et `assets/brand/LICENSE.md`. Les données sources conservent leurs licences et conditions propres. Le nom public et les usages de marque restent soumis à revue juridique.
+EUPL-1.2.
