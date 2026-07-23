@@ -35,7 +35,7 @@ Boussole Politique is being rebuilt from locked contracts. It is **not released 
 | **Scoring core candidate** — pure WASM deterministic comparison | ⏳ next      | WIT world and golden test vectors locked; Rust/WASM implementation pending                                                                                                                      |
 | Public dataset/method review and publication                    | ⏳ pending   | Independent methodological and legal/privacy approvers required (ADR-0002); no public scoring until explicit approval                                                                           |
 
-This repository is `private` until a secrets audit clears it for public reopening (wave 4). **Benchmark target:** Voting Advice Application governance (e.g. Wahl-O-Mat, iSideWith) — transparent sourcing and deterministic local scoring rather than recommendation.
+This repository is a public reserved home, intentionally without product code until activation (wave 4). **Benchmark target:** Voting Advice Application governance (e.g. Wahl-O-Mat, iSideWith) — transparent sourcing and deterministic local scoring rather than recommendation.
 
 ## How it works
 
