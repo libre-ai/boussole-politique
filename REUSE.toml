@@ -141,12 +141,20 @@ precedence = "closest"
 SPDX-FileCopyrightText = ["Assemblée nationale", "2026 Libre AI contributors"]
 SPDX-License-Identifier = "LicenseRef-ThirdParty-Data"
 
-# Visual identity. The canonical table has no row for brand assets, so this
-# reproduces the standing per-directory declaration in `assets/brand/LICENSE.md`
-# rather than inventing an outbound licence: the sources, their generated
-# derivatives under `apps/web/assets/` and the rendered proof sheet stay MIT
-# until the pending trademark review concludes. No licence grants rights over
-# the "Libre AI" or "Boussole Politique" names.
+# Visual identity — no outbound licence.
+#
+# The canonical table has no row for brand assets, and that absence is
+# deliberate rather than an oversight: LICENSING.md carries a `Trademarks`
+# section stating that software and content licences grant no rights to the
+# names, logos or marks of the project, and TRADEMARKS.md requires prior written
+# permission to alter a logo or use a mark commercially.
+#
+# These files were MIT until 2026-07-25, which contradicted that policy head-on:
+# MIT grants "modify, merge, publish, distribute, sublicense, and/or sell" —
+# precisely what the trademark policy reserves. Trademark law protects a logo
+# whatever licence sits on the file, so the legal exposure was limited; but a
+# public MIT declaration is an explicit invitation to modify the identity, and
+# that invitation is what is withdrawn.
 [[annotations]]
 path = [
   "apps/web/assets/**",
@@ -154,6 +162,6 @@ path = [
   "assets/brand/manifest.json",
   "proofs/brand/icon-size-sheet.png",
 ]
-precedence = "closest"
+precedence = "override"
 SPDX-FileCopyrightText = "2026 Libre AI contributors"
-SPDX-License-Identifier = "MIT"
+SPDX-License-Identifier = "LicenseRef-Trademark"

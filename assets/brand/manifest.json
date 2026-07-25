@@ -4,17 +4,11 @@
   "status": "proposed_for_human_review",
   "source": "assets/brand/icon-source.svg",
   "pipeline": "scripts/generate-assets.sh",
-  "license": "MIT",
+  "license": "LicenseRef-Trademark",
   "remote_resources": false,
   "maskable_safe_zone": {
-    "canvas": [
-      512,
-      512
-    ],
-    "center": [
-      256,
-      256
-    ],
+    "canvas": [512, 512],
+    "center": [256, 256],
     "safe_radius": 204.8,
     "meaningful_content_radius": 190,
     "passes": true
@@ -58,7 +52,7 @@
     },
     {
       "path": "assets/brand/LICENSE.md",
-      "sha256": "c537abc9308f63a5da6b0e841b97b246bf674b8326dbc1f87e4492653c9ecfe4",
+      "sha256": "b15402e08cea9392ce7c6115634714192d6ee3b90a59026d31f9d118d539bfff",
       "media_type": "text/markdown"
     },
     {
@@ -70,64 +64,43 @@
       "path": "apps/web/assets/favicon-32.png",
       "sha256": "ad30c489242e11e79394a8caee366af7cdfb4deef20b18248700263107409978",
       "media_type": "image/png",
-      "dimensions": [
-        32,
-        32
-      ]
+      "dimensions": [32, 32]
     },
     {
       "path": "apps/web/assets/apple-touch-icon.png",
       "sha256": "c388acbe448b16de271d1def7918c0333abf9b6b4058840f152c69ab35e529cb",
       "media_type": "image/png",
-      "dimensions": [
-        180,
-        180
-      ]
+      "dimensions": [180, 180]
     },
     {
       "path": "apps/web/assets/icon-192.png",
       "sha256": "1ff83b6537bec538392ee1748de7273ea7a09799ef247c22db72762ecdde0720",
       "media_type": "image/png",
-      "dimensions": [
-        192,
-        192
-      ]
+      "dimensions": [192, 192]
     },
     {
       "path": "apps/web/assets/icon-512.png",
       "sha256": "9926fa6ac359b82390e8ecc365f0460eac50d2ec8a0bd4a06a65a9597ad37f11",
       "media_type": "image/png",
-      "dimensions": [
-        512,
-        512
-      ]
+      "dimensions": [512, 512]
     },
     {
       "path": "apps/web/assets/icon-maskable-192.png",
       "sha256": "1ff83b6537bec538392ee1748de7273ea7a09799ef247c22db72762ecdde0720",
       "media_type": "image/png",
-      "dimensions": [
-        192,
-        192
-      ]
+      "dimensions": [192, 192]
     },
     {
       "path": "apps/web/assets/icon-maskable-512.png",
       "sha256": "9926fa6ac359b82390e8ecc365f0460eac50d2ec8a0bd4a06a65a9597ad37f11",
       "media_type": "image/png",
-      "dimensions": [
-        512,
-        512
-      ]
+      "dimensions": [512, 512]
     },
     {
       "path": "apps/web/assets/social-card.png",
       "sha256": "a9700b040b20bb09d4622d19f59a9c9f74cebafd4d899bca76ec5923c57c2106",
       "media_type": "image/png",
-      "dimensions": [
-        1200,
-        630
-      ]
+      "dimensions": [1200, 630]
     }
   ]
 }
