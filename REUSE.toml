@@ -58,6 +58,13 @@ SPDX-License-Identifier = "Apache-2.0"
 # confirmation required below is satisfied and our own licence applies. Listed
 # file by file rather than by glob: the licence follows what a file contains, and
 # a glob cannot see that.
+#
+# Our licence applying outbound does not cancel what we owe inbound: these
+# figures were derived from Assemblée nationale open data, and the Licence
+# Ouverte requires attribution of the source and update date for derived
+# information too. That notice is in `LICENSE` and `dry-run/DATA-PROVENANCE.md`
+# and covers these files. The difference with the block further down is the
+# copyright line, not the duty to attribute.
 [[annotations]]
 path = [
   "dry-run/out/q1-funnel.md",
@@ -78,19 +85,39 @@ SPDX-License-Identifier = "CC-BY-4.0"
 # is never covered by a blanket repository licence. These five archives hold
 # between 4 106 and 9 486 unmodified upstream JSON files; we wrote none of their
 # bytes, so only the producer is named as copyright holder.
+#
+# Those original terms are now established rather than presumed: the producer
+# publishes this material under the Licence Ouverte / Open Licence, and the
+# owner ruled on 2026-07-25 that it is public open data under Etalab 2.0. The
+# provenance record the canonical policy demands before publication is complete
+# in `dry-run/DATA-PROVENANCE.md` — source paths, per-archive SHA-256, update
+# dates, sui generis database rights and personal-data analysis. Two of the five
+# archives are proven byte-for-byte identical to the producer's live copy.
+#
+# The licence obliges attribution of the source and of the date of last update.
+# That notice is carried in `LICENSE` and detailed per archive in the provenance
+# record; it is a condition of this grant, not a courtesy.
 [[annotations]]
 path = ["dry-run/data/**"]
 precedence = "closest"
 SPDX-FileCopyrightText = "Assemblée nationale"
-SPDX-License-Identifier = "LicenseRef-ThirdParty-Data"
+SPDX-License-Identifier = "etalab-2.0"
 
-# Derived outputs that redistribute upstream records, and therefore carry no
-# first-party grant. `DATA-PROVENANCE.md` allows an explicit licence on an
-# aggregated result only after confirming it does not reproduce restricted
-# inputs; the upstream terms are still unsettled here (`revue-specs-2026-06-12.md`
-# leaves "Etalab/ODbL" to be decided, `docs/plan-mvp.md` makes Licence Ouverte 2.0
-# conditional on a source review that has not happened), so that confirmation
-# cannot be given for a file that carries the records themselves.
+# Derived outputs that redistribute upstream records, and therefore carry the
+# upstream licence alongside ours. `DATA-PROVENANCE.md` allows an explicit
+# licence on an aggregated result only after confirming it does not reproduce
+# restricted inputs. That confirmation can now be given: the inputs are not
+# restricted. The producer publishes them under the Licence Ouverte, which
+# permits redistribution and adaptation, and `dry-run/DATA-PROVENANCE.md`
+# completes the record the policy requires. The source review that
+# `docs/plan-mvp.md` made a precondition has been carried out, and the choice
+# `revue-specs-2026-06-12.md` left between Etalab and ODbL was settled on
+# 2026-07-25 in favour of the Licence Ouverte, aligned on the source.
+#
+# `etalab-2.0 AND CC-BY-4.0` states what these files actually are: the upstream
+# records stay under the producer's terms, our selection and computation under
+# ours. Both are permissive and both require attribution, so the combination adds
+# no conflicting obligation — it names two attributions rather than one.
 #
 # The test is applied to content, identically whatever the extension, because
 # `.md` and `.json` come out of the same scripts. A file is listed here when it
@@ -102,8 +129,11 @@ SPDX-License-Identifier = "LicenseRef-ThirdParty-Data"
 #
 # Note this is a nominative-and-record test, not a privacy test. These are public
 # votes cast by elected representatives in the exercise of their mandate, and
-# their publicity is a legal obligation; what is unresolved is the licence of the
-# source dataset, not the confidentiality of its content.
+# their publicity is a legal obligation. Nothing about their confidentiality was
+# ever in doubt, and the licence of the source dataset is no longer in doubt
+# either; the test is kept because it identifies which files owe the producer an
+# attribution for records they carry, which is a live obligation under the
+# Licence Ouverte.
 #
 # Dual copyright is correct here and only here: these are derivative works, ours
 # by construction and the producer's by the records they carry. A new output file
@@ -139,7 +169,7 @@ path = [
 ]
 precedence = "closest"
 SPDX-FileCopyrightText = ["Assemblée nationale", "2026 Libre AI contributors"]
-SPDX-License-Identifier = "LicenseRef-ThirdParty-Data"
+SPDX-License-Identifier = "etalab-2.0 AND CC-BY-4.0"
 
 # Visual identity — no outbound licence.
 #

@@ -123,11 +123,15 @@ Gate : aucun lancement public tant que les blockers juridiques, éditoriaux et d
 | Révision post-reveal | historique, pré-reveal immuable | test UX ; ne jamais écraser l'original |
 | Taxonomie | sous-ensemble français EuroVoc | atelier éditorial + stabilité inter-législatures |
 | Résolution de circonscription | choix manuel local au MVP | éviter tout géocodage serveur |
-| Licence faits | Licence Ouverte 2.0 si compatible avec chaque source | revue des licences source |
+| Licence faits — **tranchée** (voir sous la table) | Licence Ouverte 2.0 (`etalab-2.0`) | condition levée : la revue des licences source a été faite |
 | Licence éditoriale | CC BY-SA à étudier | stratégie d'attribution et anti-fausse-attribution |
 | Format de diffusion | JSON pour contrats, compression après benchmark | budget téléchargement/décodage |
 | API | aucune au MVP si statique suffit | besoin produit mesuré |
 | Validation académique | revue avant revendication publique forte | partenaire et protocole à établir |
+
+**Licence faits — décision du 2026-07-25.** La condition « si compatible avec chaque source » est levée. La couche faits n'a qu'une source autoritative, l'open data de l'Assemblée nationale (`specs-v0.3.md` §1.1), que le producteur publie sous Licence Ouverte / Open Licence : la compatibilité ne se posait donc que vis-à-vis d'elle, et elle est acquise — la Licence Ouverte autorise explicitement l'adaptation, la redistribution et la création d'informations dérivées. La revue exigée est faite et consignée dans [`dry-run/DATA-PROVENANCE.md`](../dry-run/DATA-PROVENANCE.md) : chemins amont, SHA-256 par archive, dates de mise à jour, droit *sui generis* des bases de données et classification des données personnelles. Les archives sont déclarées `etalab-2.0` dans `REUSE.toml`.
+
+Contrepartie à tenir : la Licence Ouverte impose de **mentionner la source et la date de dernière mise à jour** de l'information réutilisée. Cette mention est portée par `LICENSE` et vaut aussi pour les dérivés publiés sous notre propre licence. Toute nouvelle source ajoutée à la couche faits (Légifrance/PISTE est déjà listée comme autoritative) rouvre la revue pour elle seule.
 
 ## 4. Contradictions historiques résolues par v1
 
