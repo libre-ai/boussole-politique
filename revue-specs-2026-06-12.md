@@ -461,6 +461,13 @@ un acte éditorial qui doit être contestable), **NosDéputés** (polémiques «
 - **Licence du dataset : trancher « Etalab/ODbL »** — deux logiques incompatibles (permissive vs
   share-alike) séparées d'un slash. Recommandation : **Licence Ouverte 2.0**, alignée sur les
   sources. La couche éditoriale peut vivre sous CC BY-SA si l'attribution-défense compte.
+  >
+  > **Tranché le 2026-07-25 — recommandation suivie.** Le slash est supprimé : c'est la
+  > **Licence Ouverte 2.0** (`etalab-2.0`), et non l'ODbL, pour la raison avancée ici — c'est la
+  > licence de la source. Les archives de l'AN et les sorties qui reproduisent leurs
+  > enregistrements sont déclarées comme telles dans `REUSE.toml` ; la provenance qui manquait
+  > est établie dans `dry-run/DATA-PROVENANCE.md`. Le choix de la couche éditoriale (CC BY-SA)
+  > reste ouvert et n'est pas engagé par celui-ci.
 - **SLA éditorial public** (« résumé sous 30 jours après promulgation ») : le « froid » du
   produit le permet, autant le contractualiser — et chiffrer le backlog initial (lois jugeables ×
   2-4 h de rédaction honnête par loi) pour planifier la rédaction comme un chantier à part

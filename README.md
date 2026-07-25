@@ -79,6 +79,8 @@ Multi-licence, declared per path in [`REUSE.toml`](REUSE.toml) and summarized in
 - **Apache-2.0** — interoperability and test material: the executable scoring vectors, the registered methodology parameters, the harnesses under `scripts/` and `dry-run/scripts/`;
 - **CC-BY-4.0** — documentation, specifications, methodology analyses and project records, including `proofs/`;
 - **MIT** — the visual identity under `assets/brand/` and its generated derivatives, per the standing declaration in [`assets/brand/LICENSE.md`](assets/brand/LICENSE.md), pending the trademark review;
-- **no first-party licence** — the Assemblée nationale archives under `dry-run/data/` and the machine-readable outputs derived from them keep the terms of their producer.
+- **etalab-2.0** (Licence Ouverte / Open Licence) — the Assemblée nationale archives under `dry-run/data/`, redistributed as acquired; the dry-run outputs that reproduce upstream records carry `etalab-2.0 AND CC-BY-4.0` as derivative works.
+
+Reusing that data carries one condition — cite the source and its last update date. The notice is in [`LICENSE`](LICENSE), and the provenance record behind it, with per-archive hashes and dates, is in [`dry-run/DATA-PROVENANCE.md`](dry-run/DATA-PROVENANCE.md).
 
 No licence grants any right over the names or marks "Libre AI" and "Boussole Politique". The canonical policy is [`LICENSING.md`](https://github.com/libre-ai/libre-ai/blob/main/LICENSING.md) in the base repository. Historical revisions of this repository published under MIT remain available under those terms; no previous licence grant is withdrawn.
