@@ -14,10 +14,11 @@ The licence for each file is declared through REUSE.toml:
 - CC-BY-4.0: editorial documentation, specifications, methodology analyses and
   first-party project records, including the evidence files under `proofs/`
   apart from the rendered brand proof sheet;
-- MIT: the visual identity under `assets/brand/` and its generated derivatives
-  under `apps/web/assets/`, plus the rendered proof sheet under `proofs/brand/`,
-  which keep the standing declaration in `assets/brand/LICENSE.md` while the
-  trademark review is pending;
+- LicenseRef-Trademark: the visual identity under `assets/brand/`, its generated
+  derivatives under `apps/web/assets/` and the rendered proof sheet under
+  `proofs/brand/`. These carry **no outbound licence at all**: they are governed
+  by the organisation's trademark policy, which reserves the right to alter or
+  commercially reuse a mark. See `assets/brand/LICENSE.md`;
 - LicenseRef-ThirdParty-Data: the Assemblée nationale source archives under
   `dry-run/data/`, and those dry-run outputs that redistribute upstream records.
   That material keeps the terms of its producer. No first-party licence is

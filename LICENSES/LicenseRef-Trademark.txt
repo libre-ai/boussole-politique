@@ -1,0 +1,23 @@
+Brand assets — no licence granted
+
+The files covered by this identifier are the visual identity of the project:
+icons, wordmarks, their generated derivatives and the rendered proof sheet.
+
+They are NOT covered by any software or content licence. No right to use,
+reproduce, modify, distribute or sublicense them is granted here.
+
+They are governed by the organisation's trademark policy, TRADEMARKS.md, and by
+the Trademarks section of LICENSING.md in the canonical repository, which states
+that software and content licences do not grant rights to the names, logos or
+marks of the project.
+
+Reasonable nominative use remains permitted: naming the project, stating
+compatibility, linking to the repository. Such a reference must not imply
+sponsorship, certification, partnership or an official distribution.
+
+Any other use — adopting a logo as the identity of a fork or service, altering a
+mark, or using one in advertising, merchandising or certification — requires
+prior written permission.
+
+See assets/brand/LICENSE.md for the scope of this declaration and for the reason
+it replaced an MIT grant on 2026-07-25.
