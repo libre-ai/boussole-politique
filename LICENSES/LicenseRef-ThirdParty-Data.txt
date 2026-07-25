@@ -11,3 +11,10 @@ and acquisition channel, original licence, transformations, EU sui generis
 database rights analysis, and personal-data classification — is not complete for
 this material. Until it is, no first-party outbound licence is asserted over it
 and none may be inferred from the other declarations in this repository.
+
+What is unresolved is the reuse licence of the source dataset, not the
+confidentiality of its content. This material records votes cast publicly by
+elected representatives in the exercise of their mandate, and their publicity is
+a legal obligation; the marker asserts no restriction of its own on that basis.
+The open question is which upstream terms govern redistribution and derivation —
+the repository's own documents still leave that choice open.
