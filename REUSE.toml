@@ -23,11 +23,9 @@ SPDX-FileCopyrightText = "2026 Libre AI contributors"
 SPDX-License-Identifier = "EUPL-1.2"
 
 # Editorial documentation and first-party project records: the specifications,
-# the methodology notes, the agent-context surface, the dry-run analyses written
-# as prose, and the machine-readable evidence produced by our own verification
-# scripts.
+# the methodology notes, the agent-context surface and the prose analyses.
 [[annotations]]
-path = ["*.md", "**/*.md", "docs/**", "dry-run/fixtures/**", "proofs/**"]
+path = ["*.md", "**/*.md", "docs/**", "proofs/**"]
 precedence = "closest"
 SPDX-FileCopyrightText = "2026 Libre AI contributors"
 SPDX-License-Identifier = "CC-BY-4.0"
@@ -37,9 +35,13 @@ SPDX-License-Identifier = "CC-BY-4.0"
 # `crates/scoring/tests/golden_vectors.rs`, and its cases are synthetic — not
 # extracted records. `m1-gate-registration.v1.json` is normative machine input
 # consumed by `scripts/verify-m1-sensitivity.py`, not editorial prose.
+# `dry-run/fixtures/**` is the same kind of object: link overrides read as input
+# by `dry-run/scripts/q8-vivier-elargi.py`, so it follows that precedent rather
+# than the editorial block it used to sit in.
 [[annotations]]
 path = [
   "docs/methodology/m1-gate-registration.v1.json",
+  "dry-run/fixtures/**",
   "dry-run/scripts/**",
   "fixtures/**",
   "scripts/**",
@@ -49,16 +51,92 @@ precedence = "closest"
 SPDX-FileCopyrightText = "2026 Libre AI contributors"
 SPDX-License-Identifier = "Apache-2.0"
 
-# Third-party open data from the Assemblée nationale, redistributed as acquired,
-# and the machine-readable outputs derived from it. The canonical policy states
-# that third-party data keeps its original terms and is never covered by a
-# blanket repository licence, and that aggregated results receive an explicit
-# licence only once they are confirmed not to reproduce restricted inputs. Some
-# of these outputs do reproduce named individual voting records, so no
-# first-party licence is asserted here. The prose analyses in `dry-run/out/*.md`
-# are our own editorial methodology and stay CC-BY-4.0 above.
+# Dry-run analyses that reproduce no upstream record. These hold only figures we
+# derived ourselves — funnel counts, polarisation rates, cross-check tables — and
+# prose that cites at most four dossier identifiers as worked examples. They
+# reproduce no individual and no per-record extract of the source dataset, so the
+# confirmation required below is satisfied and our own licence applies. Listed
+# file by file rather than by glob: the licence follows what a file contains, and
+# a glob cannot see that.
 [[annotations]]
-path = ["dry-run/data/**", "dry-run/out/*.json"]
+path = [
+  "dry-run/out/q1-funnel.md",
+  "dry-run/out/q2-polarisation.md",
+  "dry-run/out/q3-verif.md",
+  "dry-run/out/q3-version.md",
+  "dry-run/out/q8-vivier-elargi.md",
+  "dry-run/out/v-q2-check.json",
+  "dry-run/out/v-q2-check.md",
+  "dry-run/out/v6.md",
+]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Third-party open data from the Assemblée nationale, redistributed as acquired.
+# The canonical policy states that third-party data keeps its original terms and
+# is never covered by a blanket repository licence. These five archives hold
+# between 4 106 and 9 486 unmodified upstream JSON files; we wrote none of their
+# bytes, so only the producer is named as copyright holder.
+[[annotations]]
+path = ["dry-run/data/**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "Assemblée nationale"
+SPDX-License-Identifier = "LicenseRef-ThirdParty-Data"
+
+# Derived outputs that redistribute upstream records, and therefore carry no
+# first-party grant. `DATA-PROVENANCE.md` allows an explicit licence on an
+# aggregated result only after confirming it does not reproduce restricted
+# inputs; the upstream terms are still unsettled here (`revue-specs-2026-06-12.md`
+# leaves "Etalab/ODbL" to be decided, `docs/plan-mvp.md` makes Licence Ouverte 2.0
+# conditional on a source review that has not happened), so that confirmation
+# cannot be given for a file that carries the records themselves.
+#
+# The test is applied to content, identically whatever the extension, because
+# `.md` and `.json` come out of the same scripts. A file is listed here when it
+# either (1) names an individual from the 577-member Assemblée nationale roster
+# or carries a `PA…` actor identifier, or (2) reproduces a per-record table of
+# legislative dossiers. The split is clean rather than arbitrary: the files below
+# carry 11 to 160 dossier records, while every file granted above cites at most
+# four as examples.
+#
+# Note this is a nominative-and-record test, not a privacy test. These are public
+# votes cast by elected representatives in the exercise of their mandate, and
+# their publicity is a legal obligation; what is unresolved is the licence of the
+# source dataset, not the confidentiality of its content.
+#
+# Dual copyright is correct here and only here: these are derivative works, ours
+# by construction and the producer's by the records they carry. A new output file
+# matches no block and fails `reuse lint` — deliberately, so it cannot inherit a
+# grant by silence.
+[[annotations]]
+path = [
+  "dry-run/out/corpus.json",
+  "dry-run/out/q1-funnel.json",
+  "dry-run/out/q1-verify-gap.json",
+  "dry-run/out/q1-verify.json",
+  "dry-run/out/q1-verify2.json",
+  "dry-run/out/q2-polarisation.json",
+  "dry-run/out/q3-verif.json",
+  "dry-run/out/q3-version.json",
+  "dry-run/out/q4-mandats.json",
+  "dry-run/out/q4-mandats.md",
+  "dry-run/out/q5-miseaupoint.json",
+  "dry-run/out/q5-miseaupoint.md",
+  "dry-run/out/q6-censure.json",
+  "dry-run/out/q6-censure.md",
+  "dry-run/out/q7-simulation.json",
+  "dry-run/out/q7-simulation.md",
+  "dry-run/out/q7-verif.json",
+  "dry-run/out/q7-verif.md",
+  "dry-run/out/q8-vivier-elargi.json",
+  "dry-run/out/v4-groupchanges.json",
+  "dry-run/out/v4-mandats-verify.json",
+  "dry-run/out/v4-mandats-verify.md",
+  "dry-run/out/v5-verify.json",
+  "dry-run/out/v5-verify.md",
+  "dry-run/out/v6.json",
+]
 precedence = "closest"
 SPDX-FileCopyrightText = ["Assemblée nationale", "2026 Libre AI contributors"]
 SPDX-License-Identifier = "LicenseRef-ThirdParty-Data"

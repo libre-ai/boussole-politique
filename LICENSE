@@ -5,20 +5,30 @@ built on French parliamentary open data. It is a multi-licence repository.
 The licence for each file is declared through REUSE.toml:
 
 - EUPL-1.2: first-party software — the Rust workspace under `crates/`, the
-  application host under `apps/`, the workspace manifests and the files under
-  `.github/`;
+  application host under `apps/` apart from its generated brand assets, the
+  workspace manifests and the files under `.github/`;
 - Apache-2.0: interoperability and test material — the executable scoring
-  vectors, the registered methodology parameters, and the generic verification
-  and dry-run harnesses under `scripts/` and `dry-run/scripts/`;
+  vectors, the registered methodology parameters, the dry-run link overrides
+  under `dry-run/fixtures/`, and the generic verification and dry-run harnesses
+  under `scripts/` and `dry-run/scripts/`;
 - CC-BY-4.0: editorial documentation, specifications, methodology analyses and
-  first-party project records, including the evidence files under `proofs/`;
-- MIT: the visual identity under `assets/brand/` and its generated derivatives,
+  first-party project records, including the evidence files under `proofs/`
+  apart from the rendered brand proof sheet;
+- MIT: the visual identity under `assets/brand/` and its generated derivatives
+  under `apps/web/assets/`, plus the rendered proof sheet under `proofs/brand/`,
   which keep the standing declaration in `assets/brand/LICENSE.md` while the
   trademark review is pending;
 - LicenseRef-ThirdParty-Data: the Assemblée nationale source archives under
-  `dry-run/data/` and the machine-readable outputs derived from them. That
-  material keeps the terms of its producer. No first-party licence is granted
-  over it, and none may be inferred from the declarations above.
+  `dry-run/data/`, and those dry-run outputs that redistribute upstream records.
+  That material keeps the terms of its producer. No first-party licence is
+  granted over it, and none may be inferred from the declarations above.
+
+Which dry-run outputs fall under that last point is decided by what a file
+contains, not by its extension: an output carries no first-party grant when it
+names an individual representative or reproduces a per-record table of
+legislative dossiers. Prose and `.json` come out of the same scripts, so the
+same test is applied to both, file by file, in REUSE.toml. Outputs holding only
+figures we derived are licensed CC-BY-4.0 like the rest of our analyses.
 
 Full licence texts are stored in LICENSES/.
 
