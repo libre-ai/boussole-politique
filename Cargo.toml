@@ -6,7 +6,7 @@ resolver = "3"
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.85"
-license = "MIT"
+license = "EUPL-1.2"
 authors = ["Libre AI contributors"]
 repository = "https://github.com/libre-ai/boussole-politique"
 

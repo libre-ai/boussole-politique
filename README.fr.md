@@ -73,4 +73,12 @@ Pour suivre l'avancement ou contribuer, ouvrez des issues et pull requests dans 
 
 ## Licence
 
-EUPL-1.2.
+Multi-licence, déclarée par chemin dans [`REUSE.toml`](REUSE.toml) et résumée dans [`LICENSE`](LICENSE) :
+
+- **EUPL-1.2** — le logiciel first-party : `crates/`, `apps/`, les manifestes du workspace, `.github/` ;
+- **Apache-2.0** — le matériel d'interopérabilité et de test : les vecteurs de scoring exécutables, les paramètres de méthodologie enregistrés, les harnais de `scripts/` et `dry-run/scripts/` ;
+- **CC-BY-4.0** — la documentation, les spécifications, les analyses méthodologiques et les relevés de projet, y compris `proofs/` ;
+- **MIT** — l'identité visuelle sous `assets/brand/` et ses dérivés générés, selon la déclaration en vigueur dans [`assets/brand/LICENSE.md`](assets/brand/LICENSE.md), en attendant la revue de marque ;
+- **aucune licence first-party** — les archives de l'Assemblée nationale sous `dry-run/data/` et les sorties machine qui en dérivent conservent les conditions de leur producteur.
+
+Aucune licence n'accorde de droit sur les noms ou marques « Libre AI » et « Boussole Politique ». La politique canonique est [`LICENSING.md`](https://github.com/libre-ai/libre-ai/blob/main/LICENSING.md) dans le dépôt de base. Les révisions de ce dépôt publiées antérieurement sous MIT restent disponibles selon ces termes ; aucune concession de licence antérieure n'est retirée.

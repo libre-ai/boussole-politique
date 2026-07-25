@@ -1,0 +1,81 @@
+version = 1
+
+# Annotations follow the canonical policy in libre-ai/libre-ai/LICENSING.md and
+# libre-ai/libre-ai/DATA-PROVENANCE.md. Within this file, the last matching
+# annotation wins, so the blocks run from the broadest default to the most
+# specific carve-out.
+
+# First-party software by default: forge configuration, the frozen Rust
+# workspace and the application host.
+[[annotations]]
+path = [
+  ".github/**",
+  ".gitignore",
+  "Cargo.lock",
+  "Cargo.toml",
+  "apps/**",
+  "crates/**",
+  "deny.toml",
+  "rust-toolchain.toml",
+]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "EUPL-1.2"
+
+# Editorial documentation and first-party project records: the specifications,
+# the methodology notes, the agent-context surface, the dry-run analyses written
+# as prose, and the machine-readable evidence produced by our own verification
+# scripts.
+[[annotations]]
+path = ["*.md", "**/*.md", "docs/**", "dry-run/fixtures/**", "proofs/**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Interoperability contracts, synthetic test material and generic harnesses.
+# `vecteurs-test.json` is an executable specification proven bit-for-bit by
+# `crates/scoring/tests/golden_vectors.rs`, and its cases are synthetic — not
+# extracted records. `m1-gate-registration.v1.json` is normative machine input
+# consumed by `scripts/verify-m1-sensitivity.py`, not editorial prose.
+[[annotations]]
+path = [
+  "docs/methodology/m1-gate-registration.v1.json",
+  "dry-run/scripts/**",
+  "fixtures/**",
+  "scripts/**",
+  "vecteurs-test.json",
+]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "Apache-2.0"
+
+# Third-party open data from the Assemblée nationale, redistributed as acquired,
+# and the machine-readable outputs derived from it. The canonical policy states
+# that third-party data keeps its original terms and is never covered by a
+# blanket repository licence, and that aggregated results receive an explicit
+# licence only once they are confirmed not to reproduce restricted inputs. Some
+# of these outputs do reproduce named individual voting records, so no
+# first-party licence is asserted here. The prose analyses in `dry-run/out/*.md`
+# are our own editorial methodology and stay CC-BY-4.0 above.
+[[annotations]]
+path = ["dry-run/data/**", "dry-run/out/*.json"]
+precedence = "closest"
+SPDX-FileCopyrightText = ["Assemblée nationale", "2026 Libre AI contributors"]
+SPDX-License-Identifier = "LicenseRef-ThirdParty-Data"
+
+# Visual identity. The canonical table has no row for brand assets, so this
+# reproduces the standing per-directory declaration in `assets/brand/LICENSE.md`
+# rather than inventing an outbound licence: the sources, their generated
+# derivatives under `apps/web/assets/` and the rendered proof sheet stay MIT
+# until the pending trademark review concludes. No licence grants rights over
+# the "Libre AI" or "Boussole Politique" names.
+[[annotations]]
+path = [
+  "apps/web/assets/**",
+  "assets/brand/*.svg",
+  "assets/brand/manifest.json",
+  "proofs/brand/icon-size-sheet.png",
+]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Libre AI contributors"
+SPDX-License-Identifier = "MIT"

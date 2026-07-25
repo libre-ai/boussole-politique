@@ -1,5 +1,7 @@
 # Licence des assets de marque
 
+> Portée : cette déclaration ne couvre que l'identité visuelle. Le reste du dépôt est multi-licence et déclaré par chemin dans [`REUSE.toml`](../../REUSE.toml) — voir [`LICENSE`](../../LICENSE) pour le résumé. La table canonique de l'organisation n'a pas de ligne pour les assets de marque : la déclaration ci-dessous reste donc en vigueur, en attendant la revue juridique mentionnée plus bas.
+
 Sauf mention contraire, les fichiers de `assets/brand/` et leurs dérivés générés dans `apps/web/assets/` sont distribués sous licence MIT :
 
 ```text
