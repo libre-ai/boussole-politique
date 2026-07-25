@@ -1,21 +1,33 @@
-MIT License
+This repository is the reserved product home of Boussole Politique. It carries a
+frozen reference implementation, its specifications, and the dry-run material
+built on French parliamentary open data. It is a multi-licence repository.
 
-Copyright (c) 2026 Libre AI contributors
+The licence for each file is declared through REUSE.toml:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+- EUPL-1.2: first-party software — the Rust workspace under `crates/`, the
+  application host under `apps/`, the workspace manifests and the files under
+  `.github/`;
+- Apache-2.0: interoperability and test material — the executable scoring
+  vectors, the registered methodology parameters, and the generic verification
+  and dry-run harnesses under `scripts/` and `dry-run/scripts/`;
+- CC-BY-4.0: editorial documentation, specifications, methodology analyses and
+  first-party project records, including the evidence files under `proofs/`;
+- MIT: the visual identity under `assets/brand/` and its generated derivatives,
+  which keep the standing declaration in `assets/brand/LICENSE.md` while the
+  trademark review is pending;
+- LicenseRef-ThirdParty-Data: the Assemblée nationale source archives under
+  `dry-run/data/` and the machine-readable outputs derived from them. That
+  material keeps the terms of its producer. No first-party licence is granted
+  over it, and none may be inferred from the declarations above.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Full licence texts are stored in LICENSES/.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+No licence here grants any right over the names, logos or marks "Libre AI" and
+"Boussole Politique".
+
+The organization-wide licensing policy — scope, precedence, historical grants,
+data and contribution rules — is the canonical one and is not restated here:
+https://github.com/libre-ai/libre-ai/blob/main/LICENSING.md
+
+Historical revisions previously published under MIT remain available under those
+terms. No previous licence grant is withdrawn.

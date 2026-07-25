@@ -1,6 +1,20 @@
+# Inbound policy: which licences a *dependency* may carry. It is deliberately
+# narrower than the outbound licences this repository declares in REUSE.toml —
+# a compatible outbound licence does not make a dependency acceptable.
 [licenses]
 allow = ["MIT", "Apache-2.0", "Unicode-3.0"]
 confidence-threshold = 0.9
+
+# Our own crates are EUPL-1.2 (outbound). They are listed here as explicit
+# exceptions rather than added to `allow`, so that a third-party EUPL
+# dependency still requires a deliberate decision.
+[[licenses.exceptions]]
+allow = ["EUPL-1.2"]
+name = "boussole-domain"
+
+[[licenses.exceptions]]
+allow = ["EUPL-1.2"]
+name = "boussole-scoring"
 
 [advisories]
 yanked = "deny"

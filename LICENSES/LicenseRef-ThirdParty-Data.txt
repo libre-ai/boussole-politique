@@ -1,0 +1,13 @@
+Third-party source data and derived output
+
+The covered file is either a third-party dataset redistributed as it was
+acquired, or an output derived from such a dataset. Libre AI grants no licence
+over that material. The applicable copyright, database and reuse terms are those
+of the producer identified in the accompanying copyright notice, as published by
+that producer.
+
+The provenance record required before publication — stable identifier, source
+and acquisition channel, original licence, transformations, EU sui generis
+database rights analysis, and personal-data classification — is not complete for
+this material. Until it is, no first-party outbound licence is asserted over it
+and none may be inferred from the other declarations in this repository.
