@@ -27,7 +27,9 @@ EXPECTED_BRAND = {
     "icon-source.svg",
     "icon.svg",
     "icon-monochrome.svg",
+    "wordmark-horizontal-source.svg",
     "wordmark-horizontal.svg",
+    "wordmark-stacked-source.svg",
     "wordmark-stacked.svg",
     "social-card-source.svg",
     "social-card.svg",
@@ -39,12 +41,55 @@ EXPECTED_BRAND = {
     "manifest.json",
 }
 
-# The two sheets that get rasterised must carry outlines, never <text>. A <text>
-# element would put the set of font families installed on the renderer back into
-# the committed bytes -- the one rendering input CI cannot pin, and the reason
-# these files exist. Their `*-source.svg` counterparts are the editable
-# originals and are expected to still hold the text.
-VECTORISED = {"social-card.svg", "icon-size-sheet.svg"}
+# Every file here must carry outlines, never <text>. Their `*-source.svg`
+# counterparts are the editable originals and are expected to still hold the
+# text. Paths are root-relative because the set no longer lives in one place.
+#
+# TWO DIFFERENT REASONS, and conflating them would misread this gate:
+#
+#   * the two sheets are RASTERISED by scripts/generate-assets.sh, so a <text>
+#     would put the set of font families installed on the runner back into the
+#     committed PNG bytes -- the one rendering input CI cannot pin. Run
+#     30193088312 measured that cost. The `Prove the render depends on no
+#     installed font` step in ci.yml re-renders with an empty fontconfig and is
+#     the live proof for these two.
+#
+#   * the wordmarks and the repository card are SERVED AS SVG and rasterised
+#     nowhere, so no PNG gate can ever cover them and that step says nothing
+#     about them. Their dependency was at the CONSUMER: a viewer without Plus
+#     Jakarta Sans got a substituted family, which for a wordmark means the mark
+#     itself is wrong. This static check is therefore the whole proof for them,
+#     not a supplement to a byte comparison -- which is precisely why it is
+#     asserted here rather than inferred from the render.
+VECTORISED = {
+    "assets/brand/social-card.svg",
+    "assets/brand/icon-size-sheet.svg",
+    "assets/brand/wordmark-horizontal.svg",
+    "assets/brand/wordmark-stacked.svg",
+    ".github/assets/repository-card.svg",
+}
+
+# The subset of VECTORISED that a person actually receives as SVG. Only these
+# reach an accessibility tree, so only these owe a textual alternative: the two
+# sheets are build inputs rasterised to PNG, and a PNG's alternative is written
+# by whatever embeds it, not by the SVG that produced it.
+SERVED = {
+    "assets/brand/wordmark-horizontal.svg",
+    "assets/brand/wordmark-stacked.svg",
+    ".github/assets/repository-card.svg",
+}
+
+# Outlining must not cost the wordmarks their theme adaptation. `currentColor`
+# sat on the <text> element; it survives only because the converter propagates
+# `fill` onto the emitted <path>. Counted, not asserted as a boolean: "at least
+# one" would still pass if a glyph path silently lost its fill while the mark's
+# strokes kept theirs. (total currentColor attributes, glyph-path fills among them)
+#
+# horizontal: 2 stroke on <g> + 1 glyph path. stacked: 2 stroke + 2 glyph paths.
+THEMED = {
+    "assets/brand/wordmark-horizontal.svg": (3, 1),
+    "assets/brand/wordmark-stacked.svg": (4, 2),
+}
 
 
 def fail(message: str) -> None:
@@ -85,7 +130,10 @@ def main() -> int:
         check_svg(path)
 
     for name in sorted(VECTORISED):
-        root = ET.parse(BRAND / name).getroot()
+        path = ROOT / name
+        if not path.is_file():
+            fail(f"fichier vectorisé absent: {name}")
+        root = ET.parse(path).getroot()
         texts = [el for el in root.iter() if el.tag.rsplit("}", 1)[-1] == "text"]
         if texts:
             fail(f"{name} contient {len(texts)} <text>: le rendu dépendrait des polices installées")
@@ -94,6 +142,43 @@ def main() -> int:
         ]
         if fonts:
             fail(f"{name} déclare encore font-family sur {len(fonts)} éléments")
+        # Vectorising removes the glyphs from the accessibility tree: the mark
+        # stops being readable text for a screen reader, an indexer or a
+        # translator. An outlined wordmark with no textual alternative is a
+        # regression, so the alternative is required here rather than trusted.
+        if name not in SERVED:
+            continue
+        if root.get("role") != "img":
+            fail(f'{name} a perdu role="img": les tracés ne sont plus annonçables')
+        labelled = root.get("aria-labelledby", "").split()
+        titles = [el for el in root.iter() if el.tag.rsplit("}", 1)[-1] == "title"]
+        if not labelled or not titles:
+            fail(f"{name} n'a plus d'alternative textuelle (aria-labelledby/<title>)")
+        ids = {el.get("id") for el in root.iter()}
+        missing_ids = [ref for ref in labelled if ref not in ids]
+        if missing_ids:
+            fail(f"{name}: aria-labelledby pointe vers des id absents: {missing_ids}")
+        if not (titles[0].text or "").strip():
+            fail(f"{name}: <title> vide, l'alternative textuelle ne dit rien")
+
+    # `currentColor` is what makes a served wordmark adapt to its context. The
+    # <text> that carried it is gone; only the converter propagating `fill`
+    # keeps the behaviour, so it is verified on the committed bytes.
+    for name, (expected_total, expected_glyphs) in sorted(THEMED.items()):
+        root = ET.parse(ROOT / name).getroot()
+        total = sum(
+            1 for el in root.iter() for value in el.attrib.values()
+            if value.strip() == "currentColor"
+        )
+        glyphs = sum(
+            1 for el in root.iter()
+            if el.tag.rsplit("}", 1)[-1] == "path" and el.get("fill") == "currentColor"
+        )
+        if (total, expected_glyphs) != (expected_total, glyphs):
+            fail(
+                f"{name}: currentColor {total} attributs / {glyphs} tracés de glyphe, "
+                f"attendu {expected_total} / {expected_glyphs} — le wordmark ne suit plus le thème"
+            )
 
     for name, expected in EXPECTED_PNG.items():
         path = WEB / name

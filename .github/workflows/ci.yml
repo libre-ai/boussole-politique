@@ -119,6 +119,11 @@ jobs:
       # after the byte comparison proves the render survives having no fonts at
       # all. The two `fonts-*` pins below are kept for closure, not because
       # anything still reads them.
+      #
+      # Three further files — the two wordmarks and .github/assets/repository-card.svg
+      # — are outlined too, but nothing here renders them, so this job neither
+      # measures nor proves anything about them. `scripts/test-assets.py` is
+      # their proof; see the note in that file for why it has to be static.
       - name: Record the unpinnable part of the toolchain
         run: |
           set -euo pipefail
@@ -162,6 +167,10 @@ jobs:
       # the comparison would pass for the wrong reason. A failure here means
       # something in the pipeline still needs a font, which is exactly the
       # regression this lot exists to prevent.
+      #
+      # Scope, stated so a green here is not over-read: this proves it for what
+      # the generator RENDERS. The served SVGs are outside it — they produce no
+      # bytes for this comparison to compare.
       - name: Prove the render depends on no installed font
         run: |
           set -euo pipefail

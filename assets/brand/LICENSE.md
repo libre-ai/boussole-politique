@@ -28,6 +28,8 @@ Toute autre utilisation — reprise du logo comme identité d'un fork ou d'un se
 
 L'icône et les compositions ont été créées localement pour ce projet le 2026-07-11, sans service externe de génération d'image. Elles reprennent uniquement la palette et la grammaire géométrique du design system inspecté dans le checkout local.
 
-Les wordmarks déclarent Plus Jakarta Sans et Inter, mais n'embarquent aucune fonte. Leur future consommation PWA doit utiliser les fontes locales distribuées par le kit client, soumises à leurs licences propres.
+Les wordmarks ne déclarent plus aucune fonte et n'en embarquent aucune : depuis le 2026-07-26, chaque glyphe est un tracé vectoriel produit à partir de Plus Jakarta Sans et Inter par `scripts/vectorize-svg-text.py`. Les originaux éditables, qui portent encore le `<text>` et les noms de familles, sont en `wordmark-*-source.svg`.
+
+Les contours sont un _document_ au sens de la SIL Open Font License 1.1, pas du Font Software : leur publication ici est permise et n'exige aucune attribution. La provenance des fontes, leurs SHA-256 et le raisonnement juridique complet sont dans [`FONT-NOTICE.md`](FONT-NOTICE.md). Cette conclusion porte sur la fonte ; la marque, elle, reste régie par le présent fichier — l'OFL ne touche pas au droit des marques.
 
 Le nom public restant provisoire, l'usage de marque et l'antériorité demandent encore une revue juridique.
