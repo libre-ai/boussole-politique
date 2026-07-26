@@ -52,8 +52,33 @@
       "media_type": "image/svg+xml"
     },
     {
+      "path": "assets/brand/social-card-source.svg",
+      "sha256": "4afc17a77902ea7d6650f3847af5232f88864a2057817bb6cf41fa5ec6a0c2b3",
+      "media_type": "image/svg+xml"
+    },
+    {
+      "path": "assets/brand/social-card.svg",
+      "sha256": "5087b6793a690f6bd3ab14fe69313ca70f47c1b2b0eabe425829e6f20bee985a",
+      "media_type": "image/svg+xml"
+    },
+    {
+      "path": "assets/brand/icon-size-sheet-source.svg",
+      "sha256": "27239802006e81c07da0eda621c98dcc5e4ff448c7d5564715aea39fb4acbf48",
+      "media_type": "image/svg+xml"
+    },
+    {
+      "path": "assets/brand/icon-size-sheet.svg",
+      "sha256": "3bc0aff7348922aab696b17a81abf434c3171d8a3126a1388aa2ded1346b3ddc",
+      "media_type": "image/svg+xml"
+    },
+    {
       "path": "assets/brand/construction.md",
       "sha256": "3b2e4cfaf9fee46eb0313f092ae19994d9f65e0ca2815f785877fbf814469df1",
+      "media_type": "text/markdown"
+    },
+    {
+      "path": "assets/brand/FONT-NOTICE.md",
+      "sha256": "c2d1b6853c96bf48cf87dde08e065db4dadd2d779d2c6467f68323b5e7764df7",
       "media_type": "text/markdown"
     },
     {
@@ -122,7 +147,7 @@
     },
     {
       "path": "apps/web/assets/social-card.png",
-      "sha256": "61df1ab47f77533b0f5a33c920387f1ad09e7d9bcaeb940521edc283ac85c045",
+      "sha256": "27ebb20c486f3333cfa8b0d96c687a6ad76654b2adb826c950b45c21b6d8965d",
       "media_type": "image/png",
       "dimensions": [
         1200,
