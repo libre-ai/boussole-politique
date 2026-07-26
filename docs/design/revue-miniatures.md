@@ -19,8 +19,13 @@
 - le signe peut être perçu comme une mire, un maillon ou une boussole malgré l’absence d’aiguille ;
 - le nom « Boussole Politique » peut produire une attente de recommandation que l’icône seule ne peut corriger ;
 - le centre vert est sémantiquement documenté comme marque, mais cette lecture doit être testée avec des personnes extérieures au projet ;
-- les wordmarks utilisent `currentColor` et déclarent les fontes locales sans les embarquer : le rendu exact dépendra de la consommation correcte du bundle `client-kit` dans la future PWA ;
 - aucune validation App Store/Play, recherche d’antériorité ou revue juridique n’a été effectuée.
+
+## Risques fermés depuis
+
+- **Rendu des wordmarks dépendant des fontes** (ouvert le 2026-07-11, fermé le 2026-07-26). Le risque énoncé était : « les wordmarks utilisent `currentColor` et déclarent les fontes locales sans les embarquer : le rendu exact dépendra de la consommation correcte du bundle `client-kit` dans la future PWA ». Les glyphes sont désormais des tracés ; il n’y a plus de fonte à consommer correctement, donc plus de dépendance à fermer. `currentColor` est conservé et vérifié par `scripts/test-assets.py`.
+
+  Ce que la fermeture coûte, et qui n’est pas nul : le texte des wordmarks n’est plus sélectionnable ni indexable. L’alternative est portée par `role="img"` + `<title>`, contrôlée par le même test. Les originaux éditables restent en `assets/brand/wordmark-*-source.svg`.
 
 ## Décision
 

@@ -69,6 +69,15 @@ render_square 512 "$WEB/icon-maskable-512.png"
 # samples and 2.3307 % of icon-size-sheet samples moved, while the six PNGs
 # without text stayed pixel-identical.
 #
+# The wordmarks are outlined too, but for a different reason and with a
+# different proof. Nothing below rasterises them -- they are served as SVG --
+# so no PNG comparison and no empty-fontconfig re-render can say anything about
+# them. Their font dependency was at the CONSUMER, where a missing Plus Jakarta
+# Sans silently substitutes a family and the mark itself comes out wrong.
+# `scripts/test-assets.py` asserts their outlines, their `currentColor` and
+# their textual alternative directly on the committed bytes; that static check
+# is their whole proof, not a supplement to a byte gate.
+#
 # Only the icon is late-bound, through the __ICON_DATA__ placeholder. Doing the
 # substitution in Python rather than in a shell heredoc keeps the coupling to
 # `icon-source.svg` exact -- a change there always reaches these sheets -- while
@@ -115,7 +124,9 @@ files = [
     brand / "icon-source.svg",
     brand / "icon.svg",
     brand / "icon-monochrome.svg",
+    brand / "wordmark-horizontal-source.svg",
     brand / "wordmark-horizontal.svg",
+    brand / "wordmark-stacked-source.svg",
     brand / "wordmark-stacked.svg",
     brand / "social-card-source.svg",
     brand / "social-card.svg",

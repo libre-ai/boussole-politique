@@ -25,6 +25,26 @@ renders the committed outlines. That is why it is not wired into CI: the CI
 runner deliberately has no Inter and no Plus Jakarta Sans, and after this
 conversion it does not need them.
 
+A SECOND, DIFFERENT REASON (added 2026-07-26)
+---------------------------------------------
+The wordmarks and `.github/assets/repository-card.svg` are also converted, and
+the paragraph above does NOT justify them: nothing rasterises those files, they
+are served as SVG, and no CI byte gate covers them. Their dependency was at the
+CONSUMER -- a viewer without Plus Jakarta Sans got a substituted family, and for
+a wordmark that means the mark is drawn wrong. So the two motives are:
+
+  * build inputs -> outlined so the COMMITTED PNG BYTES stop moving;
+  * served SVGs  -> outlined so the MARK IS RIGHT wherever it is displayed.
+
+Converting a served file costs something a build input does not: the glyphs
+leave the accessibility tree, so the mark stops being selectable, indexable and
+readable by a screen reader. Anything converted and then SERVED must therefore
+keep a textual alternative (`role="img"` + `aria-labelledby` -> non-empty
+`<title>`), and must keep `fill="currentColor"` if it had it. Both are enforced
+by `scripts/test-assets.py`, not left to whoever runs this script -- which is
+also why `fill` is in INHERITED below rather than dropped with the other
+text-only attributes.
+
 FONTS
 -----
 Not vendored, on purpose -- the point of the conversion is that the repository

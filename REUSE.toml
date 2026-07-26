@@ -185,8 +185,19 @@ SPDX-License-Identifier = "etalab-2.0 AND CC-BY-4.0"
 # whatever licence sits on the file, so the legal exposure was limited; but a
 # public MIT declaration is an explicit invitation to modify the identity, and
 # that invitation is what is withdrawn.
+#
+# `.github/assets/**` joins this block on 2026-07-26. It holds the repository
+# social-preview card, which carries the logo and the wordmark, and it was
+# sitting under the `.github/**` software block above at EUPL-1.2 — the same
+# contradiction the MIT withdrawal above removed, in a directory nobody thought
+# to look at because the file is referenced from no tracked file (it is uploaded
+# through repository Settings). EUPL-1.2 grants reproduction, modification and
+# distribution; the trademark policy reserves exactly that for the logo. The
+# licence follows what a file CONTAINS, which is the same test applied to the
+# open-data carve-outs above.
 [[annotations]]
 path = [
+  ".github/assets/**",
   "apps/web/assets/**",
   "assets/brand/*.svg",
   "assets/brand/manifest.json",

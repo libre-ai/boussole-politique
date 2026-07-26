@@ -54,4 +54,10 @@ Le wordmark ne doit pas remplacer un titre textuel de page. Son `alt` est vide s
 
 ## Fontes et thèmes
 
-Les wordmarks déclarent Plus Jakarta Sans puis Inter. La PWA devra consommer les fontes locales et le bundle vérifié Libre IA Design System 2.0 depuis `client-kit`. Aucune fonte distante ne doit être ajoutée. L’icône opaque est identique en clair et sombre ; les wordmarks à `currentColor` s’adaptent au thème.
+Les wordmarks ne déclarent plus aucune fonte : depuis la vectorisation, chaque glyphe est un `<path>`, et `wordmark-*-source.svg` est l’original éditable qui porte encore le `<text>`. Leur rendu ne dépend donc plus de ce qui est installé chez le visiteur — un poste sans Plus Jakarta Sans obtenait auparavant une famille substituée, c’est-à-dire une marque fausse.
+
+La PWA devra malgré tout consommer les fontes locales et le bundle vérifié Libre IA Design System 2.0 depuis `client-kit` : c’est une exigence du **texte d’interface**, plus des wordmarks. Aucune fonte distante ne doit être ajoutée.
+
+L’icône opaque est identique en clair et sombre ; les wordmarks à `currentColor` s’adaptent au thème. La vectorisation préserve cette propriété — le `fill="currentColor"` du `<text>` est reporté sur les tracés émis — et `scripts/test-assets.py` la vérifie sur les octets committés plutôt que de la supposer.
+
+Contrepartie à assumer : les glyphes vectorisés ne sont plus du texte sélectionnable, indexable ni lisible par un lecteur d’écran. Chaque fichier servi porte donc `role="img"` et un `aria-labelledby` pointant vers un `<title>` non vide qui énonce le nom de la marque ; c’est cette alternative, et non les tracés, qui est annoncée. Le même contrôle échoue si le `<title>` disparaît ou se vide.

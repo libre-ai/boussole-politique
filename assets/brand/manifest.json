@@ -42,13 +42,23 @@
       "media_type": "image/svg+xml"
     },
     {
-      "path": "assets/brand/wordmark-horizontal.svg",
+      "path": "assets/brand/wordmark-horizontal-source.svg",
       "sha256": "b2152208d835c8de9add226fa770a813079a84703d42caf2021e6cd4f4543550",
       "media_type": "image/svg+xml"
     },
     {
-      "path": "assets/brand/wordmark-stacked.svg",
+      "path": "assets/brand/wordmark-horizontal.svg",
+      "sha256": "17eb7355e0118006a3e5e0deac68a8881d7c5261116f665ddb50b88fa1735c0f",
+      "media_type": "image/svg+xml"
+    },
+    {
+      "path": "assets/brand/wordmark-stacked-source.svg",
       "sha256": "8d1f05442dc00b805af309c8f64f3eda16ae30e14601effa2d65e4c3eed9fe86",
+      "media_type": "image/svg+xml"
+    },
+    {
+      "path": "assets/brand/wordmark-stacked.svg",
+      "sha256": "2d9389e12a385bd7be61b05db41259f5822b89037433f61e3cf2183df11f51f5",
       "media_type": "image/svg+xml"
     },
     {
@@ -78,12 +88,12 @@
     },
     {
       "path": "assets/brand/FONT-NOTICE.md",
-      "sha256": "c2d1b6853c96bf48cf87dde08e065db4dadd2d779d2c6467f68323b5e7764df7",
+      "sha256": "0519b9f448813d22ea8fcaff7e273e2d0e42f1ef3c18020e51ede84af66a4909",
       "media_type": "text/markdown"
     },
     {
       "path": "assets/brand/LICENSE.md",
-      "sha256": "b15402e08cea9392ce7c6115634714192d6ee3b90a59026d31f9d118d539bfff",
+      "sha256": "6bb667cf2a930d26c05b8f0945ae1628299b5d37710d6bec3df466bdf9344bfb",
       "media_type": "text/markdown"
     },
     {
