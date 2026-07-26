@@ -12,7 +12,7 @@ PROOFS="$ROOT/proofs/brand"
 TMP=$(mktemp -d "$ROOT/.asset-build.XXXXXX")
 trap 'rm -rf "$TMP"' EXIT HUP INT TERM
 
-for tool in rsvg-convert xmllint python3 sha256sum identify convert base64; do
+for tool in rsvg-convert xmllint python3 sha256sum identify convert; do
   command -v "$tool" >/dev/null 2>&1 || {
     printf 'outil requis absent: %s\n' "$tool" >&2
     exit 1
@@ -53,7 +53,6 @@ render_square() {
 }
 
 cp "$BRAND/icon.svg" "$WEB/favicon.svg"
-ICON_DATA=$(base64 -w 0 "$BRAND/icon.svg")
 render_square 32 "$WEB/favicon-32.png"
 render_square 180 "$WEB/apple-touch-icon.png"
 render_square 192 "$WEB/icon-192.png"
@@ -61,42 +60,39 @@ render_square 512 "$WEB/icon-512.png"
 render_square 192 "$WEB/icon-maskable-192.png"
 render_square 512 "$WEB/icon-maskable-512.png"
 
-cat > "$TMP/social-card.svg" <<SVG
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#000000"/>
-  <g stroke="#111827" stroke-width="1">
-    <path d="M0 70h1200M0 140h1200M0 210h1200M0 280h1200M0 350h1200M0 420h1200M0 490h1200M0 560h1200"/>
-    <path d="M70 0v630M140 0v630M210 0v630M280 0v630M350 0v630M420 0v630M490 0v630M560 0v630M630 0v630M700 0v630M770 0v630M840 0v630M910 0v630M980 0v630M1050 0v630M1120 0v630"/>
-  </g>
-  <text x="72" y="112" fill="#22C55E" font-family="Inter, sans-serif" font-size="26" font-weight="700" letter-spacing="4">LIBRE AI · PRODUIT CIVIQUE</text>
-  <text x="72" y="244" fill="#FFFFFF" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="68" font-weight="700">Boussole Politique</text>
-  <text x="72" y="322" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="32">Compare tes positions aux votes,</text>
-  <text x="72" y="366" fill="#E5E7EB" font-family="Inter, sans-serif" font-size="32">sans étiquette.</text>
-  <text x="72" y="482" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="24">A voté comme toi sur les énoncés que tu as jugés.</text>
-  <image href="data:image/svg+xml;base64,$ICON_DATA" x="790" y="105" width="350" height="350"/>
-  <path d="M0 620h1200" stroke="#22C55E" stroke-width="20"/>
-</svg>
-SVG
+# The two composed sheets carry no <text>: `scripts/vectorize-svg-text.py` has
+# already turned every glyph into an outline, so nothing here consults
+# fontconfig. That is deliberate and load-bearing. While they still asked for
+# "Inter" and "Plus Jakarta Sans" by name, the rendered bytes depended on the
+# runner's font families -- the one input `apt-get install <pkg>=<version>`
+# cannot pin -- and run 30193088312 measured the cost: 5.5220 % of social-card
+# samples and 2.3307 % of icon-size-sheet samples moved, while the six PNGs
+# without text stayed pixel-identical.
+#
+# Only the icon is late-bound, through the __ICON_DATA__ placeholder. Doing the
+# substitution in Python rather than in a shell heredoc keeps the coupling to
+# `icon-source.svg` exact -- a change there always reaches these sheets -- while
+# removing any chance of the shell expanding `$` or a backtick inside 100 kB of
+# committed path data.
+python3 - "$BRAND" "$TMP" <<'PY'
+import base64
+import sys
+from pathlib import Path
+
+brand, tmp = Path(sys.argv[1]), Path(sys.argv[2])
+icon = base64.b64encode((brand / "icon.svg").read_bytes()).decode("ascii")
+for name in ("social-card", "icon-size-sheet"):
+    template = (brand / f"{name}.svg").read_text(encoding="utf-8")
+    if "__ICON_DATA__" not in template:
+        raise SystemExit(f"{name}.svg no longer carries the __ICON_DATA__ placeholder")
+    if "<text" in template:
+        raise SystemExit(f"{name}.svg contains <text>: rendering would depend on installed fonts")
+    (tmp / f"{name}.svg").write_text(template.replace("__ICON_DATA__", icon), encoding="utf-8")
+PY
+
 rsvg-convert --format=png --width=1200 --height=630 "$TMP/social-card.svg" > "$TMP/social-card.png"
 convert "$TMP/social-card.png" -background '#000000' -alpha remove -alpha off "PNG24:$WEB/social-card.png"
 
-cat > "$TMP/icon-size-sheet.svg" <<SVG
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480">
-  <rect width="1200" height="480" fill="#FFFFFF"/>
-  <text x="48" y="58" fill="#111827" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="30" font-weight="700">Contrôle des réductions — fond clair</text>
-  <g fill="#6B7280" font-family="Inter, sans-serif" font-size="18" text-anchor="middle">
-    <text x="88" y="148">16 px</text><text x="176" y="148">32 px</text><text x="274" y="148">48 px</text><text x="456" y="148">192 px</text><text x="778" y="148">512 px réduit</text><text x="1068" y="148">safe zone</text>
-  </g>
-  <image href="data:image/svg+xml;base64,$ICON_DATA" x="80" y="180" width="16" height="16"/>
-  <image href="data:image/svg+xml;base64,$ICON_DATA" x="160" y="180" width="32" height="32"/>
-  <image href="data:image/svg+xml;base64,$ICON_DATA" x="250" y="180" width="48" height="48"/>
-  <image href="data:image/svg+xml;base64,$ICON_DATA" x="360" y="180" width="192" height="192"/>
-  <image href="data:image/svg+xml;base64,$ICON_DATA" x="650" y="180" width="256" height="256"/>
-  <image href="data:image/svg+xml;base64,$ICON_DATA" x="940" y="180" width="256" height="256"/>
-  <circle cx="1068" cy="308" r="102.4" fill="none" stroke="#22C55E" stroke-width="3" stroke-dasharray="8 8"/>
-  <text x="1068" y="462" text-anchor="middle" fill="#6B7280" font-family="Inter, sans-serif" font-size="16">contenu signifiant dans le cercle</text>
-</svg>
-SVG
 rsvg-convert --format=png --width=1200 --height=480 "$TMP/icon-size-sheet.svg" > "$TMP/icon-size-sheet.png"
 convert "$TMP/icon-size-sheet.png" -background '#FFFFFF' -alpha remove -alpha off "PNG24:$PROOFS/icon-size-sheet.png"
 
@@ -121,7 +117,12 @@ files = [
     brand / "icon-monochrome.svg",
     brand / "wordmark-horizontal.svg",
     brand / "wordmark-stacked.svg",
+    brand / "social-card-source.svg",
+    brand / "social-card.svg",
+    brand / "icon-size-sheet-source.svg",
+    brand / "icon-size-sheet.svg",
     brand / "construction.md",
+    brand / "FONT-NOTICE.md",
     brand / "LICENSE.md",
     web / "favicon.svg",
     web / "favicon-32.png",

@@ -29,10 +29,22 @@ EXPECTED_BRAND = {
     "icon-monochrome.svg",
     "wordmark-horizontal.svg",
     "wordmark-stacked.svg",
+    "social-card-source.svg",
+    "social-card.svg",
+    "icon-size-sheet-source.svg",
+    "icon-size-sheet.svg",
     "construction.md",
+    "FONT-NOTICE.md",
     "LICENSE.md",
     "manifest.json",
 }
+
+# The two sheets that get rasterised must carry outlines, never <text>. A <text>
+# element would put the set of font families installed on the renderer back into
+# the committed bytes -- the one rendering input CI cannot pin, and the reason
+# these files exist. Their `*-source.svg` counterparts are the editable
+# originals and are expected to still hold the text.
+VECTORISED = {"social-card.svg", "icon-size-sheet.svg"}
 
 
 def fail(message: str) -> None:
@@ -71,6 +83,17 @@ def main() -> int:
 
     for path in sorted(BRAND.glob("*.svg")) + [WEB / "favicon.svg"]:
         check_svg(path)
+
+    for name in sorted(VECTORISED):
+        root = ET.parse(BRAND / name).getroot()
+        texts = [el for el in root.iter() if el.tag.rsplit("}", 1)[-1] == "text"]
+        if texts:
+            fail(f"{name} contient {len(texts)} <text>: le rendu dépendrait des polices installées")
+        fonts = [
+            el.tag for el in root.iter() if "font-family" in el.attrib
+        ]
+        if fonts:
+            fail(f"{name} déclare encore font-family sur {len(fonts)} éléments")
 
     for name, expected in EXPECTED_PNG.items():
         path = WEB / name

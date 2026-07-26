@@ -20,11 +20,14 @@ Verified against `Cargo.toml`, `scripts/`, and `.github/workflows/ci.yml`:
 - `python3 scripts/check-dry-run-portability.py` — dry-run portability check.
 - `python3 scripts/verify-m1-sensitivity.py` — M1 sensitivity verification.
 - `node --check dry-run/scripts/workflow-dry-run.js` — dry-run script syntax check.
-- `./scripts/generate-assets.sh` / `python3 scripts/test-assets.py` — brand assets.
+- `python3 scripts/check-duplicate-fingerprints.py` — joins tracked files on sha256, never on filename; fails on an undeclared identical group **and** on a declared group that stopped matching.
+- `./scripts/check-brand-licence-consistency.sh` — the committed manifest and its generator must declare the same licence; runs before generation, the only point where the committed bytes still exist.
+- `./scripts/generate-assets.sh` / `python3 scripts/test-assets.py` — brand assets. The generator needs `rsvg-convert`; CI owns the pinned toolchain, so a machine without it cannot refresh the committed bytes.
+- `uv run --script scripts/vectorize-svg-text.py --fonts <dir> <in.svg> <out.svg>` — turns `<text>` into `<path>`. Run **by hand, rarely**: only when the wording, size or position of the text in `assets/brand/*-source.svg` changes. It needs Inter and Plus Jakarta Sans, which CI deliberately does not have — `assets/brand/FONT-NOTICE.md` records where to fetch them, their SHA-256, and why the OFL permits publishing the outlines. It refuses to emit anything if shaping yields `.notdef`, so a conversion that lost the French diacritics cannot be committed.
 
 ## CI gates
 
-- `ci` (`.github/workflows/ci.yml`) — jobs: `rust-contracts`, `dry-run-portability`, `brand-assets`.
+- `ci` (`.github/workflows/ci.yml`) — jobs: `reuse`, `rust-contracts`, `dry-run-portability`, `brand-assets`.
 - `Context hygiene` (`.github/workflows/context-hygiene.yml`).
 
 ## Links
