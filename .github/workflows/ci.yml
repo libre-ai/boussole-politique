@@ -71,21 +71,39 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install --yes --no-install-recommends librsvg2-bin libxml2-utils imagemagick
-      - name: Generate and verify assets twice
+      - name: DIAGNOSTIC record the rendering toolchain
         run: |
           set -euo pipefail
-          # Run BEFORE generating: the generation below overwrites the committed
-          # manifest, and the licence divergence this catches only exists in the
-          # committed bytes. A full `git diff` here is not usable — the committed
-          # PNGs are not byte-reproducible by this toolchain, so every
-          # hash-bearing field would differ for unrelated reasons.
+          echo "=== apt candidates ==="
+          apt-cache policy librsvg2-bin libxml2-utils imagemagick
+          echo "=== installed closure ==="
+          dpkg-query -W -f='PKG ${binary:Package}=${Version}\n' \
+            librsvg2-bin librsvg2-2 libxml2-utils libxml2 imagemagick \
+            imagemagick-6.q16 libmagickcore-6.q16-7 libmagickwand-6.q16-7 \
+            libpng16-16t64 libcairo2 libfreetype6 libfontconfig1 2>&1 || true
+          echo "=== binaries ==="
+          rsvg-convert --version
+          convert --version | head -3
+          echo "=== fontconfig families ==="
+          fc-list : family | tr ',' '\n' | sort -u
+      - name: DIAGNOSTIC compare the committed bytes to a regeneration
+        run: |
+          set -euo pipefail
           ./scripts/check-brand-licence-consistency.sh
           ./scripts/generate-assets.sh
+          echo "=== git diff --stat ==="
+          git --no-pager diff --stat -- assets/brand apps/web/assets proofs/brand || true
+          echo "=== sha256 of the regenerated tree ==="
           find assets/brand apps/web/assets proofs/brand -type f -print0 \
-            | sort -z \
-            | xargs -0 sha256sum > /tmp/assets-first.sha256
-          ./scripts/generate-assets.sh
-          find assets/brand apps/web/assets proofs/brand -type f -print0 \
-            | sort -z \
-            | xargs -0 sha256sum > /tmp/assets-second.sha256
-          diff -u /tmp/assets-first.sha256 /tmp/assets-second.sha256
+            | sort -z | xargs -0 sha256sum
+          echo "=== structural comparison ==="
+          python3 .github/diagnose-asset-divergence.py
+      - name: DIAGNOSTIC publish the regenerated assets
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: regenerated-brand-assets
+          path: |
+            assets/brand
+            apps/web/assets
+            proofs/brand
+          if-no-files-found: error
