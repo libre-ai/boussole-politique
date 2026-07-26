@@ -110,12 +110,15 @@ jobs:
             libxml2-utils=2.9.14+dfsg-1.3ubuntu3.8 \
             fonts-lato=2.015-1 \
             fonts-dejavu-core=2.37-8
-      # Not a gate — a log, and an honest boundary. One thing above cannot be
-      # controlled from here: the SET of installed font families. `social-card`
-      # and `icon-size-sheet` ask for "Inter" and "Plus Jakarta Sans", which the
-      # image does not have, so fontconfig substitutes; a future image that adds
-      # a family it prefers would re-render them even with these versions held.
-      # The byte comparison below is what makes that loud.
+      # A log, not a gate. This used to be the honest boundary of the pinning:
+      # the SET of installed font families comes from the runner image and no
+      # apt pin can hold it, so `social-card` and `icon-size-sheet` — which asked
+      # for "Inter" and "Plus Jakarta Sans", absent here — were re-rendered
+      # whenever fontconfig's substitution changed. That hole is now closed at
+      # the source: both sheets carry outlines instead of <text>, and the step
+      # after the byte comparison proves the render survives having no fonts at
+      # all. The two `fonts-*` pins below are kept for closure, not because
+      # anything still reads them.
       - name: Record the unpinnable part of the toolchain
         run: |
           set -euo pipefail
@@ -148,3 +151,37 @@ jobs:
           # Determinism, a distinct property: the generator must not depend on
           # the clock, on filesystem order, or on its own previous output.
           diff -u /tmp/assets-first.sha256 /tmp/assets-second.sha256
+      - name: TEMPORARY export regenerated assets
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: regenerated-assets
+          path: |
+            apps/web/assets
+            proofs/brand
+            assets/brand
+      # The claim behind vectorising the text is that the render no longer
+      # consults fontconfig at all. Asserting that by reading the SVGs would only
+      # restate the intent, so it is measured instead: rebuild everything with
+      # fontconfig pointed at a configuration that declares no font directory,
+      # and require the bytes to be identical.
+      #
+      # `fc-list` returning nothing is what makes the setup meaningful — without
+      # that check a misspelt variable would leave the system fonts visible and
+      # the comparison would pass for the wrong reason. A failure here means
+      # something in the pipeline still needs a font, which is exactly the
+      # regression this lot exists to prevent.
+      - name: Prove the render depends on no installed font
+        run: |
+          set -euo pipefail
+          printf '%s\n' \
+            '<?xml version="1.0"?>' \
+            '<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">' \
+            '<fontconfig><cachedir>/tmp/fontconfig-empty</cachedir></fontconfig>' \
+            > /tmp/no-fonts.conf
+          export FONTCONFIG_FILE=/tmp/no-fonts.conf
+          fc-list > /tmp/families-visible.txt || true
+          echo "font families visible to the renderer: $(wc -l < /tmp/families-visible.txt)"
+          test ! -s /tmp/families-visible.txt
+          ./scripts/generate-assets.sh
+          git diff --exit-code -- assets/brand apps/web/assets proofs/brand
