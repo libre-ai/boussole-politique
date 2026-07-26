@@ -68,7 +68,7 @@
     },
     {
       "path": "apps/web/assets/favicon-32.png",
-      "sha256": "ad30c489242e11e79394a8caee366af7cdfb4deef20b18248700263107409978",
+      "sha256": "bd0cdeffbfdc8ca6aade88c7953968a7dba215d4b778da39da1d71a65188e889",
       "media_type": "image/png",
       "dimensions": [
         32,
@@ -77,7 +77,7 @@
     },
     {
       "path": "apps/web/assets/apple-touch-icon.png",
-      "sha256": "c388acbe448b16de271d1def7918c0333abf9b6b4058840f152c69ab35e529cb",
+      "sha256": "664bd7b68e3263035b8accd1071e6acd764d16293384897b7a91401b7495ebab",
       "media_type": "image/png",
       "dimensions": [
         180,
@@ -86,7 +86,7 @@
     },
     {
       "path": "apps/web/assets/icon-192.png",
-      "sha256": "1ff83b6537bec538392ee1748de7273ea7a09799ef247c22db72762ecdde0720",
+      "sha256": "79dc2bbddc83ce4d0b6e7440e90a6d0dba9b26b3e858066610a6133ee9880d2f",
       "media_type": "image/png",
       "dimensions": [
         192,
@@ -95,7 +95,7 @@
     },
     {
       "path": "apps/web/assets/icon-512.png",
-      "sha256": "9926fa6ac359b82390e8ecc365f0460eac50d2ec8a0bd4a06a65a9597ad37f11",
+      "sha256": "6159b03c3f43b7b09a45e51d57fdf2d230e01272844a9f58d6e70cfd0976623f",
       "media_type": "image/png",
       "dimensions": [
         512,
@@ -104,7 +104,7 @@
     },
     {
       "path": "apps/web/assets/icon-maskable-192.png",
-      "sha256": "1ff83b6537bec538392ee1748de7273ea7a09799ef247c22db72762ecdde0720",
+      "sha256": "79dc2bbddc83ce4d0b6e7440e90a6d0dba9b26b3e858066610a6133ee9880d2f",
       "media_type": "image/png",
       "dimensions": [
         192,
@@ -113,7 +113,7 @@
     },
     {
       "path": "apps/web/assets/icon-maskable-512.png",
-      "sha256": "9926fa6ac359b82390e8ecc365f0460eac50d2ec8a0bd4a06a65a9597ad37f11",
+      "sha256": "6159b03c3f43b7b09a45e51d57fdf2d230e01272844a9f58d6e70cfd0976623f",
       "media_type": "image/png",
       "dimensions": [
         512,
@@ -122,7 +122,7 @@
     },
     {
       "path": "apps/web/assets/social-card.png",
-      "sha256": "a9700b040b20bb09d4622d19f59a9c9f74cebafd4d899bca76ec5923c57c2106",
+      "sha256": "61df1ab47f77533b0f5a33c920387f1ad09e7d9bcaeb940521edc283ac85c045",
       "media_type": "image/png",
       "dimensions": [
         1200,

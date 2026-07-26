@@ -60,6 +60,12 @@ jobs:
         run: node --check dry-run/scripts/workflow-dry-run.js
       - name: Reproduce M1 sensitivity evidence twice
         run: python3 scripts/verify-m1-sensitivity.py
+      # Deliberately hosted by an already-required job rather than a new
+      # workflow: a check nobody is required to pass is decoration. This job is
+      # the repository-hygiene job that already runs stdlib Python over tracked
+      # files, so the join costs nothing here.
+      - name: Reject undeclared identical file contents
+        run: python3 scripts/check-duplicate-fingerprints.py
 
   brand-assets:
     name: Deterministic brand assets
@@ -67,43 +73,55 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
-      - name: Install local rendering tools
+      # The renderer and the PNG encoder are inputs to the byte comparison
+      # below, not incidental tooling, so their versions are pinned. Unpinned,
+      # they drift: run 30193088312 caught the ImageMagick in this image writing
+      # a cHRM chunk that the committed files did not carry, which changed every
+      # PNG hash while leaving every pixel untouched.
+      #
+      # A pinned version that Ubuntu later withdraws makes this step fail
+      # outright. That is the intended trade: a loud "the toolchain moved" beats
+      # a silent re-render.
+      - name: Install the pinned rendering toolchain
         run: |
+          set -euo pipefail
           sudo apt-get update
-          sudo apt-get install --yes --no-install-recommends librsvg2-bin libxml2-utils imagemagick
-      - name: DIAGNOSTIC record the rendering toolchain
+          sudo apt-get install --yes --no-install-recommends \
+            librsvg2-bin=2.58.0+dfsg-1build1 \
+            libxml2-utils=2.9.14+dfsg-1.3ubuntu3.8 \
+            imagemagick=8:6.9.12.98+dfsg1-5.2build2
+      # Not a gate — a log. What these packages pull in transitively, and the
+      # fonts, come from the runner image and cannot be pinned from here. When
+      # the byte comparison below fails, this is the record that says what moved.
+      - name: Record the unpinnable part of the toolchain
         run: |
           set -euo pipefail
-          echo "=== apt candidates ==="
-          apt-cache policy librsvg2-bin libxml2-utils imagemagick
-          echo "=== installed closure ==="
-          dpkg-query -W -f='PKG ${binary:Package}=${Version}\n' \
-            librsvg2-bin librsvg2-2 libxml2-utils libxml2 imagemagick \
-            imagemagick-6.q16 libmagickcore-6.q16-7 libmagickwand-6.q16-7 \
-            libpng16-16t64 libcairo2 libfreetype6 libfontconfig1 2>&1 || true
-          echo "=== binaries ==="
           rsvg-convert --version
-          convert --version | head -3
-          echo "=== fontconfig families ==="
+          convert --version | head -1
+          dpkg-query -W -f='${binary:Package}=${Version}\n' \
+            'libmagick*' 'librsvg*' 'libcairo*' 'libfreetype*' \
+            'libfontconfig*' 'libpango*' 'libpng*' 'fonts-*' 2>/dev/null | sort
           fc-list : family | tr ',' '\n' | sort -u
-      - name: DIAGNOSTIC compare the committed bytes to a regeneration
+      - name: Generate and verify assets twice
         run: |
           set -euo pipefail
+          # Run BEFORE generating: the generation below overwrites the committed
+          # manifest, and the licence divergence this catches only exists in the
+          # committed bytes.
           ./scripts/check-brand-licence-consistency.sh
           ./scripts/generate-assets.sh
-          echo "=== git diff --stat ==="
-          git --no-pager diff --stat -- assets/brand apps/web/assets proofs/brand || true
-          echo "=== sha256 of the regenerated tree ==="
+          # Freshness. This is the only moment where the committed bytes still
+          # exist, so it is the only place the repository can be proved current.
+          # Everything after this point compares two generations to each other,
+          # which two runs of one toolchain always pass.
+          git diff --exit-code -- assets/brand apps/web/assets proofs/brand
           find assets/brand apps/web/assets proofs/brand -type f -print0 \
-            | sort -z | xargs -0 sha256sum
-          echo "=== structural comparison ==="
-          python3 .github/diagnose-asset-divergence.py
-      - name: DIAGNOSTIC publish the regenerated assets
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: regenerated-brand-assets
-          path: |
-            assets/brand
-            apps/web/assets
-            proofs/brand
-          if-no-files-found: error
+            | sort -z \
+            | xargs -0 sha256sum > /tmp/assets-first.sha256
+          ./scripts/generate-assets.sh
+          find assets/brand apps/web/assets proofs/brand -type f -print0 \
+            | sort -z \
+            | xargs -0 sha256sum > /tmp/assets-second.sha256
+          # Determinism, a distinct property: the generator must not depend on
+          # the clock, on filesystem order, or on its own previous output.
+          diff -u /tmp/assets-first.sha256 /tmp/assets-second.sha256
