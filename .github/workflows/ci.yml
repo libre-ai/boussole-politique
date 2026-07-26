@@ -74,13 +74,13 @@ jobs:
       - name: Generate and verify assets twice
         run: |
           set -euo pipefail
+          # Run BEFORE generating: the generation below overwrites the committed
+          # manifest, and the licence divergence this catches only exists in the
+          # committed bytes. A full `git diff` here is not usable — the committed
+          # PNGs are not byte-reproducible by this toolchain, so every
+          # hash-bearing field would differ for unrelated reasons.
+          ./scripts/check-brand-licence-consistency.sh
           ./scripts/generate-assets.sh
-          # The committed state is destroyed by the generation above, so it has
-          # to be compared BEFORE anything is hashed. Without this, the job only
-          # proves the generator is deterministic — never that the repository is
-          # up to date. A manifest edited by hand then diverging from its
-          # generator stayed green here for weeks.
-          git diff --exit-code -- assets/brand apps/web/assets proofs/brand
           find assets/brand apps/web/assets proofs/brand -type f -print0 \
             | sort -z \
             | xargs -0 sha256sum > /tmp/assets-first.sha256
