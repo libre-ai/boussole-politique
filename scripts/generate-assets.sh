@@ -175,7 +175,7 @@ manifest = {
     "status": "proposed_for_human_review",
     "source": "assets/brand/icon-source.svg",
     "pipeline": "scripts/generate-assets.sh",
-    "license": "MIT",
+    "license": "LicenseRef-Trademark",
     "remote_resources": False,
     "maskable_safe_zone": {
         "canvas": [512, 512],
