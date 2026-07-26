@@ -74,6 +74,12 @@ jobs:
       - name: Generate and verify assets twice
         run: |
           set -euo pipefail
+          # Run BEFORE generating: the generation below overwrites the committed
+          # manifest, and the licence divergence this catches only exists in the
+          # committed bytes. A full `git diff` here is not usable — the committed
+          # PNGs are not byte-reproducible by this toolchain, so every
+          # hash-bearing field would differ for unrelated reasons.
+          ./scripts/check-brand-licence-consistency.sh
           ./scripts/generate-assets.sh
           find assets/brand apps/web/assets proofs/brand -type f -print0 \
             | sort -z \
