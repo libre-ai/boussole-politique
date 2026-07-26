@@ -151,15 +151,6 @@ jobs:
           # Determinism, a distinct property: the generator must not depend on
           # the clock, on filesystem order, or on its own previous output.
           diff -u /tmp/assets-first.sha256 /tmp/assets-second.sha256
-      - name: TEMPORARY export regenerated assets
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: regenerated-assets
-          path: |
-            apps/web/assets
-            proofs/brand
-            assets/brand
       # The claim behind vectorising the text is that the render no longer
       # consults fontconfig at all. Asserting that by reading the SVGs would only
       # restate the intent, so it is measured instead: rebuild everything with
