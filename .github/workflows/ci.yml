@@ -79,20 +79,43 @@ jobs:
       # a cHRM chunk that the committed files did not carry, which changed every
       # PNG hash while leaving every pixel untouched.
       #
-      # A pinned version that Ubuntu later withdraws makes this step fail
-      # outright. That is the intended trade: a loud "the toolchain moved" beats
-      # a silent re-render.
+      # The metapackages alone would not be enough: `imagemagick` depends on a
+      # RANGE of libmagickcore, and it is libmagickcore that writes the PNG. The
+      # list below is therefore the closure that actually produces bytes —
+      # renderer, text stack, fonts, encoder — each at the version
+      # `apt-cache policy` reports on ubuntu-24.04 today, not a guess.
+      #
+      # A pinned version that Ubuntu later withdraws, or one the runner image
+      # ships newer (apt refuses to downgrade), makes this step fail outright.
+      # That is the intended trade: a loud "the toolchain moved" beats a silent
+      # re-render.
       - name: Install the pinned rendering toolchain
         run: |
           set -euo pipefail
           sudo apt-get update
           sudo apt-get install --yes --no-install-recommends \
+            imagemagick=8:6.9.12.98+dfsg1-5.2build2 \
+            imagemagick-6.q16=8:6.9.12.98+dfsg1-5.2build2 \
+            libmagickcore-6.q16-7t64=8:6.9.12.98+dfsg1-5.2build2 \
+            libmagickwand-6.q16-7t64=8:6.9.12.98+dfsg1-5.2build2 \
             librsvg2-bin=2.58.0+dfsg-1build1 \
+            librsvg2-2=2.58.0+dfsg-1build1 \
+            libcairo2=1.18.0-3build1 \
+            libpango-1.0-0=1.52.1+ds-1build1 \
+            libpangocairo-1.0-0=1.52.1+ds-1build1 \
+            libpangoft2-1.0-0=1.52.1+ds-1build1 \
+            libfreetype6=2.13.2+dfsg-1ubuntu0.1 \
+            libfontconfig1=2.15.0-1.1ubuntu2 \
+            libpng16-16t64=1.6.43-5ubuntu0.6 \
             libxml2-utils=2.9.14+dfsg-1.3ubuntu3.8 \
-            imagemagick=8:6.9.12.98+dfsg1-5.2build2
-      # Not a gate — a log. What these packages pull in transitively, and the
-      # fonts, come from the runner image and cannot be pinned from here. When
-      # the byte comparison below fails, this is the record that says what moved.
+            fonts-lato=2.015-1 \
+            fonts-dejavu-core=2.37-8
+      # Not a gate — a log, and an honest boundary. One thing above cannot be
+      # controlled from here: the SET of installed font families. `social-card`
+      # and `icon-size-sheet` ask for "Inter" and "Plus Jakarta Sans", which the
+      # image does not have, so fontconfig substitutes; a future image that adds
+      # a family it prefers would re-render them even with these versions held.
+      # The byte comparison below is what makes that loud.
       - name: Record the unpinnable part of the toolchain
         run: |
           set -euo pipefail
