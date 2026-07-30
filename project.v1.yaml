@@ -1,0 +1,93 @@
+# Fiche d'état du projet — autorité de l'état depuis ADR-0020 (design §6.2).
+# La section statut du README est générée depuis cette fiche (sentinelles),
+# jamais éditée à la main ; l'avancement est calculé, jamais déclaré.
+schema_version: libre-ai.project.v1
+project: boussole
+repository: libre-ai/boussole-politique
+kind: product
+layer: couche-1
+statement:
+  for: "les électrices et les électeurs"
+  who_faces: "des étiquettes politiques qui remplacent les faits"
+  enables: "comparer ses positions aux votes réellement exprimés, sans étiquette"
+  producing:
+    - "des comparaisons position-par-vote sourcées et rejouables"
+  without_depending_on:
+    - "aucun compte, aucune transmission — tout reste dans le navigateur"
+summary: "Compare tes positions aux votes, sans étiquette — local-only, chiffrement au repos pour les données sensibles (couche 1)."
+current_situation: >-
+  L'application Boussole (garde no-transmission, chiffrement AES-256-GCM au repos pour les données Art. 9) est greffée et verte sur les briques épinglées ; le corpus de votes réels qui alimente la comparaison reste à intégrer.
+scope:
+  - "comparaison positions ↔ votes exprimés, sourcée"
+  - "fonctionnement local-only avec chiffrement au repos"
+non_goals:
+  - "étiquetage politique des utilisateurs"
+  - "compte ou profil"
+  - "transmission de données"
+dependencies:
+  - on: libre-ai/ui
+    why: "composants d'interface du système de design"
+    pinned: "git-dep épinglée par SHA dans le manifest de ce repo"
+  - on: libre-ai/web-platform
+    why: "socle applicatif Bun.serve + React"
+    pinned: "git-dep épinglée par SHA dans le manifest de ce repo"
+  - on: libre-ai/contracts
+    why: "autorité des contrats"
+    pinned: "git-dep épinglée par SHA dans le manifest de ce repo"
+  - on: libre-ai/governance
+    why: "gabarit de flotte et gates de qualité"
+    pinned: "git-dep épinglée par SHA dans le manifest de ce repo"
+maturity: usable
+confidence: medium
+exposure: spec-published
+freshness:
+  last_verified_on: "2026-07-30"
+hypothesis: >
+  An account-less, zero-profiling civic comparison with local WASM
+  recompute achieves VAA-class core parity while user responses never
+  leave the device.
+evidence_required:
+  - parity audit against the 58-feature VAA map (docs/parity/audits/PARITY-boussole-voxe.md)
+  - the 3 T1 amendments shipped (mismatch explanation, 24h URL-cache sharing without DB, EN/DE/ES)
+  - check-no-transmission CI gate green on apps/boussole (structural no-network proof)
+promotion_criteria:
+  - to: usable-verifiable
+    when: coverage >= 75% of 58 features (baseline 55%) and the 14 ABSENT-T1 closed
+  - to: proven
+    when: coverage >= 85% across two consecutive parity audits with the small-cohort threshold (< 5 excluded) still enforced
+kill_predicates:
+  - id: parity-regression
+    predicate: coverage < 55% of 58 features (below the 2026-07 baseline)
+    window: any parity audit after wave-4 activation
+    source: docs/parity/audits/PARITY-boussole-voxe.md
+  - id: transmission-breach
+    predicate: check-no-transmission reports an outbound primitive in apps/boussole
+    source: tools/quality/check-no-transmission.ts
+benchmark:
+  product: VAA — Voting Advice Application class (e.g. Wahl-O-Mat, iSideWith)
+scope_stability: stable
+phases:
+  - id: activation
+    title: Activation multi-repo (γ 3.5)
+    exit_criteria:
+      - id: graft-green
+        text: Contenu greffé depuis le hub avec son histoire, workspace autonome vert en CI réelle, description dégelée.
+        weight: 2
+        status: accepted
+        evidence:
+          date: "2026-07-30"
+          reference: "gate-acceptance-log 2026-07-30 (ligne 3.5), PR hub #286"
+  - id: data-corpus
+    title: Corpus de votes réel
+    exit_criteria:
+      - id: data-corpus-done
+        text: Un corpus de votes réels sourcé alimente la comparaison, parcours e2e verts dessus.
+        weight: 4
+        status: pending
+  - id: exposure
+    title: Exposition vérifiable
+    exit_criteria:
+      - id: promotion-met
+        text: Les conditions de promotion vers usable-verifiable déclarées par cette fiche (promotion_criteria) sont réunies et vérifiées.
+        weight: 4
+        status: pending
