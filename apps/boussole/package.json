@@ -19,13 +19,13 @@
     "test:e2e": "bun run build && playwright test"
   },
   "dependencies": {
-    "@libre-ai/ui": "workspace:*",
-    "@libre-ai/web-platform": "workspace:*",
-    "react": "catalog:",
-    "react-dom": "catalog:"
+    "@libre-ai/ui": "github:libre-ai/ui#46fa2956fcc86731f40772bcd3dff129c3792c46",
+    "@libre-ai/web-platform": "github:libre-ai/web-platform#a0754b69b4205e31a0c560f9729bd8d2d8556357",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
   },
   "devDependencies": {
-    "@playwright/test": "catalog:testing",
-    "fake-indexeddb": "catalog:testing"
+    "@playwright/test": "1.61.1",
+    "fake-indexeddb": "6.2.5"
   }
 }
