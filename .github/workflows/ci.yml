@@ -20,9 +20,9 @@ concurrency:
 
 jobs:
   licensing:
-    uses: libre-ai/governance/.github/workflows/reusable-licensing.yml@9cd1d421d318129db99456d963f4bc1cfad67b33
+    uses: libre-ai/governance/.github/workflows/reusable-licensing.yml@f9e7b5bab3d9ed71046df7b7dd2e70de1fe31436
     with:
-      tooling_ref: 9cd1d421d318129db99456d963f4bc1cfad67b33
+      tooling_ref: f9e7b5bab3d9ed71046df7b7dd2e70de1fe31436
       dco_boundary: c9286036260fd62a85c10c4d11785b8883bd3e51
   bun-quality:
     name: Bun quality
@@ -49,5 +49,41 @@ jobs:
         run: |
           test "$(bun --revision)" = "1.4.0-canary.1+57f349f63"
           bun run check:toolchain
+      - name: No-transmission guard (apps/boussole)
+        run: bun run check:transmission
       - run: bun run check
+  e2e:
+    name: Playwright e2e (apps/boussole)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - name: Install archived Bun toolchain
+        env:
+          BUN_ARCHIVE_URL: https://github.com/libre-ai/governance/releases/download/toolchain-bun-1.4.0-canary.1-57f349f63/bun-linux-x64.zip
+          BUN_ARCHIVE_SHA256: 83144e2542c33aaae541cf16b42f8cf1c55c3b94c5395fc776417fa27e95bcbf
+        run: |
+          curl --fail --location --retry 3 --output "$RUNNER_TEMP/bun.zip" "$BUN_ARCHIVE_URL"
+          echo "$BUN_ARCHIVE_SHA256  $RUNNER_TEMP/bun.zip" | sha256sum --check --strict
+          unzip -q "$RUNNER_TEMP/bun.zip" -d "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/bun-linux-x64" >> "$GITHUB_PATH"
+      - run: bun install --frozen-lockfile
+      - run: bun install --frozen-lockfile --cwd apps/boussole
+      # Public toolchain prerequisites, not private assistance: the browsers
+      # are installed at a fixed path and handed to Playwright through its
+      # documented env var, matching governance's adoption-proof.yml pattern.
+      - name: Install Playwright browsers
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/pw-browsers
+        run: bun x playwright install --with-deps chromium firefox webkit
+      - name: Run the e2e suite (questionnaire, data-ownership, no-js, pwa)
+        working-directory: apps/boussole
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/pw-browsers
+        run: bun run test:e2e
+      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        if: failure()
+        with:
+          name: playwright-report
+          path: apps/boussole/playwright-report/
+          if-no-files-found: ignore
 
