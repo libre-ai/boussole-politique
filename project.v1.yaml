@@ -16,7 +16,7 @@ statement:
     - "aucun compte, aucune transmission — tout reste dans le navigateur"
 summary: "Compare tes positions aux votes, sans étiquette — local-only, chiffrement au repos pour les données sensibles (couche 1)."
 current_situation: >-
-  L'application Boussole (garde no-transmission, chiffrement AES-256-GCM au repos pour les données Art. 9) est greffée et verte sur les briques épinglées ; le corpus de votes réels qui alimente la comparaison reste à intégrer.
+  L'application Boussole (garde no-transmission, chiffrement AES-256-GCM au repos pour les données Art. 9) est greffée et verte sur les briques épinglées. La phase data-corpus est éclatée en cinq livrables explicites (moteur Rust/WASM, instance méthode v3, dataset réel v3, énoncés relus polarité, pipeline extraction/provenance), tous encore à faire. Les contrats v3 (micros entiers, forme rationnelle exacte, polarité, taxonomie d'omission) sont livrés en candidate (libre-ai/contracts PR #8, draft, revue indépendante en attente) ; le gate à deux relecteurs externes reste un bloqueur nommé et assumé avant toute exposition publique — le produit avance en comparateur privé complet d'ici là.
 scope:
   - "comparaison positions ↔ votes exprimés, sourcée"
   - "fonctionnement local-only avec chiffrement au repos"
@@ -41,7 +41,7 @@ maturity: usable
 confidence: medium
 exposure: spec-published
 freshness:
-  last_verified_on: "2026-07-30"
+  last_verified_on: "2026-08-18"
 hypothesis: >
   An account-less, zero-profiling civic comparison with local WASM
   recompute achieves VAA-class core parity while user responses never
@@ -80,14 +80,69 @@ phases:
   - id: data-corpus
     title: Corpus de votes réel
     exit_criteria:
-      - id: data-corpus-done
-        text: Un corpus de votes réels sourcé alimente la comparaison, parcours e2e verts dessus.
-        weight: 4
+      - id: rust-wasm-engine
+        text: >-
+          Moteur ComputeLocalComparison compilé en Rust/WASM, avec référence
+          indépendante byte-exacte et vecteurs golden v3 — pattern policy-core
+          (crate + référence + vecteurs), engagement tenu du doc d'app
+          (docs/apps/boussole.md « Runtime boundaries »), décision owner
+          2026-08-18.
+        weight: 3
+        status: pending
+      - id: method-instance-v3
+        text: >-
+          Instance de boussole-method v3 approuvée pour ce produit, construite
+          sur le candidat contractuel (libre-ai/contracts PR #8).
+        weight: 1
+        status: pending
+      - id: dataset-v3-sourced
+        text: >-
+          Premier dataset réel v3 sourcé : seuil minimumGroupSize >= 5,
+          licence explicite, provenance tracée par statement.
+        weight: 2
+        status: pending
+      - id: symmetric-statements-polarity-reviewed
+        text: >-
+          Énoncés symétriques relus pour la polarité (ADR-0015 Q1-A, champ
+          polarity requis par énoncé dans public-vote-dataset.v3).
+        weight: 1
+        status: pending
+      - id: extraction-provenance-pipeline
+        text: Pipeline d'extraction et de provenance des votes, source par statement.
+        weight: 2
         status: pending
   - id: exposure
     title: Exposition vérifiable
     exit_criteria:
-      - id: promotion-met
-        text: Les conditions de promotion vers usable-verifiable déclarées par cette fiche (promotion_criteria) sont réunies et vérifiées.
-        weight: 4
+      - id: contracts-v3-candidate-delivered
+        text: >-
+          Contrats v3 (local-comparison, boussole-method, public-vote-dataset)
+          livrés en pull request candidate — revue indépendante à rôles
+          séparés et verrouillage catalogue restent à faire.
+        weight: 1
+        status: accepted
+        evidence:
+          date: "2026-08-18"
+          reference: "libre-ai/contracts PR #8 (draft, candidate, revue en attente)"
+      - id: independent-reviewers-gate
+        text: >-
+          Gate deux relecteurs externes indépendants (méthodologique +
+          légal/vie privée) maintenu comme bloqueur nommé avant toute
+          exposition ou scoring public — ADR-0002 ; le produit avance en
+          comparateur privé complet en attendant.
+        weight: 3
+        status: pending
+      - id: ci-wiring
+        text: >-
+          check:no-transmission câblé en step CI explicite (en plus de bun run
+          check) et suite e2e Playwright (questionnaire, data-ownership,
+          no-js, pwa) câblée en CI, navigateurs installés.
+        weight: 1
+        status: pending
+      - id: reaudit-parity-on-shipped-code
+        text: >-
+          Re-audit de parité sur le code effectivement livré (pattern
+          dogfooding-first), après corpus, moteur et câblage CI — pas sur la
+          spec.
+        weight: 2
         status: pending
