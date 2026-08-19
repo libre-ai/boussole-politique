@@ -9,12 +9,12 @@ Pour les électrices et les électeurs, qui rencontre des étiquettes politiques
 <!-- libre-ai:project-status:begin -->
 <!-- Section générée depuis project.v1.yaml — ne pas éditer à la main. -->
 
-- Situation actuelle : L'application Boussole (garde no-transmission, chiffrement AES-256-GCM au repos pour les données Art. 9) est greffée et verte sur les briques épinglées ; le corpus de votes réels qui alimente la comparaison reste à intégrer.
+- Situation actuelle : L'application Boussole (garde no-transmission, chiffrement AES-256-GCM au repos pour les données Art. 9) est greffée et verte sur les briques épinglées. La phase data-corpus est éclatée en cinq livrables explicites (moteur Rust/WASM, instance méthode v3, dataset réel v3, énoncés relus polarité, pipeline extraction/provenance), tous encore à faire. Les contrats v3 (micros entiers, forme rationnelle exacte, polarité, taxonomie d'omission) sont livrés en candidate (libre-ai/contracts PR #8, draft, revue indépendante en attente) ; le gate à deux relecteurs externes reste un bloqueur nommé et assumé avant toute exposition publique — le produit avance en comparateur privé complet d'ici là.
 - Maturité : usable
 - Exposition : spec-published
 - Confiance : medium
-- Preuves vérifiées le : 2026-07-30
-- Avancement : 20 % du périmètre actuellement déclaré
+- Preuves vérifiées le : 2026-08-18
+- Avancement : 16,7 % du périmètre actuellement déclaré
 
 <!-- libre-ai:project-status:end -->
 
