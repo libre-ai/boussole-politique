@@ -71,7 +71,19 @@ jobs:
       # Public toolchain prerequisites, not private assistance: the browsers
       # are installed at a fixed path and handed to Playwright through its
       # documented env var, matching governance's adoption-proof.yml pattern.
+      #
+      # working-directory matters here, not just style: `bun x playwright`
+      # from the repo root has no local @playwright/test to resolve (only
+      # apps/boussole declares it), so it silently fetched an unpinned
+      # Playwright release from the registry. That release's browser
+      # revision (chromium-headless-shell v1234) didn't match the one the
+      # pinned 1.61.1 test runner in apps/boussole actually looks for
+      # (v1228) -- the install step downloaded browsers, just not the ones
+      # the run step below was going to launch. Anchoring both steps to the
+      # same apps/boussole/node_modules/@playwright/test keeps the browser
+      # revision and the runner in lockstep.
       - name: Install Playwright browsers
+        working-directory: apps/boussole
         env:
           PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/pw-browsers
         run: bun x playwright install --with-deps
