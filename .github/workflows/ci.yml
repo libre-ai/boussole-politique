@@ -74,7 +74,7 @@ jobs:
       - name: Install Playwright browsers
         env:
           PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/pw-browsers
-        run: bun x playwright install --with-deps chromium firefox webkit
+        run: bun x playwright install --with-deps
       - name: Run the e2e suite (questionnaire, data-ownership, no-js, pwa)
         working-directory: apps/boussole
         env:
