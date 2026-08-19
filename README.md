@@ -14,7 +14,7 @@ Pour les électrices et les électeurs, qui rencontre des étiquettes politiques
 - Exposition : spec-published
 - Confiance : medium
 - Preuves vérifiées le : 2026-08-18
-- Avancement : 16,7 % du périmètre actuellement déclaré
+- Avancement : 22,2 % du périmètre actuellement déclaré
 
 <!-- libre-ai:project-status:end -->
 
